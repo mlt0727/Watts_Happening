@@ -9,7 +9,14 @@ function referenceKey(reference) {
   return `${reference.lat}:${reference.lon}`;
 }
 
-export default function OpportunityMap({ opportunity, referenceAreas }) {
+export default function OpportunityMap({
+  opportunity,
+  referenceAreas,
+  opportunities,
+  highlightedOpportunityIds,
+  selectedOpportunityId,
+  onSelectOpportunity,
+}) {
   const mapElement = useRef(null);
   const mapInstance = useRef(null);
   const layerGroup = useRef(null);
@@ -18,9 +25,10 @@ export default function OpportunityMap({ opportunity, referenceAreas }) {
     if (!mapElement.current) return undefined;
 
     const map = L.map(mapElement.current, {
-      zoomControl: true,
+      zoomControl: false,
       scrollWheelZoom: false,
     }).setView([32.55, -81.25], 7);
+    L.control.zoom({ position: "topright" }).addTo(map);
 
     L.tileLayer(BASE_LAYER, {
       maxZoom: 18,
@@ -67,6 +75,48 @@ export default function OpportunityMap({ opportunity, referenceAreas }) {
         .addTo(layers);
     });
 
+    const opportunityGroups = new Map();
+    opportunities.forEach((candidate) => {
+      const position = {
+        lat: (candidate.descReference.lat + candidate.gpcReference.lat) / 2,
+        lon: (candidate.descReference.lon + candidate.gpcReference.lon) / 2,
+      };
+      const key = `${position.lat.toFixed(5)}:${position.lon.toFixed(5)}`;
+      const group = opportunityGroups.get(key) ?? [];
+      group.push({ candidate, position });
+      opportunityGroups.set(key, group);
+    });
+
+    opportunityGroups.forEach((group) => {
+      group.forEach(({ candidate, position }, index) => {
+        const selected = candidate.id === selectedOpportunityId;
+        const related = highlightedOpportunityIds.includes(candidate.id);
+        const horizontalOffset = (index - (group.length - 1) / 2) * 38;
+        const markerNumber =
+          candidate.rank ??
+          opportunities.findIndex((item) => item.id === candidate.id) + 1;
+        const icon = L.divIcon({
+          className: "pairing-map-icon",
+          html: `<span class="pairing-map-dot${selected ? " pairing-map-dot-selected" : ""}${related ? " pairing-map-dot-related" : " pairing-map-dot-muted"}">${markerNumber}</span>`,
+          iconSize: [30, 30],
+          iconAnchor: [15 - horizontalOffset, 15],
+        });
+        const marker = L.marker([position.lat, position.lon], {
+          icon,
+          keyboard: true,
+          title: `${candidate.descProject.title} and ${candidate.gpcProject.title}`,
+          zIndexOffset: selected ? 1000 : related ? 500 : 0,
+        });
+
+        marker
+          .bindPopup(
+            `<strong>${candidate.location}</strong><br>${candidate.descProject.title}<br>${candidate.gpcProject.title}<br><small>Regional pairing marker; not a project-site coordinate.</small>`,
+          )
+          .on("click", () => onSelectOpportunity(candidate.id))
+          .addTo(layers);
+      });
+    });
+
     const referenceDistance = opportunity.referenceDistanceMiles;
     if (referenceDistance !== null) {
       L.polyline(
@@ -90,14 +140,21 @@ export default function OpportunityMap({ opportunity, referenceAreas }) {
         7,
       );
     }
-  }, [opportunity, referenceAreas]);
+  }, [
+    opportunity,
+    referenceAreas,
+    opportunities,
+    highlightedOpportunityIds,
+    selectedOpportunityId,
+    onSelectOpportunity,
+  ]);
 
   return (
     <div
       className="opportunity-map"
       ref={mapElement}
-      role="img"
-      aria-label="Regional map showing municipality reference points, not utility asset locations"
+      role="region"
+      aria-label="Interactive regional map with municipality reference points and opportunity pairings"
     />
   );
 }

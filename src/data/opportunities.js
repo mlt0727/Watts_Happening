@@ -90,6 +90,7 @@ const projectRecords = {
   jasperOkatie: {
     utility: "Dominion Energy South Carolina",
     title: "Jasper - Okatie 230 kV #2 construction",
+    aliases: ["Jasper - Okatie 230 kV #2: Construct"],
     area: "Jasper / Okatie area, South Carolina",
     plannedDate: null,
     sourceFile: sourceFiles.dominion,
@@ -109,6 +110,7 @@ const projectRecords = {
   okatieBluffton: {
     utility: "Dominion Energy South Carolina",
     title: "Okatie-Bluffton 115 kV rebuild",
+    aliases: ["Okatie-Bluffton 115 kV: Rebuild"],
     area: "Okatie / Bluffton area, South Carolina",
     plannedDate: "2025-06-01",
     sourceFile: sourceFiles.dominion,

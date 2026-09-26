@@ -26,20 +26,20 @@ body {
   background:
     radial-gradient(
       circle at 8% 3%,
-      rgba(29, 132, 245, 0.18),
+      rgba(25, 182, 164, 0.16),
       transparent 28rem
     ),
     radial-gradient(
       circle at 90% 15%,
-      rgba(157, 87, 222, 0.15),
+      rgba(243, 107, 131, 0.12),
       transparent 27rem
     ),
     radial-gradient(
       circle at 48% 92%,
-      rgba(0, 175, 184, 0.09),
+      rgba(29, 132, 245, 0.1),
       transparent 33rem
     ),
-    #0a0a0a;
+    #091112;
 }
 
 button,
@@ -68,5 +68,5 @@ button {
 ::-webkit-scrollbar-thumb {
   border: 2px solid #0a0a0a;
   border-radius: 99px;
-  background: linear-gradient(#1d84f5, #00afb8, #9d57de);
+  background: linear-gradient(#f36b83, #19b6a4, #1d84f5);
 }
