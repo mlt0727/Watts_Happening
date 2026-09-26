@@ -1,0 +1,1084 @@
+﻿Substation ID,Substation name,State (abbrv.),State,Latitude,Longitude,Current maximum voltage (kV),Current minimum voltage (kV),Planned project,Planned project voltage
+S-0001,Hanson,FL,Florida,30.525098,-83.393596,115,115,North Central Florida Upgrade Project,230
+S-0002,West Lake,FL,Florida,30.517475,-83.178629,115,115,North Central Florida Upgrade Project,230
+S-0003,Gore,VA,Virginia,39.276203,-78.364642,Unknown,Unknown,Rebuild Gore - Stonewall 138 kV with 500 kV Overbuild,500
+S-0004,Elizabeth City,NC,North Carolina,36.314098,-76.226179,230,Unknown,Rebuild Shawboro – Elizabeth City 230 kV Line,230
+S-0005,Hornertown,NC,North Carolina,36.44599,-77.659058,230,230,Rebuild Hornertown - Hathaway 230 kV,230
+S-0006,Thelma,NC,North Carolina,36.497002,-77.810055,232,230,Rebuild Thelma - Lakeview 230 kV Line,230
+S-0007,Lakeview,NC,North Carolina,36.474685,-77.670717,230,230,Rebuild Thelma - Lakeview 230 kV Line,230
+S-0008,Tarboro,NC,North Carolina,35.890951,-77.538709,230,Unknown,Tarboro to Hathaway Rebuild,230
+S-0009,Conway,LA,Louisiana,30.173929,-90.966333,230,138,27914-Willow Glen-Conway - Audubon,230
+S-0010,Many,LA,Louisiana,31.505784,-93.414093,230,Unknown,25883-Belmont (New Sub)-Many,230
+S-0011,J M Stuart,OH,Ohio,38.63931,-83.692237,345,69,Reconductor Stuart - Spurlock 345 kV Line,345
+S-0012,Cape Fear,NC,North Carolina,35.593228,-79.049524,115,115,Cape Fear - West End Line Rebuild,230
+S-0013,Waller,VA,Virginia,37.295853,-76.70555,230,230,Waller – Lightfoot – Skiffes Creek,230
+S-0014,Slabtown,VA,Virginia,38.224565,-77.473778,115,115,Ladysmith - Lee's Hill 230 kV Project,230
+S-0015,Belmont,LA,Louisiana,31.715716,-93.507101,Unknown,Unknown,25883-Belmont (New Sub)-Many,230
+S-0016,Possum Point,VA,Virginia,38.537414,-77.281179,230,115,Fredericksburg-Possum Point,230
+S-0017,Van Dorn,VA,Virginia,38.794994,-77.149285,230,230,Edsall 230 kV Electric Transmission Project,230
+S-0018,Elk Run,VA,Virginia,38.556273,-77.709736,115,115,Reconductor Elk Run - Gainesville 230 kV Line,230
+S-0019,Cloverhill,VA,Virginia,38.719799,-77.499632,230,230,Cloverhill to Ox 230 kV Line,230
+S-0020,Wheeler,VA,Virginia,38.753081,-77.654227,230,230,Reconductor/Rebuild Gainesville - Wheeler 230 kV Line,230
+S-0021,Mountain Run,VA,Virginia,38.46291,-77.973977,115,115,Cirrus-Keyser 230 kV Transmission Line Rebuild,230
+S-0022,McCredie,MO,Missouri,38.979855,-91.980291,345,345,Grain Belt Express,600
+S-0023,Palmyra,MO,Missouri,39.836197,-91.551167,345,161,Northern Missouri Grid Transformation Program,345
+S-0024,Elm Creek,KS,Kansas,39.427651,-97.544246,345,230,"Elm Creek 345kV Interconnection Expansion (DISIS-2017-002), Elm Creek - Tobias 345 kV",345
+S-0025,Pleasant Valley,OK,Oklahoma,35.274444,-97.511385,138,138,Minco - Pleasant Valley - Draper 345 kV,345
+S-0026,Johnston County Substation,OK,Oklahoma,34.312789,-96.780219,345,138,"Johnson County Substation Expansion, Lone Grove - Kiowa Transmission Line Rebuild Project",345
+S-0027,Wekiva,FL,Florida,28.702444,-81.416959,230,230,Piedmont-Wekiva Transmission Reliability Enhancement Project,230
+S-0028,Disston,FL,Florida,27.829953,-82.704029,Unknown,Unknown,Disston to Largo Transmission Upgrade,230
+S-0029,St. Cloud East,FL,Florida,28.224147,-81.17816,230,69,Orlando St. Cloud Resiliency Connection,230
+S-0030,Bronson,FL,Florida,29.460675,-82.653253,230,Unknown,"Crystal River - Bronson Transmission Line Project, Williston to Bronson Project",230
+S-0031,Killearn Tap,FL,Florida,30.58975,-84.259056,115,115,North Central Florida Upgrade Project,230
+S-0032,Greenville,FL,Florida,30.470711,-83.622996,115,Unknown,North Central Florida Upgrade Project,230
+S-0033,Jasper,SC,South Carolina,32.360708,-81.124071,230,230,Jasper - Okatie 230 kV,230
+S-0034,Spurlock,KY,Kentucky,38.697455,-83.814643,345,138,Reconductor Stuart - Spurlock 345 kV Line,345
+S-0035,Crozet,VA,Virginia,38.08471,-78.69854,230,230,Rebuild Charlottesville - Hydraulic Rd - Barracks Road - Crozet - Dooms 230 kV Line,230
+S-0036,Barracks Road,VA,Virginia,38.071635,-78.530512,230,230,Rebuild Charlottesville - Hydraulic Rd - Barracks Road - Crozet - Dooms 230 kV Line,230
+S-0037,Cash's Corner,VA,Virginia,38.10384,-78.263454,230,Unknown,"Rebuild Hollymeade - Cash's Corner 230 kV Line, Rebuild Cash's Corner - Gordonsville 230 kV Line",230
+S-0038,Pleasant Valley (VA),VA,Virginia,38.401011,-78.89792,Unknown,Unknown,Staunton-Valley Rebuild,230
+S-0039,Martin West,FL,Florida,29.302272,-82.196262,230,69,Marion - Levy - Alachua Reliability Projects,230
+S-0040,Garden Prairie,IL,Illinois,42.253914,-88.719351,Unknown,Unknown,"Reconductor Garden Prairie - Silver Lake 345 kV Line, Reconductor Cherry Valley - Garden Prairie 345 kV Line",345
+S-0041,University Park North,IL,Illinois,41.44212,-87.751453,345,345,Rebuild/Reconductor Olive - University Park 345 kV,345
+S-0042,Crete Energy Venture,IL,Illinois,41.43106,-87.619147,345,345,"Reconductor East Frankfort - Crete 345 kV Line, Rebuild and Reconductor ComEd Portion of Crete - St. John 345 kV",345
+S-0043,Goose Creek,IL,Illinois,40.107097,-88.600749,345,345,26770-Clinton-Goose Creek,345
+S-0044,Tazewell,IL,Illinois,40.562215,-89.537457,345,69,Central Illinois Grid Transformation Program,345
+S-0045,Brokaw,IL,Illinois,40.452807,-88.904206,345,138,Central Illinois Grid Transformation Program,345
+S-0046,Oreana,IL,Illinois,39.916873,-88.890927,345,69,26770-Clinton-Goose Creek,345
+S-0047,Roxford,IL,Illinois,38.825035,-90.097188,345,138,"Maywood- Belleau- MRPD- Sioux - Bugle, 26874-Coffeen North-Roxford",345
+S-0048,Cordova Energy,IL,Illinois,41.713894,-90.27978,345,345,Reconductor Nelson - Cordova 345 kV Line,345
+S-0049,Macomb 1,IL,Illinois,40.468758,-90.648,138,138,Central Illinois Grid Transformation Program,138
+S-0050,Macomb 2,IL,Illinois,40.454293,-90.692598,138,138,Central Illinois Grid Transformation Program,138
+S-0051,Allen,IN,Indiana,41.014331,-84.977632,345,138,Rebuild Allen - R.P. Mone 345kV Line,345
+S-0052,Reid,KY,Kentucky,37.645648,-87.503629,161,69,Southwest Indiana-Kentucky,345
+S-0053,Meredosia,IL,Illinois,39.82063,-90.563546,345,138,Central Illinois Grid Transformation Program,345
+S-0054,Ringgold,MD,Maryland,39.672078,-77.566267,230,138,Rice - Ringgold 230 kV Line,230
+S-0055,Carroll,MD,Maryland,39.565611,-77.182331,230,138,Rebuild Hunterstown - Carroll to 230 kV,230
+S-0056,Paxton East,IL,Illinois,40.46214,-88.077932,138,138,Central Illinois Grid Transformation Program,345
+S-0057,Gilman,IL,Illinois,40.764714,-87.997197,138,Unknown,Central Illinois Grid Transformation Program,345
+S-0058,Riverside (230kV),MD,Maryland,39.237146,-76.510933,230,Unknown,Reconductor Batavia - Riverside 230 kV Line,230
+S-0059,Steele,MD,Maryland,38.892065,-75.816238,230,138,"Reconductor Keeney to Steele 230 kV, Rebuild Milford to Steele 230 kV",230
+S-0060,TalenEnergy Martins Creek LLC Harrisburg,PA,Pennsylvania,40.257919,-76.857056,69,69,"West Shore - Harrisburg  230 kV Line, Dauphin - Harrisburg 230 kV",230
+S-0061,Hunterstown,PA,Pennsylvania,39.86817,-77.16455,115,115,Rebuild Hunterstown - Carroll to 230 kV,230
+S-0062,FirstEnergy Armstrong Power Station,PA,Pennsylvania,40.928175,-79.466052,345,Unknown,Rebuild and reconductor Armstrong - Homer City 345 kV Line,345
+S-0063,502 Junction,PA,Pennsylvania,39.740543,-80.032789,500,Unknown,502 Junction - Woodside 500 KV,500
+S-0064,Monroe,PA,Pennsylvania,40.980316,-75.171483,230,69,Martins Creek - Monroe 230 kV Line,230
+S-0065,Eldred,PA,Pennsylvania,40.728677,-76.441557,230,Unknown,Rebuild Eldred - Frackville 230 kV Line,230
+S-0066,Dauphin,PA,Pennsylvania,40.384028,-76.906741,230,69,Dauphin - Harrisburg 230 kV,230
+S-0067,E F Barrett,NY,New York,40.618101,-73.647975,138,Unknown,Propel NY Energy,345
+S-0068,TalenEnergy Martins Creek LLC West Shore,PA,Pennsylvania,40.191082,-76.946986,230,230,West Shore - Harrisburg  230 kV Line,230
+S-0069,Haines City East,FL,Florida,28.11978,-81.552183,230,69,Osprey to Haines City 230 kV Line,230
+S-0070,Wabash River,IN,Indiana,39.528805,-87.424562,230,Unknown,26752-Bolton 230 lines,230
+S-0071,East 13th Street,NY,New York,40.727544,-73.974622,345,345, ,0
+S-0072,Cayuga,IN,Indiana,39.925279,-87.426647,345,230,27620-Cayuga Gen. Sta.-Nucor,345
+S-0074,Brown (345 kV),IN,Indiana,37.907544,-87.721792,345,138,Southwest Indiana-Kentucky,345
+S-0075,F B Culley,IN,Indiana,37.910764,-87.325861,138,69,Southwest Indiana-Kentucky,345
+S-0076,Westfield Northeast,IN,Indiana,40.069349,-86.090947,69,69,Noblesville-Westfield Reliability Projects,230
+S-0077,Milford,DE,Delaware,38.880961,-75.399912,230,Unknown,"Rebuild Cartanza- Milford 230 kV Line, Rebuild Milford to Steele 230 kV",230
+S-0078,Keeney,DE,Delaware,39.633411,-75.730926,500,138,Reconductor Keeney to Steele 230 kV,230
+S-0079,Cartanza,DE,Delaware,39.202205,-75.469333,230,69,Rebuild Cartanza- Mil 230 kV Line,230
+S-0080,Blackfoot,MI,Michigan,42.923449,-83.453353,345,345,Oneida- Sabine Lake- Blackfoot & Majestic,345
+S-0081,Bismarck,MI,Michigan,42.59455,-82.996692,345,120,24990-Bismarck-Red Run,230
+S-0082,Stephens,MI,Michigan,42.474073,-82.996593,345,120,24138-St. Clair-Stephens,345
+S-0083,Jewell,MI,Michigan,42.718052,-83.008499,345,Unknown,24149-Jewell-Stephens,345
+S-0084,Lenox,MI,Michigan,42.724874,-82.84843,345,120,24589-Belle River-Lenox,345
+S-0085,Belle River,MI,Michigan,42.772045,-82.495248,345,Unknown,24589-Belle River-Lenox,345
+S-0086,St. Clair,MI,Michigan,42.764281,-82.474627,345,120,24138-St. Clair-Stephens,345
+S-0087,DTE Pontiac North,MI,Michigan,42.660144,-83.29695,Unknown,Unknown,Oneida- Sabine Lake- Blackfoot & Majestic,345
+S-0088,Greenwood,MI,Michigan,43.102978,-82.701804,345,Unknown,27777-Greenwood-Rapson,345
+S-0089,Orr Road,MI,Michigan,43.439426,-84.164592,138,138,Murphy - Orr Road 345 kV,345
+S-0090,Murphy,MI,Michigan,43.433015,-84.216589,345,138,Murphy - Orr Road 345 kV,345
+S-0091,Midland Cogeneration Venture,MI,Michigan,43.584158,-84.224933,345,345,23771-MCV-Tittabawassee,345
+S-0092,Mio,MI,Michigan,44.661379,-84.131387,138,138,27781-Mio Dam-Twining,345
+S-0093,Red Run,MI,Michigan,42.521757,-83.036356,120,120,24990-Bismarck-Red Run,230
+S-0094,Twining,MI,Michigan,44.112628,-83.805348,138,138,27781-Mio Dam-Twining,345
+S-0095,Blue Stones Tap Station,NY,New York,42.107903,-73.81806,115,115,New York Energy Solution,345
+S-0096,Edgemoor,DE,Delaware,39.740815,-75.509744,230,Unknown,Rebuild Edge Moor - Linwood 230 kV,230
+S-0097,West Fairbault,MN,Minnesota,44.269471,-93.293477,115,69,Mankato-Mississippi River Transmission Project Options,345
+S-0098,Elm Road,WI,Wisconsin,42.843699,-87.830728,230,230,Bluemond- Arcadian- Waukesha- Muskego- Elm Road- Racine,345
+S-0099,East Astoria,NY,New York,40.783834,-73.903404,345,Unknown,Champlain Hudson Power Express,320
+S-0100,Shore Road,NY,New York,40.833216,-73.645643,345,Unknown,Propel NY Energy,345
+S-0101,North Slope (Patnode),NY,New York,44.891234,-73.942503,230,230,Smart Path Connect,345
+S-0102,Blackberry,MN,Minnesota,47.229753,-93.313676,230,Unknown,26299-Blackberry-Iron Range,230
+S-0103,Eastwood,MN,Minnesota,44.169749,-93.939723,115,69,Mankato-Mississippi River Transmission Project,345
+S-0104,Monticello,MN,Minnesota,45.330844,-93.846359,345,115,Alexandria to Big Oaks (Cassie's Crossing),345
+S-0105,Lakefield Junction,MN,Minnesota,43.669994,-95.143252,345,69,Big Stone South- Brookings County- Lakeﬁeld Junction,765
+S-0106,Cardinal,WI,Wisconsin,43.092154,-89.568051,345,Unknown,"Cardinal-Hickory Creek Transmission Line, Hill Valley - Cardinal Upgrade",345
+S-0107,Pleasant Valley,MN,Minnesota,43.800528,-92.682742,345,161,Lakeﬁeld Junction- Pleasant Valley- North Rochester,765
+S-0108,Chub Lake,MN,Minnesota,44.59595,-93.296015,345,Unknown,27294-Hampton Corner-Helena,345
+S-0109,Navarre,MI,Michigan,42.284803,-83.162045,230,Unknown,25521-Brownstown-Navarre,230
+S-0110,Franklin,IA,Iowa,42.558252,-93.291052,161,161,MISO LRTP Tranche 1 Portfolio,345
+S-0111,Turkey River,IA,Iowa,42.701361,-91.03251,161,69,N LaCrosse-N Madison-Cardinal-Hickory Creek 345 kV,345
+S-0112,Marshalltown/Twinkle,IA,Iowa,42.045786,-92.861682,161,115,MISO LRTP Tranche 1 Portfolio,345
+S-0113,Graceton,MD,Maryland,39.699037,-76.386169,230,115,Rebuild Peach Bottom - Conastone 500 kV,500
+S-0114,Brookings County,SD,South Dakota,44.389264,-96.529298,345,Unknown,"Big Stone South- Brookings County- Lakeﬁeld Junction, 27220-Brookings County-Lyon County",345
+S-0115,Eau Claire,WI,Wisconsin,44.837118,-91.499221,161,69,Western Wisconsin Transmission Connection,345
+S-0116,Pony Creek,IA,Iowa,41.177308,-95.797094,345,345,28163-Overland Trail-Pony Creek,345
+S-0117,Walter Scott Energy Center,IA,Iowa,41.176143,-95.834082,345,161,28167-CBEC-Pony Creek,345
+S-0118,Alma,WI,Wisconsin,44.30965,-91.911019,161,69,Alma-Blair Transmission Project,345
+S-0119,Ipava,IL,Illinois,40.342689,-90.317516,345,Unknown,"Skunk River - Ipava, Central Illinois Grid Transformation Program",345
+S-0120,Jump River North,WI,Wisconsin,45.285547,-90.949792,115,115,Western Wisconsin Transmission Connection,345
+S-0121,Sycamore,IA,Iowa,41.671629,-93.677276,345,69,26829-Sycamore-Bondurant,345
+S-0122,Cookstown,NJ,New Jersey,40.06237,-74.549054,230,Unknown,Cookstown - Larrabee 230 kV,230
+S-0123,Metuchen,NJ,New Jersey,40.531393,-74.346146,230,Unknown,Reconductor Metuchen - New Dover 230 kV,230
+S-0124,Thedford,NE,Nebraska,41.980077,-100.512309,115,Unknown,R-Project,345
+S-0125,Lyon County,MN,Minnesota,44.473505,-95.674045,345,Unknown,27220-Brookings County-Lyon County,345
+S-0126,Aldene,NJ,New Jersey,40.656369,-74.285484,230,230,Reconductor Warinanco - Aldene 230 kV,230
+S-0127,Bayway,NJ,New Jersey,40.644595,-74.205949,345,Unknown,Bayway - Federal Square 230 kV,230
+S-0128,Warinanco,NJ,New Jersey,40.64166,-74.233969,230,Unknown,Reconductor Warinanco - Aldene 230 kV,230
+S-0129,Whiting,NJ,New Jersey,39.952131,-74.377869,230,230,Cookstown Whiting 230 kV,230
+S-0130,Cedar Station,NJ,New Jersey,39.690256,-74.261315,230,230,Rebuild Cedar - Oyster Creek 230 kV,230
+S-0131,Jamestown,ND,North Dakota,47.028541,-98.680839,345,Unknown,Jamestown to Ellendale (JETx),345
+S-0132,West Barnstable,MA,Massachusetts,41.685857,-70.350323,345,115,Cape Cod Solution Phase II,345
+S-0133,Maple River,ND,North Dakota,46.917446,-96.873848,345,69,MISO LRTP Tranche 2.1 Portfolio,345
+S-0134,Bison,ND,North Dakota,46.979699,-101.542188,230,230,27669-Nelson Lake-Square Butte East / Bison,230
+S-0135,Blackberry,MO,Missouri,37.332257,-94.609473,345,345,Blackberry - Wolf Creek 345 kV,345
+S-0136,Nelson,IL,Illinois,41.760609,-89.609152,345,138,"Reconductor Nelson - Cordova 345 kV Line, Reconductor ESS H471 - Nelson 345 kV",345
+S-0137,Wayne,IL,Illinois,41.982748,-88.240171,345,138,Byron - Wayne 345 kV Line,345
+S-0138,East Frankfort,IL,Illinois,41.494643,-87.825517,345,138,Reconductor East Frankfort - Crete 345 kV Line,345
+S-0139,Elwood,IL,Illinois,41.438636,-88.115735,345,345,Reconductor Elwood - Goodings Grove 345 kV Line,345
+S-0140,Collins,IL,Illinois,41.352752,-88.347141,765,345,Sub T - Woodford County - Collins & Reynolds,765
+S-0141,Wilton,IL,Illinois,41.398383,-87.952694,765,Unknown,Wilton - Dumont 765 kV Sag Mitigation,765
+S-0142,Plano (765 kV),IL,Illinois,41.683524,-88.47917,765,345,Sugar Creek- Collins,765
+S-0143,Goodings Grove,IL,Illinois,41.624852,-87.932631,345,138,Reconductor Elwood - Goodings Grove 345 kV Line,345
+S-0144,Tollway,IL,Illinois,42.063672,-88.240136,345,138,Mitigate sag limits on Wayne - Tollway 345 kV line,345
+S-0145,Byron,IL,Illinois,42.07405,-89.286667,345,345,Reconductor Wempleton - Byron 345 kV Line,345
+S-0146,Arpin,WI,Wisconsin,44.558003,-89.944551,345,115,Grid Forward Central Wisconsin Transmission Line Project,345
+S-0147,North Appleton,WI,Wisconsin,44.367662,-88.354588,345,138,28116-North Appleton-Fox River,345
+S-0148,Cherry Valley,IL,Illinois,42.216316,-88.975936,345,138,Reconductor Cherry Valley - Garden Prairie 345 kV Line,345
+S-0149,Silver Lake,IL,Illinois,42.254882,-88.250976,345,138,Reconductor Garden Prairie - Silver Lake 345 kV Line,345
+S-0150,Easy Road/ Lee Energy Facility,IL,Illinois,41.827698,-89.40726,345,345,Reconductor Lee County - Byron 345 kV Line,345
+S-0151,Wempleton,IL,Illinois,42.342651,-89.192719,345,Unknown,Reconductor Wempleton - Byron 345 kV Line,345
+S-0152,Arcadian,WI,Wisconsin,43.008741,-88.173342,345,138,Bluemond- Arcadian- Waukesha- Muskego- Elm Road- Racine,345
+S-0153,Stone Lake,WI,Wisconsin,45.898492,-91.520969,345,69,25550-Arrowhead SS-Stone Lake SS,345
+S-0154,East Garden City,NY,New York,40.730336,-73.611032,345,Unknown,Propel NY Energy,345
+S-0155,Sprain Brook,NY,New York,40.957298,-73.856367,345,Unknown,Propel NY Energy,345
+S-0156,Tremont,NY,New York,40.842683,-73.863338,138,138,Propel NY Energy,345
+S-0157,Bismarck,ND,North Dakota,46.813854,-100.72897,230,115,27385-Glenham-Bismarck WAPA,230
+S-0158,Center 345kV Switchyard,ND,North Dakota,47.07619,-101.199282,345,230,North Plains Connector,345
+S-0159,Alexandria,MN,Minnesota,45.847621,-95.405898,345,115,Big Stone South to Alexandria Route Options,345
+S-0160,Glenham,SD,South Dakota,45.534577,-100.225605,230,115,27384-Glenham-Whitlock,230
+S-0161,Hankinson,ND,North Dakota,46.117175,-96.88816,230,42,MISO LRTP Tranche 2.1 JTIQ Lines,345
+S-0162,Bourne Switching Station,MA,Massachusetts,41.766373,-70.558209,115,115,Cape Cod Solution Phase II,345
+S-0163,Vernon VT,VT,Vermont,42.783379,-72.519125,345,115,Reconductor Vernon - Northfield 345kV,345
+S-0164,Arrowhead,MN,Minnesota,46.772146,-92.294427,345,115,"MISO LRTP Tranche 2.1 Portfolio, 25550-Arrowhead SS-Stone Lake SS",345
+S-0165,Pleasant Valley,NY,New York,41.739425,-73.834823,345,345,New York Energy Solution,345
+S-0166,Churchtown,NY,New York,42.193286,-73.742675,115,115,New York Energy Solution,345
+S-0167,Wishek,ND,North Dakota,46.260634,-99.596346,230,42,"27392-Wishek-Napoleon, 27393-Wishek-Merricourt",230
+S-0168,Merricourt,ND,North Dakota,46.213883,-98.753987,Unknown,Unknown,27393-Wishek-Merricourt,230
+S-0169,Ryan,NY,New York,44.890767,-73.985591,230,230,Smart Path Connect,345
+S-0170,Willis,NY,New York,44.889162,-74.118671,230,Unknown,Smart Path Connect,345
+S-0171,Coolidge,VT,Vermont,43.42909,-72.660443,345,115,New England Clean Power Link,320
+S-0172,New Scotland,NY,New York,42.609186,-73.9042,345,Unknown,Central East Energy Connect,345
+S-0173,Riverton 230/115 kV,MN,Minnesota,46.451983,-94.066511,230,69,26410-Riverton-Wing River,230
+S-0174,Wing River,MN,Minnesota,46.387482,-95.024619,230,115,26410-Riverton-Wing River,230
+S-0175,Syosset,NY,New York,40.826427,-73.480161,69,Unknown,Propel NY Energy,345
+S-0176,Ruland Road,NY,New York,40.762451,-73.418108,138,Unknown,Propel NY Energy,345
+S-0177,Larrabee Road,ME,Maine,44.141112,-70.186043,345,115,Merrill Road to Larrabee Road,345
+S-0178,Coopers Mills,ME,Maine,44.296994,-69.556566,345,115,Coopers Mills to Maine Yankee 345 kV line,345
+S-0179,Maine Yankee,ME,Maine,43.953587,-69.695438,345,345,Coopers Mills to Maine Yankee 345 kV line,345
+S-0180,Overland Trail,IA,Iowa,41.198288,-95.797822,345,161,28163-Overland Trail-Pony Creek,345
+S-0181,Colby,IA,Iowa,43.254187,-93.291705,161,161,27311-Bison-Colby,345
+S-0182,Benton,MN,Minnesota,45.568852,-94.038439,345,69,Northland Reliability Project,345
+S-0183,Cammack Rd,IN,Indiana,40.107063,-86.081011,230,230,26747-Tipton West-Cammack Rd SS,230
+S-0184,New Dover,NJ,New Jersey,40.586822,-74.349263,230,230,Reconductor Metuchen - New Dover 230 kV,230
+S-0185,Sayreville (Raritan River),NJ,New Jersey,40.479222,-74.353576,230,230,Reconductor Red Oak - Raritan River A and B 230 kV Lines,230
+S-0186,Red Oak Station,NJ,New Jersey,40.449247,-74.347081,230,230,Reconductor Red Oak - Raritan River A and B 230 kV Lines,230
+S-0187,Federal Square,NJ,New Jersey,40.726577,-74.174614,138,138,Bayway - Federal Square 230 kV,230
+S-0188,South Waterfront,NJ,New Jersey,40.716165,-74.054412,Unknown,Unknown,Hudson - South Waterfront - Add Second 230 kV Underground Cable,230
+S-0189,Essex,NJ,New Jersey,40.738428,-74.120584,230,Unknown,Hudson - Essex 230 kV,230
+S-0190,Cedar Grove,NJ,New Jersey,40.867238,-74.217586,230,230,Jackson Road to Cedar Grove 230 kV Line,230
+S-0191,HVDC B2B Station Hudson,NJ,New Jersey,40.832063,-74.012567,345,230,Hudson - Essex 230 kV,230
+S-0192,Rainey,NY,New York,40.763225,-73.943026,345,138,"Clean Path NY, Brooklyn Clean Energy Hub",345
+S-0193,Farragut,NY,New York,40.705099,-73.984511,345,Unknown,Brooklyn Clean Energy Hub,345
+S-0194,Oyster Creek,NJ,New Jersey,39.813722,-74.209179,230,230,"Rebuild Cedar - Oyster Creek 230 kV, Ocean Wind BL England to Oyster Creek",275
+S-0195,Atlantic,NJ,New Jersey,40.254164,-74.118466,230,230,Oceanview - Atlantic - Larrabee - Smithburg 230 kV Upgrade,230
+S-0196,Oceanview,NJ,New Jersey,40.22099,-74.045889,230,Unknown,Oceanview - Atlantic - Larrabee - Smithburg 230 kV Upgrade,230
+S-0197,Smithburg,NJ,New Jersey,40.201363,-74.360576,500,230,"Oceanview - Atlantic - Larrabee - Smithburg 230 kV Upgrade, Rebuild Larrabee - Smithburg 230 kV, Larrabee - Smithburg 500 kV Line",500
+S-0198,Larrabee,NJ,New Jersey,40.113785,-74.191872,230,Unknown,"Oceanview - Atlantic - Larrabee - Smithburg 230 kV Upgrade, Rebuild Larrabee - Smithburg 230 kV, Larrabee - Smithburg 500 kV Line, Larrabee Collector Station - Larrabee 230 kV",230
+S-0199,Baker Tap,FL,Florida,30.570813,-84.16733,115,115,North Central Florida Upgrade Project,230
+S-0200,Miccosukee Tap,FL,Florida,30.545373,-84.043129,115,115,North Central Florida Upgrade Project,230
+S-0201,Sonnie Tap,FL,Florida,30.521754,-83.282924,115,115,North Central Florida Upgrade Project,230
+S-0202,Aucilla Tap,FL,Florida,30.488859,-83.756304,115,115,North Central Florida Upgrade Project,230
+S-0203,Lloyd Tap,FL,Florida,30.511443,-83.951906,115,115,North Central Florida Upgrade Project,230
+S-0204,Adirondack,NY,New York,43.922062,-75.319968,230,Unknown,Smart Path (Rebuild),345
+S-0205,Chases Lake,NY,New York,43.765308,-75.349263,230,230,Smart Path Connect,345
+S-0206,Sherburne County,MN,Minnesota,45.374852,-93.898066,345,115,"Northland Reliability Project, MN Energy Connection Route Options",345
+S-0207,Middlesex,NJ,New Jersey,40.560811,-74.462171,230,230,Reconductor Lake Nelson - Middlesex 230 kV Line,230
+S-0208,Lake Nelson,NJ,New Jersey,40.552763,-74.452278,230,230,"Reconductor Kilmer - Lake Nelson 230 kV Line, Reconductor Lake Nelson - Middlesex 230 kV Line",230
+S-0209,Kilmer,NJ,New Jersey,40.533555,-74.425294,230,230,Reconductor Kilmer - Lake Nelson 230 kV Line,230
+S-0210,Bluemound,WI,Wisconsin,43.028569,-88.053874,230,Unknown,Bluemond- Arcadian- Waukesha- Muskego- Elm Road- Racine,345
+S-0211,South Fond Du Lac,WI,Wisconsin,43.735043,-88.494525,345,69,South Fond du Lac- Rockdale- Big Bend- Sugar Creek - Kitty Hawk,345
+S-0212,Waukesha,WI,Wisconsin,43.027966,-88.22431,138,138,Bluemond- Arcadian- Waukesha- Muskego- Elm Road- Racine,345
+S-0213,Sugar Creek,WI,Wisconsin,42.702893,-88.552832,138,138,"South Fond du Lac- Rockdale- Big Bend- Sugar Creek - Kitty Hawk, Bell Center–Columbia–Sugar Creek–IL/WI State Line 765 kV",345
+S-0214,Fraser,NY,New York,42.255531,-74.997745,345,115,Clean Path NY,345
+S-0215,Moses (St. Lawrence - FDR),NY,New York,45.004081,-74.804415,230,115,Smart Path (Rebuild),345
+S-0216,Racine,WI,Wisconsin,42.705982,-87.867862,345,138,Bluemond- Arcadian- Waukesha- Muskego- Elm Road- Racine,345
+S-0217,Columbia,WI,Wisconsin,43.48624,-89.417039,345,69,"Grid Forward Central Wisconsin Transmission Line Project, 28078-Columbia-North Madison, Bell Center–Columbia–Sugar Creek–IL/WI State Line 765 kV",345
+S-0218,Eden,WI,Wisconsin,42.967952,-90.42257,138,69,N LaCrosse-N Madison-Cardinal-Hickory Creek 345 kV,345
+S-0219,Rockdale,WI,Wisconsin,42.977459,-89.04868,138,138,South Fond du Lac- Rockdale- Big Bend- Sugar Creek - Kitty Hawk,345
+S-0220,North Madison,WI,Wisconsin,43.255687,-89.419579,69,Unknown,"Proposed MVP Portfolio 1: N LaCrosse-N Madison-Cardinal-Hickory Creek 345 kV, 28078-Columbia-North Madison",345
+S-0221,Waneeta,PA,Pennsylvania,40.008753,-75.114966,230,69,Richmond - Waneeta 230 kV,230
+S-0222,Richmond,PA,Pennsylvania,39.984672,-75.077332,230,230,Richmond - Waneeta 230 kV,230
+S-0223,New Freedom,NJ,New Jersey,39.741,-74.962756,500,230,Rebuild Cardiff - New Freedom 230 kV,230
+S-0224,Whitlock,SD,South Dakota,45.009714,-100.228334,230,230,27384-Glenham-Whitlock,230
+S-0225,Tremval,WI,Wisconsin,44.293329,-91.255075,161,69,Alma-Blair Transmission Project,345
+S-0226,Brownstown,MI,Michigan,42.116047,-83.248786,345,120,23965-Brownstown-Monroe,345
+S-0227,Porter,NY,New York,43.153005,-75.224679,230,115,Smart Path Connect,345
+S-0228,Edic,NY,New York,43.157566,-75.22712,345,115,"Smart Path Connect, Central East Energy Connect",345
+S-0229,Whitpain,PA,Pennsylvania,40.171544,-75.310013,500,230,Rebuild Whitpain – Buxmont 230 kV Line,230
+S-0230,Linwood,PA,Pennsylvania,39.81803,-75.433147,230,Unknown,Rebuild Edge Moor - Linwood 230 kV,230
+S-0231,Cardiff,NJ,New Jersey,39.428338,-74.620524,230,Unknown,Rebuild Cardiff - New Freedom 230 kV,230
+S-0232,North Rochester,MN,Minnesota,44.223046,-92.658868,345,161,Mankato-Mississippi River Transmission Line Project,345
+S-0233,Buxmont,PA,Pennsylvania,40.348408,-75.341207,230,Unknown,Rebuild Whitpain – Buxmont 230 kV Line,230
+S-0234,Martins Creek,PA,Pennsylvania,40.800382,-75.108576,230,230,Martins Creek - Monroe 230 kV Line,230
+S-0235,Wilmarth,MN,Minnesota,44.198775,-94.008386,345,69,Mankato-Mississippi River Transmission Project Options,345
+S-0236,Lehigh,IA,Iowa,42.371388,-94.116499,345,345,Lehigh - Marshalltown - Franklin North - Montezuma,345
+S-0237,Webster,IA,Iowa,42.566109,-94.092199,345,161,Webster - Franklin - Marshalltown - Morgan Valley,345
+S-0238,Raun,IA,Iowa,42.329359,-96.365463,345,161,"MISO LRTP Tranche 2.1 JTIQ Lines, 27451-Raun-Remsen",345
+S-0239,Milan,MI,Michigan,42.111261,-83.653196,345,120,27785-Majestic-Milan,345
+S-0240,Monroe,MI,Michigan,41.91939,-83.385777,120,120,23965-Brownstown-Monroe,345
+S-0241,Wayne,MI,Michigan,42.310105,-83.465152,345,Unknown,Nelson Road to Oneida,345
+S-0242,Coventry,MI,Michigan,42.353148,-83.623089,345,120,Nelson Road to Oneida,345
+S-0243,Majestic,MI,Michigan,42.377935,-83.980846,345,138,"Nelson Road to Oneida, 27785-Majestic-Milan",345
+S-0244,Marcy,NY,New York,43.178714,-75.222526,765,345,Smart Path Connect,345
+S-0245,Rapson,MI,Michigan,43.829527,-82.869143,345,120,27777-Greenwood-Rapson,345
+S-0246,Tompkins,MI,Michigan,42.415447,-84.485515,345,138,"Nelson Road to Oneida, Helix - Tompkins",345
+S-0247,Tittabawassee,MI,Michigan,43.573842,-84.181408,345,138,Ludington- Denver- Tittabawassee & Nelson Road,345
+S-0248,Nelson Road,MI,Michigan,43.21083,-84.830109,345,345,LRTP-18: Oneida – Nelson Rd.,345
+S-0249,Oneida,MI,Michigan,42.685617,-84.78513,345,138,"LRTP-18: Oneida – Nelson Rd., Battle Creek - Oneida",345
+S-0250,Ludington,MI,Michigan,43.889938,-86.441407,345,345,Ludington- Denver- Tittabawassee & Nelson Road,345
+S-0251,Benton Harbor,MI,Michigan,42.1891,-86.334941,345,138,Reconductor or Rebuild Benton Harbor - Segreto 345 kV,345
+S-0252,Erie West,PA,Pennsylvania,41.934355,-80.384387,345,115,Lake Erie Connector,345
+S-0253,Burches Hill,MD,Maryland,38.738383,-76.870874,500,230,N1085N - Burches Hill 230 kV,230
+S-0254,Quad Cities,IL,Illinois,41.726519,-90.30627,345,345,Reconductor Quad Cities - ESS H471 345 kV,345
+S-0255,Montezuma Switching Station,IA,Iowa,41.61047,-92.5636,345,345,Lehigh- Marshalltown- Franklin North & Montezuma,345
+S-0256,Bondurant,IA,Iowa,41.674973,-93.497757,345,161,26829-Sycamore-Bondurant,345
+S-0257,High Ridge,MD,Maryland,39.140803,-76.872811,230,115,North Delta-High Ridge 500 kV Line,500
+S-0258,Northwest,MD,Maryland,39.463562,-76.840394,230,115,Reconductor Conastone - Northwest 230 kV Lines,230
+S-0259,Elmont,VA,Virginia,37.697796,-77.484711,500,Unknown,"Rebuild Ladysmith to Elmont 500 kV Line, Rebuild Elmont to Chickahominy 500 kV Line, Elmont - Ladysmith 230 kV Line, Elmont to Chickahominy 230 kV Line, Elmont - Kraken 500 kV",500
+S-0260,Fredericksburg,VA,Virginia,38.304422,-77.483245,230,115,Fredericksburg-Possum Point Upgrade and Rebuild,230
+S-0261,Brambleton,VA,Virginia,38.963558,-77.549042,500,230,Reconductor Brambleton - Evergreen Mills 230 kV Line,230
+S-0262,Pleasant View,VA,Virginia,39.075908,-77.528822,230,230,Pleasant View - Structure 203/15,230
+S-0263,Cannon Branch,VA,Virginia,38.744048,-77.503012,230,115,"Cannon Branch - Winters Branch 230 kV Line Extension, Clifton-Winters Branch Rebuild, Liberty-Cannon Branch Upgrade",230
+S-0264,Greenway,VA,Virginia,39.00405,-77.479598,230,Unknown,Eastern Loudoun County Reconductor Projects,230
+S-0265,Doubs,MD,Maryland,39.296426,-77.514762,500,138,"Rebuild Doubs - Goose Creek 500 kV Line, Conastone - Doubs 500 kV, Rebuild Doubs-Dickerson 230 kV, Rebuild Doubs - Aqueduct 230 kV",500
+S-0266,Enterprise,VA,Virginia,39.002224,-77.480391,230,230,Eastern Loudoun County Reconductor Projects,230
+S-0267,Shellhorn,VA,Virginia,38.998881,-77.471994,230,230,Eastern Loudoun County Reconductor Projects,230
+S-0268,Ladysmith,VA,Virginia,38.046653,-77.550276,500,230,"Rebuild Ladysmith to Elmont 500 kV Line, Elmont - Ladysmith 230 kV Line",500
+S-0269,Bristers,VA,Virginia,38.563121,-77.595541,500,115,Rebuild Bristers - Morrisville 500 kV Line,500
+S-0270,Gainesville,VA,Virginia,38.790845,-77.565172,230,115,"Reconductor Railroad DP - Gainesville 230 kV Line, Reconductor/Rebuild Gainesville - Wheeler 230 kV Line, Reconductor Elk Run - Gainesville 230 kV Line, Rollins Ford - Gainseville 230 kV",230
+S-0271,Hope Creek,NJ,New Jersey,39.467452,-75.533916,500,500,Upgrade Silver Run - Hope Creek 230 kV Line,230
+S-0272,Conastone,MD,Maryland,39.687418,-76.540393,500,230,"Rebuild Peach Bottom - Conastone 500 kV, Reconductor Conastone - Northwest 230 kV Lines, Conastone - Doubs 500 kV",500
+S-0273,Charlottesville,VA,Virginia,38.041593,-78.457822,230,230,"Rebuild Charlottesville - Hydraulic Rd - Barracks Road - Crozet - Dooms 230 kV Line, Rebuild Charlottesville - Proffit 230 kV Line, Charlottesville - Gordonsville 230 kV",230
+S-0274,Proffit,VA,Virginia,38.118576,-78.415379,230,230,Rebuild Charlottesville - Proffit 230 kV Line,230
+S-0275,Hollymeade,VA,Virginia,38.12734,-78.433773,230,230,Rebuild Hollymeade - Cash's Corner 230 kV Line,230
+S-0276,Mount Storm,WV,West Virginia,39.202995,-79.271577,500,115,Mt. Storm - Valley 500 kV Rebuild,500
+S-0277,Homer City,PA,Pennsylvania,40.517158,-79.19325,345,230,Rebuild and reconductor Armstrong - Homer City 345 kV Line,345
+S-0278,South Manheim,PA,Pennsylvania,40.142959,-76.372832,230,69,Rebuild Brunner Island - South Manheim 230 kV Line,230
+S-0279,Peach Bottom,PA,Pennsylvania,39.752831,-76.267212,500,230,Rebuild Peach Bottom - Conastone 500 kV,500
+S-0280,Ox,VA,Virginia,38.723786,-77.288517,500,230,"Rebuild Occoquan - Ox 230 kV Line, Rebuild Clifton - Ox 230 kV Line, Cloverhill to Ox 230 kV Line",230
+S-0281,Clifton,VA,Virginia,38.781209,-77.398807,500,230,"Rebuild Clifton - Ox 230 kV Line, Clifton-Winters Branch Rebuild",230
+S-0282,Beaumeade,VA,Virginia,39.026158,-77.456401,230,Unknown,Beaumeade-Buttermilk Reconductor,230
+S-0283,BECO,VA,Virginia,39.024558,-77.437133,230,230,"Reconductor Paragon Park - BECO 230 kV Line, BECO to DTC 230 kV",230
+S-0284,Clark,VA,Virginia,38.907182,-77.27127,230,230,Clark-Idylwood Reconductor,230
+S-0285,Woodbridge,VA,Virginia,38.654745,-77.282509,230,230,Woodbridge-Occoquan Reconductor,230
+S-0286,Lindendale D.P. (Minnieville),VA,Virginia,38.65267,-77.348349,115,115,Bristers-Minnieville Reconductor,230
+S-0287,Harrisonburg,VA,Virginia,38.411324,-78.882281,230,Unknown,Dooms - Harrisonburg Rebuild,230
+S-0288,Mayo,NC,North Carolina,36.524919,-78.888554,500,500,Mayo - Person Transmission Line Upgrade Project,500
+S-0289,Suffolk,VA,Virginia,36.710322,-76.580469,500,Unknown,Rebuild Earleys - Suffolk 230kV Line,230
+S-0290,Yadkin,VA,Virginia,36.762979,-76.354715,500,Unknown,"Rebuild Septa - Yadkin 500 kV, Yadkin-Fentress Rebuild",500
+S-0291,Fentress,VA,Virginia,36.690454,-76.190029,500,115,Yadkin-Fentress Rebuild,500
+S-0292,Greenwich,VA,Virginia,36.841766,-76.17498,230,115,Greenwich - Thalia - Lynnhaven 230 kV Rebuild,230
+S-0293,Thalia,VA,Virginia,36.83951,-76.134445,230,230,Greenwich - Thalia - Lynnhaven 230 kV Rebuild,230
+S-0294,Lynnhaven,VA,Virginia,36.838375,-76.075256,230,230,Greenwich - Thalia - Lynnhaven 230 kV Rebuild,230
+S-0295,Shawboro,NC,North Carolina,36.384856,-76.08006,230,Unknown,Rebuild Shawboro – Elizabeth City 230 kV Line,230
+S-0296,Erwin,NC,North Carolina,35.336798,-78.658565,230,115,Erwin - Fayetteville Line Upgrade Project,230
+S-0297,Fayetteville,NC,North Carolina,35.020422,-78.916153,230,Unknown,Erwin - Fayetteville Line Upgrade Project,230
+S-0298,Brunner Island,PA,Pennsylvania,40.097943,-76.694254,230,230,Rebuild Brunner Island - South Manheim 230 kV Line,230
+S-0299,Clover,VA,Virginia,36.866211,-78.706544,500,230,Clover-Chase City Rebuild,230
+S-0300,Dooms,VA,Virginia,38.107035,-78.849097,500,115,"Rebuild Charlottesville - Hydraulic Rd - Barracks Road - Crozet - Dooms 230 kV Line, Dooms - Harrisonburg Rebuild",230
+S-0301,West Staunton,VA,Virginia,38.193766,-79.113841,230,230,Staunton-Valley 230 kV Rebuild,230
+S-0302,Person,NC,North Carolina,36.481026,-79.051711,500,230,Mayo - Person Transmission Line Upgrade Project,500
+S-0303,Joshua Falls,VA,Virginia,37.425394,-79.036212,765,138,Joshua Falls - Yeat 765 kV Line,765
+S-0304,Staunton,VA,Virginia,38.147819,-79.06616,115,115,Staunton-Valley 230 kV Rebuild,230
+S-0305,Frackville,PA,Pennsylvania,40.77744,-76.245384,230,Unknown,"Rebuild Eldred - Frackville 230 kV Line, Frackville-Columbia 230 kV",230
+S-0306,Gordonsville,VA,Virginia,38.126548,-78.221549,230,115,"Rebuild Cash's Corner - Gordonsville 230 kV Line, Charlottesville - Gordonsville 230 kV",230
+S-0307,Stonewall,VA,Virginia,39.272976,-78.083085,138,138,"Rebuild Stonewall - Millville 138 kV with 500 kV Overbuild, Rebuild Gore - Stonewall 138 kV with 500 kV Overbuild",500
+S-0308,Chickahominy,VA,Virginia,37.437376,-77.158523,500,230,"Rebuild Elmont to Chickahominy 500 kV Line, Elmont to Chickahominy 230 kV Line",500
+S-0309,White Oak,VA,Virginia,37.48612,-77.247066,230,230,White Oak 230 kV Line,230
+S-0310,Occoquan,VA,Virginia,38.713156,-77.269064,230,230,"Rebuild Occoquan - Ox 230 kV Line, Woodbridge-Occoquan Reconductor",230
+S-0311,Idylwood,VA,Virginia,38.885642,-77.209608,230,230,"Clark-Idylwood Reconductor, Idylwood-Tysons 230 kV Project",230
+S-0312,Tysons,VA,Virginia,38.932028,-77.236891,230,230,"Tysons - Springhill 230 kV, Idylwood-Tysons 230 kV Project",230
+S-0313,West End,NC,North Carolina,35.219337,-79.53059,230,Unknown,Cape Fear - West End Line Rebuild,230
+S-0314,Valley,VA,Virginia,38.314342,-78.970811,500,230,"Staunton-Valley 230 kV Rebuild, Mt. Storm - Valley 500 kV Rebuild",500
+S-0315,Olive,IN,Indiana,41.706478,-86.483772,345,138,Rebuild/Reconductor Olive - University Park 345 kV,345
+S-0316,Chesterfield,VA,Virginia,37.381197,-77.387192,230,Unknown,Reconductor Chesterfield - Tyler 230 kV Line,230
+S-0317,Tyler,VA,Virginia,37.351091,-77.395239,230,Unknown,"Reconductor Chesterfield - Tyler 230 kV Line, Reconductor Tyler - Poe 230 kV Line",230
+S-0318,St. Johns,VA,Virginia,38.031145,-77.427656,115,115,Ladysmith - Lee's Hill 230 kV Project,230
+S-0319,Cranes Corner,VA,Virginia,38.353643,-77.455863,230,230,Rebuild Cranes Corner-Stafford 230 kV Line,230
+S-0320,Stafford,VA,Virginia,38.446102,-77.389198,230,230,Rebuild Cranes Corner-Stafford 230 kV Line,230
+S-0321,Midlothian,VA,Virginia,37.502584,-77.704052,500,230,"Rebuild Midlothian - North Anna 500 kV Line, Reconductor Midlothian - Trabue 230 kV",500
+S-0322,North Anna,VA,Virginia,38.061292,-77.797216,500,230,Rebuild Midlothian - North Anna 500 kV Line,500
+S-0323,Morrisville,VA,Virginia,38.501088,-77.708789,500,230,"Morrisville to Vint Hill 500 kV Line, Rebuild Bristers - Morrisville 500 kV Line, Rebuild Loudon - Morrisville 500 kV Line, Morrisville - AE1-044 230 kV",500
+S-0324,Remington CT,VA,Virginia,38.543852,-77.769595,230,115,Reconductor Remington CT - Elk Run - Gainesville 230 kV Line,230
+S-0325,Millville,WV,West Virginia,39.274074,-77.786859,Unknown,Unknown,"Rebuild Millville - Doubs 138 kV with 500kV Overbuild, Rebuild Stonewall - Millville 138 kV with 500 kV Overbuild",500
+S-0326,Septa,VA,Virginia,37.014744,-76.738663,500,500,Rebuild Septa - Yadkin 500 kV,500
+S-0327,Lanexa,VA,Virginia,37.420167,-76.91199,230,115,Rebuild Lanexa - Northern Neck 230 kV Line,230
+S-0328,Lightfoot,VA,Virginia,37.328231,-76.75711,230,115,Waller – Lightfoot – Skiffes Creek,230
+S-0329,Peninsula,VA,Virginia,37.091458,-76.38881,230,115,Langley 230 kV Substation Project,230
+S-0330,Dunnsville,VA,Virginia,37.852779,-76.812639,230,230,Rebuild Lanexa - Northern Neck 230 kV Line,230
+S-0331,Northern Neck,VA,Virginia,37.948478,-76.71204,230,Unknown,Rebuild Lanexa - Northern Neck 230 kV Line,230
+S-0332,King's Mill,VA,Virginia,37.233688,-76.630942,230,115,Rebuild Skiffes Creek - King's Mill 230 kV Line,230
+S-0333,Chase City,VA,Virginia,36.80906,-78.465552,115,115,"Chase City - Cloud 230 kV, Clover-Chase City Rebuild",230
+S-0334,Clubhouse,VA,Virginia,36.718195,-77.584998,230,115,Clubhouse to Lakeview 230 kV Rebuild,230
+S-0335,Earleys,NC,North Carolina,36.256403,-77.079404,230,Unknown,Rebuild Earleys - Suffolk 230 kV Line,230
+S-0336,Reams,VA,Virginia,37.089195,-77.425175,115,115,Carson - Reams Rebuild,230
+S-0337,Poe,VA,Virginia,37.199954,-77.359091,230,115,"Reconductor Carson - Poe 230 kV Line, Reconductor Poe - Prince George Line to 230 kV, Reconductor Tyler - Poe 230 kV Line",230
+S-0338,Locks,VA,Virginia,37.221977,-77.443565,230,115,Carson - Locks Rebuild,230
+S-0339,Carson,VA,Virginia,37.085388,-77.405876,500,230,"Reconductor Carson - Poe 230 kV Line, Carson - Locks Rebuild, Carson - Reams Rebuild",230
+S-0340,Greenville,NC,North Carolina,35.625485,-77.365534,230,Unknown,Greenville - Everetts 230 kV,230
+S-0341,Everetts,NC,North Carolina,35.838238,-77.106265,230,Unknown,Greenville - Everetts 230 kV,230
+S-0342,Tap148313,SC,South Carolina,34.646058,-79.857371,230,230,Robinson Plant - Rockingham Line Upgrade,230
+S-0343,Rockingham,NC,North Carolina,34.903755,-79.75831,230,Unknown,Robinson Plant - Rockingham Line Upgrade,230
+S-0344,Gentleman,NE,Nebraska,41.08105,-101.147249,345,230,R-Project,345
+S-0345,Babcock,IN,Indiana,41.534272,-87.102753,345,138,Sugar Creek- Collins,765
+S-0346,Hiple,IN,Indiana,41.557746,-85.596656,345,138,"Morrison - Reynolds - Burr Oak - Leesburg - Hiple, Hiple to IN/MI Border Transmission Line",345
+S-0347,Kathleen,FL,Florida,28.226723,-82.026802,500,230,Osprey to Kathleen 230 kV Line,230
+S-0348,Brooksville West,FL,Florida,28.527853,-82.500611,230,115,Brooksville West – Mondon Hill – Bushnell East,230
+S-0349,Ross Prairie,FL,Florida,29.005192,-82.262092,230,69,Ross Praire to Shaw Transmission Project,230
+S-0350,Sooner,OK,Oklahoma,36.447858,-97.05569,345,138,Sooner - Wekiwa 345 kV New Line,345
+S-0351,Sunnyside,OK,Oklahoma,34.185435,-97.241534,345,138,"Sunnyside 345kV GEN-2017-166 Interconnection Costs, Lone Grove - Kiowa Transmission Line Rebuild Project, Lawton - Lone Grove Transmission Rebuild Project",345
+S-0352,Fairport,MO,Missouri,40.00642,-94.343012,345,161,Northern Missouri Grid Transformation Program,345
+S-0353,Lutesville,MO,Missouri,37.258285,-89.835804,345,345,24680-Lutesville-St. Francois,345
+S-0354,Wolf Creek,KS,Kansas,38.243155,-95.687443,345,69,Blackberry - Wolf Creek 345 kV,345
+S-0355,Hoyt,KS,Kansas,39.275415,-95.679154,345,Unknown,MISO LRTP Tranche 2.1 JTIQ Lines,345
+S-0356,St Francois,MO,Missouri,37.946937,-90.455213,345,138,24680-Lutesville-St. Francois,345
+S-0357,Franks,MO,Missouri,37.951545,-92.029857,345,161,24717-Bland-Franks,345
+S-0358,Bland,MO,Missouri,38.385731,-91.494403,345,345,24717-Bland-Franks,345
+S-0359,Woodring,OK,Oklahoma,36.330453,-97.789913,345,138,Woodring 345kV Interconnection Expansion (DISIS-2017-002),345
+S-0360,Sioux,MO,Missouri,38.915518,-90.293374,345,138,Maywood - Belleau - MRPD - Sioux - Bugle,345
+S-0361,Arcadia,OK,Oklahoma,35.689939,-97.315531,345,138,Arcadia 345kV Interconnection Expansion (DISIS-2017-002),345
+S-0362,Clarksville,OK,Oklahoma,35.815389,-95.549404,345,345,Clarksville 345kV Switching Station GEN-2017-140 Interconnection Costs,345
+S-0363,Lawton East Side,OK,Oklahoma,34.603768,-98.314725,345,69,Lawton - Lone Grove Transmission Rebuild Project,345
+S-0364,Draper,OK,Oklahoma,35.331981,-97.329065,345,138,Minco - Pleasant Valley - Draper 345 kV,345
+S-0365,Wekiwa,OK,Oklahoma,36.160112,-96.223601,345,138,Sooner - Wekiwa 345 kV New Line,345
+S-0366,Pittsburg,OK,Oklahoma,34.692656,-95.922255,345,345,Lone Grove - Kiowa Transmission Line Rebuild Project,345
+S-0367,Minco,OK,Oklahoma,35.30064,-98.02714,345,345,"Minco 345kV Interconnection Expansion (DISIS-2017-002), Minco - Pleasant Valley - Draper 345 kV",345
+S-0368,Bayou LaButte,LA,Louisiana,30.25679,-91.168152,500,230,27767-Wise-Bayou Labutte,230
+S-0369,Delmont,LA,Louisiana,30.494652,-91.162743,230,Unknown,22204-Delmont-Hazel,230
+S-0370,Hazel,LA,Louisiana,30.492617,-91.134801,230,230,22204-Delmont-Hazel,230
+S-0371,Willow Glen (230kV),LA,Louisiana,30.276948,-91.110302,230,138,"27914-Willow Glen-Conway - Audubon, Willow Glen - Point Pleasant 230 kV Upgrade",230
+S-0372,Waterford 230kV,LA,Louisiana,29.985809,-90.473865,230,230,28275-Commodore-Waterford,230
+S-0373,Williston,FL,Florida,29.403062,-82.450186,69,69,"Marion - Levy - Alachua Reliability Projects, Williston to Bronson Project",230
+S-0374,R.P. Mone,OH,Ohio,40.928519,-84.739186,345,345,Rebuild Allen - R.P. Mone 345kV Line,345
+S-0375,Piedmont,FL,Florida,28.672882,-81.455208,230,69,Piedmont-Wekiva Transmission Reliability Enhancement Project,230
+S-0376,Archer,FL,Florida,29.557945,-82.505377,230,69,"Marion - Levy - Alachua Reliability Projects, Archer Reliability Upgrade Projects",230
+S-0377,Sorenson,IN,Indiana,40.983448,-85.341756,765,138,"Greentown - Sorenson - Lulu, Rebuild Sorenson - Desoto 345 kV Line",765
+S-0378,Desoto,IN,Indiana,40.236771,-85.305672,345,138,Rebuild Sorenson - Desoto 345 kV Line,345
+S-0379,Batesville,IN,Indiana,39.266858,-85.218805,345,138,Southeast Indiana,345
+S-0380,Greensboro,IN,Indiana,39.88195,-85.459,345,138,Southeast Indiana,345
+S-0381,Gwynneville,IN,Indiana,39.612988,-85.653496,345,69,Southeast Indiana,345
+S-0382,Crystal River,FL,Florida,28.960431,-82.698887,500,230,Crystal River - Bronson Transmission Line Project,230
+S-0383,Newberry / Haile Tap,FL,Florida,29.669628,-82.594321,230,Unknown,Archer Reliability Upgrade Projects,230
+S-0384,Silver Springs North,FL,Florida,29.229345,-82.078411,230,Unknown,Marion - Levy - Alachua Reliability Projects,230
+S-0385,Red Oak Electric / Shaw,FL,Florida,29.145445,-82.183735,Unknown,Unknown,Ross Praire to Shaw Transmission Project,230
+S-0386,Largo,FL,Florida,27.913561,-82.7728,230,Unknown,Disston to Largo Transmission Upgrade,230
+S-0387,Magnolia Ranch North,FL,Florida,28.41648,-81.21391,230,230,Orlando St. Cloud Resiliency Connection,230
+S-0388,Sweatt,FL,Florida,27.448378,-80.793195,Unknown,Unknown,Sweatt-Whidden Transmission Line,230
+S-0389,Whidden,FL,Florida,27.224525,-81.809053,230,230,Sweatt-Whidden Transmission Line,230
+S-0390,Bixby,OH,Ohio,39.871308,-82.900249,345,Unknown,Rebuild Conesville - Bixby 345 kV,345
+S-0391,Basinger,FL,Florida,27.389776,-81.029694,Unknown,Unknown,Sweatt-Whidden Transmission Line,230
+S-0392,Bushnell East,FL,Florida,28.671774,-82.099225,69,69,Brooksville West – Mondon Hill – Bushnell East,230
+S-0393,Drifton,FL,Florida,30.495495,-83.842958,115,69,North Central Florida Upgrade Project,230
+S-0394,Madison County,IA,Iowa,41.336205,-93.908638,345,345,MISO LRTP Tranche 1 Portfolio,345
+S-0395,Sub T,IA,Iowa,41.334759,-91.555123,345,345,East Adair- Marshalltown- Sub T,765
+S-0396,Ottumwa Generation Station,IA,Iowa,41.092841,-92.554745,345,161,The Ottumwa-Skunk River Project,345
+S-0397,Thomas Hill Station,MO,Missouri,39.544774,-92.64087,345,161,Northern Missouri Grid Transformation Program,345
+S-0398,Leesburg,IN,Indiana,41.336545,-85.901024,345,138,MISO LRTP Tranche 1 Portfolio,345
+S-0399,Greentown,IN,Indiana,40.476532,-85.916353,138,138,"Greentown - Sorenson - Lulu, Greentown - Teddy 765 kV",765
+S-0400,Dumont,IN,Indiana,41.523479,-86.360451,765,345,Wilton - Dumont 765 kV Sag Mitigation,765
+S-0401,Burr Oak,IN,Indiana,41.258015,-86.422549,345,138,MISO LRTP Tranche 1 Portfolio,345
+S-0402,Whitestown,IN,Indiana,39.98241,-86.306387,345,69,27013-DEI Whitestown-DEI Hortonville,345
+S-0403,West Frankfort East,IL,Illinois,37.87857,-88.849268,345,138,26888-Mt Vernon West-West Frankfort East,345
+S-0404,West Mount Vernon,IL,Illinois,38.333413,-88.968919,345,Unknown,"26888-Mt Vernon West-West Frankfort East, 26878-Mount Vernon-Xenia",345
+S-0405,Morrison,IN,Indiana,40.768605,-87.490515,138,138,Central Illinois Grid Transformation Program,345
+S-0406,Clinton Station,IL,Illinois,40.174172,-88.83158,345,138,"26770-Clinton-Goose Creek, 26769-Clinton-Oreana",345
+S-0407,Sidney,IL,Illinois,40.023623,-88.056092,345,138,Central Illinois Grid Transformation Program,345
+S-0408,Coffeen N,IL,Illinois,39.063106,-89.400147,345,138,26874-Coffeen North-Roxford,345
+S-0409,Kincaid Station,IL,Illinois,39.593422,-89.496223,345,345,Rebuild Kincaid - Pana 345 kV,345
+S-0410,Dresden Station,IL,Illinois,41.391038,-88.274893,345,Unknown,Upgrade R78 - Dresden 345 kV,345
+S-0411,St. John,IN,Indiana,41.450974,-87.398987,345,138,6841-Schahfer-St. John,345
+S-0412,Wolf Creek,MS,Mississippi,33.289435,-89.421611,500,500,25767-Choctaw-Wolf Creek,500
+S-0413,Tipton West,IN,Indiana,40.276138,-86.091882,230,230,26747-Tipton West-Cammack Rd SS,230
+S-0414,Hortonville,IN,Indiana,40.094113,-86.1664,345,69,27013-DEI Whitestown-DEI Hortonville,345
+S-0415,John Amos,WV,West Virginia,38.473711,-81.829438,765,Unknown,John Amos to Welton Spring 765 kV line,765
+S-0416,Conesville Station,OH,Ohio,40.183693,-81.878178,345,138,"Rebuild Conesville - Bixby 345 kV, Conesville - Corridor 345 kV, Guernsey - Conesville 765 kV, Conesville - West Millersport 765 kV",345
+S-0417,Reynolds,IN,Indiana,40.771721,-86.867896,345,Unknown,MISO LRTP Tranche 1 Portfolio,345
+S-0418,Schahfer Station,IN,Indiana,41.22048,-87.024151,345,138,"Burr Oak - Schahfer, 26841-Schahfer-St. John",345
+S-0419,NUCOR,IN,Indiana,39.972139,-86.831746,345,345,27620-Cayuga Gen. Sta.-Nucor,345
+S-0420,Craggy,NC,North Carolina,35.643181,-82.607562,230,115,Craggy - Enka Reliability Project,230
+S-0421,Enka,NC,North Carolina,35.537634,-82.635919,115,115,Craggy - Enka Reliability Project,230
+S-0422,Ohio Central,OH,Ohio,40.096976,-82.018483,345,138,Rebuild Conesville - Bixby 345 kV,345
+S-0423,Sporn,WV,West Virginia,38.961796,-81.92961,345,Unknown,Sporn - Mercers Bottom 345 kV Line,345
+S-0424,Petersburg Station,IN,Indiana,38.527368,-87.249448,345,Unknown,"Southwest Indiana-Kentucky, 27626-Petersburg-R1011",345
+S-0425,Duff,IN,Indiana,38.311594,-87.023962,345,138,Southwest Indiana-Kentucky,345
+S-0426,Bison,ND,North Dakota,46.950744,-97.075941,345,345,Bison - Alexandria,345
+S-0427,Jackson Road,NJ,New Jersey,40.906777,-74.245076,230,230,Jackson Road to Cedar Grove 230 kV Line,230
+S-0428,Liberty,VA,Virginia,38.77464,-77.533751,230,115,"Reconductor Liberty - Railroad 230 kV Line, Reconductor Pioneer - Liberty 230 kV, Liberty-Cannon Branch Upgrade",230
+S-0429,Railroad DP,VA,Virginia,38.777277,-77.535702,230,230,"Reconductor Liberty - Railroad DP 230 kV Line, Reconductor Railroad DP - Gainesville 230 kV Line",230
+S-0430,Auburn,NE,Nebraska,40.387878,-95.846335,69,69,MISO LRTP Tranche 2.1 JTIQ Lines,345
+S-0431,Goose Creek,VA,Virginia,39.075509,-77.531464,500,Unknown,"Rebuild Doubs - Goose Creek 500 kV Line, Aspen - Goose Creek 500 kV Line",500
+S-0432,Loudon,VA,Virginia,38.894132,-77.564547,500,500,Rebuild Loudon - Morrisville 500 kV Line,500
+S-0433,Briggs Road,WI,Wisconsin,43.953252,-91.282497,345,69,Proposed MVP Portfolio 1: N LaCrosse-N Madison-Cardinal-Hickory Creek 345 kV,345
+S-0434,Hampton,MN,Minnesota,44.638434,-92.996695,345,345,"Pleasant Valley- North Rochester- Hampton Corner, 27294-Hampton Corner-Helena",345
+S-0435,Helena,MN,Minnesota,44.555002,-93.656826,345,345,27294-Hampton Corner-Helena,345
+S-0436,Fargo 345 kV,IL,Illinois,40.784896,-89.700347,345,138,Woodford County - Fargo & Radbourn,345
+S-0437,Maple Ridge,IL,Illinois,40.594706,-89.761836,345,345,Central Illinois Grid Transformation Program,345
+S-0438,Maywood,MO,Missouri,39.836773,-91.594942,345,345,"Northern Missouri Grid Transformation Program, Maywood - Belleau - MRPD - Sioux - Bugle",345
+S-0439,Pana,IL,Illinois,39.411645,-89.104706,345,138,Rebuild Kincaid - Pana 345 kV,345
+S-0440,Yardley Ridge,VA,Virginia,38.950182,-77.518635,230,230,Reconductor Cabin Run to Yardley Ridge 230 kV Line,230
+S-0441,Poland Road,VA,Virginia,38.917516,-77.491736,230,230,Aviator 230 kV Project,229
+S-0442,Fox River,WI,Wisconsin,43.966306,-88.949773,69,69,28116-North Appleton-Fox River,345
+S-0443,Skiffes Creek Switching Station,VA,Virginia,37.216146,-76.607956,500,115,"Rebuild Skiffes Creek - King's Mill 230 kV Line, Waller – Lightfoot – Skiffes Creek",230
+S-0444,Buffalo Flats,KS,Kansas,37.712019,-97.668526,345,345,"Buffalo Flats 345kV Interconnection Expansion (DISIS-2017-002), Buffalo Flats - Delaware 345 kV",345
+S-0445,Okatie,SC,South Carolina,32.333704,-81.032555,230,Unknown,"Jasper - Okatie 230 kV, Okatie - Riverport 230 kV",230
+S-0446,Kittyhawk,WI,Wisconsin,42.578867,-89.044058,345,345,South Fond du Lac- Rockdale- Big Bend- Sugar Creek - Kitty Hawk,345
+S-0447,Terry Road,OK,Oklahoma,34.429605,-97.900649,345,Unknown,Lawton - Lone Grove Transmission Rebuild Project,345
+S-0448,Segreto,MI,Michigan,42.316963,-86.293123,345,Unknown,Reconductor or Rebuild Benton Harbor - Segreto 345 kV,345
+S-0449,Hamilton Solar,FL,Florida,30.442726,-83.180835,115,Unknown,North Central Florida Upgrade Project,230
+S-0450,Roundtable,VA,Virginia,39.00523,-77.46653,Unknown,Unknown,Eastern Loudoun County Reconductor Projects,230
+S-0451,Driver,AR,Arkansas,35.644791,-89.970024,500,500,28139-Driver-Hybar,230
+S-0452,Big Stone South,SD,South Dakota,45.281429,-96.507043,345,230,Big Stone South to Alexandria Route Options,345
+S-0453,Ellendale 345 kV,ND,North Dakota,46.008528,-98.570208,345,42,Jamestown to Ellendale (JETx),345
+S-0454,Stanton,ND,North Dakota,47.286567,-101.333439,230,230,27669-Nelson Lake-Square Butte East / Bison,230
+S-0455,Logan,ND,North Dakota,48.117412,-101.211387,230,115,"Logan 230kV Interconnection Expansion (DISIS-2017-002), Logan - Finstad 345 kV",345
+S-0456,Leland Olds,ND,North Dakota,47.282703,-101.317508,345,230,Leland Olds Station to Tande,345
+S-0457,Tande,ND,North Dakota,48.399607,-102.848073,345,230,"Leland Olds Station to Tande, North Dakota/Saskatchewan Border (Tableland) - Tande 230 kV Ckt 1",345
+S-0458,Winters Branch,VA,Virginia,38.732736,-77.507383,230,230,Cannon Branch - Winters Branch 230 kV Line Extension,230
+S-0459,Pioneer,VA,Virginia,38.754656,-77.512828,230,230,Reconductor Pioneer - Liberty 230 kV,230
+S-0460,Sammamish,WA,Washington,47.685393,-122.149545,230,115,Energize Eastside,230
+S-0461,Talbot Hill,WA,Washington,47.468095,-122.19148,230,115,Energize Eastside,230
+S-0462,Covington,WA,Washington,47.347578,-122.121244,500,115,Chehalis - Covington 230 kV Line Upgrade,230
+S-0463,Raver,WA,Washington,47.336054,-121.933828,500,500,Schultz-Raver 500 kV Line Upgrade,500
+S-0464,Olympia,WA,Washington,47.000981,-122.953341,500,69,Schultz-Olympia 500kV,500
+S-0465,Chehalis,WA,Washington,46.599401,-122.946721,230,69,Chehalis - Covington 230 kV Line Upgrade,230
+S-0466,Ross,WA,Washington,45.661373,-122.65874,345,115,Ross-Rivergate 230 kV Line Upgrade,230
+S-0467,Grand Coulee,WA,Washington,47.955214,-118.998706,500,230,Grand Coulee-Columbia-Schultz 500kV,500
+S-0468,Columbia,WA,Washington,47.294026,-120.077402,500,115,Grand Coulee-Columbia-Schultz 500kV,500
+S-0469,Schultz,WA,Washington,47.121356,-120.510221,500,230,"Schultz-Raver 500 kV Line Upgrade, Schultz-Olympia 500KV, Cross-Cascades Project",500
+S-0470,Rock Creek,WA,Washington,45.783352,-120.531594,500,115,Rock Creek-John Day 500 kV Line Upgrade,500
+S-0471,Midway,WA,Washington,46.620559,-119.782589,230,115,Midway-Ashe 230kV Transmission Line,230
+S-0472,Ashe,WA,Washington,46.479848,-119.335974,500,230,"Midway-Ashe 230kV Transmission Line, Townsend - Ashe 500 kV",500
+S-0473,Lakeside,WA,Washington,47.586263,-122.158284,115,115,Energize Eastside,230
+S-0474,Big Eddy,OR,Oregon,45.606691,-121.11599,500,115,"Big Eddy-Chemawa 230/500 kV Line Upgrade, Cascade Renewable Transmission, Big Eddy-Ostrander Conductor Replacement Project",500
+S-0475,Chemawa,OR,Oregon,45.014799,-122.999375,230,57,Big Eddy-Chemawa 230/500 kV Line Upgrade,500
+S-0476,John Day 2,OR,Oregon,45.67784,-120.737835,500,500,Rock Creek-John Day 500 kV Line Upgrade,500
+S-0477,Marion,OR,Oregon,44.799422,-122.697513,500,500,North of Marion Upgrade #2,500
+S-0478,Ostrander,OR,Oregon,45.360211,-122.407012,500,230,"Big Eddy-Chemawa 230/500 kV Line Upgrade, Ostrander-Pearl #1 Upgrade, Big Eddy-Ostrander Conductor Replacement Project",500
+S-0479,Santiam,OR,Oregon,44.772538,-122.674753,500,115,North of Marion Upgrade #1 (Rebuild Chemawa-Santiam),500
+S-0480,Pearl,OR,Oregon,45.329348,-122.777317,500,230,Big Eddy-Chemawa 230/500 kV Line Upgrade,500
+S-0481,La Pine,OR,Oregon,43.661113,-121.45428,230,115,La Pine-Bonanza 230 kV Line,230
+S-0482,Rivergate,OR,Oregon,45.614239,-122.767601,230,115,Ross-Rivergate 230 kV Line Upgrade,230
+S-0483,Trojan Nuclear Plant Switchyard,OR,Oregon,46.039541,-122.889428,230,230,Harborton-Trojan #3 and #4 230kV,230
+S-0484,Colstrip,MT,Montana,45.891128,-106.612819,500,69,"North Plains Connector, Colstrip - Townsend - Midpoint 500 kV",500
+S-0485,Intermountain,UT,Utah,39.501311,-112.58069,500,230,TransWest Express,500
+S-0486,Dave Johnston,WY,Wyoming,42.83737,-105.779021,230,115,Gateway West,500
+S-0487,Jim Bridger,WY,Wyoming,41.734917,-108.79034,345,115,Gateway West,500
+S-0488,Round Butte,OR,Oregon,44.601832,-121.26833,500,230,Bethel-Round Butte Transmission Upgrade,500
+S-0489,Fort St Vrain,CO,Colorado,40.243315,-104.873888,230,230,Colorado's Power Pathway,345
+S-0490,St George,UT,Utah,37.138759,-113.56327,138,138,Red Butte- St. George Upgrade to 345 KV,345
+S-0491,Laramie River,WY,Wyoming,42.107528,-104.88724,345,230,"Wyoming Intertie, Laramie River - New Underwood 345 kV",500
+S-0492,Populus,ID,Idaho,42.424742,-112.155142,345,345,"Gateway West, Gateway Central",500
+S-0493,Terminal,UT,Utah,40.758372,-112.006095,345,34,"Oquirrh to Terminal Transmission Line Project, Gateway Central",345
+S-0494,Borah,ID,Idaho,42.750305,-112.930461,345,230,Gateway West,500
+S-0495,Hemingway,ID,Idaho,43.350327,-116.663043,500,230,"Boardman to Hemingway, Gateway West, Rebuild Hemingway - Summer Lake 500 kV",500
+S-0496,Red Butte,UT,Utah,37.413006,-113.645212,345,115,Red Butte- St. George Upgrade to 345 KV,345
+S-0497,Sigurd,UT,Utah,38.844292,-111.993279,345,69,Clover - Sigurd 345 kV,345
+S-0498,Spanish Fork,UT,Utah,40.091884,-111.58629,345,69,Spanish Fork to Mercer Transmission Project,345
+S-0499,Oquirrh,UT,Utah,40.564561,-112.028068,345,46,Oquirrh to Terminal Transmission Line Project,345
+S-0500,Bethel,OR,Oregon,44.93012,-122.949538,230,57,Bethel-Round Butte Transmission Upgrade,500
+S-0501,Keeler,OR,Oregon,45.549771,-122.89506,500,115,"North of Pearl (New build), North of Pearl (Rebuild)",500
+S-0502,Midpoint (500kV),ID,Idaho,42.834672,-114.426563,500,345,"Southwest Intertie Project (SWIP) North, Gateway West",500
+S-0503,Stegall (Scotts Bluff County),NE,Nebraska,41.819513,-103.942528,345,Unknown,Ready Wyoming,230
+S-0504,Windstar,WY,Wyoming,42.861651,-105.779465,230,69,"Gateway West, Ready Wyoming",500
+S-0505,Bowmont,ID,Idaho,43.438493,-116.534679,230,69,Hemingway–Bowmont #2 230 kV Line,230
+S-0506,Shirley Basin,WY,Wyoming,42.179931,-106.229891,230,115,Gateway West,500
+S-0507,Clover,UT,Utah,39.789484,-111.894695,345,69,"Clover - Sigurd 345 kV, Gateway South, TransCanyonCrossTie",345
+S-0508,Pueblo,CO,Colorado,38.266261,-104.615168,230,115,Three Corners Connector,525
+S-0509,Big Sandy,CO,Colorado,39.301005,-103.641255,230,115,"Eastern Colorado Transmission Expansion, Big Sandy-Burlington 230 kV Uprate",230
+S-0510,Burlington,CO,Colorado,39.330792,-102.242009,115,115,"Eastern Colorado Transmission Expansion, Big Sandy-Burlington 230 kV Uprate",230
+S-0511,Tooele,UT,Utah,40.515339,-112.296319,138,69,Gateway Central,138
+S-0512,Harris,AZ,Arizona,35.143991,-114.086679,230,230,Golden Valley 230 kV,230
+S-0513,Mineral Park,AZ,Arizona,35.318973,-114.204412,230,230,Golden Valley 230 kV,230
+S-0514,Boerne,TX,Texas,29.804201,-98.725761,138,69,Boerne Split-Welfare Transmission Line Upgrade,345
+S-0515,North Receiving Station,CA,California,37.401937,-121.966526,115,Unknown,"Power the South Bay, San Jose B - NRS 230 kV line",320
+S-0516,Addicks,TX,Texas,29.822577,-95.572995,345,69,Upgrade 345kV Ckt 71 Addicks-White Oak to increase thermal limits,345
+S-0517,Ogallala,TX,Texas,34.519588,-102.03871,345,345,Ogallala to Abernathy 345 kV Line,345
+S-0518,Morgan Creek (Cattleman),TX,Texas,32.334127,-100.916107,345,69,"Cattleman – Longshore 345 kV Double-Circuit Line Rebuild, Cattleman - Range Rider 138 kV Double-Circuit Line",345
+S-0519,Fayette Plant #2,TX,Texas,29.913563,-96.756179,345,69,FPP Yard 2 - Lytton Springs Transmission Line Overhaul,345
+S-0520,Midway,CA,California,35.403875,-119.452168,500,115,Midway - Kern 230 kV Line,230
+S-0521,North McCamey,TX,Texas,31.153619,-102.223219,345,69,Bearkat-North McCamey-Sand Lake Transmsission Line Addition,345
+S-0522,Bellaire,TX,Texas,29.724688,-95.450539,345,69,Upgrade Bellaire to Jeanetta Ckt.64B to increase thermal limits,345
+S-0523,Midland East,TX,Texas,32.020259,-102.050795,345,69,Rockhound - Midland East 345 kV Line Rebuild,345
+S-0524,Pawnee,TX,Texas,28.739861,-98.023721,345,69,Rebuild Pawnee to Tango into a double circuit,345
+S-0525,El Centro,CA,California,32.80167,-115.537496,230,Unknown,S-Line Upgrade Project,230
+S-0526,Calaveras 345 Switchyard (Spruce),TX,Texas,29.312417,-98.320376,345,69,Rebuild Spruce to Eastside Double Circuit,345
+S-0527,Hidalgo,NM,New Mexico,32.40363,-108.59932,345,115,Southline Transmission Project,345
+S-0528,Antler,TX,Texas,29.776787,-98.413401,345,69,Antler-Bergheim Transmission Line Upgrade,345
+S-0529,Nacogdoches,TX,Texas,31.5842,-94.611478,345,69,Nacogdoches Southeast - Redland 345kV Line,345
+S-0530,Hobbs,NM,New Mexico,32.731904,-103.310085,230,14,Crossroads - Hobbs - Roadrunner,345
+S-0531,Stewart,TX,Texas,29.227713,-94.910647,138,69,Moody to Stewart Ckt.63 Upgrades P1041,345
+S-0532,Sherry,TX,Texas,32.713896,-97.070547,345,14,Sherry Sw. - Webb/Kennedale 345 kV DCKT Line,345
+S-0533,Bergheim,TX,Texas,29.788749,-98.526276,138,69,Antler-Bergheim Transmission Line Upgrade,345
+S-0534,Delaney,AZ,Arizona,33.481128,-113.034328,500,Unknown,Ten West Link,500
+S-0535,Trinidad,TX,Texas,32.126318,-96.105746,345,69,Trinidad - Tri Corner 345 kV Double-Circuit Line,345
+S-0536,Moody REIT,TX,Texas,29.260626,-94.853408,138,69,Moody to Stewart Ckt.63 Upgrades P1041,345
+S-0537,Petrie,AZ,Arizona,32.25338,-110.989299,138,Unknown,Southline Transmission Project,345
+S-0538,Howard,TX,Texas,29.280641,-98.572343,138,69,"CPSE Howard to San Miguel Double Circuit Line Addition, Howard-Solstice Transmission Line Project",345
+S-0539,PH Robinson,TX,Texas,29.487516,-94.982422,345,69,Upgrade Ckt.99A PH Robinson to Meadow,345
+S-0540,Welfare,TX,Texas,29.886833,-98.760605,138,69,Boerne Split-Welfare Transmission Line Upgrade,345
+S-0541,Roark,TX,Texas,29.665989,-95.56114,138,69,Jeanetta Auto Upgrades,345
+S-0542,Antelope,CA,California,34.686411,-118.298693,500,69,Antelope-Whirlwind Line Upgrade,500
+S-0543,Sandy Creek (Rattlesnake Road),TX,Texas,31.473508,-96.960681,345,69,Lake Creek - Rattlesnake Road 345 kV Line,345
+S-0544,White Oak,TX,Texas,29.815179,-95.434827,345,69,Upgrade 345kV Ckt 71 Addicks-White Oak to increase thermal limits,345
+S-0545,Afton,NM,New Mexico,32.11406,-106.848269,345,345,"Afton North-Airport 345 KV Line, Southline Transmission Project, Afton - Afton North 345 kV",345
+S-0546,Prong Moss,TX,Texas,32.207292,-101.388018,138,69,Ranger Camp – Prong Moss 345 kV Line Rebuild,345
+S-0547,Sotex5 (STP),TX,Texas,28.799468,-96.05056,345,69,Angstrom to STP: Increase 345 kV Line MOT,345
+S-0548,Fair Oaks Ranch,TX,Texas,29.732804,-98.612391,138,69,Bergheim-Fair Oaks Ranch Transmission Line Upgrade,345
+S-0549,Castro Valley Tap,CA,California,37.693302,-122.042746,230,230,Moraga-Castro Valley 230 kV Line Capacity Increase,230
+S-0550,Vineyard Tap,CA,California,37.669075,-121.85411,60,60,North Dublin - Vineyard 230 kV Reconductoring,230
+S-0551,Taos,NM,New Mexico,36.394887,-105.63357,345,115,Vista Trail,345
+S-0552,Springer,NM,New Mexico,36.397681,-104.596704,115,115,Vista Trail,345
+S-0553,W.A. Parish (138kV),TX,Texas,29.482815,-95.630358,345,69,"Upgrade Jeanetta to WA Parish, Upgrade Bellaire to WAP",345
+S-0554,Lytton Springs,TX,Texas,30.005378,-97.674222,345,69,LCRATSC FPP Yard 2 - Lytton Springs Transmission Line Overhaul,345
+S-0555,Laguna Bell,CA,California,33.976077,-118.1477,230,66,Laguna Bell - Mesa No. 1 230 kV Line Rating Increase,230
+S-0556,Whirlwind,CA,California,34.858154,-118.437124,500,220,Antelope-Whirlwind Line Upgrade,500
+S-0557,Apache,AZ,Arizona,32.060138,-109.893768,230,Unknown,Southline Transmission Project,345
+S-0558,Odessa,TX,Texas,31.848318,-102.353754,138,69,Consavvy – Odessa EHV 345 kV Double Circuit Line Rebuild,345
+S-0559,Cholla,AZ,Arizona,34.938625,-110.304222,500,Unknown,Four Corners to Cholla to Pinnacle Peak 345kV Line Rebuilds,345
+S-0560,Del Sol,TX,Texas,26.457828,-98.737119,345,69,"Cruce to Del Sol: Construct New 345 kV Double Circuit Line, Del Sol to Frontera: Build New 345 kV Double Circuit Line",345
+S-0561,Tri-Corner,TX,Texas,32.553667,-96.537503,345,69,Trinidad - Tri Corner 345 kV Double-Circuit Line,345
+S-0562,Fair Oaks,TX,Texas,29.794945,-98.593186,138,69,Bergheim-Fair Oaks Ranch Transmission Line Upgrade,345
+S-0563,Highway 46,TX,Texas,29.758775,-98.245211,138,69,Highway 46-River Oaks Transmission Line Upgrade,345
+S-0564,Frontera,TX,Texas,26.21786,-98.397117,138,69,Del Sol to Frontera: Build New 345 kV Double Circuit Line,345
+S-0565,Devers,CA,California,33.939079,-116.577733,500,Unknown,"Devers - Red Bluff 500 kV Upgrade, Devers-Valley 500 kV Upgrade",500
+S-0566,Lake Creek,TX,Texas,31.468126,-96.984831,345,69,Lake Creek - Rattlesnake Road 345 kV Line,345
+S-0567,Pinnacle Peak SRP,AZ,Arizona,33.700197,-111.940737,230,Unknown,"Pinnacle Peak - Rogers 230kV Restoration Project, Four Corners to Cholla to Pinnacle Peak 345kV Line Rebuilds",345
+S-0568,Downtown,TX,Texas,29.75538,-95.373729,138,69,Hyde Park to Downtown Ckt.32A Upgrades,345
+S-0569,Longshore,TX,Texas,32.100302,-101.452334,345,69,"Cattleman – Longshore 345 kV Double-Circuit Line Rebuild, Dinosaur - Longshore 765 kV Transmission Project, Longshore Switch - Drill Hole Switch 765 kV Transmission Project",765
+S-0570,River Oaks,TX,Texas,29.777758,-98.105828,345,69,Highway 46-River Oaks Transmission Line Upgrade,345
+S-0571,Lufkin Switch,TX,Texas,31.370149,-94.768609,345,69,Lufkin Switch - Redland Switch 345 kV Line,345
+S-0572,Rancho Vista,CA,California,34.088071,-117.533288,500,69,"San Bernardino - Vista 230 kV Upgrade, Vista - Etiwanda 230 kV Upgrade",230
+S-0573,Redland Switch,TX,Texas,31.419471,-94.678731,138,Unknown,"Lufkin Switch - Redland Switch 345 kV Line, Nacogdoches Southeast_Redland 345kV Line",345
+S-0574,Gonder,NV,Nevada,39.336551,-114.807324,345,230,TransCanyonCrossTie,500
+S-0575,Clodine,TX,Texas,29.674798,-95.620769,138,69,Jeanetta Auto Upgrades,345
+S-0576,Jeanetta,TX,Texas,29.718719,-95.536693,345,69,Upgrade Bellaire to Jeanetta Ckt.64B to increase thermal limits,345
+S-0577,Ajo,TX,Texas,27.092027,-97.774388,345,138,Ajo to Reforzar: Construct New 345 kV Double Circuit Line,345
+S-0578,San Miguel,TX,Texas,28.704006,-98.474307,345,69,"San Miguel to Cruce 345 kV lines, CPSE Howard to San Miguel Double Circuit Line Addition, San Miguel to Cruce 345 kV lines",345
+S-0579,Bearkat,TX,Texas,31.765968,-101.53145,138,69,Bearkat-North McCamey-Sand Lake Transmsission Line Addition,345
+S-0580,Sylmar West,CA,California,34.311007,-118.489348,230,69,Pardee - Sylmar 230 kV Line Rating Increase,230
+S-0581,Tonkawa,TX,Texas,32.530732,-100.684202,345,69,Tonkawa - Ranger Camp 345 kV Line Rebuild,345
+S-0582,Meadow,TX,Texas,29.460345,-95.257855,345,14,Upgrade Ckt.99A PH Robinson to Meadow,345
+S-0583,Four Corners,NM,New Mexico,36.687159,-108.48522,500,230,"North Path, Four Corners to Cholla to Pinnacle Peak 345kV Line Rebuilds, Four Corners - Pintado 345 kV",525
+S-0584,Pinal West,AZ,Arizona,32.997321,-112.196449,500,345,Palo Verde to Pinal West 500 kV transmission project,500
+S-0585,Roadway,CA,California,34.57617,-117.413218,115,115,Rebuild Kramer – Victor to 230 kV,230
+S-0586,Hyde Park,TX,Texas,29.747911,-95.384576,69,69,Hyde Park to Downtown Ckt.32A Upgrades,345
+S-0587,Rogers,AZ,Arizona,33.424981,-111.799836,230,69,Pinnacle Peak - Rogers 230kV Restoration Project,230
+S-0588,Gamebird,NV,Nevada,36.161321,-115.900369,138,138, ,230
+S-0589,Morgan Hill,CA,California,37.126669,-121.658915,115,115,Morgan Hill Area Reinforcement,230
+S-0590,Red Bluff,CA,California,33.698743,-115.311667,500,500,"Colorado River - Red Bluff 500 kV Line Upgrade, Devers - Red Bluff 500 kV Upgrade",500
+S-0591,Crystal,NV,Nevada,36.482508,-114.830345,500,230,TransWest Express,500
+S-0592,Harry Allen (230kV),NV,Nevada,36.425616,-114.903973,360,230,Greenlink West,525
+S-0593,Valley,CA,California,33.738934,-117.156656,500,115,Devers-Valley 500 kV Upgrade,500
+S-0594,Del Amo,CA,California,33.848223,-118.097174,230,66,Serrano - Del Amo - Mesa 500 kV Transmission Reinforcement,500
+S-0595,Rattlesnake,AZ,Arizona,32.386788,-111.197732,115,115,Southline Transmission Project,230
+S-0596,Hassayampa,AZ,Arizona,33.345852,-112.852079,500,500,Palo Verde to Pinal West 500 kV transmission project,500
+S-0597,Pinal Central,AZ,Arizona,32.870178,-111.561796,500,230,"SunZia, RioSol, Pinal Central - ED5 Transmission Line",525
+S-0598,Rudd,AZ,Arizona,33.409892,-112.31716,500,69,Jojoba to Rudd 500kV line,500
+S-0599,Kern,CA,California,35.379404,-119.097086,230,70,Midway - Kern 230 kV Line,230
+S-0600,Kramer,CA,California,34.989139,-117.542503,230,33,Rebuild Kramer – Victor to 230 kV,230
+S-0601,Saguaro,AZ,Arizona,32.556506,-111.296139,500,115,Southline Transmission Project,345
+S-0602,McConnico,AZ,Arizona,35.138344,-114.086254,230,230,Golden Valley 230 kV,230
+S-0603,Tortolita,AZ,Arizona,32.543465,-111.285177,500,138,Southline Transmission Project,345
+S-0604,San Bernardino,CA,California,34.079877,-117.23829,500,66,San Bernardino - Etiwanda 230 kV Upgrade,230
+S-0605,Vasona,CA,California,37.253879,-121.966337,230,230,Vasona - Metcalf Limiting Elements Removal,230
+S-0606,Pahrump,NV,Nevada,36.197096,-115.968784,230,138, ,230
+S-0607,Jojoba,AZ,Arizona,33.230528,-112.620414,500,500,"Jojoba to Rudd 500kV line, Palo Verde to Pinal West 500 kV transmission project",500
+S-0608,Nevada-Oregon Border Substation,OR,Oregon,42.104555,-119.942815,0, ,Lower Columbia to Nevada-Oregon Border,500
+S-0609,Limber,UT,Utah,40.494814,-112.502013,0, ,Gateway Central,345
+S-0610,Husky,CO,Colorado,40.60439,-104.747539,0, ,"Northern Colorado Area Plan – Ault to Cloverly Transmission Project, Ault-Husky 230KV Line Upgrade",230
+S-0611,Collins St,CO,Colorado,40.522846,-104.696962,0, ,Northern Colorado Area Plan – Ault to Cloverly Transmission Project,230
+S-0612,WAPA Ault,CO,Colorado,40.605984,-104.814507,0, ,"Northern Colorado Area Plan – Ault to Cloverly Transmission Project, Ault-Husky 230KV Line Upgrade, Reconductor Archer to Ault 230 kV",230
+S-0613,Cloverly,CO,Colorado,40.464018,-104.642151,0, ,Northern Colorado Area Plan – Ault to Cloverly Transmission Project,230
+S-0614,Waterway,FL,Florida,27.236943,-81.070351,0, ,Sweatt-Whidden Transmission Line,230
+S-0615,Dorr Field,FL,Florida,27.210896,-81.661974,0, ,Sweatt-Whidden Transmission Line,230
+S-0616,Huckleberry,CO,Colorado,37.964987,-104.583033,0, ,Eastern Colorado Transmission Expansion,230
+S-0617,Boone,CO,Colorado,38.306013,-104.139276,0, ,Eastern Colorado Transmission Expansion,230
+S-0618,Lamar,CO,Colorado,38.209954,-102.478995,0, ,Eastern Colorado Transmission Expansion,230
+S-0619,Badger Creek,CO,Colorado,40.015487,-103.830705,0, ,Eastern Colorado Transmission Expansion,230
+S-0620,Bouse,AZ,Arizona,33.998189,-114.21671,0, ,Bouse Upgrade Project,230
+S-0621,Mercer,UT,Utah,40.257622,-112.017149,0, ,Spanish Fork to Mercer Transmission Project,345
+S-0622,Bonanza,OR,Oregon,44.228502,-120.93657,0, ,"La Pine-Bonanza Line, Lower Columbia to Nevada-Oregon Border",230
+S-0623,Serrano,CA,California,33.829264,-117.789372,0, ,North of SONGS - Serrano 500 kV line,500
+S-0624,San Onofre Nuclear Power Plant (SONGS),CA,California,33.369443,-117.553574,0, ,"North of SONGS - Serrano 500 kV line, San Onofre to Viejo 230 kV, Santiago to San Onofre 230 kV",500
+S-0625,Imperial Valley,CA,California,32.717619,-115.715533,0, ,"Imperial Valley – North of SONGS Project, S-Line Upgrade Project",500
+S-0626,Big Oaks,MN,Minnesota,45.356351,-93.874668,0, ,Alexandria to Big Oaks (Cassie's Crossing),345
+S-0627,Cuyana Series Compensation Station,MN,Minnesota,46.485752,-94.046642,0, ,Northland Reliability Project,345
+S-0628,Iron Range,MN,Minnesota,47.230373,-93.30343,0, ,"Northland Reliability Project, 26299-Blackberry-Iron Range",345
+S-0629,Helix,MI,Michigan,42.402444,-84.814701,0, ,"Helix to Hiple, Helix - Tompkins",345
+S-0630,Denny,MO,Missouri,40.011251,-94.353928,0, ,Northern Missouri Grid Transformation Program,345
+S-0631,Zachary,MO,Missouri,40.151627,-92.59868,0, ,Northern Missouri Grid Transformation Program,345
+S-0632,Skunk River,IA,Iowa,40.986879,-91.633067,0, ,Ottumwa-Skunk River,345
+S-0633,Sub 92,IA,Iowa,41.554864,-91.223653,0, ,Beverly-Sub 92,345
+S-0634,Beverly,IA,Iowa,41.90526,-91.636489,0, ,Beverly-Sub 92,345
+S-0635,Morgan Valley,IA,Iowa,41.903476,-91.811883,0, ,Webster - Franklin - Marshalltown - Morgan Valley,345
+S-0636,Orient,IA,Iowa,41.192576,-94.461425,0, ,Orient to IA/MO State Border,345
+S-0637,Harborton,OR,Oregon,45.614281,-122.797273,0, ,"Harborton-Trojan #3 and #4 230kV, Cascade Renewable Transmission",230
+S-0638,Airport,NM,New Mexico,32.268863,-106.938372,0, ,Afton North-Airport 345 KV Line,345
+S-0639,Newark,CA,California,37.50072,-121.985682,0, ,"Power the South Bay, Tesla - Newark 230 kV Line No. 2 Reconductoring",320
+S-0640,Albrae,CA,California,37.5046,-121.990205,0, ,Power the South Bay,320
+S-0641,Baylands,CA,California,37.431223,-121.954942,0, ,Power the South Bay,320
+S-0642,Snow Goose,OR,Oregon,42.161421,-121.791495,0, ,Corral to Snow Goose 500kV Line,500
+S-0643,Grassland Switchyard,OR,Oregon,45.694551,-119.829482,0, ,"Corral to Grassland Annex 500kV Line, Grassland Annex to B2H 500 kV Line",500
+S-0644,Corral,OR,Oregon,44.223124,-120.9297,0, ,"Corral to Snow Goose 500kV Line, Corral to Grassland Annex 500kV Line",500
+S-0645,Quenett Creek,OR,Oregon,45.636917,-121.204577,0, ,Big Eddy - Quenett Creek Upgrade,230
+S-0646,Elk Farm,WI,Wisconsin,44.841639,-91.395562,0, ,Western Wisconsin Transmission Connection,345
+S-0647,Jump River South,WI,Wisconsin,44.920001,-90.662778,0, ,Western Wisconsin Transmission Connection,345
+S-0648,East Adair,IA,Iowa,41.276633,-94.252993,0, ,Lakeﬁeld Junction- East Adair,765
+S-0649,Lulu,MI,Michigan,41.890321,-83.644063,0, ,Greentown - Sorenson - Lulu,765
+S-0650,Sabine Lake,MI,Michigan,42.717274,-84.041407,0, ,Oneida- Sabine Lake- Blackfoot & Majestic,345
+S-0651,Denver,MI,Michigan,43.705808,-84.530781,0, ,Ludington- Denver- Tittabawassee & Nelson Road,345
+S-0652,Muskego,WI,Wisconsin,42.864967,-88.195745,0, ,Bluemond- Arcadian- Waukesha- Muskego- Elm Road- Racine,345
+S-0653,Woodford,IL,Illinois,40.755071,-88.910729,0, ,Sub T - Woodford County - Collins & Reynolds,765
+S-0654,Radbourn,IL,Illinois,40.448062,-88.898886,0, ,Woodford County - Fargo & Radbourn,345
+S-0655,Belleau,MO,Missouri,38.8265,-90.680737,0, ,Maywood - Belleau - MRPD - Sioux - Bugle,345
+S-0656,Arbor Hill,IA,Iowa,41.466873,-94.262644,0, ,Arbor Hill - East Adair (MISO LRTP Tranche 2.1 Addtl Lines),345
+S-0657,Pike County,IN,Indiana,38.535844,-87.224314,0, ,Southwest Indiana-Kentucky,345
+S-0658,Indian Creek,IN,Indiana,38.719679,-87.337774,0, ,Southwest Indiana-Kentucky,345
+S-0659,Madison County,IN,Indiana,39.986848,-85.620448,0, ,Southeast Indiana,345
+S-0660,Bugle,MO,Missouri,38.676649,-90.315483,0, ,Maywood - Belleau - MRPD - Sioux - Bugle,345
+S-0661,Hawk's Nest,MN,Minnesota,44.531274,-96.162033,0, ,"Brookings - Lyon, Hampton - Helena 2nd 345kV Circuits",345
+S-0662,Steep Bank Lake,MN,Minnesota,44.532642,-96.361012,0, ,"Brookings - Lyon, Hampton - Helena 2nd 345kV Circuits",345
+S-0663,Hill Valley,WI,Wisconsin,42.956702,-90.43453,0, ,"N LaCrosse-N Madison-Cardinal-Hickory Creek 345 kV, Hill Valley - Cardinal Upgrade",345
+S-0664,Hickory Creek,IA,Iowa,42.545612,-91.019013,0, ,N LaCrosse-N Madison-Cardinal-Hickory Creek 345 kV,345
+S-0665,Bison,IA,Iowa,43.43223,-94.015033,0, ,27311-Bison-Colby,345
+S-0666,Wise,LA,Louisiana,30.246379,-91.161546,0, ,27767-Wise-Bayou Labutte,230
+S-0667,Churchill,LA,Louisiana,29.884598,-90.171293,0, ,28274-Commodore-Churchill,500
+S-0668,Tableland,SK,Saskatchewan,49.043341,-103.175289,0, ,North Dakota/Saskatchewan Border (Tableland) - Tande 230 kV Ckt 1,230
+S-0669,Atlantic,KS,Kansas,38.920834,-95.005062,0, ,"West Gardner  - Craig  345 kV, Atlantic Substation 345 kV",345
+S-0670,Tobias,NE,Nebraska,40.486214,-97.191539,0, ,"Tobias 345kV Interconnection Expansion (DISIS-2017-002), Elm Creek - Tobias 345 kV",345
+S-0671,Consavvy,TX,Texas,31.91435,-101.998521,0, ,Consavvy – Odessa EHV 345 kV Double Circuit Line Rebuild,345
+S-0672,Sand Lake,TX,Texas,31.510254,-103.464183,0, ,"Bearkat-North McCamey-Sand Lake Transmsission Line Addition, Riverton - Sandlake 138 kV Line Conversion 345 kV and Riverton - Sandlake 138 kV Line, Big Hill - Sand Lake 765 kV Transmission Project",765
+S-0673,Eastside,TX,Texas,29.421622,-98.322861,0, ,Rebuild Spruce to Eastside Double Circuit,345
+S-0674,Tango,TX,Texas,28.655961,-97.976334,0, ,Rebuild Pawnee to Tango into a double circuit,345
+S-0675,Riverton,TX,Texas,31.806771,-103.860953,0, ,"Riverton - Sandlake 138 kV Line Conversion 345 kV and Riverton - Sandlake 138 kV Line, Construct Drill Hole – Riverton 345 kV Double-Circuit",345
+S-0676,Reforzar,TX,Texas,27.249895,-98.016124,0, ,"Ajo to Reforzar: Construct New 345 kV Double Circuit Line, Cruce to Reforzar: Construct New 345 kV Double Circuit Line",345
+S-0677,Grissom,TX,Texas,28.218241,-97.556691,0, ,Angstrom - Grissom: Build New Line,345
+S-0678,Angstrom,TX,Texas,28.044232,-97.438565,0, ,"Angstrom - Grissom: Build New Line, Angstrom to Naismith: Build New 345 kV Line",345
+S-0679,Naismith,TX,Texas,27.934175,-97.245593,0, ,Angstrom to Naismith: Build New 345 kV Line,345
+S-0680,Cenizo,TX,Texas,27.327535,-99.411772,0, ,Cenizo to Cruce: Construct New 345 kV Double Circuit Line,345
+S-0681,Cruce,TX,Texas,27.267635,-98.526909,0, ,"Cenizo to Cruce: Construct New 345 kV Double Circuit Line, Cruce to Del Sol: Construct New 345 kV Double Circuit Line, Cruce to Reforzar: Construct New 345 kV Double Circuit Line, San Miguel to Cruce 345 kV lines",345
+S-0682,Ranger Camp,TX,Texas,32.348505,-100.912681,0, ,"Ranger Camp – Cattleman 345 kV Double-Circuit Line, Ranger Camp – Prong Moss 345 kV Line Rebuild, Tonkawa - Ranger Camp 345 kV Line Rebuild",345
+S-0683,Rockhound,TX,Texas,32.075655,-101.934504,0, ,Rockhound - Connell 345 kV Double-Circuit Line,345
+S-0684,Connell,TX,Texas,32.191432,-102.063852,0, ,Rockhound - Connell 345 kV Double-Circuit Line,345
+S-0685,Midland County NW,TX,Texas,32.037424,-102.246252,0, ,Midland East – Midland County NW 345 kV Line Rebuild,345
+S-0686,Drill Hole,TX,Texas,31.951969,-104.076844,0, ,Construct Drill Hole – Riverton 345 kV Double-Circuit,345
+S-0687,Reiter,TX,Texas,31.818991,-102.309908,0, ,Reiter - Tesoro 345 kV Double-Circuit Line,345
+S-0688,Tesoro,TX,Texas,31.850846,-102.277527,0, ,Reiter - Tesoro 345 kV Double-Circuit Line,345
+S-0689,Ramhorn Hill,TX,Texas,33.038243,-97.475513,0, ,Roanoke Area Upgrades,345
+S-0690,Dunham,TX,Texas,33.052729,-97.194218,0, ,Roanoke Area Upgrades,345
+S-0691,Vealmoor,TX,Texas,32.561622,-101.596653,0, ,Expanse - Tredway 138 kV Line,138
+S-0692,Tredway,TX,Texas,32.571814,-101.599579,0, ,Expanse - Tredway 138 kV Line,138
+S-0693,Expanse,TX,Texas,32.349559,-101.876121,0, ,Expanse - Tredway 138 kV Line,138
+S-0694,Longhorn,OR,Oregon,45.84671,-119.61741,0, ,"Boardman to Hemingway, Cross-Cascades Project",500
+S-0695,Colorado River,CA,California,33.580898,-114.817181,0, ,"Ten West Link, Colorado River - Red Bluff 500 kV Line Upgrade",500
+S-0696,Richards Creek,WA,Washington,47.58324,-122.157978,0, ,Energize Eastside,230
+S-0697,Monteregie,QC,Quebec,45.498789,-72.712967,0, ,New England Clean Power Link,735
+S-0698,Merill Road,ME,Maine,44.157284,-70.182749,0, ,"Merrill Road to Larrabee Road, New England Clean Energy Connection",345
+S-0699,Appalaches,QC,Quebec,46.133341,-71.395713,0, ,Appalaches-Maine Interconnection,735
+S-0700,Wheelock,ND,North Dakota,48.340179,-103.305752,0, ,North Dakota/Saskatchewan Border (Tableland) - Wheelock 230 kV Ckt 1,230
+S-0701,Farmwell,VA,Virginia,39.015077,-77.468962,0, ,Farmwell to Nimbus 230 kV Line,230
+S-0702,Nimbus,VA,Virginia,39.012712,-77.464065,0, ,Farmwell to Nimbus 230 kV Line,230
+S-0703,North Delta (Bramah),PA,Pennsylvania,39.750504,-76.293805,0, ,"North Delta-High Ridge 500 kV Line, Rebuild Peach Bottom - Conastone 500 kV, Cooper - North Delta (Bramah)",500
+S-0704,Welton Springs,WV,West Virginia,39.166192,-78.958702,0, ,John Amos - Welton Spring - Rocky Point 765 kV Line,765
+S-0705,Rocky Point,VA,Virginia,39.248389,-77.498689,0, ,John Amos - Welton Spring - Rocky Point 765 kV Line,765
+S-0706,Aspen,VA,Virginia,39.072354,-77.530517,0, ,"Aspen - Golden 500 kV Line Options, Aspen - Goose Creek 500 kV Line",500
+S-0707,Golden,VA,Virginia,39.013601,-77.434602,0, ,"Aspen - Golden 500 kV Line Options, Mars - Golden 500 kV Line, Lockridge - Golden 230 kV Line",500
+S-0708,Evergreen Mills,VA,Virginia,38.944661,-77.526858,0, ,Reconductor Brambleton - Evergreen Mills 230 kV Line,230
+S-0709,Prince George,VA,Virginia,37.256324,-77.294912,0, ,Reconductor Poe - Prince George Line to 230 kV,230
+S-0710,Rice,PA,Pennsylvania,39.999456,-77.548369,0, ,Rice - Ringgold 230 kV Line,230
+S-0711,Cabin Run,VA,Virginia,38.957033,-77.507574,0, ,"Reconductor Cabin Run to Yardley Ridge 230 kV Line, Eastern Loudoun County Reconductor Projects",230
+S-0712,Batavia,MD,Maryland,39.315766,-76.497537,0, ,Reconductor Batavia - Riverside 230 kV Line,230
+S-0713,Mercers Bottom,WV,West Virginia,38.642286,-82.160353,0, ,Sporn - Mercers Bottom 345 kV Line,345
+S-0714,Vint Hill,VA,Virginia,38.731511,-77.590419,0, ,"Morrisville to Vint Hill 500 kV Line, Vint Hill to Wishing Star 500 kV Line",500
+S-0715,Wishing Star,VA,Virginia,38.958321,-77.548238,0, ,Vint Hill to Wishing Star 500 kV Line,500
+S-0716,Silver Run,DE,Delaware,39.456826,-75.629423,0, ,Upgrade Silver Run - Hope Creek 230 kV Line,230
+S-0717,Yeat,VA,Virginia,38.579677,-77.588945,0, ,"Joshua Falls - Yeat 765 kV Line, Kraken - Yeat 500 kV Line",765
+S-0718,Kraken,VA,Virginia,38.131944,-77.46391,0, ,"Kraken - Yeat 500 kV Line, North Anna - Kraken 500 kV Line, Elmont - Kraken 500 kV",500
+S-0719,Nokesville,VA,Virginia,38.691243,-77.595863,0, ,Nokesville - Hornbaker 230 kV Line,230
+S-0720,Hornbaker,VA,Virginia,38.745094,-77.535826,0, ,"Nokesville - Hornbaker 230 kV Line, Hornbaker - Devlin 230 kV Route Options",230
+S-0721,Raines,VA,Virginia,36.706273,-78.129292,0, ,Nebula - Raines 230 kV Route Options,230
+S-0722,Cloud,VA,Virginia,36.662128,-78.358105,0, ,Nebula - Raines 230 kV Route Options,230
+S-0723,Paragon Park,VA,Virginia,39.017166,-77.441036,0, ,Reconductor Paragon Park - BECO 230 kV Line,230
+S-0724,Lockridge,VA,Virginia,38.997129,-77.456912,0, ,"Mars - Lockridge 230 kV Line, Lockridge - Golder 230 kV Line",230
+S-0725,Mars,VA,Virginia,38.953203,-77.49176,0, ,"Mars - Lockridge 230 kV Line, Mars - Golden 500 kV Line",230
+S-0726,Sycolin Creek,VA,Virginia,39.071595,-77.512468,0, ,"Aspen - Sycolin Creek 230 kV Line, Sycolin Creek - Golden 230 kV Line",230
+S-0727,Blitz,WI,Wisconsin,42.843818,-89.115235,0, ,28090-Blitz-Rockdale,345
+S-0728,Hybar,AR,Arkansas,35.682175,-89.96232,0, ,28139-Driver-Hybar,230
+S-0729,Choctaw,MS,Mississippi,33.28837,-89.420518,0, ,25767-Choctaw-Wolf Creek,500
+S-0730,Plackett,IL,Illinois,40.463121,-88.074694,0, ,Central Illinois Grid Transformation Program,345
+S-0731,Crossbuck,IL,Illinois,40.752675,-87.990561,0, ,Central Illinois Grid Transformation Program,345
+S-0732,Racoon Trail,IA,Iowa,41.621532,-93.919117,0, ,27764-Badger Creek-Raccoon Trail,345
+S-0733,Badger Creek,IA,Iowa,41.469669,-93.906242,0, ,27764-Badger Creek-Raccoon Trail,345
+S-0734,Audubon,LA,Louisiana,30.228391,-90.992129,0, ,27914-Willow Glen-Conway - Audubon,230
+S-0735,Remsen,IA,Iowa,42.764956,-95.933623,0, ,27451-Raun-Remsen,345
+S-0736,Commodore,LA,Louisiana,30.230711,-91.227456,0, ,28274-Commodore-Churchill,500
+S-0737,Babel,TX,Texas,31.138398,-93.567538,0, ,"SETEX Area Reliability Project, Babel - Webre 500 kV Line",500
+S-0738,Running Bear,TX,Texas,30.447946,-95.542109,0, ,SETEX Area Reliability Project,500
+S-0739,Napoleon,ND,North Dakota,46.510159,-99.7774,0, ,27392-Wishek-Napoleon,230
+S-0740,Nelson Lake,ND,North Dakota,47.063911,-101.206005,0, ,"27669-Nelson Lake-Square Butte East / Bison, 27670-Nelson Lake-Square Butte / Stanton",230
+S-0741,Copperhead,PA,Pennsylvania,40.248008,-76.842265,0, ,Dauphin - Harrisburg 230 kV,230
+S-0742,Furnace Run,PA,Pennsylvania,39.847133,-76.444175,0, ,Furnace Run - Conastone 230 kV,230
+S-0743,Larrabee Collector Station,NJ,New Jersey,40.113291,-74.186861,0, ,Larrabee Collector Station - Larrabee 230 kV,230
+S-0744,Woodside,VA,Virginia,39.27181,-78.079471,0, ,Woodside - Goose Creek 500 kV Line,500
+S-0745,Hathaway,NC,North Carolina,36.042603,-77.753244,0, ,"Rebuild Hornertown - Hathaway 230 kV, Tarboro to Hathaway Rebuild, Rocky Mount Rebuild",230
+S-0746,Elderberry,IN,Indiana,41.700019,-86.480282,0, ,"Loop Dumont - Sorenson 345 kV into Elderberry, New Stillwell to Elderberry 345kV Line",345
+S-0747,Springhill,VA,Virginia,38.925434,-77.243738,0, ,Tysons - Springhill 230 kV,230
+S-0748,Panola,TX,Texas,32.092905,-94.045027,0, ,Rusk to Panola,345
+S-0749,Rusk,TX,Texas,32.027963,-94.68331,0, ,Rusk to Panola,345
+S-0750,Roadrunner,NM,New Mexico,32.21183,-103.5323,0, ,Crossroads - Hobbs - Roadrunner,345
+S-0751,Crossroads,NM,New Mexico,33.90554,-103.2734,0, ,"Crossroads - Hobbs - Roadrunner, Potter - Crossroads - Phantom 765 kV",765
+S-0752,Holt County,NE,Nebraska,42.088842,-98.308965,0, ,R-Project,345
+S-0753,Garvin,MN,Minnesota,44.230548,-95.749709,0, ,MN Energy Connection Route Options,345
+S-0754,St. Anthony,ND,North Dakota,46.457784,-100.78665,0, ,North Plains Connector,345
+S-0755,Mira Loma,NV,Nevada,39.455563,-119.717637,0, ,Greenlink West,525
+S-0756,Comstock,NV,Nevada,39.494742,-119.438757,0, ,"Greenlink West, Lantern – Comstock Meadows 345 kV line",525
+S-0757,Amargosa,NV,Nevada,36.701586,-116.612595,0, ,Greenlink West,525
+S-0758,Esmeralda,NV,Nevada,38.008801,-117.809696,0, ,Greenlink West,525
+S-0759,Northwest,NV,Nevada,36.33447,-115.33006,0, ,Greenlink West,525
+S-0760,Fort Churchill,NV,Nevada,39.131842,-119.146921,0, ,"Greenlink West, Greenlink North",525
+S-0761,Robinson Summit,NV,Nevada,39.357269,-115.166921,0, ,"Southwest Intertie Project (SWIP) North, Greenlink North, TransCanyonCrossTie",500
+S-0762,Cedar Hill,ID,Idaho,42.41465,-114.254254,0, ,Gateway West,500
+S-0763,Anticline,WY,Wyoming,41.710693,-108.744392,0, ,Gateway West,500
+S-0764,Aeolus,WY,Wyoming,42.011795,-106.378782,0, ,"Gateway West, Gateway South, Wyoming Intertie",500
+S-0765,Heward,WY,Wyoming,42.348782,-106.231294,0, ,Gateway West,500
+S-0766,S3452,NE,Nebraska,41.50926,-96.107466,0, ,Raun - S3452,345
+S-0767,Guymon,OK,Oklahoma,36.553714,-101.335688,0, ,Three Corners Connector,525
+S-0768,Knickerbocker,NY,New York,42.506731,-73.736398,0, , ,345
+S-0769,Van Wagner,NY,New York,41.744535,-73.852542,0, , ,345
+S-0770,East Stolle,NY,New York,42.836578,-78.580559,0, ,Empire State Line,345
+S-0771,Dysinger,NY,New York,43.106967,-78.566889,0, ,Empire State Line,345
+S-0772,Haverstock,NY,New York,44.976161,-74.797008,0, , ,345
+S-0773,Austin Road,NY,New York,43.761465,-75.342996,0, ,Smart Path Connect,345
+S-0774,Astoria Converter Station,NY,New York,40.78702,-73.900227,0, ,Champlain Hudson Power Express,320
+S-0775,New Rochelle,NY,New York,40.911847,-73.774398,0, ,Propel NY Energy,345
+S-0776,Princetown,NY,New York,42.83906,-74.100301,0, ,Central East Energy Connect,345
+S-0777,Rotterdam 2,NY,New York,42.828691,-73.99751,0, ,Central East Energy Connect,345
+S-0778,Eldorado,NV,Nevada,35.797045,-115.00864,0, ,TransWest Express,500
+S-0779,Wyoming Terminal,WY,Wyoming,41.745667,-107.15638,0, ,TransWest Express,500
+S-0780,SunZia East,NM,New Mexico,34.100991,-105.674546,0, ,SunZia,525
+S-0781,SunZia West,AZ,Arizona,32.600676,-111.147422,0, ,SunZia,525
+S-0782,May Valley,CO,Colorado,38.352795,-102.401642,0, ,Colorado's Power Pathway,345
+S-0783,Longhorn,CO,Colorado,37.614323,-102.383944,0, ,Colorado's Power Pathway,345
+S-0784,Goose Creek,CO,Colorado,38.998446,-102.502605,0, ,Colorado's Power Pathway,345
+S-0785,Canal Crossing,CO,Colorado,40.146128,-103.720722,0, ,Colorado's Power Pathway,345
+S-0786,Sandstone,CO,Colorado,38.408226,-104.18557,0, ,Colorado's Power Pathway,345
+S-0787,Harvest Mile,CO,Colorado,39.633574,-104.70276,0, ,Colorado's Power Pathway,345
+S-0788,Tundra,CO,Colorado,38.344194,-104.410314,0, ,Colorado's Power Pathway,345
+S-0789,Middle Grove,MO,Missouri,39.366191,-92.179765,0, ,Grain Belt Express,600
+S-0790,Castle,TX,Texas,30.306093,-95.839158,0, ,Castle 230 kV Transmission Line and Substation Project,230
+S-0791,Ruther Glen,VA,Virginia,38.018032,-77.481189,0, ,Ruther Glen 230 kV Electric Transmission Project,230
+S-0792,Carmel Church,VA,Virginia,37.929558,-77.468622,0, ,Carmel Church 230 kV Electric Transmission Project,230
+S-0793,Butler Farm,VA,Virginia,36.77907,-78.464998,0, , ,230
+S-0794,Finneywood,VA,Virginia,36.845146,-78.451109,0, ,Jeffress 230 kV Project,230
+S-0795,Jeffress,VA,Virginia,36.632053,-78.520037,0, ,Jeffress 230 kV Project,230
+S-0796,Buttermilk,VA,Virginia,39.007567,-77.457293,0, ,"Beaumeade-Buttermilk Reconductor, Eastern Loudoun County Reconductor Projects",230
+S-0797,Edsall,VA,Virginia,38.802882,-77.1432,0, ,Edsall 230 kV Electric Transmission Project,230
+S-0798,Daves Store,VA,Virginia,38.800629,-77.606472,0, ,Daves Store 230 kV Project,230
+S-0799,Gemini,VA,Virginia,38.799474,-77.608098,0, ,Daves Store 230 kV Project,230
+S-0800,Atlas,VA,Virginia,38.798837,-77.609316,0, ,Daves Store 230 kV Project,230
+S-0801,Stinger,VA,Virginia,38.790655,-77.585363,0, ,Daves Store 230 kV Project,230
+S-0802,Trident,VA,Virginia,38.788421,-77.581858,0, ,Daves Store 230 kV Project,230
+S-0803,Unity,VA,Virginia,36.886497,-78.141082,0, ,South Hill 230 kV Project,230
+S-0804,Tunstall,VA,Virginia,36.737879,-78.104011,0, ,South Hill 230 kV Project,230
+S-0805,Evans Creek,VA,Virginia,36.704856,-78.067521,0, ,South Hill 230 kV Project,230
+S-0806,Nebula,VA,Virginia,36.652122,-78.356469,0, ,Nebula - Raines 230 kV Route Options,230
+S-0807,Enon,VA,Virginia,37.339606,-77.323332,0, , ,230
+S-0808,White Mountain,VA,Virginia,37.359501,-77.3219,0, , ,230
+S-0809,Meadowville Switching Station,VA,Virginia,37.358719,-77.328665,0, , ,230
+S-0810,Sloan Drive Switching Station,VA,Virginia,37.349199,-77.310898,0, , ,230
+S-0811,Bermuda Hundred Switching Station,VA,Virginia,37.344203,-77.295163,0, , ,230
+S-0812,Sycamore Springs Switching Station,VA,Virginia,37.327535,-77.348232,0, , ,230
+S-0813,Summit,VA,Virginia,38.211724,-77.471832,0, ,Ladysmith - Lee's Hill 230 kV Project,230
+S-0814,Lee's Hill,VA,Virginia,38.222385,-77.476547,0, ,Ladysmith - Lee's Hill 230 kV Project,230
+S-0815,Post,VA,Virginia,38.20934,-77.474947,0, ,Ladysmith - Lee's Hill 230 kV Project,230
+S-0816,Ladysmith CT,VA,Virginia,38.073269,-77.513067,0, ,Ladysmith - Lee's Hill 230 kV Project,230
+S-0817,Tributary,VA,Virginia,38.157842,-77.508394,0, ,Tributary 230 kV Route Options,230
+S-0818,Langley,VA,Virginia,37.090711,-76.393141,0, ,Langley 230 kV Substation Project,230
+S-0819,Altair,VA,Virginia,39.063754,-77.558132,0, ,Altair 230 kV Route Options,230
+S-0820,Aviator,VA,Virginia,38.92369,-77.486095,0, ,Aviator 230 kV Project,230
+S-0821,DTC,VA,Virginia,39.037192,-77.428995,0, ,BECO to DTC 230 kV,230
+S-0822,Riverport,SC,South Carolina,32.212796,-81.085517,0, ,Okatie - Riverport 230 kV,230
+S-0823,Devlin,VA,Virginia,38.781943,-77.56824,0, ,Hornbaker - Devlin 230 kV Route Options,230
+S-0824,Pegasus DP,VA,Virginia,38.762827,-77.536359,0, ,Hornbaker - Devlin 230 kV Route Options,230
+S-0825,Hourglass,VA,Virginia,38.745809,-77.515837,0, ,Hornbaker - Devlin 230 kV Route Options,230
+S-0826,Runway,VA,Virginia,38.976514,-77.490438,0, ,Eastern Loudoun County Reconductor Projects,230
+S-0827,Sojourner,VA,Virginia,38.965431,-77.491484,0, ,Eastern Loudoun County Reconductor Projects,230
+S-0828,Germanna,VA,Virginia,38.437155,-77.872176,0, , ,230
+S-0829,Keyser,VA,Virginia,38.461528,-77.975363,0, ,Cirrus-Keyser 230 kV Transmission Line Rebuild,230
+S-0830,Cirrus,VA,Virginia,38.462308,-77.976505,0, , ,230
+S-0831,McDevitt,VA,Virginia,38.461395,-77.990887,0, , ,230
+S-0832,Chandler,VA,Virginia,38.4628,-77.99169,0, , ,230
+S-0833,Palomino,VA,Virginia,38.464834,-77.991147,0, , ,230
+S-0834,Mt. Pony,VA,Virginia,38.453207,-77.977007,0, , ,230
+S-0835,Potato Run,VA,Virginia,38.428262,-77.907035,0, ,Culpeper Tech Zone 230 kV Project,230
+S-0836,Oak Green (Relocated),VA,Virginia,38.331615,-77.946642,0, , ,230
+S-0837,Blackwell Road Option 1,VA,Virginia,38.698371,-77.782277,0, ,Blackwell Road 230 kV Project,230
+S-0838,Blackwell Road Option 2,VA,Virginia,38.691321,-77.773665,0, ,Blackwell Road 230 kV Project,230
+S-0839,CR 672,FL,Florida,27.764991,-82.262201,0, ,Boyette Road to CR 672,230
+S-0840,Porter's Neck,NC,North Carolina,34.302847,-77.791929,0, ,Wilmington Northeast Reliability Project,230
+S-0841,Morrisville,NC,North Carolina,35.846061,-78.829802,0, ,Morrisville Industrial Transmission Line Project,230
+S-0842,Holly Springs,NC,North Carolina,35.644013,-78.87286,0, ,Holly Springs Utley Creek Project,230
+S-0843,Noblesville West,IN,Indiana,40.042631,-86.088928,0, ,Noblesville-Westfield Reliability Projects,230
+S-0844,Osprey,FL,Florida,28.054078,-81.80763,0, , ,230
+S-0845,Mondon Hill,FL,Florida,28.55389,-82.366653,0, ,Brooksville West – Mondon Hill – Bushnell East,230
+S-0846,Roundup,ND,North Dakota,47.41017,-102.7654,0, ,Roundup to Kummer Ridge 345 kV Line,345
+S-0847,Kummer Ridge,ND,North Dakota,47.799294,-102.930435,0, ,Roundup to Kummer Ridge 345 kV Line,345
+S-0848,Abernathy,TX,Texas,33.89348,-101.814442,0, ,Abernathy - North Loop 345 kV,345
+S-0849,X-FAB,TX,Texas,33.626996,-101.877252,0, ,Abernathy - North Loop 345 kV,345
+S-0850,BL England,NJ,New Jersey,39.289863,-74.636099,0, ,Ocean Wind BL England to Oyster Creek,275
+S-0851,Hydraulic Road,VA,Virginia,38.05818,-78.490901,0, ,Rebuild Charlottesville - Hydraulic Rd - Barracks Road - Crozet - Dooms 230 kV Line,230
+S-0852,Cooper,PA,Pennsylvania,39.752062,-76.300497,0, ,Cooper - North Delta (Bramah) 500 kV,500
+S-0853,Unknown117827,SC,South Carolina,33.943265,-80.984114,230,115,CIP-Hopkins,230
+S-0854,Hopkins,SC,South Carolina,33.882265,-80.920853,115,115,CIP-Hopkins,230
+S-0855,Southern Oaks,FL,Florida,28.776422,-81.95614,0, ,Southern Oaks Reliability Project,230
+S-0856,Storey,CA,California,36.983125,-120.033516,230,Unknown,Borden - Storey 230 kV Line Reconductoring,230
+S-0857,Borden,CA,California,36.922149,-119.984503,0, ,Borden - Storey 230 kV Line Reconductoring,230
+S-0858,Bellota,CA,California,38.01554,-121.013773,0, ,Warnerville - Bellota 230 kV Line Reconductoring,230
+S-0859,Warnerville,CA,California,37.741729,-120.802415,230,115,Warnerville - Bellota 230 kV Line Reconductoring,230
+S-0860,Lugo,CA,California,34.366691,-117.368744,500,230,"Reconductor Lugo - Victor 230 kV, Lugo - Victorville 500 kV Upgrade",230
+S-0861,Victor,CA,California,34.504319,-117.388627,230,33,Reconductor Lugo - Victor 230 kV,230
+S-0862,Cortina,CA,California,39.120575,-122.223425,0, ,Reconductor Delevan - Cortina 230 kV Line,230
+S-0863,Delevan,CA,California,39.368408,-122.269318,0, ,Reconductor Delevan - Cortina 230 kV Line,230
+S-0864,Skyline,CA,California,37.339984,-121.9008,0, ,Power Santa Clara Valley,320
+S-0865,Metcalf,CA,California,37.226312,-121.745896,0, ,"Power Santa Clara Valley, Greater Bay Area 500 kV Transmission Reinforcement",500
+S-0866,Grove,CA,California,37.214072,-121.734338,0, ,Power Santa Clara Valley,500
+S-0867,Thurman,CA,California,38.127545,-121.253087,0, ,Northern San Joaquin 230 kV Transmission Project,230
+S-0868,Lockeford,CA,California,38.117821,-121.16033,230,60,Northern San Joaquin 230 kV Transmission Project,230
+S-0869,Johnnie Corner,NV,Nevada,36.433347,-116.071452,0, ,Johnnie Corner - Beatty Upgrade Project,230
+S-0870,Valley,NV,Nevada,36.537363,-116.400099,0, ,Johnnie Corner - Beatty Upgrade Project,230
+S-0871,Lathrop Switch,NV,Nevada,36.670145,-116.365975,0, ,Johnnie Corner - Beatty Upgrade Project,230
+S-0872,Beatty,NV,Nevada,36.902755,-116.767888,0, ,Johnnie Corner - Beatty Upgrade Project,230
+S-0873,Talega,CA,California,33.453118,-117.571533,230,69,South Orange County Reliability Enhancement (SOCRE) Project,230
+S-0874,Pico,CA,California,33.456804,-117.589194,115,Unknown,South Orange County Reliability Enhancement (SOCRE) Project,230
+S-0875,Capistrano,CA,California,33.512528,-117.665582,115,138,South Orange County Reliability Enhancement (SOCRE) Project,230
+S-0876,Alberhill,CA,California,33.733891,-117.413602,0, ,Alberhill System Project,500
+S-0877,Pardee,CA,California,34.439769,-118.581713,0, ,Pardee - Sylmar 230 kV Line Rating Increase,230
+S-0878,Etiwanda,CA,California,34.088987,-117.526856,0, ,San Bernardino - Etiwanda 230 kV Upgrade,230
+S-0879,Victorville,CA,California,34.563511,-117.322161,0, ,Lugo – Victorville 500 kV Upgrade,500
+S-0880,Mesa,CA,California,34.037046,-118.110367,0, ,"Serrano - Del Amo - Mesa 500 kV Transmission Reinforcement, Laguna Bell - Mesa No. 1 230 kV Line Rating Increase",500
+S-0881,Suncrest,CA,California,32.80836,-116.683291,0, ,Miguel-Sycamore Canyon Loop-in to Suncrest,230
+S-0882,Mira Loma,CA,California,34.008338,-117.564285,0, ,Mira Loma - Mesa Upgrade,500
+S-0883,North Gila,AZ,Arizona,32.746103,-114.49103,0, ,North Gila - Imperial Valley 500 kV Line,500
+S-0884,Fern Road,CA,California,40.642981,-121.936961,0, ,New Humboldt to Fern Road 500 kV Line,500
+S-0885,Humboldt 500kV,CA,California,40.745288,-124.159911,0, ,New Humboldt to Fern Road 500 kV Line,500
+S-0886,Collinsville,CA,California,38.081079,-121.83661,0, ,New Humboldt to Collinsville 500 kV Line,500
+S-0887,North Dublin,CA,California,37.744886,-121.857887,0, ,North Dublin - Vineyard 230 kV Reconductoring,230
+S-0888,Tesla,CA,California,37.712428,-121.564928,0, ,Tesla - Newark 230 kV Line No. 2 Reconductoring,230
+S-0889,Innovation,NV,Nevada,36.582466,-115.947361,0, , ,230
+S-0890,Desert View,NV,Nevada,36.365734,-115.367441,0, , ,500
+S-0891,Trout Canyon,NV,Nevada,36.076366,-115.7806,0, , ,500
+S-0892,Sloan Canyon,NV,Nevada,35.833184,-115.011805,0, , ,500
+S-0893,Vista,NV,Nevada,36.317331,-116.010826,0, , ,230
+S-0894,Moraga,CA,California,37.847892,-122.160684,0, ,Moraga-Castro Valley 230 kV Line Capacity Increase,230
+S-0895,French Camp,CA,California,37.882118,-121.290404,0, ,French Camp Reinforcement,230
+S-0896,Erie Converter Station,PA,Pennsylvania,41.935892,-80.378262,0, ,Lake Erie Converter,345
+S-0897,Nanticoke,ON,Ontario,42.800105,-80.055868,0, ,Lake Erie Connector,320
+S-0898,Hertel,QC,Quebec,45.409187,-73.428574,0, ,Hertel - New York Interconnection,400
+S-0899,Ordinance Switchyard,OR,Oregon,45.80394,-119.380932,0, ,Umatilla-Morrow County Connect Project,230
+S-0900,Highway 730 Switchyard,OR,Oregon,45.834,-119.6152,0, ,Umatilla-Morrow County Connect Project,230
+S-0901,Swan Lake Project,OR,Oregon,42.354686,-121.647296,0, ,Swan Lake Energy Storage Project,230
+S-0902,Abel,AZ,Arizona,33.149405,-111.470271,0, ,Abel-Pfister-Ball 230 kV Transmission Project,230
+S-0903,Ball,AZ,Arizona,33.292178,-111.695669,0, ,Abel-Pfister-Ball 230 kV Transmission Project,230
+S-0904,Pfister,AZ,Arizona,33.227491,-111.585839,0, ,Abel-Pfister-Ball 230 kV Transmission Project,230
+S-0905,Tranquility,CA,California,36.59171,-120.4031,0, ,Manning 500/230 kV Substation Project,230
+S-0906,Manning,CA,California,36.598936,-120.606501,0, ,"Manning 500/230 kV Substation Project, Greater Bay Area 500 kV Transmission Reinforcement",500
+S-0907,Wildlife,CA,California,33.965573,-117.445649,0, ,Riverside Transmission Reliability Project,230
+S-0909,Brooklyn Clean Energy Hub,NY,New York,40.705221,-73.981698,0, ,Brooklyn Clean Energy Hub,345
+S-0910,Dover,NY,New York,41.676583,-73.575698,0, ,Cricket Valley - Dover 345 kV,345
+S-0911,Cricket Valley,NY,New York,41.676351,-73.579847,0, ,Cricket Valley - Dover 345 kV,345
+S-0912,Delaware,OK,Oklahoma,36.813154,-95.628255,345,138,"Buffalo Flats - Delaware 345 kV, Delaware - Monett 345 kV",345
+S-0913,Takeoff,VA,Virginia,38.902527,-77.448365, , ,Sully - Takeoff 230 kV,230
+S-0914,Susquehanna,PA,Pennsylvania,41.091994,-76.147057,500,230,Montour - Susquehanna 230 kV,230
+S-0915,Montour Station,PA,Pennsylvania,41.07263,-76.663843,230,230,Montour - Susquehanna 230 kV,230
+S-0916,TalenEnergy Martins Creek LLC Harwood,PA,Pennsylvania,40.935597,-76.027442,69,Unknown,Siegfried - Harwood 230 kV,230
+S-0917,Siegfried,PA,Pennsylvania,40.713128,-75.51812,230,69,Siegfried - Harwood 230 kV,230
+S-0918,East Palmerton,PA,Pennsylvania,40.828938,-75.576022,69,69,Siegfried - Harwood 230 kV,230
+S-0918,Columbia,PA,Pennsylvania,41.002328,-76.506926,230,Unknown,Frackville-Columbia 230 kV,230
+S-0919,Brickyard, , ,38.733532,-77.508322, , ,Cannon Branch - Winters Branch 230 kV Line Extension,230
+S-0920,Walney,VA,Virginia,38.893656,-77.411585,230,230,Sully - Takeoff 230 kV,230
+S-0921,Rollins Ford, , ,38.777727,-77.579823, , ,Rollins Ford - Gainseville 230 kV,230
+S-0922,Clark County Logistics, , ,38.378142,-85.666726, , ,Clark County Reliability Project 345 kV,345
+S-0923,Deland West,FL,Florida,29.0149,-81.372157,230,69,DeLand West - Dona Vista 230 kV,230
+S-0924,Dona Vista,FL,Florida,28.876264,-81.69044,Unknown,Unknown,DeLand West - Dona Vista 230 kV,230
+S-0925,Speed,IN,Indiana,38.440728,-85.754758,345,Unknown,Clark County Reliability Project 345 kV,345
+S-0926,Stillwell,IN,Indiana,41.537116,-86.578034,345,138,New Stillwell to Elderberry 345kV Line,345
+S-0927,Sarepta,LA,Louisiana,32.909853,-93.448788,115,Unknown,Sarepta to Mount Olive 500 kV Project,500
+S-0928,Mount Olive,LA,Louisiana,32.577388,-92.687526,500,Unknown,Sarepta to Mount Olive 500 kV Project,500
+S-0929,Cypress,TX,Texas,30.303634,-94.257202,500,69,Cypress to Legend 500 kV line,500
+S-0930,Legend, , ,29.877364,-94.010277, , ,"Cypress to Legend 500 kV line, Legend - Sandling 230 kV",500
+S-0931,Pickens,MS,Mississippi,32.932001,-89.936299,230,Unknown,Pickens - South Canton 230 kV Line Rebuilds,230
+S-0932,Canton,MS,Mississippi,32.617635,-89.999558,230,230,Pickens - South Canton 230 kV Line Rebuilds,230
+S-0933,Montgomery,MO,Missouri,38.921608,-91.460167,345,69,Labadie-Montgomery 345kV Aging Infrastructure,345
+S-0934,Labadie,MO,Missouri,38.563478,-90.834618,345,Unknown,Labadie-Montgomery 345kV Aging Infrastructure,345
+S-0935,Salem,IA,Iowa,42.402107,-90.664082,345,69,J1432 GIA NU New Bryant 345 kV Switch Station,345
+S-0936,Rock Creek,IA,Iowa,41.790999,-90.295397,345,161,J1432 GIA NU New Bryant 345 kV Switch Station,345
+S-0937,Point Pleasant,LA,Louisiana,30.252078,-91.16055,230,230,Willow Glen - Point Pleasant 230 kV Upgrade,230
+S-0938,Spencer Creek,MO,Missouri,39.310588,-91.534404,345,345,New Firebrick Wind Farm (J1026),345
+S-0939,Firebrick Wind Farm, , ,39.281067,-91.644224, , ,New Firebrick Wind Farm (J1026),345
+S-0940,Sandling,TX,Texas,29.76235,-93.929585,138,69,Legend - Sandling 230 kV,230
+S-0941,Rolling Hills,IA,Iowa,41.178653,-94.775013,345,345,Rolling Hills - Southland 345 kV,345
+S-0942,Southland,IA,Iowa,41.174849,-95.797262,345,345,Rolling Hills - Southland 345 kV,345
+S-0943,Robert, , ,30.506669,-90.320729, , ,Adams Creek - Robert 230 kV,230
+S-0944,Adams Creek, , ,30.855343,-89.870036, , ,Adams Creek - Robert 230 kV,230
+S-0945,Julian Hinds, , ,33.70458,-115.626587, , ,Julian Hinds - Mirage 230 kV,230
+S-0946,Mirage,CA,California,33.818443,-116.369723,230,115,Julian Hinds - Mirage 230 kV,230
+S-0947,San Jose B, , ,37.340917,-121.901703, , ,San Jose B - NRS 230 kV line,0
+S-0948,Corridor,OH,Ohio,40.124259,-82.845278,345,138,Conesville - Corridor 345 kV,345
+S-0949,Branson NW,MO,Missouri,36.672323,-93.258538,161,161,Branson NW - Monett 345 kV,345
+S-0950,Aqueduct,MD,Maryland,39.225385,-77.441457,230,230,"Rebuild Doubs - Aqueduct 230 kV, Rebuild Dickerson - Aqueduct 230 kV",230
+S-0951,Dickerson,MD,Maryland,39.207676,-77.452879,230,Unknown,"Rebuild Doubs - Dickerson 230 kV, Rebuild Dickerson - Aqueduct 230 kV",230
+S-0952,Cass County,NE,Nebraska,40.94896,-95.966489,345,345,S3458 - S3740 345 kV,345
+S-0954,Sidney,NE,Nebraska,41.125609,-102.969953,Unknown,Unknown,Holcomb - Sidney 345 kV,345
+S-0955,Twelve Mile,ND,North Dakota,48.153701,-103.383901,Unknown,Unknown,Springbrook-Twelve Mile 345,345
+S-0956,Finstad,ND,North Dakota,48.038046,-102.357422,115,Unknown,Logan - Finstad 345 kV,345
+S-0957,Tallmadge,MI,Michigan,42.96957,-85.808842,345,138,Tallmadge-Argenta - J1663 Generator Interconnection,345
+S-0958,Argenta,MI,Michigan,42.436085,-85.608293,345,Unknown,Tallmadge-Argenta - J1663 Generator Interconnection,345
+S-0959,Trabue,VA,Virginia,37.507267,-77.628993,230,230,Reconductor Midlothian - Trabue 230 kV,230
+S-0960,Nebraska City,NE,Nebraska,40.620398,-95.776084,345,345,S3458 - S3740 345 kV,345
+S-0961,Holcomb,KS,Kansas,37.926391,-100.971893,345,115,Holcomb - Sidney 345 kV,345
+S-0962,Fort Smith,AR,Arkansas,35.300004,-94.430405,500,161,Ft Smith - Muskogee 345 kV,345
+S-0963,Hyatt,OH,Ohio,40.215326,-83.089383,345,345,Rebuild Hyatt - Marysville 345 kV,345
+S-0964,Marysville,OH,Ohio,40.332749,-83.430458,765,345,"Rebuild Hyatt - Marysville 345 kV, Teddy - Marysville 765 kV",345
+S-0965,Monett,MO,Missouri,36.974766,-93.915542,161,161,"Delaware - Monett 345 kV, Branson NW - Monett 345 kV",345
+S-0966,Patent Gate,ND,North Dakota,47.86359,-103.47504,115,115,Patent Gate - Pioneer 345 kV,345
+S-0967,Chisholm,OK,Oklahoma,35.377225,-99.719722,345,230,Chisholm - Woodward - Border 345 kV,345
+S-0968,Williston 230 kV,ND,North Dakota,48.144199,-103.732281,230,Unknown,Dawson County  - Williston 230 kV,230
+S-0969,Belfield,ND,North Dakota,46.841772,-103.070075,345,230,Belfield - Maurine 345 kV,345
+S-0970,New Underwood,SD,South Dakota,44.071939,-102.826878,230,115,Laramie River - New Underwood 345 kV,345
+S-0971,Dawson County,MT,Montana,47.106504,-104.768822,230,115,Dawson County  - Williston 230 kV,230
+S-0972,Maurine,SD,South Dakota,45.007744,-102.592115,230,230,Belfield - Maurine 345 kV,345
+S-0973,Pioneer,ND,North Dakota,48.230591,-103.955204,115,115,Patent Gate - Pioneer 345 kV,345
+S-0974,Potter County,TX,Texas,35.310286,-101.922621,345,69,Potter - Crossroads - Phantom 765 kV,765
+S-0975,Moore County,TX,Texas,35.966739,-101.863033,230,115,Moore County - Xit 230 kV,230
+S-0976,XIT,TX,Texas,36.064837,-102.528792,138,115,Moore County - Xit 230 kV,230
+S-0977,Solstice,TX,Texas,30.947288,-103.36533,138,69,"Howard-Solstice Transmission Line Project, Solstice - Bottlebrush New 345 kV Line, Solstice - Faulkner New 345 kV Line",765
+S-0978,Phantom,NM,New Mexico,32.16316,-103.8525, , ,"Potter - Crossroads - Phantom 765 kV, Phantom - Crawfish Draw 765 kV",765
+S-0979,Springbrook,ND,North Dakota,48.298659,-103.540173, , ,Springbrook-Twelve Mile 345,345
+S-0980,Ravenswood,NY,New York,40.758136,-73.94693,348,138,Ravenswood Project - Queensboro Renewable Express,0
+S-0981,Big Hill,TX,Texas,31.047192,-100.543096,345,69,"Big Hill - Sand Lake 765 kV Transmission Project, Bell County East to Big Hill 765 kV Transmission Project",765
+S-0982,Bell County,TX,Texas,31.002638,-97.258704,345,345,Bell County East to Big Hill 765 kV Transmission Project,765
+S-0983,Dinosaur, , ,32.279123,-97.791978, , ,Dinosaur - Longshore 765 kV Transmission Project,765
+S-0984,Clearfork,TX, ,32.163789,-102.77703, , ,Construct Clearfork - Drill Hole 345 kV DCKT Line,345
+S-0985,Toyah Creek,TX, ,31.367555,-103.387735, , ,Creosote - Toyah Creek 345 kV Line,345
+S-0986,Bottlebrush,TX,Texas,30.607313,-102.581574,138,Unknown,Solstice - Bottlebrush New 345 kV Line,345
+S-0987,Faulkner,TX, ,31.261849,-103.794337, , ,Solstice - Faulkner New 345 kV Line,0
+S-0988,Tewksbury No. 22A,MA,Massachusetts,42.622785,-71.242316,345,345,Reconductor Tewksbury - Woburn 345 kV,345
+S-0989,Woburn,MA,Massachusetts,42.462321,-71.154047,345,115,Reconductor Tewksbury - Woburn 345 kV,345
+S-0990,Rockville, , ,33.323854,-83.187865, , ,"East Walton - Rockville 500 kV, Rockville - Tiger Creek 500 kV",500
+S-0991,East Walton, , ,33.79638,-83.580686, , ,"East Walton - Rockville 500 kV, East Walton - Middle Fork 500 kV",500
+S-0992,Wansley,GA,Georgia,33.412338,-85.033575,230,230,"Ashley Park - Wansley 500 kV, Tenaska - Wansley 500 kV",500
+S-0993,Ashley Park, , ,33.501433,-84.487637, , ,Ashley Park - Wansley 500 kV,500
+S-0994,Talbot County Energy,GA,Georgia,32.588637,-84.692902,230,230,Dresden - Talbot 500 kV,500
+S-0995,Dresden,GA,Georgia,33.351644,-84.907616,230,230,Dresden - Talbot 500 kV,500
+S-0996,Tenaska,GA,Georgia,33.35153,-84.99777,500,500,"Tenaska - Wansley 500 kV, Heard County - Tenaska 500 kV",500
+S-0997,Heard County,GA,Georgia,33.359012,-84.994568,500,500,Heard County - Tenaska 500 kV,500
+S-0998,Farley,AL,Alabama,31.224051,-85.116208,500,230,Farley - Tazewell 500 kV,500
+S-0999,Tazewell,GA,Georgia,32.362979,-84.47688,230,Unknown,Farley - Tazewell 500 kV,500
+S-1000,Wadley,GA,Georgia,32.883631,-82.414159,230,Unknown,Hatch - Wadley 500 kV,500
+S-1001,Tiger Creek,GA,Georgia,33.094481,-82.981578,230,230,Rockville - Tiger Creek 500 kV,500
+S-1002,Warthen Substation,GA,Georgia,33.119922,-82.859392,500,500,Tiger Creek - Warthen 500 kV,500
+S-1003,Hatch,GA,Georgia,31.933525,-82.345245,500,500,Hatch - Wadley 500 kV,500
+S-1004,McGrau Ford,GA,Georgia,34.326965,-84.337396,500,230,Mcgrau Ford - Middle Fork 500 kV,500
+S-1005,Middle Fork,GA,Georgia,34.420491,-83.400556,230,115,"Mcgrau Ford - Middle Fork 500 kV, East Walton - Middle Fork 500 kV",500
+S-1006,Battle Creek,MI,Michigan,42.368678,-85.158411,345,138,Battle Creek - Oneida,345
+S-1007,Melbourne, , ,41.565501,-84.057892, , ,Dowling - Fulton 345 kV Transmission Line Tap to Melbourne,345
+S-1008,Fulton,OH,Ohio,41.60146,-83.909919,345,Unknown,Dowling - Fulton 345 kV Transmission Line Tap to Melbourne,345
+S-1009,Centreport, , ,38.390234,-77.46455, , ,Centreport 230 kV Electric Transmission Project,230
+S-1010,Midessa South SW, , ,31.858303,-102.216184, , ,Midessa South SW - Consavvy - Longshore Switch - Morgan Creek SES 345 kV Line Upgrades,345
+S-1011,Creosote,TX,Texas,31.276265,-103.127439,138,Unknown,Creosote - Toyah Creek 345 kV Line,345
+S-1012,Kammer,WV,West Virginia,39.833453,-80.806,765,500,Kammer - Juniata 765 kV,765
+S-1013,Juniata,PA,Pennsylvania,40.429139,-77.17093,500,Unknown,Kammer - Juniata 765 kV,765
+S-1014,Haddam Neck,CT,Connecticut,41.488285,-72.492704,345,345,Reconductor Scovill Rock - Haddam Neck,345
+S-1015,Scovill Rock,CT,Connecticut,41.510369,-72.569709,345,345,Reconductor Scovill Rock - Haddam Neck,345
+S-1016,DPC Bell Center,WI,Wisconsin,43.286923,-90.824316,161,69,Bell Center–Columbia–Sugar Creek–IL/WI State Line 765 kV,765
+S-1017,Big Smarr,GA,Georgia,32.971252,-83.848299, , ,Big Smarr - Tomochichi 500 kV,500
+S-1018,Tomochichi,GA,Georgia,33.273723,-84.138121, , ,Big Smarr - Tomochichi 500 kV,500
+S-1019,Seminole (OK),OK,Oklahoma,34.965972,-96.732045,345,138,"Seminole - SW Shreveport 765 kV, Seminole - Anthem 765 kV",765
+S-1020,Southwest Shreveport,LA,Louisiana,32.404782,-93.864626,345,Unknown,Seminole - SW Shreveport 765 kV,765
+S-1021,Anthem (OK),Oklahoma,OK,36.14611,-95.737158, , ,Seminole - Anthem 765 kV,765
+S-1022,Dworshak,ID,Idaho,46.528443,-116.367189,500,500,Montana to Washington (M2W),500
+S-1023,Taft,MT,Montana,47.456373,-115.589224,500,500,S-1022,0
+S-1024,Afton North,NM,New Mexico,32.12137,-106.848594, , ,Afton - Afton North 345 kV,345
+S-1025,Lantern,NV,Nevada,39.889663,-119.12056, , ,Lantern – Comstock Meadows 345 kV line,345
+S-1026,ED5,AZ,Arizona,32.734628,-111.567641,115,Unknown,Pinal Central - ED5 Transmission Line,230
+S-1027,Rio Puerco,NM,New Mexico,35.326962,-106.855189,345,345,"Rio Puerco-Prosperity 345kV Line, San Juan to Rio Puerco 345 kV, Reconductor Rio Puerco - Pintado 345 kV",345
+S-1028,Prosperity,NM,New Mexico,35.002601,-106.637623, , ,Rio Puerco-Prosperity 345kV Line,345
+S-1029,Viejo,CA,California,33.666969,-117.642432, , ,San Onofre to Viejo 230 kV,230
+S-1030,Santiago,CA,California,33.664668,-117.767998, , ,Santiago to San Onofre 230 kV,230
+S-1031,White River,WA,Washington,47.238609,-122.210146,230,69,Cross-Cascades Project,500
+S-1032,Three Peaks,UT,Utah,37.800606,-113.159712,345,69,Three Peaks - Purgatory Flat 345 kV line,345
+S-1033,Purgatory Flat,UT,Utah,37.154921,-113.437997,230,230,Three Peaks - Purgatory Flat 345 kV line,345
+S-1034,Western Spirit,NM,New Mexico,34.616379,-105.651139, , ,"Western Spirit - Chavez County 345kV Line, Western Spirit - Hidden Mountain 345 kV Line",345
+S-1035,Hidden Mountain,NM,New Mexico,34.82501,-106.828795, , ,Western Spirit - Hidden Mountain 345 kV Line,345
+S-1036,Six Mile,OR,Oregon,45.814962,-119.891865, , ,"Lower Columbia to Bonanza II, Six Mile to Ashe 500 kV Line",500
+S-1037,Taiban Mesa,NM,New Mexico,34.587388,-104.03569,345,115,Rebuild Clines Corner - Guadalupe - Taiban Mesa,345
+S-1038,Guadalupe,NM,New Mexico,35.100758,-105.019146,345,345,Rebuild Clines Corner - Guadalupe - Taiban Mesa,345
+S-1039,Clines Corner,NM,New Mexico,35.091969,-105.716911, , ,Rebuild Clines Corner - Guadalupe - Taiban Mesa,345
+S-1040,Amrad,NM,New Mexico,32.519401,-106.138167,345,115,Reconductor Amrad - Chavez 345 kV line,345
+S-1041,Marketplace,NV,Nevada,35.819235,-115.011322,500,Unknown,Mead - Market Place 500 kV Line,500
+S-1042,Mead,NV,Nevada,35.927795,-114.833833, , ,"Mead - Market Place 500 kV Line, Mead - Liberty - West Wing 500 kV Line",500
+S-1043,Westwing, , ,33.706426,-112.321858, , ,Mead - Liberty - West Wing 500 kV Line,500
+S-1044,San Juan,NM,New Mexico,36.802126,-108.442429,345,115,"San Juan to Four Corners 345 kV, San Juan to Rio Puerco 345 kV",345
+S-1045,Midpoint,ID,Idaho,42.835674,-114.420608,345,138,Colstrip - Townsend - Midpoint 500 kV,500
+S-1046,Summer Lake,OR,Oregon,43.013951,-120.955909,500,500,Rebuild Hemingway - Summer Lake 500 kV,500
+S-1047,Burns,OR,Oregon,43.667606,-119.04783,500,500,Rebuild Hemingway - Summer Lake 500 kV,500
+S-1048,B-A,NM,New Mexico,35.348672,-106.482925,345,115,Reconductor Diamond Tail - B - A 345 kV,345
+S-1049,Diamond Tail,NM,New Mexico,35.360913,-106.338141, , ,Reconductor Diamond Tail - B - A 345kV,345
+S-1050,Pintado,NM,New Mexico,35.957474,-107.568665, , ,Reconductor Rio Puerco - Pintado 345 kV,0
+S-1051,Whiteston,OR,Oregon,42.4314,-122.90914, , ,Reconductor Sams Valley - Whitestone 230 kV,230
+S-1052,Sams Valley,OR,Oregon,42.476275,-122.963352, , ,Reconductor Sams Valley - Whitestone 230 kV,230
+S-1053,Archer,WY,Wyoming,41.145246,-104.649029,230,115,Reconductor Archer to Ault 230 kV,230
+S-1054,Terry Ranch,WY,Wyoming,41.04278,-104.809226,230,115,Reconductor Ault to Terry Ranch 230 kV,230
+S-1055,Pleasant Valley Solar,ID,Idaho,43.32825,-115.986343, , ,Mayfield 230 kV Substation and Transmission Lines,230
+S-1056,Mayfield,ID,Idaho,43.370225,-115.923296, , ,"Mayfield 230 kV Substation and Transmission Lines, Mayfield to Boise Bench 230 kV Line",230
+S-1057,Boise Bench,ID,Idaho,43.559107,-116.15826,230,115,Mayfield to Boise Bench 230 kV Line,230
+S-1058,South Boise,ID,Idaho,43.506593,-116.23314, , ,Mayfield to South Boise 230 kV Line,230
+S-1059,Chip,ID,Idaho,43.524719,-116.133647, , ,Mayfield to Chip 230 kV Line,230
+S-1060,Townsend,MT,Montana,46.254187,-111.46829, , ,"Townsend - Midpoint 500 kV, Townsend - Ashe 500 kV",500
+S-1061,Broadview,MT,Montana,46.051795,-108.851657,500,69,Colstrip - Broadview 500 kV Upgrade,500
+S-1062,Woodward,OK,Oklahoma,36.311799,-99.368382,345,138,Crawfish Draw - Woodward 765 kV,765
+S-1063,Webre,LA,Louisiana,30.442085,-91.475561,500,500,Babel - Webre 500 kV Line,500
+S-1064,Crawfish Draw,TX,Texas,33.864669,-101.789201, , ,"Phantom - Crawfish Draw 765 kV, Crawfish Draw - Woodward 765 kV",765
+S-1065,Yell,AR,Arkansas,35.347688,-93.240958, , ,Fort Smith - Yell 500 kV,500
+S-1066,McNeil,AR,Arkansas,33.336705,-93.224444,500,115,Turk - McNeil 500 kV,500
+S-1067,Turk,AR,Arkansas,33.646389,-93.743632, , ,Turk - McNeil 500 kV,500
+S-1068,Brunswick,VA,Virginia,36.741401,-77.921151,115,115,Heritage - Mosby (HVDC Underground) 525 kV,525
+S-1069,Mosby,VA,Virginia,38.894969,-77.568203,500,115,Heritage - Mosby (HVDC Underground) 525 kV,525
+S-1070,Sunbury,PA,Pennsylvania,40.836241,-76.827685,500,Unknown,Sunbury - Kelayres 500 kV,500
+S-1071,Kelayres,PA,Pennsylvania,40.93543,-76.030192,230,Unknown,Sunbury - Kelayres 500 kV,500
+S-1072,Teddy,OH,Ohio,39.941145,-83.702477, , ,"Greentown - Teddy 765 kV, Teddy - Marysville 765 kV, Teddy - Cole 345 kV, Teddy - Beatty 345 kV",765
+S-1073,Guernsey,OH,Ohio,39.93335,-81.527229,Unknown,Unknown,Guernsey - Conesville 765 kV,0
+S-1074,West Millersport,OH,Ohio,39.887668,-82.568861,345,138,"West Millersport - Adkins 765 kV, Conesville - West Millersport 765 kV",765
+S-1075,Adkins,OH,Ohio,39.712337,-83.177565,345,345,West Millersport - Adkins 765 kV,765
+S-1076,Cole,OH,Ohio,39.958654,-83.181047, , ,Teddy - Cole 345 kV,345
+S-1077,Beatty,OH,Ohio,39.862203,-83.118557,345,69,Teddy -Beatty 345 kV,345
+S-1078,Pecan Creek,OK,Oklahoma,35.716732,-95.468045,345,161,Heartland Spirit Connector,640
+S-1079,White Bluff,AR,Arkansas,34.424093,-92.144217,500,115,Heartland Spirit Connector,640
+S-1080,Columbia,MD,Maryland,39.194216,-76.827561,230,230,North Delta - High Ridge 500 kV Line,500
+S-1081,Howard,MD,Maryland,39.231449,-76.782029,230,115,North Delta - High Ridge 500 kV Line,500
+S-1082,Granite,MD,Maryland,39.339123,-76.839024,230,Unknown,North Delta - High Ridge 500 kV Line,500
+S-1083,Honeyville,UT,Utah,41.637077,-112.06977,230,34,Gateway Central,345
+S-1084,Treasureton,ID,Idaho,42.222541,-111.84966,230,138,Gateway Central,345
+S-1085,Turtle Creek,NE,Nebraska,41.09935,-96.171637, , ,S3740 – S3454 345 kV,345
