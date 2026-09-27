@@ -70,10 +70,6 @@ def load_projects(path: Path) -> dict[str, dict[str, Project]]:
 
 
 def estimated_time_gap_days(project_a: Project, project_b: Project) -> int | str:
-    """按唯一投运年份估算天数：abs(year_a - year_b) * 365，不计闰年。
-
-    项目所有 station 行必须给出相同的四位年份；缺失、多年份或互相矛盾时返回 NaN。
-    """
     years = []
     for project in (project_a, project_b):
         if len(project.year_values) != 1:
@@ -138,7 +134,6 @@ def open_output_csv(path: Path):
     try:
         return path.open("w", encoding="utf-8", newline="")
     except PermissionError:
-        # Excel 等程序可能占用原文件；保存到唯一的新文件名。
         destination = tempfile.NamedTemporaryFile(
             mode="w", encoding="utf-8", newline="", delete=False,
             dir=path.parent, prefix=f"{path.stem}_", suffix=path.suffix,
