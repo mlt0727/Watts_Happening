@@ -137,3 +137,9 @@ Project data:
 
 **Our Grid Future — Planned Transmission Projects National Database**  
 https://www.ourgridfuture.org/
+
+## Project Contribution Team
+Shirina Daniels
+Monica Barbosa
+Lingtong Meng
+Kevin Wilson
