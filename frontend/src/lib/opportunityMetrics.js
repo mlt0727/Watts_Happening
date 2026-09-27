@@ -89,16 +89,27 @@ export function rankOpportunities(opportunities) {
       ),
     }))
     .sort((first, second) => {
-      if (first.score === null && second.score === null) {
-        return first.location.localeCompare(second.location);
+      const firstIsComplete = first.score !== null;
+      const secondIsComplete = second.score !== null;
+
+      if (firstIsComplete !== secondIsComplete) {
+        return firstIsComplete ? -1 : 1;
       }
-      if (first.score === null) return 1;
-      if (second.score === null) return -1;
-      return (
-        second.score - first.score ||
-        first.daysApart - second.daysApart ||
-        first.location.localeCompare(second.location)
-      );
+
+      const firstDistance = first.referenceDistanceMiles ?? Number.POSITIVE_INFINITY;
+      const secondDistance = second.referenceDistanceMiles ?? Number.POSITIVE_INFINITY;
+      const firstTiming = first.daysApart ?? Number.POSITIVE_INFINITY;
+      const secondTiming = second.daysApart ?? Number.POSITIVE_INFINITY;
+
+      if (firstDistance !== secondDistance) {
+        return firstDistance - secondDistance;
+      }
+
+      if (firstTiming !== secondTiming) {
+        return firstTiming - secondTiming;
+      }
+
+      return first.location.localeCompare(second.location);
     })
     .map((opportunity, index) => ({
       ...opportunity,

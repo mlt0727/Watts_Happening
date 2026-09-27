@@ -1,11 +1,16 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { buildCandidatePosition, hasValidReference } from "../lib/mapUtils.js";
 
 const BASE_LAYER =
   "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 
 function referenceKey(reference) {
+  if (!hasValidReference(reference)) {
+    return null;
+  }
+
   return `${reference.lat}:${reference.lon}`;
 }
 
@@ -50,16 +55,46 @@ export default function OpportunityMap({
   useEffect(() => {
     const map = mapInstance.current;
     const layers = layerGroup.current;
-    if (!map || !layers) return;
+    if (!map || !layers || !opportunity) return;
+
+    const fallbackReferences = Object.values(referenceAreas);
+    const descProjectPoint = hasValidReference({
+      lat: opportunity.descProject?.latitude,
+      lon: opportunity.descProject?.longitude,
+    })
+      ? { lat: opportunity.descProject.latitude, lon: opportunity.descProject.longitude }
+      : hasValidReference(opportunity.descReference)
+        ? opportunity.descReference
+        : fallbackReferences[0] ?? null;
+    const gpcProjectPoint = hasValidReference({
+      lat: opportunity.gpcProject?.latitude,
+      lon: opportunity.gpcProject?.longitude,
+    })
+      ? { lat: opportunity.gpcProject.latitude, lon: opportunity.gpcProject.longitude }
+      : hasValidReference(opportunity.gpcReference)
+        ? opportunity.gpcReference
+        : fallbackReferences[1] ?? fallbackReferences[0] ?? null;
+
+    const descReference = descProjectPoint ?? fallbackReferences[0] ?? null;
+    const gpcReference = gpcProjectPoint ?? fallbackReferences[1] ?? fallbackReferences[0] ?? null;
+
+    if (!hasValidReference(descReference) || !hasValidReference(gpcReference)) {
+      layers.clearLayers();
+      return;
+    }
 
     layers.clearLayers();
 
     const selectedKeys = new Set([
-      referenceKey(opportunity.descReference),
-      referenceKey(opportunity.gpcReference),
-    ]);
+      referenceKey(descReference),
+      referenceKey(gpcReference),
+    ].filter(Boolean));
 
     Object.values(referenceAreas).forEach((reference) => {
+      if (!hasValidReference(reference)) {
+        return;
+      }
+
       const selected = selectedKeys.has(referenceKey(reference));
       L.circleMarker([reference.lat, reference.lon], {
         radius: selected ? 8 : 6,
@@ -77,10 +112,11 @@ export default function OpportunityMap({
 
     const opportunityGroups = new Map();
     opportunities.forEach((candidate) => {
-      const position = {
-        lat: (candidate.descReference.lat + candidate.gpcReference.lat) / 2,
-        lon: (candidate.descReference.lon + candidate.gpcReference.lon) / 2,
-      };
+      const position = buildCandidatePosition(candidate, Object.values(referenceAreas));
+      if (!position) {
+        return;
+      }
+
       const key = `${position.lat.toFixed(5)}:${position.lon.toFixed(5)}`;
       const group = opportunityGroups.get(key) ?? [];
       group.push({ candidate, position });
@@ -118,25 +154,25 @@ export default function OpportunityMap({
     });
 
     const referenceDistance = opportunity.referenceDistanceMiles;
-    if (referenceDistance !== null) {
+    if (Number.isFinite(referenceDistance) && referenceDistance > 0) {
       L.polyline(
         [
-          [opportunity.descReference.lat, opportunity.descReference.lon],
-          [opportunity.gpcReference.lat, opportunity.gpcReference.lon],
+          [descReference.lat, descReference.lon],
+          [gpcReference.lat, gpcReference.lon],
         ],
         { color: "#e5683e", weight: 3, opacity: 0.9, dashArray: "7 7" },
       ).addTo(layers);
 
       map.fitBounds(
         [
-          [opportunity.descReference.lat, opportunity.descReference.lon],
-          [opportunity.gpcReference.lat, opportunity.gpcReference.lon],
+          [descReference.lat, descReference.lon],
+          [gpcReference.lat, gpcReference.lon],
         ],
         { padding: [70, 70], maxZoom: 8 },
       );
     } else {
       map.setView(
-        [opportunity.descReference.lat, opportunity.descReference.lon],
+        [descReference.lat, descReference.lon],
         7,
       );
     }

@@ -14,20 +14,23 @@ const getDatabaseConnection = (database) => {
       throw new Error("MONGO_URI is not defined in .env file");
    }
 
-   // If connection does not exist, create it
-   if (!connections[database]) {
-      connections[database] = mongoose.createConnection(
-         `${baseURI}/${database}${options}`
+   const normalizedDatabase = String(database || '').trim();
+   const normalizedBaseURI = baseURI.replace(/\/+$/, '');
+
+   if (!connections[normalizedDatabase]) {
+      connections[normalizedDatabase] = mongoose.createConnection(
+         `${normalizedBaseURI}${options}`,
+         { dbName: normalizedDatabase }
       );
-      // Handle connection errors
-      connections[database].on("error", (err) => {
-         console.error(`MongoDB connection error for ${database}:`, err);
+
+      connections[normalizedDatabase].on("error", (err) => {
+         console.error(`MongoDB connection error for ${normalizedDatabase}:`, err);
       });
-      connections[database].once("open", () => {
-         console.log(`Connected to MongoDB database: ${database}`);
+      connections[normalizedDatabase].once("open", () => {
+         console.log(`Connected to MongoDB database: ${normalizedDatabase}`);
       });
    }
-   return connections[database];
+   return connections[normalizedDatabase];
 };
 
 module.exports = getDatabaseConnection;

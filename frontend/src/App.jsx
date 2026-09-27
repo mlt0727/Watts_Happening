@@ -1,9 +1,13 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import OpportunityMap from "./components/OpportunityMap.jsx";
-import { mapReferenceAreas, opportunities } from "./data/opportunities.js";
+import {
+  mapReferenceAreas,
+  opportunities as fallbackOpportunities,
+} from "./data/opportunities.js";
+import { rankOpportunities } from "./lib/opportunityMetrics.js";
 import "./App.css";
 
-const PAGE_SIZE = 5;
+const PAGE_SIZE = 20;
 
 function projectKey(project) {
   return `${project.utility}:${project.title}`;
@@ -59,11 +63,25 @@ function utilityAbbreviation(utility) {
     "Georgia Power": "GPC",
   };
 
-  return abbreviations[utility] ?? utility;
+  const normalizedUtility = String(utility ?? "").trim();
+  return abbreviations[normalizedUtility] ?? truncateText(normalizedUtility, 75);
+}
+
+function truncateText(value, maxLength = 75) {
+  if (value == null) {
+    return "";
+  }
+
+  const text = String(value).trim();
+  if (text.length <= maxLength) {
+    return text;
+  }
+
+  return `${text.slice(0, maxLength).trim()}…`;
 }
 
 function formatProjectWithUtility(project) {
-  return `${project.title} (${utilityAbbreviation(project.utility)})`;
+  return `${truncateText(project.title, 75)} (${utilityAbbreviation(project.utility)})`;
 }
 
 function getProjectType(project) {
@@ -96,23 +114,6 @@ function getTimelineOverlapLabel(opportunity) {
   return `Limited overlap (${formatGap(opportunity.daysApart)})`;
 }
 
-const allProjects = Array.from(
-  new Map(
-    opportunities.flatMap((opportunity) =>
-      [opportunity.descProject, opportunity.gpcProject].map((project) => [
-        projectKey(project),
-        project,
-      ]),
-    ),
-  ).values(),
-);
-
-const rankedOpportunities = opportunities.filter(
-  (opportunity) => opportunity.score !== null,
-);
-
-const defaultOpportunity = rankedOpportunities[0] ?? opportunities[0];
-
 function ProjectComparison({ project, comparisonClass }) {
   const isVerified = project.plannedDate !== null;
 
@@ -122,11 +123,11 @@ function ProjectComparison({ project, comparisonClass }) {
         <span className="project-identity-marker" aria-hidden="true" />
 
         <p className="utility-name">
-          {project.utility} ({utilityAbbreviation(project.utility)})
+          {truncateText(project.utility, 75)} ({utilityAbbreviation(project.utility)})
         </p>
       </div>
 
-      <h3>{project.title}</h3>
+      <h3>{truncateText(project.title, 75)}</h3>
 
       <dl>
         <div>
@@ -170,17 +171,33 @@ function ProjectComparison({ project, comparisonClass }) {
 function PairingSummary({ opportunity }) {
   const descProject = opportunity.descProject;
   const gpcProject = opportunity.gpcProject;
+  const impact = opportunity.impact ?? {
+    combinedCost: Number(descProject.estimatedCost ?? 0) + Number(gpcProject.estimatedCost ?? 0),
+    estimatedSavings: 0,
+    savingsRate: 0,
+    coordinationType: "project coordination",
+  };
+  const distanceMiles = Number(opportunity.referenceDistanceMiles ?? 0);
+  const combinedCost = Number(impact.combinedCost ?? 0);
+  const estimatedSavings = Number(impact.estimatedSavings ?? 0);
+  const savingsRate = Number(impact.savingsRate ?? 0);
+  const coordinationType = impact.coordinationType ?? "project coordination";
+
+  const summaryText = `${descProject.title} and ${gpcProject.title} are ${distanceMiles.toFixed(1)} miles apart and have an estimated combined project cost of ${new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(combinedCost)}. Potential coordination includes ${coordinationType}. Using a ${(savingsRate * 100).toFixed(1)}% prototype savings assumption on the smaller project, the estimated potential savings are approximately ${new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(estimatedSavings)}.`;
 
   return (
     <section className="pairing-summary" aria-label="Overview">
       <p className="pairing-summary-label">Overview</p>
 
-      <p className="pairing-summary-text">
-        This pairing compares{" "}
-        <strong>{utilityAbbreviation(descProject.utility)}</strong> and{" "}
-        <strong>{utilityAbbreviation(gpcProject.utility)}</strong> projects
-        near <strong>{opportunity.location}</strong>.
-      </p>
+      <p className="pairing-summary-text">{summaryText}</p>
 
       <dl className="pairing-summary-details">
         <div>
@@ -194,12 +211,12 @@ function PairingSummary({ opportunity }) {
         </div>
 
         <div>
-          <dt>DESC estimated cost</dt>
+          <dt>{`${truncateText(descProject.title, 75)} estimated cost`}</dt>
           <dd>{formatCost(descProject.estimatedCost)}</dd>
         </div>
 
         <div>
-          <dt>GPC estimated cost</dt>
+          <dt>{`${truncateText(gpcProject.title, 75)} estimated cost`}</dt>
           <dd>{formatCost(gpcProject.estimatedCost)}</dd>
         </div>
       </dl>
@@ -208,50 +225,162 @@ function PairingSummary({ opportunity }) {
 }
 
 function App() {
-  const [selectedId, setSelectedId] = useState(defaultOpportunity.id);
+  const [opportunities, setOpportunities] = useState(fallbackOpportunities);
+  const [selectedId, setSelectedId] = useState(
+    fallbackOpportunities[0]?.id ?? null,
+  );
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProjectKey, setSelectedProjectKey] = useState(null);
   const [suggestionsOpen, setSuggestionsOpen] = useState(false);
   const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
+  const [projectSuggestions, setProjectSuggestions] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    fetch("/api/opportunities")
+      .then(async (response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+        const rawOpportunities = data.results ?? fallbackOpportunities;
+        const nextOpportunities = rankOpportunities(rawOpportunities);
+
+        if (isMounted) {
+          setOpportunities(nextOpportunities);
+          if (!nextOpportunities.some((opportunity) => opportunity.id === selectedId)) {
+            setSelectedId(nextOpportunities[0]?.id ?? null);
+          }
+        }
+      })
+      .catch(() => {
+        if (isMounted) {
+          setOpportunities(rankOpportunities(fallbackOpportunities));
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [selectedId]);
+
+  const allProjects = useMemo(
+    () =>
+      Array.from(
+        new Map(
+          opportunities.flatMap((opportunity) =>
+            [opportunity.descProject, opportunity.gpcProject].map((project) => [
+              projectKey(project),
+              project,
+            ]),
+          ),
+        ).values(),
+      ),
+    [opportunities],
+  );
+
+  const rankedOpportunities = useMemo(
+    () =>
+      [...opportunities].sort((first, second) => {
+        const firstScore = Number.isFinite(first.score) ? first.score : Number.POSITIVE_INFINITY;
+        const secondScore = Number.isFinite(second.score) ? second.score : Number.POSITIVE_INFINITY;
+
+        if (firstScore !== secondScore) {
+          return firstScore - secondScore;
+        }
+
+        const firstDistance = first.referenceDistanceMiles ?? Number.POSITIVE_INFINITY;
+        const secondDistance = second.referenceDistanceMiles ?? Number.POSITIVE_INFINITY;
+        const firstTiming = first.daysApart ?? Number.POSITIVE_INFINITY;
+        const secondTiming = second.daysApart ?? Number.POSITIVE_INFINITY;
+
+        if (firstDistance !== secondDistance) {
+          return firstDistance - secondDistance;
+        }
+
+        if (firstTiming !== secondTiming) {
+          return firstTiming - secondTiming;
+        }
+
+        return String(first.location ?? "").localeCompare(String(second.location ?? ""));
+      }),
+    [opportunities],
+  );
+
+  const defaultOpportunity = rankedOpportunities[0] ?? opportunities[0] ?? null;
 
   const normalizedQuery = normalizeSearchText(searchQuery);
 
-  const projectSuggestions = useMemo(() => {
+  useEffect(() => {
     if (!normalizedQuery) {
-      return [];
+      setProjectSuggestions([]);
+      return undefined;
     }
 
-    return allProjects.filter((project) => {
-      const searchValues = [
-        project.title,
-        project.utility,
-        project.area,
-        project.sourceProjectId,
-        ...(project.aliases ?? []),
-      ]
-        .filter(Boolean)
-        .map(normalizeSearchText);
+    let isActive = true;
 
-      return searchValues.some((value) => value.includes(normalizedQuery));
-    });
-  }, [normalizedQuery]);
+    fetch(`/api/projects/search?q=${encodeURIComponent(normalizedQuery)}`)
+      .then(async (response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const payload = await response.json();
+        const nextSuggestions = payload.results ?? [];
+
+        if (isActive) {
+          setProjectSuggestions(nextSuggestions);
+        }
+      })
+      .catch(() => {
+        if (!isActive) {
+          return;
+        }
+
+        const fallbackSuggestions = allProjects.filter((project) => {
+          const searchValues = [
+            project.title,
+            project.utility,
+            project.area,
+            project.sourceProjectId,
+            ...(project.aliases ?? []),
+          ]
+            .filter(Boolean)
+            .map(normalizeSearchText);
+
+          return searchValues.some((value) => value.includes(normalizedQuery));
+        });
+
+        setProjectSuggestions(fallbackSuggestions);
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, [normalizedQuery, allProjects]);
 
   const selectedProject = allProjects.find(
     (project) => projectKey(project) === selectedProjectKey,
   );
 
   const filteredOpportunities = useMemo(() => {
+    const baseOpportunities = rankedOpportunities.length
+      ? rankedOpportunities
+      : opportunities;
+
     if (!selectedProject) {
-      return opportunities;
+      return baseOpportunities;
     }
 
-    return opportunities.filter(
+    return baseOpportunities.filter(
       (opportunity) =>
         projectKey(opportunity.descProject) === selectedProjectKey ||
         projectKey(opportunity.gpcProject) === selectedProjectKey,
     );
-  }, [selectedProject, selectedProjectKey]);
+  }, [rankedOpportunities, selectedProject, selectedProjectKey, opportunities]);
 
   const totalPages = Math.max(
     1,
@@ -267,18 +396,35 @@ function App() {
 
   const selectedOpportunity =
     opportunities.find((opportunity) => opportunity.id === selectedId) ??
-    defaultOpportunity;
+    defaultOpportunity ??
+    null;
+
+  const selectedOpportunityMap = selectedOpportunity
+    ? {
+        ...selectedOpportunity,
+        descReference:
+          selectedOpportunity.descReference ?? Object.values(mapReferenceAreas)[0],
+        gpcReference:
+          selectedOpportunity.gpcReference ??
+          Object.values(mapReferenceAreas)[1] ??
+          Object.values(mapReferenceAreas)[0],
+      }
+    : null;
 
   const highlightedOpportunityIds = useMemo(() => {
+    if (!selectedOpportunity) {
+      return [];
+    }
+
     if (selectedProject) {
       return filteredOpportunities.map((opportunity) => opportunity.id);
     }
 
     return [selectedOpportunity.id];
-  }, [selectedProject, filteredOpportunities, selectedOpportunity.id]);
+  }, [selectedProject, filteredOpportunities, selectedOpportunity]);
 
   function chooseProject(project) {
-    const key = projectKey(project);
+    const key = project.key ?? projectKey(project);
 
     const firstRelatedOpportunity = opportunities.find(
       (opportunity) =>
@@ -286,7 +432,7 @@ function App() {
         projectKey(opportunity.gpcProject) === key,
     );
 
-    setSearchQuery(project.title);
+    setSearchQuery(project.title ?? project.utility ?? "");
     setSelectedProjectKey(key);
     setSuggestionsOpen(false);
     setActiveSuggestionIndex(0);
@@ -344,6 +490,37 @@ function App() {
 
   function selectOpportunity(opportunity) {
     setSelectedId(opportunity.id);
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
+  if (!selectedOpportunity) {
+    return (
+      <main className="app-shell">
+        <header className="site-header">
+          <div className="header-decoration" aria-hidden="true">
+            <span className="header-decoration-yellow" />
+            <span className="header-decoration-cream" />
+            <span className="header-decoration-lavender" />
+          </div>
+
+          <div className="brand">
+            <p className="brand-kicker">Sperry Tech × Shell Hacks 2026</p>
+            <h1>Watts Happening</h1>
+            <p className="brand-description">
+              Loading coordination opportunities from the live backend…
+            </p>
+          </div>
+        </header>
+
+        <section className="dashboard-grid">
+          <div className="empty-state" style={{ padding: "2rem", color: "#355a63" }}>
+            No opportunity data is available yet. Check that the API is running on port 3000.
+          </div>
+        </section>
+      </main>
+    );
   }
 
   return (
@@ -483,11 +660,11 @@ function App() {
           </div>
 
           <OpportunityMap
-            opportunity={selectedOpportunity}
+            opportunity={selectedOpportunityMap}
             referenceAreas={mapReferenceAreas}
             opportunities={opportunities}
             highlightedOpportunityIds={highlightedOpportunityIds}
-            selectedOpportunityId={selectedOpportunity.id}
+            selectedOpportunityId={selectedOpportunity?.id ?? null}
             onSelectOpportunity={setSelectedId}
           />
 
@@ -535,7 +712,7 @@ function App() {
             {selectedProject && (
               <div className="selected-project-banner">
                 <span>Selected project</span>
-                <strong>{selectedProject.title}</strong>
+                <strong>{truncateText(selectedProject.title, 75)}</strong>
               </div>
             )}
 
@@ -567,7 +744,7 @@ function App() {
       <section className="opportunities-card">
         {selectedProject && (
           <p className="active-project-filter">
-            Coordination pairings for: <strong>{selectedProject.title}</strong>
+            Coordination pairings for: <strong>{truncateText(selectedProject.title, 75)}</strong>
           </p>
         )}
 

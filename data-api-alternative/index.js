@@ -3,6 +3,7 @@
 * applies basic rate limiting, and routes incoming requests to API controller methods.
 */
 const rateLimit = require("express-rate-limit");
+const cors = require("cors");
 const express = require("express");
 const apiRoutes = require("./routes/api");
 const logger = require("./utils/logging");
@@ -14,11 +15,13 @@ const API_SECRET = process.env.API_SECRET;
 
 const app = express();
 
+app.use(cors({ origin: true, credentials: true }));
+
 // Middleware for rate limiting
 const limiter = rateLimit({
-   windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS, 10), // 15 minutes
-   max: parseInt(process.env.RATE_LIMIT_MAX, 10), // Limit each IP to 100 requests per windowMs
-   message: { message: process.env.RATE_LIMIT_MESSAGE },
+   windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS, 10) || 15 * 60 * 1000,
+   max: parseInt(process.env.RATE_LIMIT_MAX, 10) || 100,
+   message: { message: process.env.RATE_LIMIT_MESSAGE || "Too many requests" },
 });
 // Apply the rate limiter to all requests
 app.use(limiter);
@@ -35,13 +38,24 @@ app.use((req, res, next) => {
       body: req.body,
       headers: req.headers,
    });
+
+   const isLocalDevRequest =
+      req.hostname === "localhost" ||
+      req.hostname === "127.0.0.1" ||
+      req.headers.origin?.startsWith("http://localhost") ||
+      req.headers.origin?.startsWith("http://127.0.0.1");
+
+   if (isLocalDevRequest) {
+      return next();
+   }
+
    const apiKey = req.headers["x-api-key"];
    const apiSecret = req.headers["x-api-secret"];
    if (apiKey === API_KEY && apiSecret === API_SECRET) {
-      next(); // Authorized
-   } else {
-      res.status(403).json({ message: "Forbidden: Invalid API Key or Secret" });
+      return next(); // Authorized
    }
+
+   return res.status(403).json({ message: "Forbidden: Invalid API Key or Secret" });
 });
 
 // Middleware for API routing

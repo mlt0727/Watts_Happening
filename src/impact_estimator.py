@@ -1,3 +1,33 @@
+import re
+
+
+def parse_cost_value(value):
+    if value is None:
+        return 0.0
+
+    if isinstance(value, (int, float)):
+        return float(value)
+
+    if isinstance(value, str):
+        cleaned = value.strip()
+        if not cleaned:
+            return 0.0
+
+        cleaned = cleaned.replace('$', '').replace(',', '').replace('_', '').upper()
+        cleaned = cleaned.lstrip('>~').strip()
+
+        if cleaned.endswith('B'):
+            return float(cleaned[:-1]) * 1_000_000_000
+        if cleaned.endswith('M'):
+            return float(cleaned[:-1]) * 1_000_000
+
+        match = re.search(r'-?\d+(?:\.\d+)?', cleaned)
+        if match:
+            return float(match.group(0))
+
+    return 0.0
+
+
 def get_savings_rate(distance_mi):
     if distance_mi <= 0:
         return 0.15
@@ -32,6 +62,8 @@ def get_coordination_type(distance_mi):
 
 
 def estimate_cost_impact(cost_a, cost_b, distance_mi):
+    cost_a = parse_cost_value(cost_a)
+    cost_b = parse_cost_value(cost_b)
     savings_rate = get_savings_rate(distance_mi)
 
     combined_cost = cost_a + cost_b
