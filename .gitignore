@@ -1,6 +1,9 @@
 # Virtual environment
 .venv/
 
+# Vercel project linkage, downloaded environment files, and build output
+.vercel/
+
 # Python
 __pycache__/
 *.pyc
