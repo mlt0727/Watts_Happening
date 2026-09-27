@@ -87,7 +87,8 @@ def _area(rows):
     states = _distinct(_text(row.get("state_name")) or _text(row.get("state_code")) for row in rows)
     station_label = " / ".join(stations[:3])
     if len(stations) > 3:
-        station_label += f" (+{len(stations) - 3} substations)"
+        extra_stations = len(stations) - 3
+        station_label += f" (+{extra_stations} {'substation' if extra_stations == 1 else 'substations'})"
     return ", ".join(part for part in (station_label, " / ".join(states)) if part) or "Area not provided"
 
 
@@ -105,6 +106,7 @@ def _reference(row, project):
         "projectId": project["id"],
         "name": name,
         "label": name,
+        "region": state,
         "lat": lat,
         "lon": lon,
         "source": "Substation coordinates from the projects collection",
@@ -125,20 +127,27 @@ def _closest_pair(first, second):
     return min(((a, b) for a in first for b in second), key=lambda pair: (_distance(*pair), pair[0]["id"], pair[1]["id"]))
 
 
-def _impact_summary(first, second, distance):
+def _impact_details(first, second, distance):
     costs = (first["estimatedCost"], second["estimatedCost"])
     if all(isinstance(cost, (int, float)) and not isinstance(cost, bool)
            and math.isfinite(cost) and cost >= 0 for cost in costs):
-        return impact_estimator.generate_impact_explanation(
-            first["title"], second["title"], *costs, distance,
-        )
-    return (
-        f"{impact_estimator.describe_endpoint_proximity(first['title'], second['title'], distance)} "
-        f"Potential coordination includes {impact_estimator.get_coordination_type(distance)}. "
-        "Estimated savings are unavailable because both projects need a single valid, "
-        "nonnegative numeric cost estimate. Proximity-based savings are a prototype "
-        "assumption, not a verified forecast."
-    )
+        impact = impact_estimator.estimate_cost_impact(*costs, distance)
+        return {
+            "estimatedSavings": impact["estimated_savings"],
+            "impactSummary": impact_estimator.generate_impact_explanation(
+                first["title"], second["title"], *costs, distance,
+            ),
+        }
+    return {
+        "estimatedSavings": None,
+        "impactSummary": (
+            f"{impact_estimator.describe_endpoint_proximity(first['title'], second['title'], distance)} "
+            f"Potential coordination includes {impact_estimator.get_coordination_type(distance)}. "
+            "Estimated savings are unavailable because both projects need a single valid, "
+            "nonnegative numeric cost estimate. Proximity-based savings are a prototype "
+            "assumption, not a verified forecast."
+        ),
+    }
 
 
 def build_dashboard(project_rows, overlap_rows):
@@ -252,7 +261,7 @@ def build_dashboard(project_rows, overlap_rows):
             "gpcReference": second_point,
             "daysApart": days_apart,
             "referenceDistanceMiles": distance,
-            "impactSummary": _impact_summary(first, second, distance),
+            **_impact_details(first, second, distance),
         })
 
     return {

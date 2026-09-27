@@ -76,7 +76,7 @@ def generate_impact_explanation(
         f"Potential coordination includes "
         f"{impact['coordination_type']}. "
         f"Using a {impact['savings_rate']:.0%} prototype savings "
-        f"assumption on the smaller project, the estimated potential "
-        f"savings are approximately "
+        f"assumption on the smaller project, the model estimates "
+        f"savings of approximately "
         f"${impact['estimated_savings']:,.0f}."
     )

@@ -94,6 +94,22 @@ class DashboardTest(unittest.TestCase):
         self.assertEqual(reference["projectId"], result["projects"][0]["id"])
         self.assertEqual(result["opportunities"], [])
 
+    def test_reference_region_uses_state_name_then_code_without_parsing_station_name(self):
+        rows = [
+            project(state_name="South Carolina", state_code="SC"),
+            project(station_id="s2", state_name="", state_code="NC"),
+            project("2", "s3", "Utility B", state_name=None, state_code=None,
+                    substation_name="Washington, Example Station"),
+        ]
+        result = build_dashboard(rows, [overlap()])
+        references = list(result["referenceAreas"].values())
+        self.assertEqual([item["region"] for item in references], ["South Carolina", "NC", None])
+        candidate = result["opportunities"][0]
+        for side in ("descReference", "gpcReference"):
+            reference = candidate[side]
+            self.assertEqual(reference["region"], result["referenceAreas"][reference["id"]]["region"])
+        self.assertIsNone(candidate["gpcReference"]["region"])
+
     def test_ranges_and_disagreements_are_not_simplified(self):
         result = build_dashboard([project(cost="1500000000-1700000000", estimated_in_service_year="2027 | 2028")], [])["projects"][0]
         self.assertEqual(result["estimatedCost"], "1500000000-1700000000")
@@ -236,21 +252,36 @@ class DashboardTest(unittest.TestCase):
             project("2", "s2", "Utility B", project_name="Second project", cost="10000000"),
         ]
         with patch("backend.dashboard.impact_estimator.generate_impact_explanation", wraps=impact_estimator.generate_impact_explanation) as generate:
-            summary = build_dashboard(rows, [overlap()])["opportunities"][0]["impactSummary"]
+            candidate = build_dashboard(rows, [overlap()])["opportunities"][0]
+        summary = candidate["impactSummary"]
         generate.assert_called_once_with("First project", "Second project", 2000000, 10000000, 2.5)
         self.assertIn("nearest recorded endpoints", summary)
         self.assertIn("2.5 miles apart", summary)
         self.assertIn("combined project cost is $12,000,000", summary)
         self.assertIn("5% prototype savings assumption on the smaller project", summary)
-        self.assertIn("savings are approximately $100,000", summary)
+        self.assertIn("the model estimates savings of approximately $100,000", summary)
+        self.assertEqual(candidate["estimatedSavings"], 100000)
+
+    def test_numeric_savings_reuses_estimator_without_parsing_or_rounding_explanation(self):
+        rows = [project(cost="123.45"), project("2", "s2", "Utility B", cost="500")]
+        expected = impact_estimator.estimate_cost_impact(123.45, 500, 2.5)["estimated_savings"]
+        with patch("backend.dashboard.impact_estimator.generate_impact_explanation", return_value="An explanation without currency."), \
+             patch("backend.dashboard.impact_estimator.estimate_cost_impact", wraps=impact_estimator.estimate_cost_impact) as estimate:
+            candidate = build_dashboard(rows, [overlap()])["opportunities"][0]
+        estimate.assert_called_once_with(123.45, 500, 2.5)
+        self.assertEqual(candidate["impactSummary"], "An explanation without currency.")
+        self.assertEqual(candidate["estimatedSavings"], expected)
+        self.assertNotEqual(candidate["estimatedSavings"], round(expected))
 
     def test_impact_summary_keeps_zero_cost_valid_and_calls_shared_station(self):
         rows = [project(cost="0"), project("2", "s2", "Utility B", cost="1000000")]
-        summary = build_dashboard(rows, [overlap(distance_mi="0")])["opportunities"][0]["impactSummary"]
+        candidate = build_dashboard(rows, [overlap(distance_mi="0")])["opportunities"][0]
+        summary = candidate["impactSummary"]
         self.assertIn("shared station", summary)
         self.assertNotIn("0.0 miles", summary)
         self.assertIn("15% prototype savings assumption", summary)
-        self.assertIn("savings are approximately $0", summary)
+        self.assertIn("the model estimates savings of approximately $0", summary)
+        self.assertEqual(candidate["estimatedSavings"], 0)
 
     def test_impact_summary_does_not_invent_savings_for_unusable_costs(self):
         invalid_costs = [None, "", "NaN", "1500000-1700000", ">1000000", "$1,000,000", "unknown", -1, float("inf"), float("nan")]
@@ -259,9 +290,13 @@ class DashboardTest(unittest.TestCase):
                 with self.subTest(cost=cost, side=invalid_side):
                     rows = [project(), project("2", "s2", "Utility B")]
                     rows[invalid_side]["cost"] = cost
-                    with patch("backend.dashboard.impact_estimator.generate_impact_explanation") as generate:
-                        summary = build_dashboard(rows, [overlap()])["opportunities"][0]["impactSummary"]
+                    with patch("backend.dashboard.impact_estimator.generate_impact_explanation") as generate, \
+                         patch("backend.dashboard.impact_estimator.estimate_cost_impact") as estimate:
+                        candidate = build_dashboard(rows, [overlap()])["opportunities"][0]
+                    summary = candidate["impactSummary"]
                     generate.assert_not_called()
+                    estimate.assert_not_called()
+                    self.assertIsNone(candidate["estimatedSavings"])
                     self.assertIn("laydown yards, deliveries, crews, and equipment", summary)
                     self.assertIn("Estimated savings are unavailable", summary)
                     self.assertIn("both projects need a single valid, nonnegative numeric cost estimate", summary)
@@ -269,7 +304,9 @@ class DashboardTest(unittest.TestCase):
                     self.assertNotIn("$", summary)
 
         rows = [project(cost="1000"), project(station_id="s3", cost="2000"), project("2", "s2", "Utility B")]
-        summary = build_dashboard(rows, [overlap(distance_mi=0)])["opportunities"][0]["impactSummary"]
+        candidate = build_dashboard(rows, [overlap(distance_mi=0)])["opportunities"][0]
+        summary = candidate["impactSummary"]
+        self.assertIsNone(candidate["estimatedSavings"])
         self.assertIn("Estimated savings are unavailable", summary)
         self.assertIn("shared station", summary)
         self.assertNotIn("$", summary)
@@ -277,15 +314,17 @@ class DashboardTest(unittest.TestCase):
     def test_impact_summary_uses_existing_distance_thresholds(self):
         rows = [project(cost="1000000"), project("2", "s2", "Utility B", cost="2000000")]
         for distance, rate, savings in [
-            (0, "15%", "$150,000"), (0.999, "10%", "$100,000"),
-            (1, "5%", "$50,000"), (4.999, "5%", "$50,000"),
-            (5, "3%", "$30,000"), (24.999, "3%", "$30,000"),
-            (25, "0%", "$0"),
+            (0, "15%", 150000), (0.999, "10%", 100000),
+            (1, "5%", 50000), (4.999, "5%", 50000),
+            (5, "3%", 30000), (24.999, "3%", 30000),
+            (25, "0%", 0),
         ]:
             with self.subTest(distance=distance):
-                summary = build_dashboard(rows, [overlap(distance_mi=distance)])["opportunities"][0]["impactSummary"]
+                candidate = build_dashboard(rows, [overlap(distance_mi=distance)])["opportunities"][0]
+                summary = candidate["impactSummary"]
                 self.assertIn(f"Using a {rate} prototype savings assumption", summary)
-                self.assertIn(f"savings are approximately {savings}.", summary)
+                self.assertIn(f"the model estimates savings of approximately ${savings:,.0f}.", summary)
+                self.assertEqual(candidate["estimatedSavings"], savings)
 
     def test_repository_csv_contract_and_serialization(self):
         data_dir = Path(__file__).resolve().parents[2] / "data"

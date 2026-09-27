@@ -3,10 +3,15 @@ import OpportunityMap from "./components/OpportunityMap.jsx";
 import { fetchDashboard } from "./lib/api.js";
 import { searchDashboard } from "./lib/dashboardSearch.js";
 import { rankOpportunities } from "./lib/opportunityMetrics.js";
-import { firstCompany, formatDistance, relatedOpportunities, companyOpportunities, stationNames } from "./lib/dashboardView.js";
+import { firstCompany, formatDistance, relatedOpportunities, companyOpportunities, getNationalTopOpportunities, stationNames, mapRegionTitle } from "./lib/dashboardView.js";
 import "./App.css";
 
 const PAGE_SIZE = 5;
+const NATIONAL_LIMIT = 20;
+const OPPORTUNITY_TABS = [
+  { id: "nationwide", label: "top 20 coordination oppertunities" },
+  { id: "company", label: "top company pairing" },
+];
 const EMPTY_PROJECTS = [];
 const EMPTY_REFERENCE_AREAS = {};
 
@@ -18,7 +23,9 @@ function formatDate(project) {
   const value = project.plannedDate;
   if (!value) {
     const years = project.plannedYearLabel ?? project.plannedYear;
-    return years ? `${years} (estimated year)` : "Not publicly available";
+    if (!years) return "Not publicly available";
+    const yearCount = String(years).match(/\d{4}/g)?.length ?? 1;
+    return `${years} (estimated ${yearCount > 1 ? "years" : "year"})`;
   }
 
   return new Date(`${value}T00:00:00Z`).toLocaleDateString("en-US", {
@@ -122,12 +129,12 @@ function ProjectComparison({ project, reference, comparisonClass, onChooseProjec
         </div>
 
         <div>
-          <dt>In-service date</dt>
+          <dt>In-Service Date</dt>
           <dd>{formatDate(project)}</dd>
         </div>
 
         <div>
-          <dt>Estimated cost</dt>
+          <dt>Estimated Cost</dt>
           <dd>{formatCost(project.estimatedCost)}</dd>
         </div>
 
@@ -139,7 +146,7 @@ function ProjectComparison({ project, reference, comparisonClass, onChooseProjec
         )}
       </dl>
       <button className="view-button project-matches-button" type="button" onClick={() => onChooseProject(project)}>
-        Show this project&apos;s matches
+        Show This Project&apos;s Matches <span aria-hidden="true">↓</span>
       </button>
     </article>
   );
@@ -151,33 +158,41 @@ function PairingSummary({ opportunity }) {
 
   return (
     <section className="pairing-summary" aria-label="Overview">
-      <p className="pairing-summary-label">Overview</p>
-
-      <p className="pairing-summary-text">
-        {opportunity.impactSummary}
-      </p>
+      <h3 className="pairing-summary-label">Overview</h3>
 
       <dl className="pairing-summary-details">
         <div>
-          <dt>Closest endpoint distance</dt>
+          <dt>Closest Endpoint Distance</dt>
           <dd>{formatDistance(opportunity.referenceDistanceMiles)}</dd>
         </div>
 
         <div>
-          <dt>Timeline overlap</dt>
+          <dt>Timeline Overlap</dt>
           <dd>{getTimelineOverlapLabel(opportunity)}</dd>
         </div>
 
         <div>
-          <dt>{firstCompany(descProject.utility)} estimated cost</dt>
+          <dt>{firstCompany(descProject.utility)} Estimated Cost</dt>
           <dd>{formatCost(descProject.estimatedCost)}</dd>
         </div>
 
         <div>
-          <dt>{firstCompany(gpcProject.utility)} estimated cost</dt>
+          <dt>{firstCompany(gpcProject.utility)} Estimated Cost</dt>
           <dd>{formatCost(gpcProject.estimatedCost)}</dd>
         </div>
+        <div>
+          <dt>Cost Difference</dt>
+          <dd>{formatCost(opportunity.costDifference)}</dd>
+        </div>
+        <div>
+          <dt>Estimated Savings</dt>
+          <dd>{formatCost(opportunity.estimatedSavings)}</dd>
+        </div>
       </dl>
+
+      <p className="pairing-summary-text">
+        {opportunity.impactSummary}
+      </p>
     </section>
   );
 }
@@ -191,23 +206,27 @@ function App() {
   const [selectedProjectKey, setSelectedProjectKey] = useState(null);
   const [selectedCompanyId, setSelectedCompanyId] = useState(null);
   const [selectedReference, setSelectedReference] = useState(null);
+  const [mapFocus, setMapFocus] = useState("pairing");
   const [suggestionsOpen, setSuggestionsOpen] = useState(false);
   const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-  const [detailsScrollRequest, setDetailsScrollRequest] = useState(0);
+  const [opportunitiesTab, setOpportunitiesTab] = useState("company");
+  const [scrollRequest, setScrollRequest] = useState(null);
   const detailsSection = useRef(null);
+  const opportunitiesSection = useRef(null);
 
   useEffect(() => {
-    if (!detailsScrollRequest) return undefined;
+    if (!scrollRequest) return undefined;
     const frame = requestAnimationFrame(() => {
-      const section = detailsSection.current;
+      const section = scrollRequest.target === "details"
+        ? detailsSection.current : opportunitiesSection.current;
       if (!section) return;
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       section.focus({ preventScroll: true });
       section.scrollIntoView({ behavior: reduceMotion ? "instant" : "smooth", block: "start" });
     });
     return () => cancelAnimationFrame(frame);
-  }, [detailsScrollRequest]);
+  }, [scrollRequest]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -254,33 +273,48 @@ function App() {
     [activeProjectKey, selectedReference, selectedCompany, opportunities],
   );
 
+  const nationalOpportunities = useMemo(
+    () => getNationalTopOpportunities(opportunities, NATIONAL_LIMIT),
+    [opportunities],
+  );
+  const isNationwide = opportunitiesTab === "nationwide";
+  const displayedOpportunities = isNationwide ? nationalOpportunities : filteredOpportunities;
+  const pageSize = isNationwide ? NATIONAL_LIMIT : PAGE_SIZE;
+
   const totalPages = Math.max(
     1,
-    Math.ceil(filteredOpportunities.length / PAGE_SIZE),
+    Math.ceil(displayedOpportunities.length / pageSize),
   );
 
   const safeCurrentPage = Math.min(currentPage, totalPages);
 
-  const paginatedOpportunities = filteredOpportunities.slice(
-    (safeCurrentPage - 1) * PAGE_SIZE,
-    safeCurrentPage * PAGE_SIZE,
+  const paginatedOpportunities = displayedOpportunities.slice(
+    (safeCurrentPage - 1) * pageSize,
+    safeCurrentPage * pageSize,
   );
 
   const selectedOpportunity =
-    filteredOpportunities.find((opportunity) => opportunity.id === selectedId) ??
-    filteredOpportunities[0];
+    displayedOpportunities.find((opportunity) => opportunity.id === selectedId) ??
+    displayedOpportunities[0];
+  const activeMapReference = isNationwide ? null : selectedReference ??
+    (!selectedOpportunity ? mapReferenceAreas[selectedProject?.referenceAreaId] : null);
+  const mapTitleReference = mapFocus === "station" || !selectedOpportunity ? activeMapReference : null;
 
-  const highlightedOpportunityIds = useMemo(() => {
-    if (selectedProject || selectedCompany) {
-      return filteredOpportunities.map((opportunity) => opportunity.id);
-    }
-
-    return selectedOpportunity ? [selectedOpportunity.id] : [];
-  }, [selectedProject, selectedCompany, filteredOpportunities, selectedOpportunity]);
+  const highlightedOpportunityIds = useMemo(
+    () => displayedOpportunities.map((opportunity) => opportunity.id),
+    [displayedOpportunities],
+  );
 
   const selectMapOpportunity = useCallback((id) => {
     const candidate = opportunities.find((item) => item.id === id);
     if (!candidate) return;
+    setMapFocus("pairing");
+    if (isNationwide && nationalOpportunities.some((item) => item.id === id)) {
+      setSelectedId(id);
+      setSuggestionsOpen(false);
+      return;
+    }
+    setOpportunitiesTab("company");
     const visibleIndex = filteredOpportunities.findIndex((item) => item.id === id);
     const related = visibleIndex >= 0 ? filteredOpportunities : relatedOpportunities(opportunities, candidate.descProject.id);
     if (visibleIndex < 0) {
@@ -292,11 +326,13 @@ function App() {
     setSelectedId(id);
     setSuggestionsOpen(false);
     setCurrentPage(Math.floor(Math.max(0, related.findIndex((item) => item.id === id)) / PAGE_SIZE) + 1);
-  }, [filteredOpportunities, opportunities]);
+  }, [filteredOpportunities, opportunities, isNationwide, nationalOpportunities]);
 
   const selectMapReference = useCallback((reference) => {
     const project = allProjects.find((item) => item.id === reference.projectId);
     const related = relatedOpportunities(opportunities, project?.id, reference);
+    setMapFocus("station");
+    setOpportunitiesTab("company");
     setSelectedReference(reference);
     setSelectedCompanyId(null);
     setSelectedProjectKey(project?.id ?? null);
@@ -308,6 +344,7 @@ function App() {
 
   function chooseProject(project) {
     const key = projectKey(project);
+    setMapFocus("pairing");
 
     const firstRelatedOpportunity = opportunities.find(
       (opportunity) =>
@@ -315,6 +352,7 @@ function App() {
         projectKey(opportunity.gpcProject) === key,
     );
 
+    setOpportunitiesTab("company");
     setSearchQuery(project.title);
     setSelectedCompanyId(null);
     setSelectedProjectKey(key);
@@ -326,8 +364,15 @@ function App() {
     setSelectedId(firstRelatedOpportunity?.id ?? null);
   }
 
+  function showProjectMatches(project) {
+    chooseProject(project);
+    setScrollRequest({ target: "opportunities" });
+  }
+
   function chooseCompany(company) {
     const related = companyOpportunities(opportunities, company);
+    setMapFocus("pairing");
+    setOpportunitiesTab("company");
     setSelectedCompanyId(company.id);
     setSearchQuery(company.name);
     setSelectedProjectKey(null);
@@ -347,6 +392,8 @@ function App() {
   }
 
   function clearSearch() {
+    setMapFocus("pairing");
+    setOpportunitiesTab("company");
     setSearchQuery("");
     setSelectedProjectKey(null);
     setSelectedCompanyId(null);
@@ -394,12 +441,34 @@ function App() {
   }
 
   function selectOpportunity(opportunity) {
+    setMapFocus("pairing");
     setSelectedId(opportunity.id);
   }
 
   function viewOpportunityDetails(opportunity) {
+    setMapFocus("pairing");
     setSelectedId(opportunity.id);
-    setDetailsScrollRequest((request) => request + 1);
+    setScrollRequest({ target: "details" });
+  }
+
+  function chooseOpportunitiesTab(tab) {
+    setMapFocus("pairing");
+    setOpportunitiesTab(tab);
+    setCurrentPage(1);
+    const candidates = tab === "nationwide" ? nationalOpportunities : filteredOpportunities;
+    setSelectedId(candidates.find((item) => item.id === selectedId)?.id ?? candidates[0]?.id ?? null);
+  }
+
+  function handleTabKeyDown(event, index) {
+    let nextIndex;
+    if (event.key === "ArrowRight") nextIndex = (index + 1) % OPPORTUNITY_TABS.length;
+    else if (event.key === "ArrowLeft") nextIndex = (index - 1 + OPPORTUNITY_TABS.length) % OPPORTUNITY_TABS.length;
+    else if (event.key === "Home") nextIndex = 0;
+    else if (event.key === "End") nextIndex = OPPORTUNITY_TABS.length - 1;
+    else return;
+    event.preventDefault();
+    chooseOpportunitiesTab(OPPORTUNITY_TABS[nextIndex].id);
+    event.currentTarget.parentElement.querySelectorAll('[role="tab"]')[nextIndex].focus();
   }
 
   return (
@@ -412,7 +481,7 @@ function App() {
         </div>
 
         <div className="brand">
-          <p className="brand-kicker">Sperry Tech × Shell Hacks 2026</p>
+          <p className="brand-kicker">Sperry Tech × ShellHacks 2026</p>
 
           <h1>Watts Happening</h1>
 
@@ -532,8 +601,8 @@ function App() {
         <section className="map-panel" aria-label="Project endpoint map">
           <div className="map-heading">
             <div>
-              <p className="eyebrow">Project overview</p>
-              <h2>United States utility projects</h2>
+              <p className="eyebrow">Project Overview</p>
+              <h2>{mapRegionTitle(selectedOpportunity, mapTitleReference)}</h2>
             </div>
           </div>
 
@@ -544,64 +613,64 @@ function App() {
             highlightedOpportunityIds={highlightedOpportunityIds}
             selectedOpportunityId={selectedOpportunity?.id ?? null}
             onSelectOpportunity={selectMapOpportunity}
-            selectedReference={selectedReference ?? (!selectedOpportunity ? mapReferenceAreas[selectedProject?.referenceAreaId] : null)}
+            selectedReference={activeMapReference}
             onSelectReference={selectMapReference}
           />
 
           <div className="map-legend" aria-label="Map legend">
             <div className="map-legend-item">
               <span className="legend-reference legend-reference-selected" />
-              Selected project endpoint
+              Selected Project Endpoint
             </div>
 
             <div className="map-legend-item">
               <span className="legend-reference legend-reference-other" />
-              Other project endpoint
+              Other Project Endpoint
             </div>
 
             <div className="map-legend-item">
               <span className="legend-pairing-dot" />
-              Other opportunity
+              Other Opportunity
             </div>
 
             <div className="map-legend-item">
               <span className="legend-related-dot" />
-              Related pairing
+              Related Pairing
             </div>
 
             <div className="map-legend-item">
               <span className="legend-selected-dot" />
-              Selected map marker
+              Selected Map Marker
             </div>
 
             <div className="map-legend-item">
               <span className="legend-line" />
-              Endpoint comparison
+              Endpoint Comparison
             </div>
           </div>
 
-          <p className="map-note">
-            Pins use the substation coordinates recorded in the shared dataset.
-            Pairing markers sit between the closest endpoints; dashed connectors
-            compare those endpoints and do not show transmission routes.
-          </p>
         </section>
 
         <aside className="side-panel">
           <section className="description-card" ref={detailsSection} tabIndex={-1} aria-labelledby="project-details-heading">
-            {(selectedProject || selectedCompany) && (
+            {isNationwide ? (
               <div className="selected-project-banner">
-                <span>{selectedCompany ? "Selected company" : selectedReference ? `Selected station: ${selectedReference.name}` : "Selected project"}</span>
+                <span>Nationwide Selection</span>
+                <strong>{selectedOpportunity ? `Rank ${selectedOpportunity.rank} · United States` : "United States"}</strong>
+              </div>
+            ) : (selectedProject || selectedCompany) && (
+              <div className="selected-project-banner">
+                <span>{selectedCompany ? "Selected Company" : selectedReference ? `Selected Station: ${selectedReference.name}` : "Selected Project"}</span>
                 <strong>{selectedCompany?.name ?? selectedProject.title}</strong>
               </div>
             )}
 
             <div className="card-topline">
-              <p className="eyebrow">{selectedOpportunity ? `Map marker ${selectedOpportunity.mapNumber}` : "Selected station / project"}</p>
+              <p className="eyebrow">{selectedOpportunity ? `Map Marker ${selectedOpportunity.mapNumber}` : "Selected Station / Project"}</p>
             </div>
 
             <div className="comparison-header">
-              <h2 id="project-details-heading">{stationNames(selectedOpportunity) || selectedReference?.name || selectedCompany?.name || selectedProject?.title || (isLoading ? "Loading cloud data…" : "Project data")}</h2>
+              <h2 id="project-details-heading">{stationNames(selectedOpportunity) || (!isNationwide && (selectedReference?.name || selectedCompany?.name || selectedProject?.title)) || (isLoading ? "Loading cloud data…" : "Project Data")}</h2>
             </div>
 
             {selectedOpportunity ? (
@@ -610,27 +679,29 @@ function App() {
                   project={selectedOpportunity.descProject}
                   reference={selectedOpportunity.descReference}
                   comparisonClass="desc-comparison"
-                  onChooseProject={chooseProject}
+                  onChooseProject={showProjectMatches}
                 />
 
                 <ProjectComparison
                   project={selectedOpportunity.gpcProject}
                   reference={selectedOpportunity.gpcReference}
                   comparisonClass="gpc-comparison"
-                  onChooseProject={chooseProject}
+                  onChooseProject={showProjectMatches}
                 />
 
                 <PairingSummary opportunity={selectedOpportunity} />
               </div>
             ) : (
               <div className="comparison-grid">
-                {selectedProject && (
-                  <ProjectComparison project={selectedProject} reference={selectedReference ?? mapReferenceAreas[selectedProject.referenceAreaId]} comparisonClass="desc-comparison" onChooseProject={chooseProject} />
+                {!isNationwide && selectedProject && (
+                  <ProjectComparison project={selectedProject} reference={selectedReference ?? mapReferenceAreas[selectedProject.referenceAreaId]} comparisonClass="desc-comparison" onChooseProject={showProjectMatches} />
                 )}
                 <p className="no-search-results" role={loadError ? "alert" : "status"}>
                   {isLoading
                     ? "Loading projects and coordination pairings…"
-                    : loadError || (selectedCompany
+                    : loadError || (isNationwide
+                      ? "No nationwide pairings have complete distance, timing, and cost data."
+                      : selectedCompany
                       ? "No coordination pairings are available for this company."
                       : selectedReference
                       ? "No coordination pairings are available at this station. Show this project's matches to see its other stations."
@@ -649,29 +720,54 @@ function App() {
         </aside>
       </section>
 
-      <section className="opportunities-card">
-        {(selectedCompany || selectedProject || selectedReference) && (
+      <section className="opportunities-card" ref={opportunitiesSection} tabIndex={-1} aria-labelledby="top-opportunities-heading">
+        <h2 id="top-opportunities-heading">top coordination oppertunities</h2>
+        <div className="opportunity-tabs" role="tablist" aria-label="Opportunity Rankings">
+          {OPPORTUNITY_TABS.map((tab, index) => (
+            <button
+              key={tab.id}
+              id={`${tab.id}-opportunities-tab`}
+              className="opportunity-tab"
+              type="button"
+              role="tab"
+              aria-selected={opportunitiesTab === tab.id}
+              aria-controls={`${tab.id}-opportunities-panel`}
+              tabIndex={opportunitiesTab === tab.id ? 0 : -1}
+              onClick={() => chooseOpportunitiesTab(tab.id)}
+              onKeyDown={(event) => handleTabKeyDown(event, index)}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {OPPORTUNITY_TABS.filter((tab) => tab.id !== opportunitiesTab).map((tab) => (
+          <div key={tab.id} role="tabpanel" id={`${tab.id}-opportunities-panel`} aria-labelledby={`${tab.id}-opportunities-tab`} hidden />
+        ))}
+        <div className="opportunity-panel" role="tabpanel" id={`${opportunitiesTab}-opportunities-panel`} aria-labelledby={`${opportunitiesTab}-opportunities-tab`} tabIndex={0}>
+        {!isNationwide && (selectedCompany || selectedProject || selectedReference) && (
           <p className="active-project-filter">
-            Coordination pairings for: <strong>{selectedCompany?.name ?? selectedReference?.name ?? selectedProject.title}</strong>
+            Coordination pairings for: <strong>{selectedCompany?.name ?? selectedReference?.name ?? selectedProject?.title}</strong>
             {selectedReference && selectedProject && ` · ${selectedProject.title}`}
           </p>
         )}
 
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">Best matches first · timing and distance</p>
-            <h2>Top Coordination Opportunities</h2>
-          </div>
-        </div>
+        {isNationwide && (
+          <p className="active-project-filter">
+            The top {nationalOpportunities.length} eligible pairings across the United States, independent of your search.
+          </p>
+        )}
 
         <div className="table-scroll">
           <table>
             <thead>
               <tr>
+                {isNationwide && <th scope="col">Rank</th>}
                 <th>Project (Utility A)</th>
                 <th>Project (Utility B)</th>
                 <th>Distance</th>
                 <th>Timeline Overlap</th>
+                <th title="Absolute difference between the two projects' estimated costs">Cost Difference</th>
                 <th>Project Type(s)</th>
                 <th>View</th>
               </tr>
@@ -680,7 +776,7 @@ function App() {
             <tbody>
               {!paginatedOpportunities.length && (
                 <tr>
-                  <td colSpan={6}>
+                  <td colSpan={isNationwide ? 8 : 7}>
                     {isLoading ? "Loading pairings…" : loadError ? "Pairings could not be loaded." : "No matching pairings."}
                   </td>
                 </tr>
@@ -703,6 +799,7 @@ function App() {
                     }
                   }}
                 >
+                  {isNationwide && <td className="national-rank">{opportunity.rank}</td>}
                   <td>
                     <strong>
                       {formatProjectWithUtility(opportunity.descProject)}
@@ -726,6 +823,8 @@ function App() {
                   <td>{formatDistance(opportunity.referenceDistanceMiles)}</td>
 
                   <td>{getTimelineOverlapLabel(opportunity)}</td>
+
+                  <td className="cost-difference">{formatCost(opportunity.costDifference)}</td>
 
                   <td>{getPairTypes(opportunity)}</td>
 
@@ -753,15 +852,15 @@ function App() {
           aria-label="Top coordination opportunities pages"
         >
           <span className="pagination-summary">
-            Showing {filteredOpportunities.length ? (safeCurrentPage - 1) * PAGE_SIZE + 1 : 0}–
+            Showing {displayedOpportunities.length ? (safeCurrentPage - 1) * pageSize + 1 : 0}–
             {Math.min(
-              safeCurrentPage * PAGE_SIZE,
-              filteredOpportunities.length,
+              safeCurrentPage * pageSize,
+              displayedOpportunities.length,
             )}{" "}
-            of {filteredOpportunities.length}
+            of {displayedOpportunities.length}
           </span>
 
-          <div className="pagination-controls">
+          {!isNationwide && <div className="pagination-controls">
             <button
               className="pagination-button"
               type="button"
@@ -805,7 +904,7 @@ function App() {
             >
               Next
             </button>
-          </div>
+          </div>}
         </nav>
 
         <p className="data-disclaimer">
@@ -813,6 +912,7 @@ function App() {
           timing gaps come from the overlap records; in-service years are source
           estimates, not verified exact dates. Reload to see database updates.
         </p>
+        </div>
       </section>
     </main>
   );

@@ -460,7 +460,7 @@ h3 {
 
 .map-panel {
   display: grid;
-  grid-template-rows: auto minmax(390px, 1fr) auto auto;
+  grid-template-rows: auto minmax(390px, 1fr) auto;
   min-height: 570px;
 }
 
@@ -585,17 +585,6 @@ h3 {
   border-top: 3px dashed var(--ink);
 }
 
-.map-note {
-  margin: 0;
-  border-top: 2px solid var(--line);
-  background: var(--lavender-light);
-  color: var(--ink-soft);
-  padding: 11px 16px 13px;
-  font-size: 0.73rem;
-  font-weight: 600;
-  line-height: 1.5;
-}
-
 /* Map pins */
 
 .pairing-map-icon {
@@ -643,16 +632,17 @@ h3 {
 }
 
 .description-card {
-  padding: 22px;
+  padding: 14px;
+  scroll-margin-top: 20px;
 }
 
 .selected-project-banner {
   display: grid;
-  gap: 4px;
-  margin-bottom: 15px;
+  gap: 2px;
+  margin-bottom: 9px;
   border-left: 6px solid var(--yellow);
   background: var(--cream);
-  padding: 10px 12px;
+  padding: 7px 10px;
 }
 
 .selected-project-banner span {
@@ -678,7 +668,11 @@ h3 {
 
 .comparison-header {
   border-bottom: 2px solid var(--line);
-  padding-bottom: 16px;
+  padding-bottom: 10px;
+}
+
+.description-card .eyebrow {
+  margin-bottom: 5px;
 }
 
 .comparison-header h2,
@@ -691,17 +685,17 @@ h3 {
 
 .comparison-grid {
   display: grid;
-  gap: 18px;
-  margin-top: 18px;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .utility-comparison {
-  padding: 0 0 18px;
+  padding: 0;
 }
 
 .utility-comparison + .utility-comparison {
   border-top: 1px solid #b8b8b8;
-  padding-top: 18px;
+  padding-top: 10px;
 }
 
 .desc-comparison,
@@ -714,12 +708,12 @@ h3 {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .project-identity-marker {
   width: 5px;
-  height: 28px;
+  height: 24px;
   flex: 0 0 5px;
   background: var(--utility-purple);
 }
@@ -744,14 +738,14 @@ h3 {
 
 .utility-comparison dl {
   display: grid;
-  gap: 10px;
-  margin: 14px 0 0;
+  gap: 3px;
+  margin: 7px 0 0;
 }
 
 .utility-comparison dl div {
   display: grid;
-  grid-template-columns: 33% 67%;
-  gap: 9px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 8px;
 }
 
 .utility-comparison dt {
@@ -765,7 +759,8 @@ h3 {
   color: var(--ink);
   font-size: 0.76rem;
   font-weight: 600;
-  line-height: 1.44;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
 }
 
 .source-verified {
@@ -781,25 +776,25 @@ h3 {
 .pairing-summary {
   border-top: 2px solid var(--overview-purple);
   background: var(--overview-purple-soft);
-  padding: 17px 16px 16px;
+  padding: 12px;
 }
 
 .pairing-summary-label {
   display: inline-block;
-  margin: 0 0 9px;
+  margin: 0 0 8px;
   color: var(--overview-purple);
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 900;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.035em;
   text-transform: uppercase;
 }
 
 .pairing-summary-text {
-  margin: 0;
+  margin: 10px 0 0;
   color: var(--ink-soft);
   font-size: 0.78rem;
   font-weight: 600;
-  line-height: 1.55;
+  line-height: 1.45;
 }
 
 .pairing-summary strong {
@@ -809,13 +804,13 @@ h3 {
 
 .pairing-summary-details {
   display: grid;
-  gap: 9px;
-  margin: 14px 0 0;
+  gap: 6px;
+  margin: 0;
 }
 
 .pairing-summary-details div {
   display: grid;
-  grid-template-columns: 42% 58%;
+  grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
   gap: 9px;
 }
 
@@ -837,7 +832,87 @@ h3 {
 
 .opportunities-card {
   margin-top: 24px;
-  padding: 22px;
+  padding: 0;
+  scroll-margin-top: 20px;
+}
+
+.opportunities-card > h2 {
+  padding: 16px;
+}
+
+.opportunity-tabs {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+  background: var(--lavender);
+  padding: 9px 12px 0;
+}
+
+.opportunity-tab {
+  position: relative;
+  isolation: isolate;
+  border: 0;
+  border-radius: 14px 14px 0 0;
+  background: transparent;
+  color: var(--ink);
+  padding: 13px 22px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: left;
+  transition: background 140ms ease;
+}
+
+.opportunity-tab[aria-selected="true"] {
+  z-index: 1;
+  background: var(--surface);
+}
+
+.opportunity-tab[aria-selected="true"]::before,
+.opportunity-tab[aria-selected="true"]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+}
+
+.opportunity-tab[aria-selected="true"]::before {
+  left: -12px;
+  border-radius: 0 0 12px 0;
+  box-shadow: 4px 4px 0 4px var(--surface);
+}
+
+.opportunity-tab[aria-selected="true"]::after {
+  right: -12px;
+  border-radius: 0 0 0 12px;
+  box-shadow: -4px 4px 0 4px var(--surface);
+}
+
+.opportunity-tab:hover:not([aria-selected="true"]) {
+  background: var(--lavender-light);
+}
+
+.opportunity-panel {
+  position: relative;
+  background: var(--surface);
+  padding: 16px;
+}
+
+.opportunity-tab:focus-visible,
+[role="tabpanel"]:focus-visible {
+  outline: 3px solid var(--orange-deep);
+  outline-offset: -3px;
+}
+
+.national-rank {
+  font-weight: 900;
+  text-align: center;
+}
+
+.cost-difference {
+  font-variant-numeric: tabular-nums;
 }
 
 .active-project-filter {
@@ -854,14 +929,6 @@ h3 {
 .active-project-filter strong {
   color: var(--ink);
   font-weight: 900;
-}
-
-.section-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 17px;
 }
 
 .table-scroll {
@@ -966,7 +1033,8 @@ tbody tr:hover {
   display: flex;
   width: fit-content;
   max-width: 100%;
-  margin: 16px 0 0 auto;
+  margin: 10px 0 0 auto;
+  padding: 6px 10px;
   background: var(--yellow);
   text-align: center;
   white-space: normal;
@@ -1130,7 +1198,7 @@ tbody tr:hover {
 
   .map-panel {
     min-height: 470px;
-    grid-template-rows: auto minmax(320px, 1fr) auto auto;
+    grid-template-rows: auto minmax(320px, 1fr) auto;
   }
 
   .opportunity-map,
@@ -1138,16 +1206,21 @@ tbody tr:hover {
     min-height: 320px;
   }
 
-  .section-heading {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 7px;
+  .opportunity-tab {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 10px;
+    font-size: 0.75rem;
+  }
+
+  .opportunity-panel {
+    padding: 12px;
   }
 
   .utility-comparison dl div,
   .pairing-summary-details div {
     grid-template-columns: 1fr;
-    gap: 4px;
+    gap: 2px;
   }
 
   .table-pagination {
