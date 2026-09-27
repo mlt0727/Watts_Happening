@@ -5,6 +5,7 @@ python-dotenv
 pandas
 numpy
 openpyxl              # read/write Excel datasets
+scikit-learn
 
 # ── Visualization ──────────────────────────────────────────────────────
 matplotlib
