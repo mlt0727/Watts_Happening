@@ -132,4 +132,8 @@ Watts Happening expands the challenge's two-utility example into a nationwide ap
 Project data:
 
 **Our Grid Future — Planned Transmission Projects National Database**  
+<<<<<<< HEAD
 https://www.ourgridfuture.org/
+=======
+https://www.ourgridfuture.org/
+>>>>>>> 9982bac25b436e673f545cbfb18cffe9592f3c37
