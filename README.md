@@ -56,3 +56,7 @@ A pairing is ranked only when both planned dates are source-verified and two dis
 - Broad public place references cannot validate transmission-asset proximity or line geometry.
 - OpenStreetMap tiles require an internet connection and are subject to OpenStreetMap's tile usage policy and data licence.
 - Verify the Georgia Power source's CEII handling and sharing requirements before deploying or distributing the app.
+
+
+#kwils096_db_user
+#vN8fJbQ52QGTEL1M
