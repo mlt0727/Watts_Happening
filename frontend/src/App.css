@@ -1165,4 +1165,506 @@ tbody tr:hover {
     height: 44px;
     animation: pikachu-walk-and-turn-small 22s linear infinite;
   }
+}ong {
+  color: var(--ink);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.comparison-header {
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 16px;
+}
+
+.comparison-header h2,
+.opportunities-card h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.22rem;
+  letter-spacing: -0.04em;
+}
+
+.comparison-grid {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.utility-comparison {
+  padding: 0 0 18px;
+}
+
+.utility-comparison + .utility-comparison {
+  border-top: 1px solid #b8b8b8;
+  padding-top: 18px;
+}
+
+.desc-comparison,
+.gpc-comparison {
+  border-left: 0;
+  background: transparent;
+}
+
+.project-identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.project-identity-marker {
+  width: 5px;
+  height: 28px;
+  flex: 0 0 5px;
+  background: var(--utility-purple);
+}
+
+.utility-name {
+  margin: 0;
+  color: var(--utility-purple);
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.utility-comparison h3 {
+  margin: 0;
+  color: var(--ink);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 0.94rem;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.utility-comparison dl {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0 0;
+}
+
+.utility-comparison dl div {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  gap: 9px;
+}
+
+.utility-comparison dt {
+  color: var(--ink-soft);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.utility-comparison dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.44;
+}
+
+.source-verified {
+  color: #20743c !important;
+}
+
+.source-pending {
+  color: var(--orange-deep) !important;
+}
+
+/* Overview */
+
+.pairing-summary {
+  border-top: 2px solid var(--overview-purple);
+  background: var(--overview-purple-soft);
+  padding: 17px 16px 16px;
+}
+
+.pairing-summary-label {
+  display: inline-block;
+  margin: 0 0 9px;
+  color: var(--overview-purple);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.pairing-summary-text {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.pairing-summary strong {
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.pairing-summary-details {
+  display: grid;
+  gap: 9px;
+  margin: 14px 0 0;
+}
+
+.pairing-summary-details div {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  gap: 9px;
+}
+
+.pairing-summary-details dt {
+  color: var(--ink-soft);
+  font-size: 0.73rem;
+  font-weight: 800;
+}
+
+.pairing-summary-details dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.74rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Opportunities */
+
+.opportunities-card {
+  margin-top: 24px;
+  padding: 22px;
+}
+
+.active-project-filter {
+  margin: 0 0 16px;
+  border-left: 7px solid #f1bd00;
+  background: #ffe15a;
+  color: var(--ink);
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.active-project-filter strong {
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 17px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  border: 2px solid var(--line);
+  border-radius: 3px;
+  background: var(--white);
+}
+
+table {
+  width: 100%;
+  min-width: 1080px;
+  border-collapse: collapse;
+  color: var(--ink);
+  font-size: 0.79rem;
+}
+
+th,
+td {
+  border-bottom: 1px solid #a8a8a8;
+  padding: 13px 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  background: var(--lavender-light);
+  color: var(--ink);
+  font-size: 0.69rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+td {
+  font-weight: 600;
+  line-height: 1.42;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+tbody tr:hover {
+  background: var(--cream);
+}
+
+.active-row {
+  background: linear-gradient(90deg, #fff2a8, #fff9d8);
+}
+
+.active-row:hover {
+  background: linear-gradient(90deg, #ffe15a, #fff2a8);
+}
+
+.selectable-row {
+  cursor: pointer;
+}
+
+.selectable-row:focus-visible {
+  outline: 3px solid var(--orange-deep);
+  outline-offset: -3px;
+}
+
+.table-area {
+  display: block;
+  margin-top: 5px;
+  color: var(--ink-soft);
+  font-size: 0.69rem;
+  font-weight: 600;
+}
+
+.view-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+  background: var(--lavender);
+  color: var(--ink);
+  padding: 8px 13px;
+  font-size: 0.74rem;
+  font-weight: 900;
+  transition:
+    background 120ms ease,
+    transform 120ms ease;
+  white-space: nowrap;
+}
+
+.view-button:hover {
+  background: var(--yellow);
+  transform: translateY(-1px);
+}
+
+.view-button:active {
+  transform: translateY(1px);
+}
+
+/* Pagination */
+
+.table-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 0 0;
+}
+
+.pagination-summary {
+  color: var(--muted);
+  font-size: 0.73rem;
+  font-weight: 700;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.pagination-button {
+  min-width: 32px;
+  min-height: 32px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--white);
+  color: var(--ink);
+  padding: 5px 9px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  transition:
+    background 120ms ease,
+    color 120ms ease;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background: var(--lavender-light);
+}
+
+.pagination-button:focus-visible {
+  outline: 3px solid var(--orange-deep);
+  outline-offset: 2px;
+}
+
+.pagination-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+.pagination-number {
+  width: 32px;
+  padding: 5px;
+}
+
+.pagination-current {
+  border-color: var(--utility-purple);
+  background: var(--utility-purple);
+  color: var(--white);
+}
+
+.data-disclaimer {
+  margin: 15px 0 0;
+  color: var(--muted);
+  font-size: 0.73rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+@media (max-width: 1100px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    width: min(100% - 20px, 1500px);
+    padding-top: 12px;
+  }
+
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 17px;
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .header-decoration {
+    width: 55%;
+    opacity: 0.62;
+  }
+
+  .header-decoration-yellow {
+    top: -108px;
+    right: -54px;
+    width: 240px;
+    height: 240px;
+    border-width: 17px;
+  }
+
+  .header-decoration-cream {
+    top: -95px;
+    right: -43px;
+    width: 205px;
+    height: 205px;
+    border-width: 7px;
+  }
+
+  .header-decoration-lavender {
+    top: -56px;
+    right: -82px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .brand,
+  .header-search {
+    z-index: 2;
+  }
+
+  .header-search {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .search-with-pikachu {
+    width: 100%;
+    padding-top: 23px;
+  }
+
+  .pikachu-walk-track {
+    top: -38px;
+    height: 66px;
+  }
+
+  .pikachu-walking-gif {
+    width: 52px;
+    height: 52px;
+    animation: pikachu-walk-and-turn-mobile 22s linear infinite;
+  }
+
+  .project-search {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .map-panel {
+    min-height: 470px;
+    grid-template-rows: auto minmax(320px, 1fr) auto auto;
+  }
+
+  .opportunity-map,
+  .leaflet-container {
+    min-height: 320px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .utility-comparison dl div,
+  .pairing-summary-details div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .table-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .pagination-controls {
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 0;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+}
+
+@media (max-width: 520px) {
+  .search-with-pikachu {
+    padding-top: 20px;
+  }
+
+  .pikachu-walk-track {
+    display: block;
+    top: -32px;
+    height: 56px;
+  }
+
+  .pikachu-walking-gif {
+    width: 44px;
+    height: 44px;
+    animation: pikachu-walk-and-turn-small 22s linear infinite;
+  }
 }
