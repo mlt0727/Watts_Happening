@@ -1,0 +1,30 @@
+{
+    "name": "data-api",
+    "version": "1.0.0",
+    "description": "MongoDB Data API Template",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "serve": "node index.js ",
+      "dev": "nodemon index.js",
+      "start": "node app.js",
+      "lint": "eslint ./"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "cors": "^2.8.5",
+      "dotenv": "^16.4.7",
+      "express": "^4.21.2",
+      "express-rate-limit": "^7.5.0",
+      "mongodb": "^6.12.0",
+      "mongoose": "^8.9.3",
+      "nodemon": "^3.1.9",
+      "winston": "^3.17.0"
+    },
+    "devDependencies": {
+      "@eslint/js": "^9.21.0",
+      "eslint": "^9.21.0",
+      "globals": "^16.0.0"
+    }
+  }
