@@ -1,7 +1,800 @@
-﻿overlap_id,distance_mi,time_gap (day),utility_a,project_id_a,project_name_a,utility_b,project_id_b,project_name_b
-OVL_1,4.09,3074,Dominion Energy South Carolina,DESC_2,Hooks - Thurmond 115 kV Tie: Rebuild,Georgia Power,GPC_1,EVANS PRIMARY - THURMOND DAM (USA) #5 115KV REBUILD
-OVL_2,5.65,152,Dominion Energy South Carolina,DESC_3,Jasper - Okatie 230 kV #2: Construct,Georgia Power,GPC_2,SAV: MCINTOSH - PURRYSBURG 230KV REACTORS
-OVL_3,7.55,517,Dominion Energy South Carolina,DESC_3,Jasper - Okatie 230 kV #2: Construct,Georgia Power,GPC_3,SAV: GOSHEN (SAV) - MCINTOSH 115KV LINE REBUILD
-OVL_4,8.01,3074,Dominion Energy South Carolina,DESC_1,Stevens Creek - Hooks 115 kV / LR Plumb Branch 46 kV Rebuilds,Georgia Power,GPC_1,EVANS PRIMARY - THURMOND DAM (USA) #5 115KV REBUILD
-OVL_5,14.34,365,Dominion Energy South Carolina,DESC_5,Okatie-Bluffton 115 kV: Rebuild,Georgia Power,GPC_2,SAV: MCINTOSH - PURRYSBURG 230KV REACTORS
-OVL_6,14.81,730,Dominion Energy South Carolina,DESC_5,Okatie-Bluffton 115 kV: Rebuild,Georgia Power,GPC_3,SAV: GOSHEN (SAV) - MCINTOSH 115KV LINE REBUILD
+overlap_id,distance_mi,time_gap (day),utility_a,project_id_a,project_name_a,utility_b,project_id_b,project_name_b
+OVL_1,9.603822,1460,AEC,161,Rebuild Cardiff - New Freedom 230 kV,"Orsted Wind Power North America, Public Service Enterprise Group Renewable Generation LLC",147,Ocean Wind BL England to Oyster Creek
+OVL_2,17.899139,365,AEC,161,Rebuild Cardiff - New Freedom 230 kV,PECO,160,Richmond - Waneeta 230 kV
+OVL_3,0,1825,AEP,269,Rebuild Sorenson - Desoto 345 kV Line,AEP Indiana Michigan Transmission Company Inc.; American Electric Power; International Transmission Company (ITC Transmission),268,Greentown - Sorenson - Lulu
+OVL_4,19.107242,2190,AEP,47,Rebuild Allen - R.P. Mone 345 kV Line,AEP Indiana Michigan Transmission Company Inc.; American Electric Power; International Transmission Company (ITC Transmission),268,Greentown - Sorenson - Lulu
+OVL_5,0,0,AEP,377,Howard-Solstice Transmission Line Project,AEP Texas,575,Solstice - Bottlebrush New 345 kV Line
+OVL_6,0,365,AEP,377,Howard-Solstice Transmission Line Project,AEP Texas,576,Solstice - Faulkner New 345 kV Line
+OVL_7,15.340517,365,AEP,377,Howard-Solstice Transmission Line Project,CPS Energy,367,Rebuild Spruce to Eastside Double Circuit
+OVL_8,0,1095,AEP,377,Howard-Solstice Transmission Line Project,CPS Energy,376,CPSE Howard to San Miguel Double Circuit Line Addition
+OVL_9,13.678625,,AEP,493,Loop Dumont - Sorenson 345 kV into Elderberry,Commonwealth Edison,117,Wilton - Dumont 765 kV Sag Mitigation
+OVL_10,0.48122,,AEP,493,Loop Dumont - Sorenson 345 kV into Elderberry,Commonwealth Edison,39,Rebuild/Reconductor Olive - University Park 345 kV
+OVL_11,23.976065,1460,AEP,269,Rebuild Sorenson - Desoto 345 kV Line,Duke Energy Indiana LLC; Duke Energy Ohio; Indianapolis Power & Light Company (AES Indiana); Hoosier Energy; Indiana Municipal Power Agency; American Electric Power,270,Southeast Indiana
+OVL_12,0,730,AEP,272,Rebuild Conesville - Bixby 345 kV,"Transource, First Energy",286,Guernsey - Conesville 765 kV
+OVL_13,0,365,AEP,272,Rebuild Conesville - Bixby 345 kV,"Transource, First Energy",287,Conesville - West Millersport 765 kV
+OVL_14,16.057952,730,AEP,272,Rebuild Conesville - Bixby 345 kV,"Transource, First Energy",631,Teddy - Cole 345 kV
+OVL_15,11.594336,730,AEP,272,Rebuild Conesville - Bixby 345 kV,"Transource, First Energy",632,Teddy - Beatty 345 kV
+OVL_16,17.607142,365,AEP,272,Rebuild Conesville - Bixby 345 kV,"Transource, First Energy",633,West Millersport - Adkins 765 kV
+OVL_17,0,1825,AEP,285,Conesville - Corridor 345 kV,"Transource, First Energy",286,Guernsey - Conesville 765 kV
+OVL_18,0,2190,AEP,285,Conesville - Corridor 345 kV,"Transource, First Energy",287,Conesville - West Millersport 765 kV
+OVL_19,21.12762,1825,AEP,285,Conesville - Corridor 345 kV,"Transource, First Energy",631,Teddy - Cole 345 kV
+OVL_20,23.175319,1825,AEP,285,Conesville - Corridor 345 kV,"Transource, First Energy",632,Teddy - Beatty 345 kV
+OVL_21,21.936951,2190,AEP,285,Conesville - Corridor 345 kV,"Transource, First Energy",633,West Millersport - Adkins 765 kV
+OVL_22,0,1095,AEP,568,Rebuild Hyatt - Marysville 345 kV,"Transource, First Energy",569,Teddy - Marysville 765 kV
+OVL_23,18.38438,1095,AEP,568,Rebuild Hyatt - Marysville 345 kV,"Transource, First Energy",631,Teddy - Cole 345 kV
+OVL_24,24.447234,1095,AEP,568,Rebuild Hyatt - Marysville 345 kV,"Transource, First Energy",632,Teddy - Beatty 345 kV
+OVL_25,21.338377,0,AEP,291,Sporn - Mercers Bottom 345 kV Line,"Valley Link Transmission West Virginia, LLC",284,John Amos to Welton Spring 765 kV line
+OVL_26,0,730,AEP,493,Loop Dumont - Sorenson 345 kV into Elderberry,"WABASH VALLEY POWER ASSOCIATION, INC.",494,New Stillwell to Elderberry 345kV Line
+OVL_27,24.210878,2555,AEP Indiana Michigan Transmission Company Inc.; American Electric Power; International Transmission Company (ITC Transmission),268,Greentown - Sorenson - Lulu,American Transmission Systems (ATSI),594,Dowling - Fulton 345 kV Transmission Line Tap to Melbourne
+OVL_28,16.645417,1825,AEP Indiana Michigan Transmission Company Inc.; American Electric Power; International Transmission Company (ITC Transmission),268,Greentown - Sorenson - Lulu,Duke Energy Indiana,140,26747-Tipton West-Cammack Rd SS
+OVL_29,13.432868,1825,AEP Indiana Michigan Transmission Company Inc.; American Electric Power; International Transmission Company (ITC Transmission),268,Greentown - Sorenson - Lulu,ITC,162,23965-Brownstown-Monroe
+OVL_30,15.272701,1460,AEP Indiana Michigan Transmission Company Inc.; American Electric Power; International Transmission Company (ITC Transmission),268,Greentown - Sorenson - Lulu,ITC,168,27785-Majestic-Milan
+OVL_31,0,730,AEP Indiana Michigan Transmission Company Inc.; American Electric Power; International Transmission Company (ITC Transmission),268,Greentown - Sorenson - Lulu,"Transource, First Energy",275,Greentown - Teddy 765 kV
+OVL_32,0,0,AEP Texas,456,Cruce to Reforzar: Construct New 345 kV Double Circuit Line,"AEP Texas, Electric Transmission Texas (ETT)",396,Cruce to Del Sol: Construct New 345 kV Double Circuit Line
+OVL_33,0,0,AEP Texas,456,Cruce to Reforzar: Construct New 345 kV Double Circuit Line,"AEP Texas, Electric Transmission Texas (ETT)",409,Ajo to Reforzar: Construct New 345 kV Double Circuit Line
+OVL_34,0,0,AEP Texas,456,Cruce to Reforzar: Construct New 345 kV Double Circuit Line,"AEP Texas, Electric Transmission Texas (ETT)",459,Cenizo to Cruce: Construct New 345 kV Double Circuit Line
+OVL_35,10.840695,1095,AEP Texas,581,Creosote - Toyah Creek 345 kV Line,LCRA Transmission Services Corporation,362,Bearkat - North McCamey - Sand Lake Transmsission Line Addition
+OVL_36,10.840695,365,AEP Texas,581,Creosote - Toyah Creek 345 kV Line,"LCRA Transmission Services Corporation, Oncor",454,Big Hill - Sand Lake 765 kV Transmission Project
+OVL_37,10.840695,1095,AEP Texas,581,Creosote - Toyah Creek 345 kV Line,Oncor,453,Riverton - Sandlake 138 kV Line Conversion 345 kV and Riverton - Sandlake 138 kV Line
+OVL_38,0,0,AEP Texas,456,Cruce to Reforzar: Construct New 345 kV Double Circuit Line,South Texas Electric Cooperative,410,San Miguel to Cruce 345 kV lines
+OVL_39,0,0,"AEP Texas, Electric Transmission Texas (ETT)",396,Cruce to Del Sol: Construct New 345 kV Double Circuit Line,South Texas Electric Cooperative,410,San Miguel to Cruce 345 kV lines
+OVL_40,0,0,"AEP Texas, Electric Transmission Texas (ETT)",459,Cenizo to Cruce: Construct New 345 kV Double Circuit Line,South Texas Electric Cooperative,410,San Miguel to Cruce 345 kV lines
+OVL_41,21.813265,1095,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV
+OVL_42,16.882762,0,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,13,Fredericksburg-Possum Point
+OVL_43,6.72275,1095,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,15,Reconductor Elk Run - Gainesville 230 kV Line
+OVL_44,10.814708,0,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,16,Cloverhill to Ox 230 kV Line
+OVL_45,12.487971,0,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,17,Reconductor/Rebuild Gainesville - Wheeler 230 kV Line
+OVL_46,22.322618,1460,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,18,Cirrus - Keyser 230 kV Transmission Line Rebuild
+OVL_47,19.859901,0,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,186,Fredericksburg - Possum Point Upgrade and Rebuild
+OVL_48,11.454467,1095,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,189,Cannon Branch - Winters Branch 230 kV Line Extension
+OVL_49,12.266814,1095,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,190,Clifton - Winters Branch Rebuild
+OVL_50,12.266814,1095,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,191,Liberty-Cannon Branch Upgrade
+OVL_51,1.198119,365,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,197,Rebuild Bristers - Morrisville 500 kV Line
+OVL_52,13.951637,730,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,198,Reconductor Railroad DP - Gainesville 230 kV Line
+OVL_53,13.692795,1460,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,199,Rollins Ford - Gainseville 230 kV
+OVL_54,19.024472,365,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,205,Rebuild Occoquan - Ox 230 kV Line
+OVL_55,17.293595,1460,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,206,Rebuild Clifton - Ox 230 kV Line
+OVL_56,17.336965,2555,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,211,Woodbridge - Occoquan Reconductor
+OVL_57,13.933516,1460,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,212,Bristers - Minnieville Reconductor
+OVL_58,14.205474,365,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,230,Rebuild Cranes Corner - Stafford 230 kV Line
+OVL_59,8.451764,0,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,233,Morrisville to Vint Hill 500 kV Line
+OVL_60,8.451764,365,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,234,Rebuild Loudon - Morrisville 500 kV Line
+OVL_61,10.06891,1095,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,236,Reconductor Remington CT - Elk Run - Gainesville 230 kV Line
+OVL_62,13.795728,1095,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,294,Reconductor Liberty - Railroad 230 kV Line
+OVL_63,12.768217,1095,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,295,Reconductor Pioneer - Liberty 230 kV
+OVL_64,13.951637,1095,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,296,Reconductor Liberty - Railroad DP 230 kV Line
+OVL_65,23.922971,1825,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,301,Aviator 230 kV Project
+OVL_66,10.491032,365,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,475,Vint Hill to Wishing Star 500 kV Line
+OVL_67,0,0,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,476,Kraken - Yeat 500 kV Line
+OVL_68,7.717514,0,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,478,Nokesville - Hornbaker 230 kV Line
+OVL_69,11.783044,0,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,479,Hornbaker - Devlin 230 kV Route Options
+OVL_70,14.427901,365,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,505,Daves Store 230 kV Project
+OVL_71,20.131046,0,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,509,Culpeper Tech Zone 230 kV Project
+OVL_72,12.605385,,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,510,Blackwell Road 230 kV Project
+OVL_73,23.558233,730,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,546,Sully - Takeoff 230 kV
+OVL_74,14.717077,730,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Dominion Energy,595,Centreport 230 kV Electric Transmission Project
+OVL_75,8.451764,,"AEP, Dominion Energy",222,Joshua Falls - Yeat 765 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_76,0,0,"AEP, EDE",545,Delaware - Monett 345 kV,"AEP, EKC",303,Buffalo Flats - Delaware 345 kV
+OVL_77,0,365,"AEP, EDE",545,Delaware - Monett 345 kV,EDE,561,Branson NW - Monett 345 kV
+OVL_78,0,0,"AEP, EKC",303,Buffalo Flats - Delaware 345 kV,"Evergy Kansas Central, Inc.",302,Buffalo Flats 345kV Interconnection Expansion (DISIS-2017-002)
+OVL_79,19.542555,365,APS,50,Rebuild Hunterstown - Carroll to 230 kV,Baltimore Gas and Electric Company (BGE),180,Reconductor Conastone - Northwest 230 kV Lines
+OVL_80,12.629215,730,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV
+OVL_81,22.474629,730,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV
+OVL_82,23.820744,730,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV
+OVL_83,24.702051,1095,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV
+OVL_84,22.474629,730,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV
+OVL_85,19.751671,1460,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,15,Reconductor Elk Run - Gainesville 230 kV Line
+OVL_86,24.636755,365,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,16,Cloverhill to Ox 230 kV Line
+OVL_87,19.751671,365,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,17,Reconductor/Rebuild Gainesville - Wheeler 230 kV Line
+OVL_88,7.79242,,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,187,Reconductor Brambleton - Evergreen Mills 230 kV Line
+OVL_89,0.144369,0,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,188,Pleasant View - Structure 203/15
+OVL_90,22.952804,1460,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,189,Cannon Branch - Winters Branch 230 kV Line Extension
+OVL_91,21.548096,1460,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,190,Clifton - Winters Branch Rebuild
+OVL_92,20.788432,1460,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,191,Liberty-Cannon Branch Upgrade
+OVL_93,5.667872,,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,192,Eastern Loudoun County Reconductor Projects
+OVL_94,19.751671,1095,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,198,Reconductor Railroad DP - Gainesville 230 kV Line
+OVL_95,19.751671,1825,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,199,Rollins Ford - Gainseville 230 kV
+OVL_96,21.548096,1825,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,206,Rebuild Clifton - Ox 230 kV Line
+OVL_97,5.277214,2555,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,207,Beaumeade - Buttermilk Reconductor
+OVL_98,6.165442,1095,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,208,Reconductor Paragon Park - BECO 230 kV Line
+OVL_99,6.101994,1825,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,209,BECO to DTC 230 kV
+OVL_100,18.179873,1825,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,210,Clark - Idylwood Reconductor
+OVL_101,18.666518,2555,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,226,Idylwood - Tysons 230 kV Project
+OVL_102,18.606661,1095,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,227,Tysons - Springhill 230 kV
+OVL_103,23.978452,365,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,233,Morrisville to Vint Hill 500 kV Line
+OVL_104,12.657288,0,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,234,Rebuild Loudon - Morrisville 500 kV Line
+OVL_105,20.788432,1460,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,294,Reconductor Liberty - Railroad 230 kV Line
+OVL_106,20.788432,1460,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,295,Reconductor Pioneer - Liberty 230 kV
+OVL_107,20.607128,1460,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,296,Reconductor Liberty - Railroad DP 230 kV Line
+OVL_108,0,1095,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,297,Aspen - Goose Creek 500 kV Line
+OVL_109,8.285768,1460,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,300,Reconductor Cabin Run to Yardley Ridge 230 kV Line
+OVL_110,10.768863,2190,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,301,Aviator 230 kV Project
+OVL_111,5.35568,1460,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,469,Farmwell to Nimbus 230 kV Line
+OVL_112,0.22383,1095,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,472,Aspen - Golden 500 kV Line Options
+OVL_113,6.73153,730,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,473,Mars - Golden 500 kV Line
+OVL_114,6.73153,730,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,474,Lockridge - Golden 230 kV Line
+OVL_115,8.146838,0,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,475,Vint Hill to Wishing Star 500 kV Line
+OVL_116,22.830707,365,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,478,Nokesville - Hornbaker 230 kV Line
+OVL_117,20.379569,365,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,479,Hornbaker - Devlin 230 kV Route Options
+OVL_118,6.733246,730,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,481,Mars - Lockridge 230 kV Line
+OVL_119,6.733246,730,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,482,Lockridge - Golder 230 kV Line
+OVL_120,1.054218,1095,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,483,Aspen - Sycolin Creek 230 kV Line
+OVL_121,1.054218,1095,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,484,Sycolin Creek - Golden 230 kV Line
+OVL_122,19.415487,730,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,505,Daves Store 230 kV Project
+OVL_123,1.645029,2190,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,508,Altair 230 kV Route Options
+OVL_124,12.757916,1095,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,Dominion Energy,546,Sully - Takeoff 230 kV
+OVL_125,17.637782,,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,187,Reconductor Brambleton - Evergreen Mills 230 kV Line
+OVL_126,9.972469,0,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,188,Pleasant View - Structure 203/15
+OVL_127,13.82824,,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,192,Eastern Loudoun County Reconductor Projects
+OVL_128,12.54312,2555,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,207,Beaumeade - Buttermilk Reconductor
+OVL_129,12.680375,1095,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,208,Reconductor Paragon Park - BECO 230 kV Line
+OVL_130,11.84869,1825,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,209,BECO to DTC 230 kV
+OVL_131,22.934824,1825,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,210,Clark - Idylwood Reconductor
+OVL_132,22.292779,2555,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,226,Idylwood - Tysons 230 kV Project
+OVL_133,22.292779,1095,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,227,Tysons - Springhill 230 kV
+OVL_134,22.477154,0,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,234,Rebuild Loudon - Morrisville 500 kV Line
+OVL_135,10.056111,1095,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,297,Aspen - Goose Creek 500 kV Line
+OVL_136,17.564474,1460,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,300,Reconductor Cabin Run to Yardley Ridge 230 kV Line
+OVL_137,19.702307,2190,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,301,Aviator 230 kV Project
+OVL_138,13.335227,1460,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,469,Farmwell to Nimbus 230 kV Line
+OVL_139,10.233774,1095,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,472,Aspen - Golden 500 kV Line Options
+OVL_140,13.445058,730,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,473,Mars - Golden 500 kV Line
+OVL_141,13.445058,730,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,474,Lockridge - Golden 230 kV Line
+OVL_142,17.971858,0,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,475,Vint Hill to Wishing Star 500 kV Line
+OVL_143,14.549019,730,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,481,Mars - Lockridge 230 kV Line
+OVL_144,14.549019,730,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,482,Lockridge - Golder 230 kV Line
+OVL_145,9.92979,1095,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,483,Aspen - Sycolin Creek 230 kV Line
+OVL_146,9.92979,1095,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,484,Sycolin Creek - Golden 230 kV Line
+OVL_147,11.432527,2190,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,508,Altair 230 kV Route Options
+OVL_148,21.085179,1095,APS,195,Rebuild Doubs-Dickerson 230 kV,Dominion Energy,546,Sully - Takeoff 230 kV
+OVL_149,18.988146,,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,187,Reconductor Brambleton - Evergreen Mills 230 kV Line
+OVL_150,11.339218,0,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,188,Pleasant View - Structure 203/15
+OVL_151,15.073714,,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,192,Eastern Loudoun County Reconductor Projects
+OVL_152,13.78856,2555,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,207,Beaumeade - Buttermilk Reconductor
+OVL_153,13.87776,1095,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,208,Reconductor Paragon Park - BECO 230 kV Line
+OVL_154,13.020041,1825,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,209,BECO to DTC 230 kV
+OVL_155,23.805964,1825,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,210,Clark - Idylwood Reconductor
+OVL_156,23.048202,2555,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,226,Idylwood - Tysons 230 kV Project
+OVL_157,23.048202,1095,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,227,Tysons - Springhill 230 kV
+OVL_158,23.821066,0,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,234,Rebuild Loudon - Morrisville 500 kV Line
+OVL_159,11.423379,1095,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,297,Aspen - Goose Creek 500 kV Line
+OVL_160,18.877321,1460,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,300,Reconductor Cabin Run to Yardley Ridge 230 kV Line
+OVL_161,20.982199,2190,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,301,Aviator 230 kV Project
+OVL_162,14.605507,1460,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,469,Farmwell to Nimbus 230 kV Line
+OVL_163,11.600432,1095,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,472,Aspen - Golden 500 kV Line Options
+OVL_164,14.637494,730,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,473,Mars - Golden 500 kV Line
+OVL_165,14.637494,730,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,474,Lockridge - Golden 230 kV Line
+OVL_166,19.320436,0,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,475,Vint Hill to Wishing Star 500 kV Line
+OVL_167,15.792738,730,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,481,Mars - Lockridge 230 kV Line
+OVL_168,15.792738,730,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,482,Lockridge - Golder 230 kV Line
+OVL_169,11.286586,1095,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,483,Aspen - Sycolin Creek 230 kV Line
+OVL_170,11.286586,1095,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,484,Sycolin Creek - Golden 230 kV Line
+OVL_171,12.798636,2190,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,508,Altair 230 kV Route Options
+OVL_172,22.310441,1095,APS,196,Rebuild Doubs - Aqueduct 230 kV,Dominion Energy,546,Sully - Takeoff 230 kV
+OVL_173,19.454899,0,APS,224,Rebuild Stonewall - Millville 138 kV with 500 kV Overbuild,Dominion Energy,188,Pleasant View - Structure 203/15
+OVL_174,24.635988,2555,APS,224,Rebuild Stonewall - Millville 138 kV with 500 kV Overbuild,Dominion Energy,207,Beaumeade - Buttermilk Reconductor
+OVL_175,19.374162,1095,APS,224,Rebuild Stonewall - Millville 138 kV with 500 kV Overbuild,Dominion Energy,297,Aspen - Goose Creek 500 kV Line
+OVL_176,24.706515,1460,APS,224,Rebuild Stonewall - Millville 138 kV with 500 kV Overbuild,Dominion Energy,469,Farmwell to Nimbus 230 kV Line
+OVL_177,19.564915,1095,APS,224,Rebuild Stonewall - Millville 138 kV with 500 kV Overbuild,Dominion Energy,472,Aspen - Golden 500 kV Line Options
+OVL_178,20.291288,1095,APS,224,Rebuild Stonewall - Millville 138 kV with 500 kV Overbuild,Dominion Energy,483,Aspen - Sycolin Creek 230 kV Line
+OVL_179,20.291288,1095,APS,224,Rebuild Stonewall - Millville 138 kV with 500 kV Overbuild,Dominion Energy,484,Sycolin Creek - Golden 230 kV Line
+OVL_180,19.007599,2190,APS,224,Rebuild Stonewall - Millville 138 kV with 500 kV Overbuild,Dominion Energy,508,Altair 230 kV Route Options
+OVL_181,19.454899,730,APS,237,Rebuild Millville - Doubs 138 kV with 500kV Overbuild,Dominion Energy,188,Pleasant View - Structure 203/15
+OVL_182,24.635988,1825,APS,237,Rebuild Millville - Doubs 138 kV with 500kV Overbuild,Dominion Energy,207,Beaumeade - Buttermilk Reconductor
+OVL_183,19.374162,365,APS,237,Rebuild Millville - Doubs 138 kV with 500kV Overbuild,Dominion Energy,297,Aspen - Goose Creek 500 kV Line
+OVL_184,24.706515,730,APS,237,Rebuild Millville - Doubs 138 kV with 500kV Overbuild,Dominion Energy,469,Farmwell to Nimbus 230 kV Line
+OVL_185,19.564915,365,APS,237,Rebuild Millville - Doubs 138 kV with 500kV Overbuild,Dominion Energy,472,Aspen - Golden 500 kV Line Options
+OVL_186,20.291288,365,APS,237,Rebuild Millville - Doubs 138 kV with 500kV Overbuild,Dominion Energy,483,Aspen - Sycolin Creek 230 kV Line
+OVL_187,20.291288,365,APS,237,Rebuild Millville - Doubs 138 kV with 500kV Overbuild,Dominion Energy,484,Sycolin Creek - Golden 230 kV Line
+OVL_188,19.007599,1460,APS,237,Rebuild Millville - Doubs 138 kV with 500kV Overbuild,Dominion Energy,508,Altair 230 kV Route Options
+OVL_189,19.864254,,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,187,Reconductor Brambleton - Evergreen Mills 230 kV Line
+OVL_190,12.02614,365,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,188,Pleasant View - Structure 203/15
+OVL_191,16.786494,,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,192,Eastern Loudoun County Reconductor Projects
+OVL_192,16.947955,2190,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,203,Mt. Storm - Valley 500 kV Rebuild
+OVL_193,15.521043,2190,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,207,Beaumeade - Buttermilk Reconductor
+OVL_194,15.81318,730,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,208,Reconductor Paragon Park - BECO 230 kV Line
+OVL_195,15.062664,1460,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,209,BECO to DTC 230 kV
+OVL_196,24.730449,365,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,234,Rebuild Loudon - Morrisville 500 kV Line
+OVL_197,12.073231,730,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,297,Aspen - Goose Creek 500 kV Line
+OVL_198,20.136418,1095,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,300,Reconductor Cabin Run to Yardley Ridge 230 kV Line
+OVL_199,22.444729,1825,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,301,Aviator 230 kV Project
+OVL_200,16.198865,1095,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,469,Farmwell to Nimbus 230 kV Line
+OVL_201,12.281803,730,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,472,Aspen - Golden 500 kV Line Options
+OVL_202,16.581951,365,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,473,Mars - Golden 500 kV Line
+OVL_203,16.581951,365,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,474,Lockridge - Golden 230 kV Line
+OVL_204,20.217102,365,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,475,Vint Hill to Wishing Star 500 kV Line
+OVL_205,17.504245,365,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,481,Mars - Lockridge 230 kV Line
+OVL_206,17.504245,365,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,482,Lockridge - Golder 230 kV Line
+OVL_207,12.237587,730,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,483,Aspen - Sycolin Creek 230 kV Line
+OVL_208,12.237587,730,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,484,Sycolin Creek - Golden 230 kV Line
+OVL_209,13.148592,1825,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,508,Altair 230 kV Route Options
+OVL_210,24.048755,730,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,Dominion Energy,546,Sully - Takeoff 230 kV
+OVL_211,17.637782,,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,187,Reconductor Brambleton - Evergreen Mills 230 kV Line
+OVL_212,9.972469,0,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,188,Pleasant View - Structure 203/15
+OVL_213,13.82824,,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,192,Eastern Loudoun County Reconductor Projects
+OVL_214,12.54312,2555,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,207,Beaumeade - Buttermilk Reconductor
+OVL_215,12.680375,1095,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,208,Reconductor Paragon Park - BECO 230 kV Line
+OVL_216,11.84869,1825,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,209,BECO to DTC 230 kV
+OVL_217,22.934824,1825,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,210,Clark - Idylwood Reconductor
+OVL_218,22.292779,2555,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,226,Idylwood - Tysons 230 kV Project
+OVL_219,22.292779,1095,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,227,Tysons - Springhill 230 kV
+OVL_220,22.477154,0,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,234,Rebuild Loudon - Morrisville 500 kV Line
+OVL_221,10.056111,1095,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,297,Aspen - Goose Creek 500 kV Line
+OVL_222,17.564474,1460,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,300,Reconductor Cabin Run to Yardley Ridge 230 kV Line
+OVL_223,19.702307,2190,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,301,Aviator 230 kV Project
+OVL_224,13.335227,1460,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,469,Farmwell to Nimbus 230 kV Line
+OVL_225,10.233774,1095,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,472,Aspen - Golden 500 kV Line Options
+OVL_226,13.445058,730,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,473,Mars - Golden 500 kV Line
+OVL_227,13.445058,730,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,474,Lockridge - Golden 230 kV Line
+OVL_228,17.971858,0,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,475,Vint Hill to Wishing Star 500 kV Line
+OVL_229,14.549019,730,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,481,Mars - Lockridge 230 kV Line
+OVL_230,14.549019,730,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,482,Lockridge - Golder 230 kV Line
+OVL_231,9.92979,1095,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,483,Aspen - Sycolin Creek 230 kV Line
+OVL_232,9.92979,1095,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,484,Sycolin Creek - Golden 230 kV Line
+OVL_233,11.432527,2190,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,508,Altair 230 kV Route Options
+OVL_234,21.085179,1095,APS,562,Rebuild Dickerson - Aqueduct 230 kV,Dominion Energy,546,Sully - Takeoff 230 kV
+OVL_235,24.090411,730,APS,50,Rebuild Hunterstown - Carroll to 230 kV,"PECO, Baltimore Gas and Electric Company (BGE)",179,North Delta - High Ridge 500 kV Line
+OVL_236,0,1095,APS,193,Rebuild Doubs - Goose Creek 500 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_237,0,1095,APS,195,Rebuild Doubs-Dickerson 230 kV,PSEG,194,Conastone - Doubs 500 kV
+OVL_238,0,1095,APS,196,Rebuild Doubs - Aqueduct 230 kV,PSEG,194,Conastone - Doubs 500 kV
+OVL_239,14.633067,1095,APS,224,Rebuild Stonewall - Millville 138 kV with 500 kV Overbuild,PSEG,194,Conastone - Doubs 500 kV
+OVL_240,14.633067,365,APS,237,Rebuild Millville - Doubs 138 kV with 500kV Overbuild,PSEG,194,Conastone - Doubs 500 kV
+OVL_241,3.428578,730,APS,471,John Amos - Welton Spring - Rocky Point 765 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_242,6.282676,1095,APS,562,Rebuild Dickerson - Aqueduct 230 kV,PSEG,194,Conastone - Doubs 500 kV
+OVL_243,21.717927,365,APS,50,Rebuild Hunterstown - Carroll to 230 kV,Transource Energy,49,Rice - Ringgold 230 kV Line
+OVL_244,19.253379,2920,Ameren Illinois,279,26769-Clinton-Oreana,Ameren Illinois; Commonwealth Edison Company (ComEd),299,Woodford County - Fargo & Radbourn
+OVL_245,19.253379,2920,Ameren Illinois,42,26770-Clinton-Goose Creek,Ameren Illinois; Commonwealth Edison Company (ComEd),299,Woodford County - Fargo & Radbourn
+OVL_246,19.628396,1825,Ameren Illinois,279,26769-Clinton-Oreana,"Ameren Transmission Company of Illinois (ATXI), Ameren Illinois",43,Central Illinois Grid Transformation Program
+OVL_247,19.628396,1825,Ameren Illinois,42,26770-Clinton-Goose Creek,"Ameren Transmission Company of Illinois (ATXI), Ameren Illinois",43,Central Illinois Grid Transformation Program
+OVL_248,0,0,Ameren Illinois,99,Skunk River - Ipava,"Ameren Transmission Company of Illinois (ATXI), Ameren Illinois",43,Central Illinois Grid Transformation Program
+OVL_249,0,1825,Ameren Illinois,45,26874-Coffeen North-Roxford,Ameren Transmission Company of Illinois; Ameren Missouri; Ameren Illinois; Missouri Joint Municipal Electric Utility Commission,44,Maywood- Belleau- MRPD- Sioux - Bugle
+OVL_250,24.375778,,Ameren Illinois,438,Ottumwa - Skunk River,ITC Midwest LLC; MidAmerican Energy Company; Ameren Missouri (assigned and connecting-facility owners; MARS competitive-line developer not yet selected),273,East Adair- Marshalltown- Sub T
+OVL_251,0,,Ameren Illinois / Ameren,20,Northern Missouri Grid Transformation Program,Ameren Transmission Company of Illinois; Ameren Missouri; Ameren Illinois; Missouri Joint Municipal Electric Utility Commission,44,Maywood- Belleau- MRPD- Sioux - Bugle
+OVL_252,0.430958,1095,Ameren Illinois; Commonwealth Edison Company (ComEd),299,Woodford County - Fargo & Radbourn,"Ameren Transmission Company of Illinois (ATXI), Ameren Illinois",43,Central Illinois Grid Transformation Program
+OVL_253,21.221398,730,Ameren Illinois; Commonwealth Edison Company (ComEd),299,Woodford County - Fargo & Radbourn,Ameren Transmission Company of Illinois; GridLiance Heartland LLC; Dairyland Power Cooperative; Illinois Municipal Electric Agency; MidAmerican Energy Company; ITC Midwest LLC; Northern Indiana Public Service Company LLC; Commonwealth Edison Company (ComEd),116,Sub T - Woodford County - Collins & Reynolds
+OVL_254,19.97803,1825,Ameren Missouri,555,Labadie-Montgomery 345kV Aging Infrastructure,Ameren Transmission Company of Illinois; Ameren Missouri; Ameren Illinois; Missouri Joint Municipal Electric Utility Commission,44,Maywood- Belleau- MRPD- Sioux - Bugle
+OVL_255,20.887256,1825,"Ameren Transmission Company of Illinois (ATXI), Ameren Illinois",43,Central Illinois Grid Transformation Program,Ameren Transmission Company of Illinois; GridLiance Heartland LLC; Dairyland Power Cooperative; Illinois Municipal Electric Agency; MidAmerican Energy Company; ITC Midwest LLC; Northern Indiana Public Service Company LLC; Commonwealth Edison Company (ComEd),116,Sub T - Woodford County - Collins & Reynolds
+OVL_256,13.381686,2190,Ameren Transmission Company of Illinois; GridLiance Heartland LLC; Dairyland Power Cooperative; Illinois Municipal Electric Agency; MidAmerican Energy Company; ITC Midwest LLC; Northern Indiana Public Service Company LLC; Commonwealth Edison Company (ComEd),116,Sub T - Woodford County - Collins & Reynolds,Commonwealth Edison,115,Reconductor Elwood - Goodings Grove 345 kV Line
+OVL_257,20.692558,,Ameren Transmission Company of Illinois; GridLiance Heartland LLC; Dairyland Power Cooperative; Illinois Municipal Electric Agency; MidAmerican Energy Company; ITC Midwest LLC; Northern Indiana Public Service Company LLC; Commonwealth Edison Company (ComEd),116,Sub T - Woodford County - Collins & Reynolds,Commonwealth Edison,117,Wilton - Dumont 765 kV Sag Mitigation
+OVL_258,4.585924,,Ameren Transmission Company of Illinois; GridLiance Heartland LLC; Dairyland Power Cooperative; Illinois Municipal Electric Agency; MidAmerican Energy Company; ITC Midwest LLC; Northern Indiana Public Service Company LLC; Commonwealth Edison Company (ComEd),116,Sub T - Woodford County - Collins & Reynolds,Commonwealth Edison Company (ComEd) (Dresden transmission facility owner; project developer unconfirmed),281,Upgrade R78 - Dresden 345 kV
+OVL_259,23.853003,0,Ameren Transmission Company of Illinois; GridLiance Heartland LLC; Dairyland Power Cooperative; Illinois Municipal Electric Agency; MidAmerican Energy Company; ITC Midwest LLC; Northern Indiana Public Service Company LLC; Commonwealth Edison Company (ComEd),116,Sub T - Woodford County - Collins & Reynolds,Midcontinent Grid Solutions (Transource Energy LLC and BHE Transmission); Commonwealth Edison Company (ComEd),118,Sugar Creek- Collins
+OVL_260,8.201843,1825,American Electric Power (AEP),261,Clarksville 345kV Switching Station GEN-2017-140 Interconnection Costs,NextEra Energy,634,Heartland Spirit Connector
+OVL_261,0,,American Electric Power; Duke Energy Indiana LLC; Indianapolis Power & Light Company (AES Indiana); Hoosier Energy; Southern Indiana Gas & Electric Company (CenterPoint Energy Indiana South); Republic Transmission LLC; Big Rivers Electric Corporation,48,Southwest Indiana-Kentucky,Indianapolis Power & Light Company (AES Indiana),292,27626-Petersburg-R1011
+OVL_262,9.828787,,American Transmission Company (ATC),485,28090-Blitz-Rockdale,American Transmission Company LLC; Viridon Midcontinent LLC,156,South Fond du Lac- Rockdale- Big Bend- Sugar Creek - Kitty Hawk
+OVL_263,15.930206,4380,American Transmission Company (ATC),121,Grid Forward Central Wisconsin Transmission Line Project,American Transmission Company LLC; Xcel Energy; Dairyland Power Cooperative; Southern Minnesota Municipal Power Agency (SMMPA Wisconsin LLC); WPPI Energy; ITC Midwest LLC,159,Proposed MVP Portfolio 1: N LaCrosse-N Madison-Cardinal-Hickory Creek 345 kV
+OVL_264,0,2920,American Transmission Company (ATC),158,28078-Columbia-North Madison,American Transmission Company LLC; Xcel Energy; Dairyland Power Cooperative; Southern Minnesota Municipal Power Agency (SMMPA Wisconsin LLC); WPPI Energy; ITC Midwest LLC,159,Proposed MVP Portfolio 1: N LaCrosse-N Madison-Cardinal-Hickory Creek 345 kV
+OVL_265,13.551308,3650,American Transmission Company (ATC),87,Hill Valley - Cardinal Upgrade,American Transmission Company LLC; Xcel Energy; Dairyland Power Cooperative; Southern Minnesota Municipal Power Agency (SMMPA Wisconsin LLC); WPPI Energy; ITC Midwest LLC,159,Proposed MVP Portfolio 1: N LaCrosse-N Madison-Cardinal-Hickory Creek 345 kV
+OVL_266,0,1460,American Transmission Company (ATC),87,Hill Valley - Cardinal Upgrade,American Transmission Company LLC; Xcel Energy; Dairyland Power Cooperative; Southern Minnesota Municipal Power Agency (SMMPA Wisconsin LLC); WPPI Energy; ITC Midwest LLC,92,N LaCrosse-N Madison-Cardinal-Hickory Creek 345 kV
+OVL_267,0,,American Transmission Company (ATC),124,25550-Arrowhead SS-Stone Lake SS,Great River Energy; Minnesota Power; Missouri River Energy Services; Otter Tail Power Company; Northern States Power Company (Xcel Energy); Western Area Power Administration; American Transmission Company LLC; ITC Midwest LLC; MidAmerican Energy Company; Dairyland Power Cooperative; Rochester Public Utilities; Southern Minnesota Municipal Power Agency; Viridon Midcontinent LLC; Midcontinent Grid Solutions (Transource Energy LLC and BHE Transmission); Commonwealth Edison Company (ComEd); Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission); AEP Indiana Michigan Transmission Company Inc.; American Electric Power; Duke Energy Indiana LLC; Duke Energy Ohio; Indianapolis Power & Light Company (AES Indiana); Hoosier Energy; Southern Indiana Gas & Electric Company (CenterPoint Energy Indiana South); Republic Transmission LLC; Big Rivers Electric Corporation; Indiana Municipal Power Agency; Ameren Transmission Company of Illinois; Ameren Missouri; Ameren Illinois; Missouri Joint Municipal Electric Utility Commission; GridLiance Heartland LLC; Illinois Municipal Electric Agency; Northern Indiana Public Service Company LLC (confirmed facility owners and selected developers; EASL and MARS developers pending; full facility-level ownership not confirmed),110,MISO LRTP Tranche 2.1 Portfolio
+OVL_268,13.551308,730,American Transmission Company (ATC),158,28078-Columbia-North Madison,"ITC Midwest, ATC, Dairyland Power Cooperative",86,Cardinal - Hickory Creek
+OVL_269,0,1460,American Transmission Company (ATC),87,Hill Valley - Cardinal Upgrade,"ITC Midwest, ATC, Dairyland Power Cooperative",86,Cardinal - Hickory Creek
+OVL_270,0,1460,American Transmission Company (ATC),121,Grid Forward Central Wisconsin Transmission Line Project,"Transource Energy, Berkshire Hathaway Energy",157,Bell Center–Columbia–Sugar Creek–IL/WI State Line 765 kV
+OVL_271,0,2920,American Transmission Company (ATC),158,28078-Columbia-North Madison,"Transource Energy, Berkshire Hathaway Energy",157,Bell Center–Columbia–Sugar Creek–IL/WI State Line 765 kV
+OVL_272,21.29044,,American Transmission Company LLC,79,Bluemond- Arcadian- Waukesha- Muskego- Elm Road- Racine,American Transmission Company LLC; Viridon Midcontinent LLC,156,South Fond du Lac- Rockdale- Big Bend- Sugar Creek - Kitty Hawk
+OVL_273,21.29044,,American Transmission Company LLC,79,Bluemond- Arcadian- Waukesha- Muskego- Elm Road- Racine,"Transource Energy, Berkshire Hathaway Energy",157,Bell Center–Columbia–Sugar Creek–IL/WI State Line 765 kV
+OVL_274,17.994311,,American Transmission Company LLC; Viridon Midcontinent LLC,156,South Fond du Lac- Rockdale- Big Bend- Sugar Creek - Kitty Hawk,Commonwealth Edison,120,Reconductor Wempleton - Byron 345 kV Line
+OVL_275,0,,American Transmission Company LLC; Viridon Midcontinent LLC,156,South Fond du Lac- Rockdale- Big Bend- Sugar Creek - Kitty Hawk,"Transource Energy, Berkshire Hathaway Energy",157,Bell Center–Columbia–Sugar Creek–IL/WI State Line 765 kV
+OVL_276,23.536412,3650,American Transmission Company LLC; Xcel Energy; Dairyland Power Cooperative; Southern Minnesota Municipal Power Agency (SMMPA Wisconsin LLC); WPPI Energy; ITC Midwest LLC,159,Proposed MVP Portfolio 1: N LaCrosse-N Madison-Cardinal-Hickory Creek 345 kV,Dairyland Power Cooperative,98,Alma - Blair Transmission Project
+OVL_277,20.627422,1460,American Transmission Company LLC; Xcel Energy; Dairyland Power Cooperative; Southern Minnesota Municipal Power Agency (SMMPA Wisconsin LLC); WPPI Energy; ITC Midwest LLC,92,N LaCrosse-N Madison-Cardinal-Hickory Creek 345 kV,ITC MIDWEST,556,J1432 GIA NU New Bryant 345 kV Switch Station
+OVL_278,13.551308,2190,American Transmission Company LLC; Xcel Energy; Dairyland Power Cooperative; Southern Minnesota Municipal Power Agency (SMMPA Wisconsin LLC); WPPI Energy; ITC Midwest LLC,159,Proposed MVP Portfolio 1: N LaCrosse-N Madison-Cardinal-Hickory Creek 345 kV,"ITC Midwest, ATC, Dairyland Power Cooperative",86,Cardinal - Hickory Creek
+OVL_279,15.930206,5840,American Transmission Company LLC; Xcel Energy; Dairyland Power Cooperative; Southern Minnesota Municipal Power Agency (SMMPA Wisconsin LLC); WPPI Energy; ITC Midwest LLC,159,Proposed MVP Portfolio 1: N LaCrosse-N Madison-Cardinal-Hickory Creek 345 kV,"Transource Energy, Berkshire Hathaway Energy",157,Bell Center–Columbia–Sugar Creek–IL/WI State Line 765 kV
+OVL_280,0,2555,Arizona Public Service,395,Four Corners to Cholla to Pinnacle Peak 345kV Line Rebuilds,"Invenergy, New Mexico Renewable Energy Transmission Authority (RETA)",413,North Path
+OVL_281,0,,Arizona Public Service,395,Four Corners to Cholla to Pinnacle Peak 345kV Line Rebuilds,Public Service Company of New Mexico (PNM),414,Four Corners - Pintado 345 kV
+OVL_282,8.289234,,Arizona Public Service,395,Four Corners to Cholla to Pinnacle Peak 345kV Line Rebuilds,Public Service Company of New Mexico (PNM),605,San Juan to Rio Puerco 345 kV
+OVL_283,8.289234,,Arizona Public Service,395,Four Corners to Cholla to Pinnacle Peak 345kV Line Rebuilds,Public Service Company of New Mexico (PNM); Tucson Electric Power Company,616,San Juan to Four Corners 345 kV
+OVL_284,0,730,Arizona Public Service,424,Jojoba to Rudd 500kV line,Salt River Project (SRP),415,Palo Verde to Pinal West 500 kV transmission project
+OVL_285,0,4015,Arizona Public Service,395,Four Corners to Cholla to Pinnacle Peak 345kV Line Rebuilds,Western Area Power Administration,401,Pinnacle Peak - Rogers 230kV Restoration Project
+OVL_286,21.911179,,Arizona Public Service,395,Four Corners to Cholla to Pinnacle Peak 345kV Line Rebuilds,Western Area Power Administration (WAPA),615,Mead - Liberty - West Wing 500 kV Line
+OVL_287,20.490334,,Arizona Public Service,424,Jojoba to Rudd 500kV line,Western Area Power Administration (WAPA),615,Mead - Liberty - West Wing 500 kV Line
+OVL_288,0,0,Avangrid,466,New England Clean Energy Connection,Central Maine Power Company,136,Merrill Road to Larrabee Road
+OVL_289,13.810993,365,Baltimore Gas and Electric Company (BGE),180,Reconductor Conastone - Northwest 230 kV Lines,PECO,470,Cooper - North Delta (Bramah)
+OVL_290,13.509059,365,Baltimore Gas and Electric Company (BGE),180,Reconductor Conastone - Northwest 230 kV Lines,PECO,517,Cooper - North Delta (Bramah) 500 kV
+OVL_291,8.598227,1095,Baltimore Gas and Electric Company (BGE),180,Reconductor Conastone - Northwest 230 kV Lines,"PECO, Baltimore Gas and Electric Company (BGE)",179,North Delta - High Ridge 500 kV Line
+OVL_292,14.51369,1095,Baltimore Gas and Electric Company (BGE),51,Reconductor Batavia - Riverside 230 kV Line,"PECO, Baltimore Gas and Electric Company (BGE)",179,North Delta - High Ridge 500 kV Line
+OVL_293,0,0,Baltimore Gas and Electric Company (BGE),180,Reconductor Conastone - Northwest 230 kV Lines,PSEG,194,Conastone - Doubs 500 kV
+OVL_294,0,1095,Baltimore Gas and Electric Company (BGE),180,Reconductor Conastone - Northwest 230 kV Lines,"Portland General Electric, PECO",93,Rebuild Peach Bottom - Conastone 500 kV
+OVL_295,12.160959,1460,Baltimore Gas and Electric Company (BGE),180,Reconductor Conastone - Northwest 230 kV Lines,Transource Energy,490,Furnace Run - Conastone 230 kV
+OVL_296,11.1461,1825,Basin Electric Power Cooperative,468,North Dakota/Saskatchewan Border (Tableland) - Wheelock 230 kV Ckt 1,Basin Electric Power Cooperative (BEPC),565,Springbrook-Twelve Mile 345
+OVL_297,15.998554,365,Basin Electric Power Cooperative,308,Leland Olds Station to Tande,Great River Energy,489,27670-Nelson Lake-Square Butte / Stanton
+OVL_298,15.310876,2190,Basin Electric Power Cooperative,308,Leland Olds Station to Tande,Grid United,126,North Plains Connector
+OVL_299,0.792979,365,Basin Electric Power Cooperative,308,Leland Olds Station to Tande,Minnesota Power,111,27669-Nelson Lake-Square Butte East / Bison
+OVL_300,23.844574,1825,Basin Electric Power Cooperative,468,North Dakota/Saskatchewan Border (Tableland) - Wheelock 230 kV Ckt 1,Western Area Power Administration (WAPA),572,Dawson County - Williston 230 kV
+OVL_301,13.86007,0,Basin Electric Power Cooperative (BEPC),565,Springbrook-Twelve Mile 345,Western Area Power Administration (WAPA),572,Dawson County - Williston 230 kV
+OVL_302,11.877646,730,Basin Electric Power Cooperative (BEPC),570,Patent Gate - Pioneer 345 kV,Western Area Power Administration (WAPA),572,Dawson County - Williston 230 kV
+OVL_303,0,1460,Basin Electric Power Cooperative (BEPC) / Western Area Power Administration (WAPA),335,Laramie River - New Underwood 345 kV,Grid United,334,Wyoming Intertie
+OVL_304,0,1095,Black Hills Energy,345,Ready Wyoming,"Idaho Power, PacifiCorp",330,Gateway West
+OVL_305,13.393887,,Bonneville Power Administration,610,Lower Columbia to Bonanza II,"Idaho Power, PacifiCorp",338,Boardman to Hemingway
+OVL_306,13.393887,,Bonneville Power Administration,611,Six Mile to Ashe 500 kV Line,"Idaho Power, PacifiCorp",338,Boardman to Hemingway
+OVL_307,0.503762,,Bonneville Power Administration,427,Lower Columbia to Nevada-Oregon Border,PacifiCorp,442,Corral to Snow Goose 500kV Line
+OVL_308,0.503762,,Bonneville Power Administration,427,Lower Columbia to Nevada-Oregon Border,PacifiCorp,443,Corral to Grassland Annex 500kV Line
+OVL_309,0.503762,,Bonneville Power Administration,432,La Pine-Bonanza Line,PacifiCorp,442,Corral to Snow Goose 500kV Line
+OVL_310,0.503762,,Bonneville Power Administration,432,La Pine-Bonanza Line,PacifiCorp,443,Corral to Grassland Annex 500kV Line
+OVL_311,8.846485,,Bonneville Power Administration,610,Lower Columbia to Bonanza II,PacifiCorp,443,Corral to Grassland Annex 500kV Line
+OVL_312,8.846485,,Bonneville Power Administration,610,Lower Columbia to Bonanza II,PacifiCorp,444,Grassland Annex to B2H 500 kV Line
+OVL_313,8.846485,,Bonneville Power Administration,611,Six Mile to Ashe 500 kV Line,PacifiCorp,443,Corral to Grassland Annex 500kV Line
+OVL_314,8.846485,,Bonneville Power Administration,611,Six Mile to Ashe 500 kV Line,PacifiCorp,444,Grassland Annex to B2H 500 kV Line
+OVL_315,1.434046,365,Bonneville Power Administration,314,Ross - Rivergate 230 kV Line Upgrade,Portland General Electric,327,Harborton - Trojan #3 and #4 230kV
+OVL_316,19.710726,730,Bonneville Power Administration,320,Big Eddy - Chemawa 230/500 kV Line Upgrade,Portland General Electric,327,Harborton - Trojan #3 and #4 230kV
+OVL_317,6.498293,,Bonneville Power Administration,342,North of Pearl (New build),Portland General Electric,327,Harborton - Trojan #3 and #4 230kV
+OVL_318,6.498293,,Bonneville Power Administration,343,North of Pearl (Rebuild),Portland General Electric,327,Harborton - Trojan #3 and #4 230kV
+OVL_319,6.337637,365,Bonneville Power Administration,320,Big Eddy - Chemawa 230/500 kV Line Upgrade,"Portland General Electric, the Confederated Tribes of the Warm Springs Reservation of Oregon",331,Bethel - Round Butte Transmission Upgrade
+OVL_320,15.292935,,Bonneville Power Administration,323,North of Marion Upgrade #2,"Portland General Electric, the Confederated Tribes of the Warm Springs Reservation of Oregon",331,Bethel - Round Butte Transmission Upgrade
+OVL_321,17.31218,,Bonneville Power Administration,325,North of Marion Upgrade #1 (Rebuild Chemawa - Santiam),"Portland General Electric, the Confederated Tribes of the Warm Springs Reservation of Oregon",331,Bethel - Round Butte Transmission Upgrade
+OVL_322,1.434046,365,Bonneville Power Administration,314,Ross - Rivergate 230 kV Line Upgrade,"PowerBridge LLC, Sun2o Partners LLC",321,Cascade Renewable Transmission
+OVL_323,18.916935,730,Bonneville Power Administration,317,Rock Creek - John Day 500 kV Line Upgrade,"PowerBridge LLC, Sun2o Partners LLC",321,Cascade Renewable Transmission
+OVL_324,0,1460,Bonneville Power Administration,320,Big Eddy - Chemawa 230/500 kV Line Upgrade,"PowerBridge LLC, Sun2o Partners LLC",321,Cascade Renewable Transmission
+OVL_325,0,1460,Bonneville Power Administration,322,Big Eddy - Ostrander Conductor Replacement Project,"PowerBridge LLC, Sun2o Partners LLC",321,Cascade Renewable Transmission
+OVL_326,6.498293,,Bonneville Power Administration,342,North of Pearl (New build),"PowerBridge LLC, Sun2o Partners LLC",321,Cascade Renewable Transmission
+OVL_327,6.498293,,Bonneville Power Administration,343,North of Pearl (Rebuild),"PowerBridge LLC, Sun2o Partners LLC",321,Cascade Renewable Transmission
+OVL_328,4.763077,,Bonneville Power Administration,445,Big Eddy - Quenett Creek Upgrade,"PowerBridge LLC, Sun2o Partners LLC",321,Cascade Renewable Transmission
+OVL_329,8.951218,1460,Bonneville Power Administration,311,Chehalis - Covington 230 kV Line Upgrade,Puget Sound Energy,310,Energize Eastside
+OVL_330,8.604847,,Bonneville Power Administration,311,Chehalis - Covington 230 kV Line Upgrade,Puget Sound Energy,316,Cross-Cascades Project
+OVL_331,15.11349,2555,Bonneville Power Administration,312,Schultz - Raver 500 kV Line Upgrade,Puget Sound Energy,310,Energize Eastside
+OVL_332,0,,Bonneville Power Administration,312,Schultz - Raver 500 kV Line Upgrade,Puget Sound Energy,316,Cross-Cascades Project
+OVL_333,0,,Bonneville Power Administration,313,Schultz - Olympia 500KV,Puget Sound Energy,316,Cross-Cascades Project
+OVL_334,23.559692,,Bonneville Power Administration,315,Grand Coulee - Columbia - Schultz 500kV,Puget Sound Energy,316,Cross-Cascades Project
+OVL_335,13.393887,,Bonneville Power Administration,610,Lower Columbia to Bonanza II,Puget Sound Energy,316,Cross-Cascades Project
+OVL_336,13.393887,,Bonneville Power Administration,611,Six Mile to Ashe 500 kV Line,Puget Sound Energy,316,Cross-Cascades Project
+OVL_337,13.385745,,Bonneville Power Administration,610,Lower Columbia to Bonanza II,Umatilla Electric Cooperative,539,Umatilla-Morrow County Connect Project
+OVL_338,13.385745,,Bonneville Power Administration,611,Six Mile to Ashe 500 kV Line,Umatilla Electric Cooperative,539,Umatilla-Morrow County Connect Project
+OVL_339,0,,Bonneville Power Administration (BPA),319,Townsend - Ashe 500 kV,"Bonneville Power Administration, Department of Energy Richland",318,Midway - Ashe 230kV Transmission Line
+OVL_340,0,,Bonneville Power Administration (BPA),319,Townsend - Ashe 500 kV,Idaho Power Company,624,Townsend - Midpoint 500 kV
+OVL_341,23.757635,1825,CPS Energy,367,Rebuild Spruce to Eastside Double Circuit,LCRA Transmission Services Corporation,398,Highway 46 - River Oaks Transmission Line Upgrade
+OVL_342,0,365,CPS Energy,376,CPSE Howard to San Miguel Double Circuit Line Addition,South Texas Electric Cooperative,410,San Miguel to Cruce 345 kV lines
+OVL_343,0,4015,Citizens Energy,366,S-Line Upgrade Project,Horizon West Transmission (NextEra Energy Transmission),436,Imperial Valley - North of SONGS Project
+OVL_344,0,,Commonwealth Edison,46,Reconductor Nelson - Cordova 345 kV Line,Commonwealth Edison Company (ComEd),113,Reconductor ESS H471 - Nelson 345 kV
+OVL_345,1.620873,,Commonwealth Edison,46,Reconductor Nelson - Cordova 345 kV Line,Commonwealth Edison Company (ComEd),177,Reconductor Quad Cities - ESS H471 345 kV
+OVL_346,8.878468,,Commonwealth Edison,115,Reconductor Elwood - Goodings Grove 345 kV Line,Commonwealth Edison Company (ComEd) (Dresden transmission facility owner; project developer unconfirmed),281,Upgrade R78 - Dresden 345 kV
+OVL_347,16.707904,,Commonwealth Edison,117,Wilton - Dumont 765 kV Sag Mitigation,Commonwealth Edison Company (ComEd) (Dresden transmission facility owner; project developer unconfirmed),281,Upgrade R78 - Dresden 345 kV
+OVL_348,24.350705,,Commonwealth Edison,40,Reconductor East Frankfort - Crete 345 kV Line,Commonwealth Edison Company (ComEd) (Dresden transmission facility owner; project developer unconfirmed),281,Upgrade R78 - Dresden 345 kV
+OVL_349,18.810821,,Commonwealth Edison,114,Byron - Wayne 345 kV Line,"Commonwealth Edison, AEP",37,Reconductor Garden Prairie - Silver Lake 345 kV Line
+OVL_350,13.223014,,Commonwealth Edison,119,Mitigate sag limits on Wayne - Tollway 345 kV line,"Commonwealth Edison, AEP",37,Reconductor Garden Prairie - Silver Lake 345 kV Line
+OVL_351,18.114216,,Commonwealth Edison,120,Reconductor Wempleton - Byron 345 kV Line,"Commonwealth Edison, AEP",123,Reconductor Lee County - Byron 345 kV Line
+OVL_352,14.106902,,Commonwealth Edison,120,Reconductor Wempleton - Byron 345 kV Line,"Commonwealth Edison, AEP",38,Reconductor Cherry Valley - Garden Prairie 345 kV Line
+OVL_353,11.386167,,Commonwealth Edison,46,Reconductor Nelson - Cordova 345 kV Line,"Commonwealth Edison, AEP",123,Reconductor Lee County - Byron 345 kV Line
+OVL_354,5.387923,,Commonwealth Edison,46,Reconductor Nelson - Cordova 345 kV Line,ITC MIDWEST,556,J1432 GIA NU New Bryant 345 kV Switch Station
+OVL_355,24.058578,,Commonwealth Edison,114,Byron - Wayne 345 kV Line,Midcontinent Grid Solutions (Transource Energy LLC and BHE Transmission); Commonwealth Edison Company (ComEd),118,Sugar Creek- Collins
+OVL_356,18.264661,,Commonwealth Edison,39,Rebuild/Reconductor Olive - University Park 345 kV,Northern Indiana Public Service Company,282,6841-Schahfer-St. John
+OVL_357,11.485898,,Commonwealth Edison,40,Reconductor East Frankfort - Crete 345 kV Line,Northern Indiana Public Service Company,282,6841-Schahfer-St. John
+OVL_358,11.485898,0,Commonwealth Edison,41,Rebuild and Reconductor ComEd Portion of Crete - St. John 345 kV,Northern Indiana Public Service Company,282,6841-Schahfer-St. John
+OVL_359,18.622115,,Commonwealth Edison,117,Wilton - Dumont 765 kV Sag Mitigation,Otter Tail Power Company; Montana-Dakota Utilities Co.; Great River Energy; Minnesota Power; Missouri River Energy Services; Western Minnesota Municipal Power Agency; Northern States Power Company (Xcel Energy); Dairyland Power Cooperative; Rochester Public Utilities; Southern Minnesota Municipal Power Agency; American Transmission Company LLC; WPPI Energy; MidAmerican Energy Company; Cedar Falls Utilities; ITC Midwest LLC; Ameren Transmission Company of Illinois; Ameren Missouri; Ameren Illinois; Associated Electric Cooperative Inc.; Northern Indiana Public Service Company LLC; Republic Transmission LLC; Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission) (confirmed portfolio facility owners and participants; full facility-level ownership not confirmed),91,MISO LRTP Tranche 1 Portfolio
+OVL_360,11.293568,,Commonwealth Edison,117,Wilton - Dumont 765 kV Sag Mitigation,"WABASH VALLEY POWER ASSOCIATION, INC.",494,New Stillwell to Elderberry 345kV Line
+OVL_361,0.48122,,Commonwealth Edison,39,Rebuild/Reconductor Olive - University Park 345 kV,"WABASH VALLEY POWER ASSOCIATION, INC.",494,New Stillwell to Elderberry 345kV Line
+OVL_362,11.386167,,Commonwealth Edison Company (ComEd),113,Reconductor ESS H471 - Nelson 345 kV,"Commonwealth Edison, AEP",123,Reconductor Lee County - Byron 345 kV Line
+OVL_363,4.490251,,Commonwealth Edison Company (ComEd),177,Reconductor Quad Cities - ESS H471 345 kV,ITC MIDWEST,556,J1432 GIA NU New Bryant 345 kV Switch Station
+OVL_364,22.803783,,Commonwealth Edison Company (ComEd) (Dresden transmission facility owner; project developer unconfirmed),281,Upgrade R78 - Dresden 345 kV,Midcontinent Grid Solutions (Transource Energy LLC and BHE Transmission); Commonwealth Edison Company (ComEd),118,Sugar Creek- Collins
+OVL_365,0.406667,,Con Edison,146,Brooklyn Clean Energy Hub,LS Power,578,Ravenswood Project - Queensboro Renewable Express
+OVL_366,0,365,Con Edison,146,Brooklyn Clean Energy Hub,"New York Power Authority, Invenergy, energyRe",145,Clean Path NY
+OVL_367,20.79502,365,Con Edison,146,Brooklyn Clean Energy Hub,PSEG,102,Reconductor Metuchen - New Dover 230 kV
+OVL_368,13.787633,,Con Edison,146,Brooklyn Clean Energy Hub,PSEG,104,Reconductor Warinanco - Aldene 230 kV
+OVL_369,10.065617,,Con Edison,146,Brooklyn Clean Energy Hub,PSEG,105,Bayway - Federal Square 230 kV
+OVL_370,3.739965,,Con Edison,146,Brooklyn Clean Energy Hub,PSEG,142,Hudson - South Waterfront - Add Second 230 kV Underground Cable
+OVL_371,5.98768,,Con Edison,146,Brooklyn Clean Energy Hub,PSEG,143,Hudson - Essex 230 kV
+OVL_372,16.05534,0,Con Edison,146,Brooklyn Clean Energy Hub,PSEG,144,Jackson Road to Cedar Grove 230 kV Line
+OVL_373,6.892796,730,Con Edison,146,Brooklyn Clean Energy Hub,"The New York Power Authority (NYPA), New York Transco (NY Transco)",60,Propel NY Energy
+OVL_374,2.515103,730,Con Edison,146,Brooklyn Clean Energy Hub,Transmission Developers Inc (TDI),80,Champlain Hudson Power Express
+OVL_375,15.254094,,Copenhagen Infrastructure Partners,540,Swan Lake Energy Storage Project,PacifiCorp,442,Corral to Snow Goose 500kV Line
+OVL_376,14.06557,3650,DCR Transmission,374,Ten West Link,Salt River Project (SRP),415,Palo Verde to Pinal West 500 kV transmission project
+OVL_377,0,1460,DCR Transmission,374,Ten West Link,Southern California Edsion,418,Colorado River - Red Bluff 500 kV Line Upgrade
+OVL_378,13.345703,,Delmarva Power & Light Company,52,Reconductor Keeney to Steele 230 kV,LS Power,200,Upgrade Silver Run - Hope Creek 230 kV Line
+OVL_379,18.648974,,Delmarva Power & Light Company,66,Rebuild Cartanza- Mil 230 kV Line,LS Power,200,Upgrade Silver Run - Hope Creek 230 kV Line
+OVL_380,18.931366,,Delmarva Power & Light Company,77,Rebuild Edge Moor - Linwood 230 kV,LS Power,200,Upgrade Silver Run - Hope Creek 230 kV Line
+OVL_381,21.400594,,Delmarva Power & Light Company,77,Rebuild Edge Moor - Linwood 230 kV,PECO,160,Richmond - Waneeta 230 kV
+OVL_382,4.855774,1460,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,12,Ladysmith - Lee's Hill 230 kV Project
+OVL_383,0,2190,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,181,Rebuild Ladysmith to Elmont 500 kV Line
+OVL_384,0,1095,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,182,Rebuild Elmont to Chickahominy 500 kV Line
+OVL_385,0,1095,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,183,Elmont - Ladysmith 230 kV Line
+OVL_386,0,1460,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,184,Elmont to Chickahominy 230 kV Line
+OVL_387,11.963226,1095,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,186,Fredericksburg - Possum Point Upgrade and Rebuild
+OVL_388,19.574911,2190,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,225,White Oak 230 kV Line
+OVL_389,22.517906,730,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,228,Reconductor Chesterfield - Tyler 230 kV Line
+OVL_390,24.451612,730,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,229,Reconductor Tyler - Poe 230 kV Line
+OVL_391,15.324165,1460,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,230,Rebuild Cranes Corner - Stafford 230 kV Line
+OVL_392,18.058054,0,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,231,Rebuild Midlothian - North Anna 500 kV Line
+OVL_393,15.351785,2190,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,232,Reconductor Midlothian - Trabue 230 kV
+OVL_394,0,1095,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,476,Kraken - Yeat 500 kV Line
+OVL_395,0,1095,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,477,North Anna - Kraken 500 kV Line
+OVL_396,7.926482,1825,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,502,Ruther Glen 230 kV Electric Transmission Project
+OVL_397,13.985892,1825,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,503,Carmel Church 230 kV Electric Transmission Project
+OVL_398,3.007447,1825,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,507,Tributary 230 kV Route Options
+OVL_399,17.846173,1825,Dominion,185,Elmont - Kraken 500 kV,Dominion Energy,595,Centreport 230 kV Electric Transmission Project
+OVL_400,23.577819,1825,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,14,Edsall 230 kV Electric Transmission Project
+OVL_401,7.196132,2190,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,15,Reconductor Elk Run - Gainesville 230 kV Line
+OVL_402,12.653675,1095,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,16,Cloverhill to Ox 230 kV Line
+OVL_403,7.196132,1095,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,17,Reconductor/Rebuild Gainesville - Wheeler 230 kV Line
+OVL_404,4.089981,,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,187,Reconductor Brambleton - Evergreen Mills 230 kV Line
+OVL_405,12.679341,730,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,188,Pleasant View - Structure 203/15
+OVL_406,11.002346,2190,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,189,Cannon Branch - Winters Branch 230 kV Line Extension
+OVL_407,11.002346,2190,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,190,Clifton - Winters Branch Rebuild
+OVL_408,8.518205,2190,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,191,Liberty-Cannon Branch Upgrade
+OVL_409,5.38603,,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,192,Eastern Loudoun County Reconductor Projects
+OVL_410,22.975814,1460,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,197,Rebuild Bristers - Morrisville 500 kV Line
+OVL_411,7.196132,1825,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,198,Reconductor Railroad DP - Gainesville 230 kV Line
+OVL_412,7.196132,2555,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,199,Rollins Ford - Gainseville 230 kV
+OVL_413,19.147962,730,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,205,Rebuild Occoquan - Ox 230 kV Line
+OVL_414,12.037157,2555,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,206,Rebuild Clifton - Ox 230 kV Line
+OVL_415,9.800022,3285,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,207,Beaumeade - Buttermilk Reconductor
+OVL_416,10.861314,1825,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,208,Reconductor Paragon Park - BECO 230 kV Line
+OVL_417,11.391127,2555,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,209,BECO to DTC 230 kV
+OVL_418,15.988561,2555,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,210,Clark - Idylwood Reconductor
+OVL_419,20.426352,3650,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,211,Woodbridge - Occoquan Reconductor
+OVL_420,20.506646,2555,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,212,Bristers - Minnieville Reconductor
+OVL_421,17.994843,3285,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,226,Idylwood - Tysons 230 kV Project
+OVL_422,17.570983,1825,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,227,Tysons - Springhill 230 kV
+OVL_423,11.357027,1095,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,233,Morrisville to Vint Hill 500 kV Line
+OVL_424,0.204933,730,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,234,Rebuild Loudon - Morrisville 500 kV Line
+OVL_425,8.518205,2190,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,294,Reconductor Liberty - Railroad 230 kV Line
+OVL_426,8.518205,2190,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,295,Reconductor Pioneer - Liberty 230 kV
+OVL_427,8.317748,2190,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,296,Reconductor Liberty - Railroad DP 230 kV Line
+OVL_428,12.422142,1825,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,297,Aspen - Goose Creek 500 kV Line
+OVL_429,4.653242,2190,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,300,Reconductor Cabin Run to Yardley Ridge 230 kV Line
+OVL_430,4.39663,2920,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,301,Aviator 230 kV Project
+OVL_431,9.86409,2190,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,469,Farmwell to Nimbus 230 kV Line
+OVL_432,10.895664,1825,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,472,Aspen - Golden 500 kV Line Options
+OVL_433,5.750965,1460,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,473,Mars - Golden 500 kV Line
+OVL_434,10.895664,1460,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,474,Lockridge - Golden 230 kV Line
+OVL_435,4.506836,730,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,475,Vint Hill to Wishing Star 500 kV Line
+OVL_436,21.813265,1095,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,476,Kraken - Yeat 500 kV Line
+OVL_437,10.501027,1095,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,478,Nokesville - Hornbaker 230 kV Line
+OVL_438,7.809353,1095,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,479,Hornbaker - Devlin 230 kV Route Options
+OVL_439,11.779652,1095,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,480,Nebula - Raines 230 kV Route Options
+OVL_440,5.750965,1460,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,481,Mars - Lockridge 230 kV Line
+OVL_441,9.251419,1460,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,482,Lockridge - Golder 230 kV Line
+OVL_442,12.56546,1825,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,483,Aspen - Sycolin Creek 230 kV Line
+OVL_443,12.56546,1825,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,484,Sycolin Creek - Golden 230 kV Line
+OVL_444,17.975142,1095,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,5,Rebuild Thelma - Lakeview 230 kV Line
+OVL_445,6.83583,1460,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,505,Daves Store 230 kV Project
+OVL_446,8.490244,2555,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,506,South Hill 230 kV Project
+OVL_447,11.674471,2920,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,508,Altair 230 kV Route Options
+OVL_448,17.81586,,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,510,Blackwell Road 230 kV Project
+OVL_449,6.465105,1825,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Dominion Energy,546,Sully - Takeoff 230 kV
+OVL_450,18.683704,3285,Dominion,629,Heritage - Mosby (HVDC Underground) 525 kV,Duke Energy,242,Clubhouse to Lakeview 230 kV Rebuild
+OVL_451,11.14597,,Dominion Energy,267,Archer Reliability Upgrade Projects,Duke Energy,29,Crystal River - Bronson Transmission Line Project
+OVL_452,11.14597,,Dominion Energy,267,Archer Reliability Upgrade Projects,Duke Energy,30,Williston to Bronson Project
+OVL_453,0,,Dominion Energy,267,Archer Reliability Upgrade Projects,Duke Energy,36,Marion - Levy - Alachua Reliability Projects
+OVL_454,19.251202,1095,Dominion Energy,4,Rebuild Hornertown - Hathaway 230 kV,Duke Energy,242,Clubhouse to Lakeview 230 kV Rebuild
+OVL_455,17.48395,2190,Dominion Energy,5,Rebuild Thelma - Lakeview 230 kV Line,Duke Energy,242,Clubhouse to Lakeview 230 kV Rebuild
+OVL_456,21.745739,730,Dominion Energy,504,Jeffress 230 kV Project,Duke Energy,214,Mayo - Person Transmission Line Upgrade Project
+OVL_457,24.287209,2555,Dominion Energy,226,Idylwood - Tysons 230 kV Project,"PECO, Baltimore Gas and Electric Company (BGE)",179,North Delta - High Ridge 500 kV Line
+OVL_458,24.287209,1095,Dominion Energy,227,Tysons - Springhill 230 kV,"PECO, Baltimore Gas and Electric Company (BGE)",179,North Delta - High Ridge 500 kV Line
+OVL_459,23.072259,,Dominion Energy,187,Reconductor Brambleton - Evergreen Mills 230 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_460,15.254937,1095,Dominion Energy,188,Pleasant View - Structure 203/15,PSEG,194,Conastone - Doubs 500 kV
+OVL_461,20.19439,,Dominion Energy,192,Eastern Loudoun County Reconductor Projects,PSEG,194,Conastone - Doubs 500 kV
+OVL_462,18.933674,1460,Dominion Energy,207,Beaumeade - Buttermilk Reconductor,PSEG,194,Conastone - Doubs 500 kV
+OVL_463,19.23917,0,Dominion Energy,208,Reconductor Paragon Park - BECO 230 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_464,18.491233,730,Dominion Energy,209,BECO to DTC 230 kV,PSEG,194,Conastone - Doubs 500 kV
+OVL_465,15.290096,0,Dominion Energy,297,Aspen - Goose Creek 500 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_466,23.452988,365,Dominion Energy,300,Reconductor Cabin Run to Yardley Ridge 230 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_467,19.593626,365,Dominion Energy,469,Farmwell to Nimbus 230 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_468,15.504876,0,Dominion Energy,472,Aspen - Golden 500 kV Line Options,PSEG,194,Conastone - Doubs 500 kV
+OVL_469,20.007734,365,Dominion Energy,473,Mars - Golden 500 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_470,20.007734,365,Dominion Energy,474,Lockridge - Golden 230 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_471,23.429635,1095,Dominion Energy,475,Vint Hill to Wishing Star 500 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_472,20.910493,365,Dominion Energy,481,Mars - Lockridge 230 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_473,20.910493,365,Dominion Energy,482,Lockridge - Golder 230 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_474,15.534828,0,Dominion Energy,483,Aspen - Sycolin Creek 230 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_475,15.534828,0,Dominion Energy,484,Sycolin Creek - Golden 230 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_476,16.243051,1095,Dominion Energy,508,Altair 230 kV Route Options,PSEG,194,Conastone - Doubs 500 kV
+OVL_477,15.331962,,Dominion Energy,14,Edsall 230 kV Electric Transmission Project,Potomac Electric Power Company (Pepco),176,N1085N - Burches Hill 230 kV
+OVL_478,22.53317,,Dominion Energy,16,Cloverhill to Ox 230 kV Line,Potomac Electric Power Company (Pepco),176,N1085N - Burches Hill 230 kV
+OVL_479,21.534343,,Dominion Energy,205,Rebuild Occoquan - Ox 230 kV Line,Potomac Electric Power Company (Pepco),176,N1085N - Burches Hill 230 kV
+OVL_480,22.53317,,Dominion Energy,206,Rebuild Clifton - Ox 230 kV Line,Potomac Electric Power Company (Pepco),176,N1085N - Burches Hill 230 kV
+OVL_481,20.883059,,Dominion Energy,210,Clark - Idylwood Reconductor,Potomac Electric Power Company (Pepco),176,N1085N - Burches Hill 230 kV
+OVL_482,21.534343,,Dominion Energy,211,Woodbridge - Occoquan Reconductor,Potomac Electric Power Company (Pepco),176,N1085N - Burches Hill 230 kV
+OVL_483,20.883059,,Dominion Energy,226,Idylwood - Tysons 230 kV Project,Potomac Electric Power Company (Pepco),176,N1085N - Burches Hill 230 kV
+OVL_484,23.81326,,Dominion Energy,227,Tysons - Springhill 230 kV,Potomac Electric Power Company (Pepco),176,N1085N - Burches Hill 230 kV
+OVL_485,15.668572,1825,Dominion Energy,11,Waller - Lightfoot - Skiffes Creek,Virginia Electric & Power Company,216,Rebuild Septa - Yadkin 500 kV
+OVL_486,13.018924,0,Dominion Energy,215,Rebuild Earleys - Suffolk 230 kV Line,Virginia Electric & Power Company,216,Rebuild Septa - Yadkin 500 kV
+OVL_487,0,730,Dominion Energy,217,Yadkin - Fentress Rebuild,Virginia Electric & Power Company,216,Rebuild Septa - Yadkin 500 kV
+OVL_488,11.336144,1095,Dominion Energy,218,Greenwich - Thalia - Lynnhaven 230 kV Rebuild,Virginia Electric & Power Company,216,Rebuild Septa - Yadkin 500 kV
+OVL_489,19.762591,1095,Dominion Energy,239,Langley 230 kV Substation Project,Virginia Electric & Power Company,216,Rebuild Septa - Yadkin 500 kV
+OVL_490,15.668572,,Dominion Energy,240,Rebuild Skiffes Creek - King's Mill 230 kV Line,Virginia Electric & Power Company,216,Rebuild Septa - Yadkin 500 kV
+OVL_491,22.95947,,Dominion Energy,12,Ladysmith - Lee's Hill 230 kV Project,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_492,23.251844,,Dominion Energy,13,Fredericksburg-Possum Point,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_493,3.813264,,Dominion Energy,15,Reconductor Elk Run - Gainesville 230 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_494,18.864648,,Dominion Energy,16,Cloverhill to Ox 230 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_495,17.658387,,Dominion Energy,17,Reconductor/Rebuild Gainesville - Wheeler 230 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_496,14.583654,,Dominion Energy,18,Cirrus - Keyser 230 kV Transmission Line Rebuild,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_497,18.269716,,Dominion Energy,186,Fredericksburg - Possum Point Upgrade and Rebuild,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_498,19.349203,,Dominion Energy,189,Cannon Branch - Winters Branch 230 kV Line Extension,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_499,20.12931,,Dominion Energy,190,Clifton - Winters Branch Rebuild,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_500,20.12931,,Dominion Energy,191,Liberty-Cannon Branch Upgrade,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_501,0,,Dominion Energy,197,Rebuild Bristers - Morrisville 500 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_502,21.246482,,Dominion Energy,198,Reconductor Railroad DP - Gainesville 230 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_503,20.341701,,Dominion Energy,199,Rollins Ford - Gainseville 230 kV,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_504,22.107512,,Dominion Energy,212,Bristers - Minnieville Reconductor,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_505,17.064809,,Dominion Energy,230,Rebuild Cranes Corner - Stafford 230 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_506,0,,Dominion Energy,233,Morrisville to Vint Hill 500 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_507,0,,Dominion Energy,234,Rebuild Loudon - Morrisville 500 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_508,4.419762,,Dominion Energy,236,Reconductor Remington CT - Elk Run - Gainesville 230 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_509,21.12993,,Dominion Energy,294,Reconductor Liberty - Railroad 230 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_510,20.465251,,Dominion Energy,295,Reconductor Pioneer - Liberty 230 kV,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_511,21.246482,,Dominion Energy,296,Reconductor Liberty - Railroad DP 230 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_512,17.155309,,Dominion Energy,475,Vint Hill to Wishing Star 500 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_513,8.451764,,Dominion Energy,476,Kraken - Yeat 500 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_514,14.484674,,Dominion Energy,478,Nokesville - Hornbaker 230 kV Line,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_515,19.271879,,Dominion Energy,479,Hornbaker - Devlin 230 kV Route Options,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_516,21.001262,,Dominion Energy,505,Daves Store 230 kV Project,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_517,11.846733,,Dominion Energy,509,Culpeper Tech Zone 230 kV Project,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_518,13.602728,,Dominion Energy,510,Blackwell Road 230 kV Project,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_519,15.27566,,Dominion Energy,595,Centreport 230 kV Electric Transmission Project,Virginia Electric and Power Company (Dominion Energy),235,Morrisville - AE1-044 230 kV
+OVL_520,2.658193,730,Duke Energy,64,Noblesville - Westfield Reliability Projects,Duke Energy Indiana,140,26747-Tipton West-Cammack Rd SS
+OVL_521,4.34033,730,Duke Energy,64,Noblesville - Westfield Reliability Projects,Indianapolis Power & Light Company (AES Indiana),276,27013-DEI Whitestown-DEI Hortonville
+OVL_522,22.985567,365,Duke Energy,26,Piedmont - Wekiva Transmission Reliability Enhancement Project,Orlando Utilities Commission,28,Orlando St. Cloud Resiliency Connection
+OVL_523,23.895117,730,Duke Energy,61,Osprey to Haines City 230 kV Line,Orlando Utilities Commission,28,Orlando St. Cloud Resiliency Connection
+OVL_524,4.600704,0,Duke Energy Indiana,140,26747-Tipton West-Cammack Rd SS,Indianapolis Power & Light Company (AES Indiana),276,27013-DEI Whitestown-DEI Hortonville
+OVL_525,16.645417,1095,Duke Energy Indiana,140,26747-Tipton West-Cammack Rd SS,"Transource, First Energy",275,Greentown - Teddy 765 kV
+OVL_526,0,0,El Paso Electric Company,382,Afton North - Airport 345 KV Line,"Grid United, Tuscan Electric",368,Southline Transmission Project
+OVL_527,0,0,El Paso Electric Company,383,Afton - Afton North 345 kV,"Grid United, Tuscan Electric",368,Southline Transmission Project
+OVL_528,3.972029,1095,Entergy,449,28274-Commodore-Churchill,Entergy LA,263,27767-Wise-Bayou Labutte
+OVL_529,18.6402,730,Entergy,449,28274-Commodore-Churchill,Entergy LA,264,22204-Delmont-Hazel
+OVL_530,4.257795,730,Entergy,449,28274-Commodore-Churchill,Entergy LA,265,Willow Glen - Point Pleasant 230 kV Upgrade
+OVL_531,20.789183,365,Entergy,449,28274-Commodore-Churchill,Entergy LA,488,Babel - Webre 500 kV Line
+OVL_532,0,0,Entergy,487,SETEX Area Reliability Project,Entergy LA,488,Babel - Webre 500 kV Line
+OVL_533,3.71663,1095,Entergy,7,27914-Willow Glen-Conway - Audubon,Entergy LA,263,27767-Wise-Bayou Labutte
+OVL_534,14.972683,730,Entergy,7,27914-Willow Glen-Conway - Audubon,Entergy LA,264,22204-Delmont-Hazel
+OVL_535,0,730,Entergy,7,27914-Willow Glen-Conway - Audubon,Entergy LA,265,Willow Glen - Point Pleasant 230 kV Upgrade
+OVL_536,24.584349,365,Entergy,7,27914-Willow Glen-Conway - Audubon,Entergy LA,488,Babel - Webre 500 kV Line
+OVL_537,0,0,Evergy,450,West Gardner - Craig 345 kV,Evergy Metro Inc.,451,Atlantic Substation 345 kV
+OVL_538,23.98899,,Garland Power & Light,495,Rusk to Panola,"Oklahoma Gas and Electric Company, AEP",600,Seminole - SW Shreveport 765 kV
+OVL_539,0,0,Georgia Power,586,Ashley Park - Wansley 500 kV,Georgia Transmission,587,Tenaska - Wansley 500 kV
+OVL_540,8.3903,730,Georgia Power,586,Ashley Park - Wansley 500 kV,Georgia Transmission,588,Dresden - Talbot 500 kV
+OVL_541,4.317363,1460,Georgia Power,586,Ashley Park - Wansley 500 kV,Georgia Transmission,589,Heard County - Tenaska 500 kV
+OVL_542,20.041008,365,Georgia Power,590,Farley - Tazewell 500 kV,Georgia Transmission,588,Dresden - Talbot 500 kV
+OVL_543,0.309563,,Great Basin Transmission LLC (LS Power),344,Southwest Intertie Project (SWIP) North,Idaho Power Company,328,Colstrip - Townsend - Midpoint 500 kV
+OVL_544,0,365,Great Basin Transmission LLC (LS Power),344,Southwest Intertie Project (SWIP) North,"Idaho Power, PacifiCorp",330,Gateway West
+OVL_545,0,365,Great Basin Transmission LLC (LS Power),344,Southwest Intertie Project (SWIP) North,NV Energy,498,Greenlink North
+OVL_546,0,0,Great Basin Transmission LLC (LS Power),344,Southwest Intertie Project (SWIP) North,"TransCanyon LLC (Berkshire Hathaway, Pinnacle West Capital Corporation)",348,TransCanyonCrossTie
+OVL_547,2.517522,2190,Great River Energy,135,26410-Riverton-Wing River,"Great River Energy, Minnesota Power",139,Northland Reliability Project
+OVL_548,0.905471,1825,Great River Energy,489,27670-Nelson Lake-Square Butte / Stanton,Grid United,126,North Plains Connector
+OVL_549,0,0,Great River Energy,489,27670-Nelson Lake-Square Butte / Stanton,Minnesota Power,111,27669-Nelson Lake-Square Butte East / Bison
+OVL_550,1.710012,0,"Great River Energy, Minnesota Power",139,Northland Reliability Project,"Great River Energy, Minnesota Power, Missouri River Energy Services, Otter Tail Power Company, Xcel Energy",84,Alexandria to Big Oaks (Cassie's Crossing)
+OVL_551,0,1825,"Great River Energy, Minnesota Power",139,Northland Reliability Project,Minnesota Power,82,26299-Blackberry-Iron Range
+OVL_552,0,730,"Great River Energy, Minnesota Power",139,Northland Reliability Project,Xcel Energy,153,MN Energy Connection Route Options
+OVL_553,1.710012,730,"Great River Energy, Minnesota Power, Missouri River Energy Services, Otter Tail Power Company, Xcel Energy",84,Alexandria to Big Oaks (Cassie's Crossing),Xcel Energy,153,MN Energy Connection Route Options
+OVL_554,9.808326,,Great River Energy; Minnesota Power; Missouri River Energy Services; Otter Tail Power Company; Northern States Power Company (Xcel Energy); Western Area Power Administration; American Transmission Company LLC; ITC Midwest LLC; MidAmerican Energy Company; Dairyland Power Cooperative; Rochester Public Utilities; Southern Minnesota Municipal Power Agency; Viridon Midcontinent LLC; Midcontinent Grid Solutions (Transource Energy LLC and BHE Transmission); Commonwealth Edison Company (ComEd); Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission); AEP Indiana Michigan Transmission Company Inc.; American Electric Power; Duke Energy Indiana LLC; Duke Energy Ohio; Indianapolis Power & Light Company (AES Indiana); Hoosier Energy; Southern Indiana Gas & Electric Company (CenterPoint Energy Indiana South); Republic Transmission LLC; Big Rivers Electric Corporation; Indiana Municipal Power Agency; Ameren Transmission Company of Illinois; Ameren Missouri; Ameren Illinois; Missouri Joint Municipal Electric Utility Commission; GridLiance Heartland LLC; Illinois Municipal Electric Agency; Northern Indiana Public Service Company LLC (confirmed facility owners and selected developers; EASL and MARS developers pending; full facility-level ownership not confirmed),110,MISO LRTP Tranche 2.1 Portfolio,Northern States Power Company,293,Bison - Alexandria
+OVL_555,0,,Grid United,126,North Plains Connector,Idaho Power Company,328,Colstrip - Townsend - Midpoint 500 kV
+OVL_556,0,730,Grid United,334,Wyoming Intertie,"Idaho Power, PacifiCorp",330,Gateway West
+OVL_557,0.905471,1825,Grid United,126,North Plains Connector,Minnesota Power,111,27669-Nelson Lake-Square Butte East / Bison
+OVL_558,24.753809,1460,Grid United,126,North Plains Connector,Montana-Dakota Utilities Company,125,27385-Glenham-Bismarck WAPA
+OVL_559,0,2190,Grid United,334,Wyoming Intertie,PacifiCorp,347,Gateway South
+OVL_560,20.88922,0,Grid United,349,Three Corners Connector,Tri-State Generation and Transmission Association,350,Eastern Colorado Transmission Expansion
+OVL_561,12.343391,365,Grid United,349,Three Corners Connector,Xcel Energy,332,Colorado's Power Pathway
+OVL_562,8.942077,730,"Grid United, Tuscan Electric",368,Southline Transmission Project,Pattern Energy,421,SunZia
+OVL_563,20.024027,730,"Grid United, Tuscan Electric",368,Southline Transmission Project,Western Area Power Administration (WAPA),423,Pinal Central - ED5 Transmission Line
+OVL_564,13.836221,0,GridLiance West,528,Johnnie Corner - Beatty Upgrade Project,NV Energy,419,Greenlink West
+OVL_565,22.934658,,ITC,439,Beverly-Sub 92,ITC Midwest LLC; MidAmerican Energy Company; Ameren Missouri (assigned and connecting-facility owners; MARS competitive-line developer not yet selected),273,East Adair- Marshalltown- Sub T
+OVL_566,19.623213,,ITC,172,LRTP-18: Oneida -Nelson Rd.,Michigan Electric Transmission Company,170,Helix - Tompkins
+OVL_567,0,,ITC,172,LRTP-18: Oneida -Nelson Rd.,Michigan Electric Transmission Company,173,Battle Creek - Oneida
+OVL_568,17.388912,365,ITC,162,23965-Brownstown-Monroe,Michigan Electric Transmission Company (ITC),169,Nelson Road to Oneida
+OVL_569,0,0,ITC,168,27785-Majestic-Milan,Michigan Electric Transmission Company (ITC),169,Nelson Road to Oneida
+OVL_570,24.104505,,ITC,172,LRTP-18: Oneida -Nelson Rd.,Michigan Electric Transmission Company (ITC),169,Nelson Road to Oneida
+OVL_571,15.588825,730,ITC,90,25521-Brownstown-Navarre,Michigan Electric Transmission Company (ITC),169,Nelson Road to Oneida
+OVL_572,23.647877,1095,ITC,168,27785-Majestic-Milan,Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission),67,Oneida- Sabine Lake- Blackfoot & Majestic
+OVL_573,15.922854,1095,ITC,68,24990-Bismarck-Red Run,Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission),67,Oneida- Sabine Lake- Blackfoot & Majestic
+OVL_574,19.972116,2555,ITC,69,24138-St. Clair-Stephens,Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission),67,Oneida- Sabine Lake- Blackfoot & Majestic
+OVL_575,15.186018,2555,ITC,70,24149-Jewell-Stephens,Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission),67,Oneida- Sabine Lake- Blackfoot & Majestic
+OVL_576,23.21249,2555,ITC,71,24589-Belle River-Lenox,Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission),67,Oneida- Sabine Lake- Blackfoot & Majestic
+OVL_577,9.020216,,ITC,439,Beverly-Sub 92,MidAmerican Energy Company,166,Webster - Franklin - Marshalltown - Morgan Valley
+OVL_578,19.623213,,ITC,172,LRTP-18: Oneida -Nelson Rd.,Xcel Energy,437,Helix to Hiple
+OVL_579,0,365,ITC Great Plains,21,Elm Creek 345kV Interconnection Expansion (DISIS-2017-002),Nebraska Public Power District,22,Elm Creek - Tobias 345 kV
+OVL_580,12.28899,,ITC Midwest LLC; MidAmerican Energy Company (assigned and connecting-facility owners; EASL competitive-line developer not yet selected),446,Lakefield Junction- East Adair,MidAmerican Energy Company,440,Orient to IA/MO State Border
+OVL_581,22.385779,,ITC Midwest LLC; MidAmerican Energy Company (assigned and connecting-facility owners; EASL competitive-line developer not yet selected),446,Lakefield Junction- East Adair,MidAmerican Energy Company,486,27764-Badger Creek-Raccoon Trail
+OVL_582,13.153854,,ITC Midwest LLC; MidAmerican Energy Company (assigned and connecting-facility owners; EASL competitive-line developer not yet selected),446,Lakefield Junction- East Adair,MidAmerican Energy Company (Arbor Hill terminal substation owner; EASL new-line developer not yet selected),447,Arbor Hill - East Adair (MISO LRTP Tranche 2.1 Addtl Lines)
+OVL_583,18.340632,,ITC Midwest LLC; MidAmerican Energy Company (assigned and connecting-facility owners; EASL competitive-line developer not yet selected),446,Lakefield Junction- East Adair,Otter Tail Power Company; Montana-Dakota Utilities Co.; Great River Energy; Minnesota Power; Missouri River Energy Services; Western Minnesota Municipal Power Agency; Northern States Power Company (Xcel Energy); Dairyland Power Cooperative; Rochester Public Utilities; Southern Minnesota Municipal Power Agency; American Transmission Company LLC; WPPI Energy; MidAmerican Energy Company; Cedar Falls Utilities; ITC Midwest LLC; Ameren Transmission Company of Illinois; Ameren Missouri; Ameren Illinois; Associated Electric Cooperative Inc.; Northern Indiana Public Service Company LLC; Republic Transmission LLC; Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission) (confirmed portfolio facility owners and participants; full facility-level ownership not confirmed),91,MISO LRTP Tranche 1 Portfolio
+OVL_584,8.868052,,Idaho Power,346,Hemingway - Bowmont #2 230 kV Line,Idaho Power Company; PacifiCorp,339,Rebuild Hemingway - Summer Lake 500 kV
+OVL_585,24.122771,,Idaho Power,622,Mayfield to South Boise 230 kV Line,Idaho Power Company; PacifiCorp,339,Rebuild Hemingway - Summer Lake 500 kV
+OVL_586,8.868052,730,Idaho Power,346,Hemingway - Bowmont #2 230 kV Line,"Idaho Power, PacifiCorp",330,Gateway West
+OVL_587,8.868052,365,Idaho Power,346,Hemingway - Bowmont #2 230 kV Line,"Idaho Power, PacifiCorp",338,Boardman to Hemingway
+OVL_588,24.122771,,Idaho Power,622,Mayfield to South Boise 230 kV Line,"Idaho Power, PacifiCorp",330,Gateway West
+OVL_589,24.122771,,Idaho Power,622,Mayfield to South Boise 230 kV Line,"Idaho Power, PacifiCorp",338,Boardman to Hemingway
+OVL_590,0.309563,,Idaho Power Company,328,Colstrip - Townsend - Midpoint 500 kV,"Idaho Power, PacifiCorp",330,Gateway West
+OVL_591,0,,Idaho Power Company; PacifiCorp,339,Rebuild Hemingway - Summer Lake 500 kV,"Idaho Power, PacifiCorp",330,Gateway West
+OVL_592,0,,Idaho Power Company; PacifiCorp,339,Rebuild Hemingway - Summer Lake 500 kV,"Idaho Power, PacifiCorp",338,Boardman to Hemingway
+OVL_593,0,1460,"Idaho Power, PacifiCorp",330,Gateway West,PacifiCorp,347,Gateway South
+OVL_594,14.662582,,"Idaho Power, PacifiCorp",338,Boardman to Hemingway,PacifiCorp,443,Corral to Grassland Annex 500kV Line
+OVL_595,14.662582,,"Idaho Power, PacifiCorp",338,Boardman to Hemingway,PacifiCorp,444,Grassland Annex to B2H 500 kV Line
+OVL_596,0,,"Idaho Power, PacifiCorp",330,Gateway West,PacifiCorp / Pacificorp,336,Gateway Central
+OVL_597,0,,"Idaho Power, PacifiCorp",338,Boardman to Hemingway,Puget Sound Energy,316,Cross-Cascades Project
+OVL_598,0.884597,0,"Idaho Power, PacifiCorp",338,Boardman to Hemingway,Umatilla Electric Cooperative,539,Umatilla-Morrow County Connect Project
+OVL_599,0,,"Invenergy, New Mexico Renewable Energy Transmission Authority (RETA)",413,North Path,Public Service Company of New Mexico (PNM),414,Four Corners - Pintado 345 kV
+OVL_600,8.289234,,"Invenergy, New Mexico Renewable Energy Transmission Authority (RETA)",413,North Path,Public Service Company of New Mexico (PNM),605,San Juan to Rio Puerco 345 kV
+OVL_601,8.289234,,"Invenergy, New Mexico Renewable Energy Transmission Authority (RETA)",413,North Path,Public Service Company of New Mexico (PNM); Tucson Electric Power Company,616,San Juan to Four Corners 345 kV
+OVL_602,13.093725,365,Jersey Central Power & Light,106,Cookstown Whiting 230 kV,"Orsted Wind Power North America, Public Service Enterprise Group Renewable Generation LLC",147,Ocean Wind BL England to Oyster Creek
+OVL_603,0,,Jersey Central Power & Light,107,Rebuild Cedar - Oyster Creek 230 kV,"Orsted Wind Power North America, Public Service Enterprise Group Renewable Generation LLC",147,Ocean Wind BL England to Oyster Creek
+OVL_604,20.752627,1825,Jersey Central Power & Light,148,Oceanview - Atlantic - Larrabee - Smithburg 230 kV Upgrade,"Orsted Wind Power North America, Public Service Enterprise Group Renewable Generation LLC",147,Ocean Wind BL England to Oyster Creek
+OVL_605,20.752627,730,Jersey Central Power & Light,149,Rebuild Larrabee - Smithburg 230 kV,"Orsted Wind Power North America, Public Service Enterprise Group Renewable Generation LLC",147,Ocean Wind BL England to Oyster Creek
+OVL_606,20.752627,730,Jersey Central Power & Light,150,Larrabee - Smithburg 500 kV Line,"Orsted Wind Power North America, Public Service Enterprise Group Renewable Generation LLC",147,Ocean Wind BL England to Oyster Creek
+OVL_607,20.731963,365,Jersey Central Power & Light,151,Larrabee Collector Station - Larrabee 230 kV,"Orsted Wind Power North America, Public Service Enterprise Group Renewable Generation LLC",147,Ocean Wind BL England to Oyster Creek
+OVL_608,3.625745,730,Jersey Central Power & Light,141,Reconductor Red Oak - Raritan River A and B 230 kV Lines,PSEG,102,Reconductor Metuchen - New Dover 230 kV
+OVL_609,12.750787,,Jersey Central Power & Light,141,Reconductor Red Oak - Raritan River A and B 230 kV Lines,PSEG,104,Reconductor Warinanco - Aldene 230 kV
+OVL_610,13.805973,,Jersey Central Power & Light,141,Reconductor Red Oak - Raritan River A and B 230 kV Lines,PSEG,105,Bayway - Federal Square 230 kV
+OVL_611,22.679157,,Jersey Central Power & Light,141,Reconductor Red Oak - Raritan River A and B 230 kV Lines,PSEG,142,Hudson - South Waterfront - Add Second 230 kV Underground Cable
+OVL_612,21.681948,,Jersey Central Power & Light,141,Reconductor Red Oak - Raritan River A and B 230 kV Lines,PSEG,143,Hudson - Essex 230 kV
+OVL_613,22.59315,1095,Jersey Central Power & Light,148,Oceanview - Atlantic - Larrabee - Smithburg 230 kV Upgrade,PSEG,102,Reconductor Metuchen - New Dover 230 kV
+OVL_614,22.815551,0,Jersey Central Power & Light,149,Rebuild Larrabee - Smithburg 230 kV,PSEG,102,Reconductor Metuchen - New Dover 230 kV
+OVL_615,22.815551,0,Jersey Central Power & Light,150,Larrabee - Smithburg 500 kV Line,PSEG,102,Reconductor Metuchen - New Dover 230 kV
+OVL_616,5.764869,730,Jersey Central Power & Light,154,Reconductor Lake Nelson - Middlesex 230 kV Line,PSEG,102,Reconductor Metuchen - New Dover 230 kV
+OVL_617,11.304782,,Jersey Central Power & Light,154,Reconductor Lake Nelson - Middlesex 230 kV Line,PSEG,104,Reconductor Warinanco - Aldene 230 kV
+OVL_618,14.396468,,Jersey Central Power & Light,154,Reconductor Lake Nelson - Middlesex 230 kV Line,PSEG,105,Bayway - Federal Square 230 kV
+OVL_619,23.720593,,Jersey Central Power & Light,154,Reconductor Lake Nelson - Middlesex 230 kV Line,PSEG,142,Hudson - South Waterfront - Add Second 230 kV Underground Cable
+OVL_620,21.608792,,Jersey Central Power & Light,154,Reconductor Lake Nelson - Middlesex 230 kV Line,PSEG,143,Hudson - Essex 230 kV
+OVL_621,24.745323,365,Jersey Central Power & Light,154,Reconductor Lake Nelson - Middlesex 230 kV Line,PSEG,144,Jackson Road to Cedar Grove 230 kV Line
+OVL_622,4.15903,730,Jersey Central Power & Light,155,Reconductor Kilmer - Lake Nelson 230 kV Line,PSEG,102,Reconductor Metuchen - New Dover 230 kV
+OVL_623,11.216476,,Jersey Central Power & Light,155,Reconductor Kilmer - Lake Nelson 230 kV Line,PSEG,104,Reconductor Warinanco - Aldene 230 kV
+OVL_624,13.831678,,Jersey Central Power & Light,155,Reconductor Kilmer - Lake Nelson 230 kV Line,PSEG,105,Bayway - Federal Square 230 kV
+OVL_625,23.183462,,Jersey Central Power & Light,155,Reconductor Kilmer - Lake Nelson 230 kV Line,PSEG,142,Hudson - South Waterfront - Add Second 230 kV Underground Cable
+OVL_626,21.345437,,Jersey Central Power & Light,155,Reconductor Kilmer - Lake Nelson 230 kV Line,PSEG,143,Hudson - Essex 230 kV
+OVL_627,0,1460,LCRA Transmission Services Corporation,362,Bearkat - North McCamey - Sand Lake Transmsission Line Addition,"LCRA Transmission Services Corporation, Oncor",454,Big Hill - Sand Lake 765 kV Transmission Project
+OVL_628,23.561503,730,LCRA Transmission Services Corporation,362,Bearkat - North McCamey - Sand Lake Transmsission Line Addition,Oncor,358,Cattleman - Longshore 345 kV Double - Circuit Line Rebuild
+OVL_629,23.561503,1095,LCRA Transmission Services Corporation,362,Bearkat - North McCamey - Sand Lake Transmsission Line Addition,Oncor,403,Dinosaur - Longshore 765 kV Transmission Project
+OVL_630,23.561503,730,LCRA Transmission Services Corporation,362,Bearkat - North McCamey - Sand Lake Transmsission Line Addition,Oncor,404,Longshore Switch - Drill Hole Switch 765 kV Transmission Project
+OVL_631,0,0,LCRA Transmission Services Corporation,362,Bearkat - North McCamey - Sand Lake Transmsission Line Addition,Oncor,453,Riverton - Sandlake 138 kV Line Conversion 345 kV and Riverton - Sandlake 138 kV Line
+OVL_632,0,1460,"LCRA Transmission Services Corporation, Oncor",454,Big Hill - Sand Lake 765 kV Transmission Project,Oncor,453,Riverton - Sandlake 138 kV Line Conversion 345 kV and Riverton - Sandlake 138 kV Line
+OVL_633,0.406667,,LS Power,578,Ravenswood Project - Queensboro Renewable Express,"New York Power Authority, Invenergy, energyRe",145,Clean Path NY
+OVL_634,24.179111,,LS Power,578,Ravenswood Project - Queensboro Renewable Express,PSEG,102,Reconductor Metuchen - New Dover 230 kV
+OVL_635,17.053988,,LS Power,578,Ravenswood Project - Queensboro Renewable Express,PSEG,104,Reconductor Warinanco - Aldene 230 kV
+OVL_636,12.11679,,LS Power,578,Ravenswood Project - Queensboro Renewable Express,PSEG,105,Bayway - Federal Square 230 kV
+OVL_637,6.330289,,LS Power,578,Ravenswood Project - Queensboro Renewable Express,PSEG,142,Hudson - South Waterfront - Add Second 230 kV Underground Cable
+OVL_638,6.154495,,LS Power,578,Ravenswood Project - Queensboro Renewable Express,PSEG,143,Hudson - Essex 230 kV
+OVL_639,16.035791,,LS Power,578,Ravenswood Project - Queensboro Renewable Express,PSEG,144,Jackson Road to Cedar Grove 230 kV Line
+OVL_640,7.296586,,LS Power,578,Ravenswood Project - Queensboro Renewable Express,"The New York Power Authority (NYPA), New York Transco (NY Transco)",60,Propel NY Energy
+OVL_641,2.887882,,LS Power,578,Ravenswood Project - Queensboro Renewable Express,Transmission Developers Inc (TDI),80,Champlain Hudson Power Express
+OVL_642,0,730,LS Power Grid California,354,Power the South Bay,Pacific Gas and Electric Company (PG&E),355,San Jose B - NRS 230 kV line
+OVL_643,13.351551,730,LS Power Grid California,354,Power the South Bay,Pacific Gas and Electric Company (PG&E),387,Moraga-Castro Valley 230 kV Line Capacity Increase
+OVL_644,13.589238,2190,LS Power Grid California,354,Power the South Bay,Pacific Gas and Electric Company (PG&E),388,North Dublin - Vineyard 230 kV Reconductoring
+OVL_645,10.229839,1095,LS Power Grid California,354,Power the South Bay,Pacific Gas and Electric Company (PG&E),426,Vasona - Metcalf Limiting Elements Removal
+OVL_646,0,2190,LS Power Grid California,354,Power the South Bay,Pacific Gas and Electric Company (PG&E),441,Tesla - Newark 230 kV Line No. 2 Reconductoring
+OVL_647,17.153352,2190,LS Power Grid California,354,Power the South Bay,Pacific Gas and Electric Company (PG&E),526,Greater Bay Area 500 kV Transmission Reinforcement
+OVL_648,0.08134,730,LS Power Grid California,525,Power Santa Clara Valley,Pacific Gas and Electric Company (PG&E),355,San Jose B - NRS 230 kV line
+OVL_649,22.881587,2190,LS Power Grid California,525,Power Santa Clara Valley,Pacific Gas and Electric Company (PG&E),388,North Dublin - Vineyard 230 kV Reconductoring
+OVL_650,7.328895,365,LS Power Grid California,525,Power Santa Clara Valley,Pacific Gas and Electric Company (PG&E),417,Morgan Hill Area Reinforcement
+OVL_651,6.954841,1095,LS Power Grid California,525,Power Santa Clara Valley,Pacific Gas and Electric Company (PG&E),426,Vasona - Metcalf Limiting Elements Removal
+OVL_652,12.043003,2190,LS Power Grid California,525,Power Santa Clara Valley,Pacific Gas and Electric Company (PG&E),441,Tesla - Newark 230 kV Line No. 2 Reconductoring
+OVL_653,0,2190,LS Power Grid California,525,Power Santa Clara Valley,Pacific Gas and Electric Company (PG&E),526,Greater Bay Area 500 kV Transmission Reinforcement
+OVL_654,0,2190,LS Power Grid California,542,Manning 500/230 kV Substation Project,Pacific Gas and Electric Company (PG&E),526,Greater Bay Area 500 kV Transmission Reinforcement
+OVL_655,0,730,"LS Power Grid New York, New York Power Authority",134,Central East Energy Connect,"The New York Power Authority (NYPA), National Grid",81,Smart Path Connect
+OVL_656,0,1095,Michigan Electric Transmission Company,170,Helix - Tompkins,Michigan Electric Transmission Company (ITC),169,Nelson Road to Oneida
+OVL_657,24.104505,1095,Michigan Electric Transmission Company,173,Battle Creek - Oneida,Michigan Electric Transmission Company (ITC),169,Nelson Road to Oneida
+OVL_658,9.325415,2190,Michigan Electric Transmission Company,73,Murphy - Orr Road 345 kV,Michigan Electric Transmission Company LLC (ITC Holdings),171,Ludington- Denver- Tittabawassee & Nelson Road
+OVL_659,2.292192,1460,Michigan Electric Transmission Company,74,23771-MCV-Tittabawassee,Michigan Electric Transmission Company LLC (ITC Holdings),171,Ludington- Denver- Tittabawassee & Nelson Road
+OVL_660,0,1460,Michigan Electric Transmission Company,170,Helix - Tompkins,Xcel Energy,437,Helix to Hiple
+OVL_661,17.695402,1460,Michigan Electric Transmission Company,173,Battle Creek - Oneida,Xcel Energy,437,Helix to Hiple
+OVL_662,23.647877,1095,Michigan Electric Transmission Company (ITC),169,Nelson Road to Oneida,Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission),67,Oneida- Sabine Lake- Blackfoot & Majestic
+OVL_663,16.817471,365,Michigan Electric Transmission Company (ITC),169,Nelson Road to Oneida,Xcel Energy,437,Helix to Hiple
+OVL_664,21.576616,365,MidAmerican Energy Company,440,Orient to IA/MO State Border,MidAmerican Energy Company (Arbor Hill terminal substation owner; EASL new-line developer not yet selected),447,Arbor Hill - East Adair (MISO LRTP Tranche 2.1 Addtl Lines)
+OVL_665,18.453091,2190,MidAmerican Energy Company,486,27764-Badger Creek-Raccoon Trail,MidAmerican Energy Company (Arbor Hill terminal substation owner; EASL new-line developer not yet selected),447,Arbor Hill - East Adair (MISO LRTP Tranche 2.1 Addtl Lines)
+OVL_666,13.510823,,MidAmerican Energy Company,166,Webster - Franklin - Marshalltown - Morgan Valley,MidAmerican Energy Company; ITC Midwest LLC,165,Lehigh - Marshalltown - Franklin North - Montezuma
+OVL_667,0,,MidAmerican Energy Company,167,27451-Raun-Remsen,Minnesota Power; Otter Tail Power Company; Northern States Power Company (Xcel Energy); ITC Midwest LLC; MidAmerican Energy Company; Omaha Public Power District; Evergy Kansas Central; Evergy Missouri West,129,MISO LRTP Tranche 2.1 JTIQ Lines
+OVL_668,17.925291,1460,MidAmerican Energy Company,558,Rolling Hills - Southland 345 kV,Omaha Public Power District,563,S3458 - S3740 345 kV
+OVL_669,20.167594,0,MidAmerican Energy Company,558,Rolling Hills - Southland 345 kV,Omaha Public Power District,635,S3740 S3454 345 kV
+OVL_670,18.077605,1095,MidAmerican Energy Company,96,28163-Overland Trail-Pony Creek,Omaha Public Power District,563,S3458 - S3740 345 kV
+OVL_671,20.22028,365,MidAmerican Energy Company,96,28163-Overland Trail-Pony Creek,Omaha Public Power District,635,S3740 S3454 345 kV
+OVL_672,17.145597,1095,MidAmerican Energy Company,97,28167-CBEC-Pony Creek,Omaha Public Power District,563,S3458 - S3740 345 kV
+OVL_673,18.348994,365,MidAmerican Energy Company,97,28167-CBEC-Pony Creek,Omaha Public Power District,635,S3740 S3454 345 kV
+OVL_674,9.22232,,MidAmerican Energy Company,486,27764-Badger Creek-Raccoon Trail,Otter Tail Power Company; Montana-Dakota Utilities Co.; Great River Energy; Minnesota Power; Missouri River Energy Services; Western Minnesota Municipal Power Agency; Northern States Power Company (Xcel Energy); Dairyland Power Cooperative; Rochester Public Utilities; Southern Minnesota Municipal Power Agency; American Transmission Company LLC; WPPI Energy; MidAmerican Energy Company; Cedar Falls Utilities; ITC Midwest LLC; Ameren Transmission Company of Illinois; Ameren Missouri; Ameren Illinois; Associated Electric Cooperative Inc.; Northern Indiana Public Service Company LLC; Republic Transmission LLC; Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission) (confirmed portfolio facility owners and participants; full facility-level ownership not confirmed),91,MISO LRTP Tranche 1 Portfolio
+OVL_675,20.44793,,MidAmerican Energy Company (Arbor Hill terminal substation owner; EASL new-line developer not yet selected),447,Arbor Hill - East Adair (MISO LRTP Tranche 2.1 Addtl Lines),Otter Tail Power Company; Montana-Dakota Utilities Co.; Great River Energy; Minnesota Power; Missouri River Energy Services; Western Minnesota Municipal Power Agency; Northern States Power Company (Xcel Energy); Dairyland Power Cooperative; Rochester Public Utilities; Southern Minnesota Municipal Power Agency; American Transmission Company LLC; WPPI Energy; MidAmerican Energy Company; Cedar Falls Utilities; ITC Midwest LLC; Ameren Transmission Company of Illinois; Ameren Missouri; Ameren Illinois; Associated Electric Cooperative Inc.; Northern Indiana Public Service Company LLC; Republic Transmission LLC; Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission) (confirmed portfolio facility owners and participants; full facility-level ownership not confirmed),91,MISO LRTP Tranche 1 Portfolio
+OVL_676,16.37591,2920,Midcontinent Grid Solutions (Transource Energy LLC and BHE Transmission); Commonwealth Edison Company (ComEd),118,Sugar Creek- Collins,Northern Indiana Public Service Company,282,6841-Schahfer-St. John
+OVL_677,22.060623,2555,Midcontinent Grid Solutions (Transource Energy LLC and BHE Transmission); Commonwealth Edison Company (ComEd),118,Sugar Creek- Collins,Northern Indiana Public Service Company,289,26841-Schahfer-St. John
+OVL_678,22.060623,730,Midcontinent Grid Solutions (Transource Energy LLC and BHE Transmission); Commonwealth Edison Company (ComEd),118,Sugar Creek- Collins,Northern Indiana Public Service Company LLC; American Electric Power; Commonwealth Edison Company (ComEd),288,Burr Oak - Schahfer
+OVL_679,16.484075,,Minnesota Power; Otter Tail Power Company; Northern States Power Company (Xcel Energy); ITC Midwest LLC; MidAmerican Energy Company; Omaha Public Power District; Evergy Kansas Central; Evergy Missouri West,129,MISO LRTP Tranche 2.1 JTIQ Lines,Omaha Public Power District,563,S3458 - S3740 345 kV
+OVL_680,16.69762,1095,Montana-Dakota Utilities Company,132,27393-Wishek-Merricourt,"Otter Tail Power Company, Montana-Dakota Utilities",108,Jamestown to Ellendale (JETx)
+OVL_681,5.67403,730,NV Energy,419,Greenlink West,The Anschutz Corporation,329,TransWest Express
+OVL_682,0,365,NV Energy,498,Greenlink North,"TransCanyon LLC (Berkshire Hathaway, Pinnacle West Capital Corporation)",348,TransCanyonCrossTie
+OVL_683,24.529797,0,"New York Power Authority, Invenergy, energyRe",145,Clean Path NY,PSEG,102,Reconductor Metuchen - New Dover 230 kV
+OVL_684,17.401012,,"New York Power Authority, Invenergy, energyRe",145,Clean Path NY,PSEG,104,Reconductor Warinanco - Aldene 230 kV
+OVL_685,12.384503,,"New York Power Authority, Invenergy, energyRe",145,Clean Path NY,PSEG,105,Bayway - Federal Square 230 kV
+OVL_686,6.676438,,"New York Power Authority, Invenergy, energyRe",145,Clean Path NY,PSEG,142,Hudson - South Waterfront - Add Second 230 kV Underground Cable
+OVL_687,5.98768,,"New York Power Authority, Invenergy, energyRe",145,Clean Path NY,PSEG,143,Hudson - Essex 230 kV
+OVL_688,16.05534,365,"New York Power Authority, Invenergy, energyRe",145,Clean Path NY,PSEG,144,Jackson Road to Cedar Grove 230 kV Line
+OVL_689,6.892796,1095,"New York Power Authority, Invenergy, energyRe",145,Clean Path NY,"The New York Power Authority (NYPA), New York Transco (NY Transco)",60,Propel NY Energy
+OVL_690,2.515103,365,"New York Power Authority, Invenergy, energyRe",145,Clean Path NY,Transmission Developers Inc (TDI),80,Champlain Hudson Power Express
+OVL_691,20.242507,730,"NextEra Energy, Exelon",597,Kammer - Juniata 765 kV,PPL Electric Utilities,54,West Shore - Harrisburg 230 kV Line
+OVL_692,14.244724,730,"NextEra Energy, Exelon",597,Kammer - Juniata 765 kV,PPL Electric Utilities,55,Dauphin - Harrisburg 230 kV
+OVL_693,0,1825,Nextera Energy,371,Crossroads - Hobbs - Roadrunner,Southwestern Public Service,496,Potter - Crossroads - Phantom 765 kV
+OVL_694,19.023083,1460,Nextera Energy,371,Crossroads - Hobbs - Roadrunner,Southwestern Public Service,577,Phantom - Crawfish Draw 765 kV
+OVL_695,0,1825,Northern Indiana Public Service Company,289,26841-Schahfer-St. John,Northern Indiana Public Service Company LLC; American Electric Power; Commonwealth Edison Company (ComEd),288,Burr Oak - Schahfer
+OVL_696,21.955987,,Northern Indiana Public Service Company,249,Morrison - Reynolds - Burr Oak - Leesburg - Hiple,Otter Tail Power Company; Montana-Dakota Utilities Co.; Great River Energy; Minnesota Power; Missouri River Energy Services; Western Minnesota Municipal Power Agency; Northern States Power Company (Xcel Energy); Dairyland Power Cooperative; Rochester Public Utilities; Southern Minnesota Municipal Power Agency; American Transmission Company LLC; WPPI Energy; MidAmerican Energy Company; Cedar Falls Utilities; ITC Midwest LLC; Ameren Transmission Company of Illinois; Ameren Missouri; Ameren Illinois; Associated Electric Cooperative Inc.; Northern Indiana Public Service Company LLC; Republic Transmission LLC; Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission) (confirmed portfolio facility owners and participants; full facility-level ownership not confirmed),91,MISO LRTP Tranche 1 Portfolio
+OVL_697,0,365,Northern Indiana Public Service Company,249,Morrison - Reynolds - Burr Oak - Leesburg - Hiple,Republic Transmission,250,Hiple to IN/MI Border Transmission Line
+OVL_698,24.744253,1095,Oklahoma Gas and Electric,23,Minco - Pleasant Valley - Draper 345 kV,Oklahoma Gas and Electric Company,260,Arcadia 345kV Interconnection Expansion (DISIS-2017-002)
+OVL_699,0,0,Oklahoma Gas and Electric,23,Minco - Pleasant Valley - Draper 345 kV,Oklahoma Gas and Electric Company,262,Minco 345kV Interconnection Expansion (DISIS-2017-002)
+OVL_700,0,730,Oklahoma Gas and Electric Company,24,Johnson County Substation Expansion,Public Service Company of Oklahoma,25,Lone Grove - Kiowa Transmission Line Rebuild Project
+OVL_701,0,730,Oklahoma Gas and Electric Company,255,Sunnyside 345kV GEN-2017-166 Interconnection Costs,Public Service Company of Oklahoma,25,Lone Grove - Kiowa Transmission Line Rebuild Project
+OVL_702,0,730,Oklahoma Gas and Electric Company,255,Sunnyside 345kV GEN-2017-166 Interconnection Costs,Public Service Company of Oklahoma,256,Lawton - Lone Grove Transmission Rebuild Project
+OVL_703,0,730,"Oklahoma Gas and Electric Company, AEP",600,Seminole - SW Shreveport 765 kV,Oklahoma Gas and Electric Company; American Electric Power (AEP),601,Seminole - Anthem 765 kV
+OVL_704,24.629117,1825,Oncor,453,Riverton - Sandlake 138 kV Line Conversion 345 kV and Riverton - Sandlake 138 kV Line,Southwestern Public Service,496,Potter - Crossroads - Phantom 765 kV
+OVL_705,24.629117,1460,Oncor,453,Riverton - Sandlake 138 kV Line Conversion 345 kV and Riverton - Sandlake 138 kV Line,Southwestern Public Service,577,Phantom - Crawfish Draw 765 kV
+OVL_706,19.634308,1460,Oncor,455,Construct Drill Hole - Riverton 345 kV Double-Circuit,Southwestern Public Service,496,Potter - Crossroads - Phantom 765 kV
+OVL_707,19.634308,1095,Oncor,455,Construct Drill Hole - Riverton 345 kV Double-Circuit,Southwestern Public Service,577,Phantom - Crawfish Draw 765 kV
+OVL_708,21.955987,,Otter Tail Power Company; Montana-Dakota Utilities Co.; Great River Energy; Minnesota Power; Missouri River Energy Services; Western Minnesota Municipal Power Agency; Northern States Power Company (Xcel Energy); Dairyland Power Cooperative; Rochester Public Utilities; Southern Minnesota Municipal Power Agency; American Transmission Company LLC; WPPI Energy; MidAmerican Energy Company; Cedar Falls Utilities; ITC Midwest LLC; Ameren Transmission Company of Illinois; Ameren Missouri; Ameren Illinois; Associated Electric Cooperative Inc.; Northern Indiana Public Service Company LLC; Republic Transmission LLC; Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission) (confirmed portfolio facility owners and participants; full facility-level ownership not confirmed),91,MISO LRTP Tranche 1 Portfolio,Republic Transmission,250,Hiple to IN/MI Border Transmission Line
+OVL_709,20.90017,,Otter Tail Power Company; Montana-Dakota Utilities Co.; Great River Energy; Minnesota Power; Missouri River Energy Services; Western Minnesota Municipal Power Agency; Northern States Power Company (Xcel Energy); Dairyland Power Cooperative; Rochester Public Utilities; Southern Minnesota Municipal Power Agency; American Transmission Company LLC; WPPI Energy; MidAmerican Energy Company; Cedar Falls Utilities; ITC Midwest LLC; Ameren Transmission Company of Illinois; Ameren Missouri; Ameren Illinois; Associated Electric Cooperative Inc.; Northern Indiana Public Service Company LLC; Republic Transmission LLC; Michigan Electric Transmission Company LLC; International Transmission Company (ITC Transmission) (confirmed portfolio facility owners and participants; full facility-level ownership not confirmed),91,MISO LRTP Tranche 1 Portfolio,"WABASH VALLEY POWER ASSOCIATION, INC.",494,New Stillwell to Elderberry 345kV Line
+OVL_710,0,730,PECO,470,Cooper - North Delta (Bramah),"PECO, Baltimore Gas and Electric Company (BGE)",179,North Delta - High Ridge 500 kV Line
+OVL_711,0.371427,730,PECO,517,Cooper - North Delta (Bramah) 500 kV,"PECO, Baltimore Gas and Electric Company (BGE)",179,North Delta - High Ridge 500 kV Line
+OVL_712,15.258016,365,PECO,160,Richmond - Waneeta 230 kV,PPL Electric Utilities,163,Rebuild Whitpain - Buxmont 230 kV Line
+OVL_713,13.810993,365,PECO,470,Cooper - North Delta (Bramah),PSEG,194,Conastone - Doubs 500 kV
+OVL_714,13.509059,365,PECO,517,Cooper - North Delta (Bramah) 500 kV,PSEG,194,Conastone - Doubs 500 kV
+OVL_715,0,730,PECO,470,Cooper - North Delta (Bramah),"Portland General Electric, PECO",93,Rebuild Peach Bottom - Conastone 500 kV
+OVL_716,0.371427,730,PECO,517,Cooper - North Delta (Bramah) 500 kV,"Portland General Electric, PECO",93,Rebuild Peach Bottom - Conastone 500 kV
+OVL_717,10.406315,1825,PECO,470,Cooper - North Delta (Bramah),Transource Energy,490,Furnace Run - Conastone 230 kV
+OVL_718,10.065745,1825,PECO,517,Cooper - North Delta (Bramah) 500 kV,Transource Energy,490,Furnace Run - Conastone 230 kV
+OVL_719,13.810993,1095,"PECO, Baltimore Gas and Electric Company (BGE)",179,North Delta - High Ridge 500 kV Line,PSEG,194,Conastone - Doubs 500 kV
+OVL_720,0,0,"PECO, Baltimore Gas and Electric Company (BGE)",179,North Delta - High Ridge 500 kV Line,"Portland General Electric, PECO",93,Rebuild Peach Bottom - Conastone 500 kV
+OVL_721,10.406315,2555,"PECO, Baltimore Gas and Electric Company (BGE)",179,North Delta - High Ridge 500 kV Line,Transource Energy,490,Furnace Run - Conastone 230 kV
+OVL_722,20.785555,3650,PPL Electric Utilities,204,Rebuild Brunner Island - South Manheim 230 kV Line,Transource Energy,490,Furnace Run - Conastone 230 kV
+OVL_723,0,1095,PSEG,194,Conastone - Doubs 500 kV,"Portland General Electric, PECO",93,Rebuild Peach Bottom - Conastone 500 kV
+OVL_724,23.861169,,PSEG,104,Reconductor Warinanco - Aldene 230 kV,"The New York Power Authority (NYPA), New York Transco (NY Transco)",60,Propel NY Energy
+OVL_725,18.15327,,PSEG,105,Bayway - Federal Square 230 kV,"The New York Power Authority (NYPA), New York Transco (NY Transco)",60,Propel NY Energy
+OVL_726,13.279796,,PSEG,142,Hudson - South Waterfront - Add Second 230 kV Underground Cable,"The New York Power Authority (NYPA), New York Transco (NY Transco)",60,Propel NY Energy
+OVL_727,7.835218,,PSEG,143,Hudson - Essex 230 kV,"The New York Power Authority (NYPA), New York Transco (NY Transco)",60,Propel NY Energy
+OVL_728,18.590581,730,PSEG,144,Jackson Road to Cedar Grove 230 kV Line,"The New York Power Authority (NYPA), New York Transco (NY Transco)",60,Propel NY Energy
+OVL_729,19.905135,,PSEG,104,Reconductor Warinanco - Aldene 230 kV,Transmission Developers Inc (TDI),80,Champlain Hudson Power Express
+OVL_730,14.735732,,PSEG,105,Bayway - Federal Square 230 kV,Transmission Developers Inc (TDI),80,Champlain Hudson Power Express
+OVL_731,9.183468,,PSEG,142,Hudson - South Waterfront - Add Second 230 kV Underground Cable,Transmission Developers Inc (TDI),80,Champlain Hudson Power Express
+OVL_732,6.610288,,PSEG,143,Hudson - Essex 230 kV,Transmission Developers Inc (TDI),80,Champlain Hudson Power Express
+OVL_733,17.407939,730,PSEG,144,Jackson Road to Cedar Grove 230 kV Line,Transmission Developers Inc (TDI),80,Champlain Hudson Power Express
+OVL_734,12.160959,1460,PSEG,194,Conastone - Doubs 500 kV,Transource Energy,490,Furnace Run - Conastone 230 kV
+OVL_735,0,,PacifiCorp,337,Oquirrh to Terminal Transmission Line Project,PacifiCorp / Pacificorp,336,Gateway Central
+OVL_736,23.08528,,PacifiCorp,341,Spanish Fork to Mercer Transmission Project,PacifiCorp / Pacificorp,336,Gateway Central
+OVL_737,14.662582,,PacifiCorp,443,Corral to Grassland Annex 500kV Line,Puget Sound Energy,316,Cross-Cascades Project
+OVL_738,14.662582,,PacifiCorp,444,Grassland Annex to B2H 500 kV Line,Puget Sound Energy,316,Cross-Cascades Project
+OVL_739,0,,PacifiCorp,340,Clover - Sigurd 345 kV,"TransCanyon LLC (Berkshire Hathaway, Pinnacle West Capital Corporation)",348,TransCanyonCrossTie
+OVL_740,0,1095,PacifiCorp,347,Gateway South,"TransCanyon LLC (Berkshire Hathaway, Pinnacle West Capital Corporation)",348,TransCanyonCrossTie
+OVL_741,14.12482,,PacifiCorp,443,Corral to Grassland Annex 500kV Line,Umatilla Electric Cooperative,539,Umatilla-Morrow County Connect Project
+OVL_742,14.12482,,PacifiCorp,444,Grassland Annex to B2H 500 kV Line,Umatilla Electric Cooperative,539,Umatilla-Morrow County Connect Project
+OVL_743,20.008287,730,Pattern Energy,421,SunZia,Salt River Project (SRP),541,Abel-Pfister-Ball 230 kV Transmission Project
+OVL_744,0,730,Pattern Energy,421,SunZia,Southwestern Power Group,422,RioSol
+OVL_745,0,0,Pattern Energy,421,SunZia,Western Area Power Administration (WAPA),423,Pinal Central - ED5 Transmission Line
+OVL_746,0,730,Portland General Electric,327,Harborton - Trojan #3 and #4 230kV,"PowerBridge LLC, Sun2o Partners LLC",321,Cascade Renewable Transmission
+OVL_747,10.406315,2555,"Portland General Electric, PECO",93,Rebuild Peach Bottom - Conastone 500 kV,Transource Energy,490,Furnace Run - Conastone 230 kV
+OVL_748,0,2555,PowerOn Midwest,298,Pleasant Valley- North Rochester- Hampton Corner,Xcel Energy,89,27294-Hampton Corner-Helena
+OVL_749,0,1460,PowerOn Midwest,85,Big Stone South- Brookings County- Lakefield Junction,Xcel Energy,94,27220-Brookings County-Lyon County
+OVL_750,12.92319,3285,PowerOn Midwest,85,Big Stone South- Brookings County- Lakefield Junction,Xcel Energy / Central Minnesota Municipal Power Agency / Great River Energy / Missouri River Energy Services / Otter Tail Power Company,448,"Brookings - Lyon, Hampton - Helena 2nd 345kV Circuits"
+OVL_751,0,,Public Service Company of New Mexico,604,Rio Puerco-Prosperity 345 kV Line,Public Service Company of New Mexico (PNM),605,San Juan to Rio Puerco 345 kV
+OVL_752,0,,Public Service Company of New Mexico,604,Rio Puerco-Prosperity 345 kV Line,Public Service Company of New Mexico (PNM),606,Reconductor Rio Puerco - Pintado 345 kV
+OVL_753,21.035592,,Public Service Company of New Mexico,604,Rio Puerco-Prosperity 345 kV Line,Public Service Company of New Mexico (PNM); Tucson Electric Power Company,617,Reconductor Diamond Tail - B - A 345 kV
+OVL_754,8.289234,,Public Service Company of New Mexico (PNM),414,Four Corners - Pintado 345 kV,Public Service Company of New Mexico (PNM); Tucson Electric Power Company,616,San Juan to Four Corners 345 kV
+OVL_755,0,,Public Service Company of New Mexico (PNM),605,San Juan to Rio Puerco 345 kV,Public Service Company of New Mexico (PNM); Tucson Electric Power Company,616,San Juan to Four Corners 345 kV
+OVL_756,21.035592,,Public Service Company of New Mexico (PNM),605,San Juan to Rio Puerco 345 kV,Public Service Company of New Mexico (PNM); Tucson Electric Power Company,617,Reconductor Diamond Tail - B - A 345 kV
+OVL_757,21.035592,,Public Service Company of New Mexico (PNM),606,Reconductor Rio Puerco - Pintado 345 kV,Public Service Company of New Mexico (PNM); Tucson Electric Power Company,617,Reconductor Diamond Tail - B - A 345 kV
+OVL_758,0.884597,,Puget Sound Energy,316,Cross-Cascades Project,Umatilla Electric Cooperative,539,Umatilla-Morrow County Connect Project
+OVL_759,20.008287,1460,Salt River Project (SRP),541,Abel-Pfister-Ball 230 kV Transmission Project,Southwestern Power Group,422,RioSol
+OVL_760,10.969656,0,Salt River Project (SRP),541,Abel-Pfister-Ball 230 kV Transmission Project,Western Area Power Administration,401,Pinnacle Peak - Rogers 230kV Restoration Project
+OVL_761,20.008287,730,Salt River Project (SRP),541,Abel-Pfister-Ball 230 kV Transmission Project,Western Area Power Administration (WAPA),423,Pinal Central - ED5 Transmission Line
+OVL_762,5.873444,,San Diego Gas & Electric (SDG&E),529,South Orange County Reliability Enhancement (SOCRE) Project,Southern California Edison,434,San Onofre to Viejo 230 kV
+OVL_763,5.873444,,San Diego Gas & Electric (SDG&E),529,South Orange County Reliability Enhancement (SOCRE) Project,Southern California Edison,435,Santiago to San Onofre 230 kV
+OVL_764,21.073733,1825,San Diego Gas & Electric (SDG&E),529,South Orange County Reliability Enhancement (SOCRE) Project,Southern California Edison,530,Alberhill System Project
+OVL_765,5.873444,2920,San Diego Gas & Electric (SDG&E),529,South Orange County Reliability Enhancement (SOCRE) Project,"Southern California Edison, Lotus Infrastructure Partners",433,North of SONGS - Serrano 500 kV line
+OVL_766,2.461516,3285,"Sharyland Utilities, Lubbock Power & Light",516,Abernathy - North Loop 345 kV,Southwestern Public Service,577,Phantom - Crawfish Draw 765 kV
+OVL_767,2.461516,4015,"Sharyland Utilities, Lubbock Power & Light",516,Abernathy - North Loop 345 kV,"Southwestern Public Service, Oklahoma Gas and Electric Company",626,Crawfish Draw - Woodward 765 kV
+OVL_768,22.916213,2920,Southern California Edison,393,Laguna Bell - Mesa No. 1 230 kV Line Rating Increase,"Southern California Edison, Lotus Infrastructure Partners",433,North of SONGS - Serrano 500 kV line
+OVL_769,23.133131,1460,Southern California Edison,406,San Bernardino - Vista 230 kV Upgrade,"Southern California Edison, Lotus Infrastructure Partners",433,North of SONGS - Serrano 500 kV line
+OVL_770,23.133131,365,Southern California Edison,407,Vista - Etiwanda 230 kV Upgrade,"Southern California Edison, Lotus Infrastructure Partners",433,North of SONGS - Serrano 500 kV line
+OVL_771,17.713117,365,Southern California Edison,420,Serrano - Del Amo - Mesa 500 kV Transmission Reinforcement,"Southern California Edison, Lotus Infrastructure Partners",433,North of SONGS - Serrano 500 kV line
+OVL_772,23.41713,365,Southern California Edison,425,San Bernardino - Etiwanda 230 kV Upgrade,"Southern California Edison, Lotus Infrastructure Partners",433,North of SONGS - Serrano 500 kV line
+OVL_773,0,,Southern California Edison,434,San Onofre to Viejo 230 kV,"Southern California Edison, Lotus Infrastructure Partners",433,North of SONGS - Serrano 500 kV line
+OVL_774,0,,Southern California Edison,435,Santiago to San Onofre 230 kV,"Southern California Edison, Lotus Infrastructure Partners",433,North of SONGS - Serrano 500 kV line
+OVL_775,22.563368,1095,Southern California Edison,530,Alberhill System Project,"Southern California Edison, Lotus Infrastructure Partners",433,North of SONGS - Serrano 500 kV line
+OVL_776,17.87846,2190,Southern California Edison,532,Mira Loma - Mesa Upgrade,"Southern California Edison, Lotus Infrastructure Partners",433,North of SONGS - Serrano 500 kV line
+OVL_777,22.807734,0,Southern California Edison,400,Devers-Valley 500 kV Upgrade,"Southern California Edison, Riverside Public Utilities",543,Riverside Transmission Reliability Project
+OVL_778,9.839766,0,Southern California Edison,406,San Bernardino - Vista 230 kV Upgrade,"Southern California Edison, Riverside Public Utilities",543,Riverside Transmission Reliability Project
+OVL_779,9.839766,1095,Southern California Edison,407,Vista - Etiwanda 230 kV Upgrade,"Southern California Edison, Riverside Public Utilities",543,Riverside Transmission Reliability Project
+OVL_780,9.712621,1095,Southern California Edison,425,San Bernardino - Etiwanda 230 kV Upgrade,"Southern California Edison, Riverside Public Utilities",543,Riverside Transmission Reliability Project
+OVL_781,23.521617,,Southern California Edison,434,San Onofre to Viejo 230 kV,"Southern California Edison, Riverside Public Utilities",543,Riverside Transmission Reliability Project
+OVL_782,16.112981,365,Southern California Edison,530,Alberhill System Project,"Southern California Edison, Riverside Public Utilities",543,Riverside Transmission Reliability Project
+OVL_783,7.41114,730,Southern California Edison,532,Mira Loma - Mesa Upgrade,"Southern California Edison, Riverside Public Utilities",543,Riverside Transmission Reliability Project
+OVL_784,0,0,Southern California Edison,399,Devers - Red Bluff 500 kV Upgrade,Southern California Edsion,418,Colorado River - Red Bluff 500 kV Line Upgrade
+OVL_785,18.106541,730,Southern California Edison,560,Julian Hinds - Mirage 230 kV,Southern California Edsion,418,Colorado River - Red Bluff 500 kV Line Upgrade
+OVL_786,21.846827,1460,"Southern California Edison, Lotus Infrastructure Partners",433,North of SONGS - Serrano 500 kV line,"Southern California Edison, Riverside Public Utilities",543,Riverside Transmission Reliability Project
+OVL_787,1.540531,,"Southern California Public Power Authority (SCPPA, including interests held for WAPA and LADWP); Arizona Public Service Company; Salt River Project; StarTrans IO, L.L.C.",614,Mead - Market Place 500 kV Line,The Anschutz Corporation,329,TransWest Express
+OVL_788,0,,"Southern California Public Power Authority (SCPPA, including interests held for WAPA and LADWP); Arizona Public Service Company; Salt River Project; StarTrans IO, L.L.C.",614,Mead - Market Place 500 kV Line,Western Area Power Administration (WAPA),615,Mead - Liberty - West Wing 500 kV Line
+OVL_789,0,730,Southwestern Power Group,422,RioSol,Western Area Power Administration (WAPA),423,Pinal Central - ED5 Transmission Line
+OVL_790,0,730,Southwestern Public Service,577,Phantom - Crawfish Draw 765 kV,"Southwestern Public Service, Oklahoma Gas and Electric Company",626,Crawfish Draw - Woodward 765 kV
+OVL_791,13.320057,,The Anschutz Corporation,329,TransWest Express,Western Area Power Administration (WAPA),615,Mead - Liberty - West Wing 500 kV Line
+OVL_792,10.928611,730,The New York Power Authority (NYPA),152,Smart Path (Rebuild),"The New York Power Authority (NYPA), National Grid",81,Smart Path Connect
+OVL_793,4.302592,1460,"The New York Power Authority (NYPA), New York Transco (NY Transco)",60,Propel NY Energy,Transmission Developers Inc (TDI),80,Champlain Hudson Power Express
+OVL_794,7.494429,365,Tri-State Generation and Transmission Association,350,Eastern Colorado Transmission Expansion,Xcel Energy,332,Colorado's Power Pathway
+OVL_795,21.911179,,Western Area Power Administration,401,Pinnacle Peak - Rogers 230kV Restoration Project,Western Area Power Administration (WAPA),615,Mead - Liberty - West Wing 500 kV Line
+OVL_796,0,,Western Area Power Administration (WAPA),429,Ault-Husky 230 kV Line Upgrade,Xcel Energy,428,Northern Colorado Area Plan - Ault to Cloverly Transmission Project
+OVL_797,0,,Western Area Power Administration (WAPA),430,Reconductor Archer to Ault 230 kV,Xcel Energy,428,Northern Colorado Area Plan - Ault to Cloverly Transmission Project
+OVL_798,12.92319,1825,Xcel Energy,94,27220-Brookings County-Lyon County,Xcel Energy / Central Minnesota Municipal Power Agency / Great River Energy / Missouri River Energy Services / Otter Tail Power Company,448,"Brookings - Lyon, Hampton - Helena 2nd 345kV Circuits"
+OVL_799,22.557898,1095,Xcel Energy,89,27294-Hampton Corner-Helena,"Xcel Energy / Xcel Energy, Dairyland Power Cooperative, Rochester Public Utilities, Southern Minnesota Municipal Power Agency",78,Mankato - Mississippi River Transmission Project Options

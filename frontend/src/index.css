@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@600;700&display=swap");
 
 :root {
-  font-family: "Inter", Arial, sans-serif;
-  color: #ffffff;
-  background: #0a0a0a;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #18324b;
+  background: #f7fafc;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -14,8 +14,7 @@
 
 html {
   min-width: 320px;
-  background: #0a0a0a;
-  color-scheme: dark;
+  background: #f7fafc;
   scroll-behavior: smooth;
 }
 
@@ -23,26 +22,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background:
-    radial-gradient(
-      circle at 8% 3%,
-      rgba(25, 182, 164, 0.16),
-      transparent 28rem
-    ),
-    radial-gradient(
-      circle at 90% 15%,
-      rgba(243, 107, 131, 0.12),
-      transparent 27rem
-    ),
-    radial-gradient(
-      circle at 48% 92%,
-      rgba(29, 132, 245, 0.1),
-      transparent 33rem
-    ),
-    #091112;
+  background: #f7fafc;
 }
 
 button,
+input,
 select {
   font: inherit;
 }
@@ -53,7 +37,7 @@ button {
 
 ::selection {
   color: #ffffff;
-  background: #e65598;
+  background: #f58220;
 }
 
 ::-webkit-scrollbar {
@@ -62,11 +46,11 @@ button {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #eef3f7;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #0a0a0a;
+  border: 2px solid #eef3f7;
   border-radius: 99px;
-  background: linear-gradient(#f36b83, #19b6a4, #1d84f5);
+  background: #f58220;
 }

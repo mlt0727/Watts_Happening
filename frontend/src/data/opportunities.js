@@ -60,15 +60,25 @@ export const mapReferenceAreas = {
     label: "Augusta region reference",
   },
   jasperOkatie: {
-    ...midpoint(coordinateReferences.jasperCounty, coordinateReferences.okatieVillage),
+    ...midpoint(
+      coordinateReferences.jasperCounty,
+      coordinateReferences.okatieVillage,
+    ),
     name: "Jasper County / Okatie reference area",
-    source: "Midpoint of the listed Jasper County and Okatie public place references",
+    label: "Jasper / Okatie region reference",
+    source:
+      "Midpoint of the listed Jasper County and Okatie public place references",
     osmUrl: null,
   },
   blufftonOkatie: {
-    ...midpoint(coordinateReferences.bluffton, coordinateReferences.okatieVillage),
+    ...midpoint(
+      coordinateReferences.bluffton,
+      coordinateReferences.okatieVillage,
+    ),
     name: "Bluffton / Okatie reference area",
-    source: "Midpoint of the listed Bluffton and Okatie public place references",
+    label: "Bluffton / Okatie region reference",
+    source:
+      "Midpoint of the listed Bluffton and Okatie public place references",
     osmUrl: null,
   },
   savannah: {
@@ -81,25 +91,44 @@ const projectRecords = {
   hooksThurmond: {
     utility: "Dominion Energy South Carolina",
     title: "Hooks - Thurmond 115 kV tie rebuild",
+    aliases: [
+      "Hooks - Thurmond 115 kV Tie: Rebuild",
+      "Hooks Thurmond",
+      "Thurmond tie rebuild",
+    ],
+    projectType: "Transmission Line",
     area: "Hooks / Thurmond area, South Carolina",
     plannedDate: null,
     sourceFile: sourceFiles.dominion,
     sourceStatus: "Project and date need source verification",
     referenceAreaId: "augusta",
   },
+
   jasperOkatie: {
     utility: "Dominion Energy South Carolina",
     title: "Jasper - Okatie 230 kV #2 construction",
-    aliases: ["Jasper - Okatie 230 kV #2: Construct"],
+    aliases: [
+      "Jasper - Okatie 230 kV #2: Construct",
+      "Jasper Okatie",
+      "Jasper Okatie construction",
+    ],
+    projectType: "Transmission Line",
     area: "Jasper / Okatie area, South Carolina",
     plannedDate: null,
     sourceFile: sourceFiles.dominion,
     sourceStatus: "Project and date need source verification",
     referenceAreaId: "jasperOkatie",
   },
+
   stevensHooks: {
     utility: "Dominion Energy South Carolina",
     title: "Stevens Creek - Hooks 115 kV rebuild",
+    aliases: [
+      "Stevens Creek - Hooks 115 kV / LR Plumb Branch 46 kV Rebuilds",
+      "Stevens Creek Hooks",
+      "LR Plumb Branch",
+    ],
+    projectType: "Transmission Line",
     area: "Stevens Creek / Hooks area, South Carolina",
     plannedDate: "2024-12-31",
     sourceFile: sourceFiles.dominion,
@@ -107,10 +136,16 @@ const projectRecords = {
     sourceStatus: "Matched in provided listing; planned date verified",
     referenceAreaId: "augusta",
   },
+
   okatieBluffton: {
     utility: "Dominion Energy South Carolina",
     title: "Okatie-Bluffton 115 kV rebuild",
-    aliases: ["Okatie-Bluffton 115 kV: Rebuild"],
+    aliases: [
+      "Okatie-Bluffton 115 kV: Rebuild",
+      "Okatie Bluffton",
+      "Bluffton rebuild",
+    ],
+    projectType: "Transmission Line",
     area: "Okatie / Bluffton area, South Carolina",
     plannedDate: "2025-06-01",
     sourceFile: sourceFiles.dominion,
@@ -118,27 +153,51 @@ const projectRecords = {
     sourceStatus: "Matched in provided listing; planned date verified",
     referenceAreaId: "blufftonOkatie",
   },
+
   evansThurmond: {
     utility: "Georgia Power",
     title: "Evans Primary - Thurmond Dam #5 115 kV rebuild",
+    aliases: [
+      "EVANS PRIMARY - THURMOND DAM (USA) #5 115KV REBUILD",
+      "Evans Primary Thurmond Dam",
+      "Thurmond Dam #5",
+      "Evans Thurmond",
+    ],
+    projectType: "Transmission Line",
     area: "Thurmond area, Georgia / South Carolina",
     plannedDate: null,
     sourceFile: sourceFiles.georgia,
     sourceStatus: "Project and date need source verification",
     referenceAreaId: "augusta",
   },
+
   mcintoshPurrysburg: {
     utility: "Georgia Power",
     title: "McIntosh - Purrysburg 230 kV reactors",
+    aliases: [
+      "SAV: MCINTOSH - PURRYSBURG 230KV REACTORS",
+      "McIntosh Purrysburg",
+      "McIntosh reactors",
+      "Purrysburg reactors",
+    ],
+    projectType: "Transmission Equipment / Reactors",
     area: "Savannah region",
     plannedDate: "2026-06-01",
     sourceFile: sourceFiles.georgia,
     sourceStatus: "Matched in local listing; planned date verified",
     referenceAreaId: "savannah",
   },
+
   goshenMcintosh: {
     utility: "Georgia Power",
     title: "Goshen - McIntosh 115 kV line rebuild",
+    aliases: [
+      "SAV: GOSHEN (SAV) - MCINTOSH 115KV LINE REBUILD",
+      "Goshen McIntosh",
+      "Goshen line rebuild",
+      "McIntosh line rebuild",
+    ],
+    projectType: "Transmission Line",
     area: "Savannah region",
     plannedDate: "2027-06-01",
     sourceFile: sourceFiles.georgia,
@@ -189,12 +248,15 @@ const candidatePairs = [
 const candidates = candidatePairs.map((pair) => {
   const descProject = projectRecords[pair.descId];
   const gpcProject = projectRecords[pair.gpcId];
+
   const descReference = mapReferenceAreas[descProject.referenceAreaId];
   const gpcReference = mapReferenceAreas[gpcProject.referenceAreaId];
+
   const daysApart = daysBetweenDates(
     descProject.plannedDate,
     gpcProject.plannedDate,
   );
+
   const referenceDistanceMiles =
     descProject.referenceAreaId === gpcProject.referenceAreaId
       ? null
