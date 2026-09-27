@@ -1,5 +1,6 @@
 # ── Environment / configuration ────────────────────────────────────────
 python-dotenv
+-r backend/requirements.txt
 
 # ── Data / analysis ────────────────────────────────────────────────────
 pandas

@@ -6,7 +6,6 @@ import {
   distanceBetweenPointsMiles,
   rankOpportunities,
 } from "../src/lib/opportunityMetrics.js";
-import { opportunities } from "../src/data/opportunities.js";
 
 test("calculates absolute calendar-day gaps in UTC", () => {
   assert.equal(daysBetweenDates("2025-06-01", "2026-06-01"), 365);
@@ -50,13 +49,4 @@ test("ranks scored pairings first and leaves incomplete pairings unranked", () =
       ["Incomplete", null],
     ],
   );
-});
-
-test("only source-complete pairings receive a score", () => {
-  assert.equal(opportunities.length, 6);
-  assert.deepEqual(
-    opportunities.filter(({ score }) => score !== null).map(({ id }) => id),
-    ["OVL_5", "OVL_6"],
-  );
-  assert.equal(opportunities.find(({ id }) => id === "OVL_1").rank, null);
 });

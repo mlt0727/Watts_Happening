@@ -93,12 +93,16 @@ These values are intended as rough prototype estimates for identifying and illus
 - Leaflet
 
 ### Backend
-- Node.js
-- Express.js
-- Mongoose
+- Python
+- FastAPI
+- PyMongo
 
 ### Database
-- MongoDB
+- MongoDB Atlas
+
+### Run Locally
+
+See [the frontend and backend setup guide](backend/README.md) for environment configuration, development commands, and tests. The React dashboard reads live Atlas data through the FastAPI backend; database credentials stay on the server.
 
 ### Data Processing & Machine Learning
 - Python

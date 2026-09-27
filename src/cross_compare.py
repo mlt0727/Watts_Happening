@@ -7,6 +7,11 @@ from dataclasses import dataclass, field
 from itertools import combinations
 from pathlib import Path
 
+if __package__:
+    from .utility_identity import companies_overlap
+else:
+    from utility_identity import companies_overlap
+
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 EARTH_RADIUS_KM = 6371.0088
@@ -102,6 +107,8 @@ def find_overlaps(companies: dict[str, dict[str, Project]], threshold_km: float 
         raise ValueError("Distance threshold must be a positive finite number")
     overlap_id = 0
     for company_a, company_b in combinations(sorted(companies), 2):
+        if companies_overlap(company_a, company_b):
+            continue
         for project_id_a in sorted(companies[company_a]):
             for project_id_b in sorted(companies[company_b]):
                 project_a = companies[company_a][project_id_a]

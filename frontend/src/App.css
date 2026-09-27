@@ -962,6 +962,21 @@ tbody tr:hover {
   transform: translateY(1px);
 }
 
+.view-button.project-matches-button {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  margin: 16px 0 0 auto;
+  background: var(--yellow);
+  text-align: center;
+  white-space: normal;
+}
+
+.view-button.project-matches-button:hover,
+.view-button.project-matches-button:focus-visible {
+  background: var(--lavender);
+}
+
 /* Pagination */
 
 .table-pagination {
