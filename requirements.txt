@@ -10,3 +10,8 @@ scikit-learn
 
 # ── Visualization ──────────────────────────────────────────────────────
 matplotlib
+
+# ── Frontend (npm dependencies; install from frontend/) ─────────────────
+# React, React DOM, Vite, @vitejs/plugin-react, Tailwind CSS,
+# @tailwindcss/vite, Leaflet, React Leaflet, and ESLint are listed in
+# frontend/package.json. They are not pip-installable requirements.
