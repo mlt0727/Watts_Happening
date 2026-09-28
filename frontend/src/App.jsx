@@ -9,8 +9,8 @@ import "./App.css";
 const PAGE_SIZE = 5;
 const NATIONAL_LIMIT = 20;
 const OPPORTUNITY_TABS = [
-  { id: "nationwide", label: "top 20 coordination oppertunities" },
-  { id: "company", label: "top company pairing" },
+  { id: "nationwide", label: "Top 20 Coordination Opportunities" },
+  { id: "company", label: "Top Company Pairing" },
 ];
 const EMPTY_PROJECTS = [];
 const EMPTY_REFERENCE_AREAS = {};
@@ -167,7 +167,7 @@ function PairingSummary({ opportunity }) {
         </div>
 
         <div>
-          <dt>Timeline Overlap</dt>
+          <dt>Time Gap</dt>
           <dd>{getTimelineOverlapLabel(opportunity)}</dd>
         </div>
 
@@ -180,10 +180,10 @@ function PairingSummary({ opportunity }) {
           <dt>{firstCompany(gpcProject.utility)} Estimated Cost</dt>
           <dd>{formatCost(gpcProject.estimatedCost)}</dd>
         </div>
-        <div>
+        {/*<div>
           <dt>Cost Difference</dt>
           <dd>{formatCost(opportunity.costDifference)}</dd>
-        </div>
+        </div>*/}
         <div>
           <dt>Estimated Savings</dt>
           <dd>{formatCost(opportunity.estimatedSavings)}</dd>
@@ -721,7 +721,7 @@ function App() {
       </section>
 
       <section className="opportunities-card" ref={opportunitiesSection} tabIndex={-1} aria-labelledby="top-opportunities-heading">
-        <h2 id="top-opportunities-heading">top coordination oppertunities</h2>
+        <h2 id="top-opportunities-heading">Top Coordination Opportunities</h2>
         <div className="opportunity-tabs" role="tablist" aria-label="Opportunity Rankings">
           {OPPORTUNITY_TABS.map((tab, index) => (
             <button
@@ -766,8 +766,8 @@ function App() {
                 <th>Project (Utility A)</th>
                 <th>Project (Utility B)</th>
                 <th>Distance</th>
-                <th>Timeline Overlap</th>
-                <th title="Absolute difference between the two projects' estimated costs">Cost Difference</th>
+                <th>Time Gap</th>
+                {/*<th title="Absolute difference between the two projects' estimated costs">Cost Difference</th>*/}
                 <th>Project Type(s)</th>
                 <th>View</th>
               </tr>
@@ -776,7 +776,7 @@ function App() {
             <tbody>
               {!paginatedOpportunities.length && (
                 <tr>
-                  <td colSpan={isNationwide ? 8 : 7}>
+                  <td colSpan={isNationwide ? 7 : 6}>
                     {isLoading ? "Loading pairings…" : loadError ? "Pairings could not be loaded." : "No matching pairings."}
                   </td>
                 </tr>
@@ -824,7 +824,7 @@ function App() {
 
                   <td>{getTimelineOverlapLabel(opportunity)}</td>
 
-                  <td className="cost-difference">{formatCost(opportunity.costDifference)}</td>
+                  {/*<td className="cost-difference">{formatCost(opportunity.costDifference)}</td>*/}
 
                   <td>{getPairTypes(opportunity)}</td>
 
