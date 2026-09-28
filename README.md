@@ -139,4 +139,4 @@ Project data:
 https://www.ourgridfuture.org/
 
 ## Project Contribution Team
-Shirina Daniel, Monica Barbosa, Lingtong Meng & Kevin Wilson
+Shirina Daniel, Monica Barbosa, Lingtong Meng & Kevin Wilson.
