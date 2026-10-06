@@ -20,8 +20,39 @@ export function firstCompany(value) {
 
 export function formatDistance(value) {
   if (!Number.isFinite(value)) return "Unavailable";
-  if (value === 0) return "Shared Station";
+  if (value === 0) return "Shared station";
   return value < 0.05 ? "<0.1 mi" : `${value.toFixed(1)} mi`;
+}
+
+export function formatYearsApart(years) {
+  if (!Number.isFinite(years)) return "Timing unavailable";
+  if (years === 0) return "Same year";
+  return `${years} ${years === 1 ? "year" : "years"} apart`;
+}
+
+const LEGAL_WORDS = new Set(["inc", "llc", "corp", "corporation", "company", "co", "ltd", "lp", "the"]);
+
+function ownerWords(utility) {
+  return firstCompany(utility).toLocaleLowerCase().replace(/[^a-z0-9]+/g, " ").trim()
+    .split(" ").filter((word) => word && !LEGAL_WORDS.has(word));
+}
+
+// Flags pairs such as "Duke Energy" / "Duke Energy Indiana". The backend keeps
+// operating subsidiaries as separate owners, so this is a hint, not a filter.
+export function possibleAffiliates(opportunity) {
+  const [shorter, longer] = [ownerWords(opportunity?.descProject?.utility), ownerWords(opportunity?.gpcProject?.utility)]
+    .sort((first, second) => first.length - second.length);
+  return shorter.length > 0 && shorter.every((word, index) => longer[index] === word);
+}
+
+// Puts the searched company's or project's side first so columns stay anchored.
+export function orientPair(opportunity, anchorProjectIds) {
+  const pair = [
+    { project: opportunity.descProject, reference: opportunity.descReference },
+    { project: opportunity.gpcProject, reference: opportunity.gpcReference },
+  ];
+  return anchorProjectIds?.has(opportunity.gpcProject.id) && !anchorProjectIds.has(opportunity.descProject.id)
+    ? pair.reverse() : pair;
 }
 
 export function sameStation(first, second) {
@@ -36,7 +67,7 @@ export function sameStation(first, second) {
 function globallyRanked(opportunities) {
   // App supplies the national ranking. Raw standalone inputs are ranked across
   // their entire input once, before filtering; pre-ranked subsets retain rank.
-  const rankingFields = ["score", "rank", "costDifference", "costFit"];
+  const rankingFields = ["rank", "distanceTier", "yearsApart"];
   return opportunities.every((opportunity) =>
     rankingFields.every((field) => Object.hasOwn(opportunity, field)))
     ? opportunities
@@ -58,8 +89,7 @@ export function companyOpportunities(opportunities, company) {
 export function getNationalTopOpportunities(opportunities, limit = 20) {
   if (!Number.isFinite(limit) || limit <= 0) return [];
   return globallyRanked(opportunities)
-    .filter((opportunity) => Number.isFinite(opportunity.score) &&
-      Number.isFinite(opportunity.rank))
+    .filter((opportunity) => Number.isFinite(opportunity.rank))
     .slice(0, Math.floor(limit));
 }
 

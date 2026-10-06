@@ -21,14 +21,22 @@ function textElement(tag, value) {
   return element;
 }
 
-function popupContent(title, lines, note) {
-  const content = document.createElement("div");
-  content.append(textElement("strong", title));
-  lines.forEach((line) => {
-    content.append(document.createElement("br"), document.createTextNode(line ?? ""));
+// Leaflet markers only open popups on Enter; route Enter/Space to selection instead.
+function activateOnKeyboard(element, layer) {
+  element.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      event.stopPropagation();
+      layer.fire("click");
+    }
   });
-  content.append(document.createElement("br"), textElement("small", note));
-  return content;
+}
+
+function pairPosition(opportunity) {
+  return [
+    (opportunity.descReference.lat + opportunity.gpcReference.lat) / 2,
+    (opportunity.descReference.lon + opportunity.gpcReference.lon) / 2,
+  ];
 }
 
 export default function OpportunityMap({
@@ -38,6 +46,7 @@ export default function OpportunityMap({
   highlightedOpportunityIds,
   selectedOpportunityId,
   selectedReference,
+  overview,
   onSelectOpportunity,
   onSelectReference,
 }) {
@@ -104,82 +113,65 @@ export default function OpportunityMap({
       const selected = selectedKeys.has(referenceKey(reference));
       const circle = L.circleMarker([reference.lat, reference.lon], {
         bubblingMouseEvents: false,
-        radius: selected ? 8 : 6,
-        color: selected ? "#fff7ed" : "#234d56",
+        className: selected ? "map-station map-station-selected" : "map-station",
+        radius: selected ? 7 : 4,
         weight: selected ? 2 : 1,
-        fillColor: selected ? "#e5683e" : "#95b7a8",
-        fillOpacity: 0.95,
+        fillOpacity: 1,
       })
         .bindTooltip(textElement("span", reference.label), { direction: "top", offset: [0, -6] })
-        .bindPopup(
-          popupContent(reference.label, [reference.name], "Substation coordinates from the shared project dataset."),
-        )
         .on("click", (event) => {
           L.DomEvent.stopPropagation(event);
           onSelectReference?.(reference);
         })
         .addTo(layers);
 
+      // Only the selected pair's stations join the tab order; the table is the keyboard path to the rest.
       const element = circle.getElement();
-      if (element && onSelectReference) {
+      if (element && selected && onSelectReference) {
         element.setAttribute("role", "button");
         element.setAttribute("tabindex", "0");
-        element.setAttribute("aria-label", `Select station ${reference.name}`);
-        element.setAttribute("aria-pressed", String(selected));
-        element.addEventListener("keydown", (event) => {
-          if (event.key === "Enter" || event.key === " ") {
-            event.preventDefault();
-            event.stopPropagation();
-            circle.fire("click");
-          }
-        });
+        element.setAttribute("aria-label", `Show pairings at ${reference.name}`);
+        activateOnKeyboard(element, circle);
       }
     });
 
     const opportunityGroups = new Map();
-    opportunities.forEach((candidate, candidateIndex) => {
+    opportunities.forEach((candidate) => {
       if (!validReference(candidate.descReference) || !validReference(candidate.gpcReference)) return;
-      const position = {
-        lat: (candidate.descReference.lat + candidate.gpcReference.lat) / 2,
-        lon: (candidate.descReference.lon + candidate.gpcReference.lon) / 2,
-      };
-      const key = `${position.lat.toFixed(5)}:${position.lon.toFixed(5)}`;
+      const position = pairPosition(candidate);
+      const key = `${position[0].toFixed(5)}:${position[1].toFixed(5)}`;
       const group = opportunityGroups.get(key) ?? [];
-      group.push({ candidate, position, candidateIndex });
+      group.push(candidate);
       opportunityGroups.set(key, group);
     });
 
     opportunityGroups.forEach((group) => {
-      group.forEach(({ candidate, position, candidateIndex }, index) => {
+      group.forEach((candidate, index) => {
         const selected = candidate.id === selectedOpportunityId;
         const related = highlightedIds.has(candidate.id);
-        const horizontalOffset = (index - (group.length - 1) / 2) * 38;
-        const markerNumber =
-          candidate.mapNumber ??
-          candidate.rank ??
-          candidateIndex + 1;
-        const markerDescription = `Map marker ${markerNumber}: ${candidate.descReference.name} ↔ ${candidate.gpcReference.name}`;
-        const markerTitle = `${markerDescription} — ${candidate.descProject.title}; ${candidate.gpcProject.title}`;
+        const numbered = selected || related;
+        const horizontalOffset = (index - (group.length - 1) / 2) * (numbered ? 34 : 14);
+        const size = numbered ? 30 : 12;
+        const markerTitle = `#${candidate.mapNumber}: ${candidate.descProject.title} and ${candidate.gpcProject.title}`;
+        const state = selected ? "selected" : related ? "related" : "other";
         const icon = L.divIcon({
           className: "pairing-map-icon",
-          html: `<span class="pairing-map-dot${selected ? " pairing-map-dot-selected" : ""}${related ? " pairing-map-dot-related" : " pairing-map-dot-muted"}">${markerNumber}</span>`,
-          iconSize: [30, 30],
-          iconAnchor: [15 - horizontalOffset, 15],
+          html: `<span class="pairing-map-dot pairing-map-dot-${state}">${numbered ? candidate.mapNumber : ""}</span>`,
+          iconSize: [size, size],
+          iconAnchor: [size / 2 - horizontalOffset, size / 2],
         });
-        const marker = L.marker([position.lat, position.lon], {
+        const marker = L.marker(pairPosition(candidate), {
           icon,
-          keyboard: true,
+          keyboard: numbered,
           title: markerTitle,
           zIndexOffset: selected ? 1000 : related ? 500 : 0,
-        });
-
-        marker
-          .bindTooltip(textElement("span", markerTitle), { direction: "top", offset: [0, -6] })
-          .bindPopup(
-            popupContent(markerDescription, [candidate.descProject.title, candidate.gpcProject.title], "Pairing marker between recorded endpoints; not a transmission route."),
-          )
+        })
+          .bindTooltip(textElement("span", markerTitle), { direction: "top", offset: [0, -size / 2] })
           .on("click", () => onSelectOpportunity(candidate.id))
           .addTo(layers);
+
+        const element = marker.getElement();
+        if (element && numbered) activateOnKeyboard(element, marker);
       });
     });
 
@@ -190,9 +182,19 @@ export default function OpportunityMap({
           [opportunity.descReference.lat, opportunity.descReference.lon],
           [opportunity.gpcReference.lat, opportunity.gpcReference.lon],
         ],
-        { color: "#e5683e", weight: 3, opacity: 0.9, dashArray: "7 7", interactive: false },
+        { className: "map-gap-line", weight: 3, dashArray: "7 7", interactive: false },
       ).addTo(layers);
+    }
 
+    if (overview) {
+      const positions = opportunities
+        .filter((candidate) => highlightedIds.has(candidate.id) &&
+          validReference(candidate.descReference) && validReference(candidate.gpcReference))
+        .map(pairPosition);
+      if (positions.length) {
+        map.fitBounds(positions, { padding: [40, 40], maxZoom: 6 });
+        return;
+      }
     }
 
     const viewportReferences = [...new Map(
@@ -224,6 +226,7 @@ export default function OpportunityMap({
     highlightedOpportunityIds,
     selectedOpportunityId,
     selectedReference,
+    overview,
     onSelectOpportunity,
     onSelectReference,
   ]);

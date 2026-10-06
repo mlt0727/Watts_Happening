@@ -1,11 +1,12 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
-  calculateOpportunityScore,
-  calculateCostDifference,
+  DISTANCE_TIERS,
   daysBetweenDates,
   distanceBetweenPointsMiles,
+  distanceTier,
   rankOpportunities,
+  yearsApart,
 } from "../src/lib/opportunityMetrics.js";
 
 test("calculates absolute calendar-day gaps in UTC", () => {
@@ -28,96 +29,57 @@ test("calculates great-circle distances and rejects invalid coordinates", () => 
   );
 });
 
-test("weights timing, distance, and national cost percentile 40/30/30", () => {
-  assert.equal(calculateOpportunityScore(0, 0, 1), 100);
-  assert.equal(calculateOpportunityScore(1825, 25, 0), 0);
-  assert.equal(calculateOpportunityScore(1825, 25, 1), 30);
-  assert.equal(calculateOpportunityScore(0, 25, 0), 40);
-  assert.equal(calculateOpportunityScore(1825, 0, 0), 30);
-  assert.equal(calculateOpportunityScore(2000, 30, 0.5), 15);
-  assert.equal(calculateOpportunityScore(null, 5, 1), null);
-  assert.equal(calculateOpportunityScore(10, null, 1), null);
-  for (const costFit of [undefined, null, NaN, Infinity, -0.1, 1.1, "1"]) {
-    assert.equal(calculateOpportunityScore(0, 0, costFit), null);
+test("distance tiers match the backend savings rates", () => {
+  const cases = [[0, 0.15], [0.4, 0.1], [1, 0.05], [4.99, 0.05], [5, 0.03], [24.9, 0.03], [25, 0], [80, 0]];
+  for (const [miles, rate] of cases) {
+    assert.equal(DISTANCE_TIERS[distanceTier(miles)].rate, rate, `${miles} mi`);
+  }
+  for (const invalid of [null, undefined, NaN, -1, "3"]) {
+    assert.equal(distanceTier(invalid), null);
   }
 });
 
-test("ranks scored pairings first and leaves incomplete pairings unranked", () => {
+test("timing gaps are whole years because source dates are years", () => {
+  assert.equal(yearsApart(0), 0);
+  assert.equal(yearsApart(365), 1);
+  assert.equal(yearsApart(730), 2);
+  assert.equal(yearsApart(null), null);
+  assert.equal(yearsApart(-1), null);
+});
+
+const pair = (id, daysApart, referenceDistanceMiles) => ({
+  id, location: id, daysApart, referenceDistanceMiles,
+  descProject: { id: `${id}-a` }, gpcProject: { id: `${id}-b` },
+});
+
+test("proximity tier outranks timing, then years, then exact distance", () => {
   const ranked = rankOpportunities([
-    { location: "Later", daysApart: 365, referenceDistanceMiles: 10 },
-    { location: "Incomplete", daysApart: null, referenceDistanceMiles: 2 },
-    { location: "Earlier", daysApart: 100, referenceDistanceMiles: 10 },
-  ].map((opportunity) => ({
-    ...opportunity, descProject: { estimatedCost: 100 }, gpcProject: { estimatedCost: 100 },
-  })));
+    pair("near-late", 1460, 0.5),
+    pair("far-same-year", 0, 20),
+    pair("shared-late", 730, 0),
+    pair("near-soon", 365, 0.9),
+    pair("near-soon-closer", 365, 0.2),
+    pair("incomplete", null, 0),
+  ]);
 
   assert.deepEqual(
-    ranked.map(({ location, rank }) => [location, rank]),
+    ranked.map(({ id, rank, distanceTier: tier, yearsApart: years }) => [id, rank, tier, years]),
     [
-      ["Earlier", 1],
-      ["Later", 2],
-      ["Incomplete", null],
+      ["shared-late", 1, 0, 2],
+      ["near-soon-closer", 2, 1, 1],
+      ["near-soon", 3, 1, 1],
+      ["near-late", 4, 1, 4],
+      ["far-same-year", 5, 3, 0],
+      ["incomplete", null, 0, null],
     ],
   );
-});
-
-const pair = (id, firstCost, secondCost, daysApart = 0, distance = 0) => ({
-  id, location: id, daysApart, referenceDistanceMiles: distance,
-  descProject: { id: `${id}-a`, estimatedCost: firstCost },
-  gpcProject: { id: `${id}-b`, estimatedCost: secondCost },
-});
-
-test("cost differences accept zero and reject missing, textual, negative, and nonfinite estimates", () => {
-  assert.equal(calculateCostDifference(0, 0), 0);
-  assert.equal(calculateCostDifference(100, 0), 100);
-  assert.equal(calculateCostDifference(0, 100), 100);
-  for (const invalid of [undefined, null, "", "100", "100–200", -1, NaN, Infinity]) {
-    assert.equal(calculateCostDifference(invalid, 100), null);
-    assert.equal(calculateCostDifference(100, invalid), null);
-    const [ranked] = rankOpportunities([pair("invalid", invalid, 100)]);
-    assert.equal(ranked.costDifference, null);
-    assert.equal(ranked.costFit, null);
-    assert.equal(ranked.score, null);
-    assert.equal(ranked.rank, null);
-  }
-});
-
-test("equal timing and distance favor smaller absolute USD gaps using national percentiles", () => {
-  const ranked = rankOpportunities([
-    pair("large", 100, 1000),
-    pair("medium", 100, 200),
-    pair("small", 110, 100),
-  ]);
-  assert.deepEqual(ranked.map(({ id, costDifference, costFit, score }) =>
-    [id, costDifference, costFit, score]), [
-    ["small", 10, 1, 100],
-    ["medium", 100, 0.5, 85],
-    ["large", 900, 0, 70],
-  ]);
-});
-
-test("cost percentiles use all complete-cost pairs and give tied gaps the same average rank", () => {
-  const ranked = rankOpportunities([
-    pair("tied-a", 0, 0),
-    pair("tied-b", 50, 50),
-    pair("middle", 0, 100),
-    pair("missing-date", 0, 200, null),
-    pair("missing-cost", null, 200),
-  ]);
-  const byId = Object.fromEntries(ranked.map((opportunity) => [opportunity.id, opportunity]));
-  assert.equal(byId["tied-a"].costFit, 1 - 0.5 / 3);
-  assert.equal(byId["tied-b"].costFit, byId["tied-a"].costFit);
-  assert.equal(byId.middle.costFit, 1 - 2 / 3);
-  assert.equal(byId["missing-date"].costFit, 0);
-  assert.equal(byId["missing-date"].rank, null);
-  assert.equal(byId["missing-cost"].costFit, null);
-  assert.equal(rankOpportunities([pair("single", 0, 0)])[0].score, 100);
+  assert.ok(ranked.every((opportunity) => !("complete" in opportunity)));
 });
 
 test("tie order is deterministic, and ranking preserves source objects and map numbers", () => {
   const source = [
-    Object.freeze({ ...pair("b", 10, 20), location: "Same", mapNumber: 7 }),
-    Object.freeze({ ...pair("a", 10, 20), location: "Same", mapNumber: 42 }),
+    Object.freeze({ ...pair("b", 0, 0), location: "Same", mapNumber: 7 }),
+    Object.freeze({ ...pair("a", 0, 0), location: "Same", mapNumber: 42 }),
   ];
   const before = structuredClone(source);
   Object.freeze(source);

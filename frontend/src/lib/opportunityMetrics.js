@@ -1,5 +1,4 @@
 const MILES_PER_EARTH_RADIUS = 3958.7613;
-const MAX_TIMING_WINDOW_DAYS = 1825;
 const SCREENING_RADIUS_MILES = 25;
 
 function parseIsoDate(value) {
@@ -60,23 +59,29 @@ export function distanceBetweenPointsMiles(firstPoint, secondPoint) {
   return 2 * MILES_PER_EARTH_RADIUS * Math.asin(Math.sqrt(haversine));
 }
 
-export function calculateOpportunityScore(daysApart, referenceDistanceMiles) {
-  if (
-    !Number.isFinite(daysApart) ||
-    daysApart < 0 ||
-    !Number.isFinite(referenceDistanceMiles) ||
-    referenceDistanceMiles < 0
-  ) {
-    return null;
-  }
+// Mirrors get_savings_rate in src/impact_estimator.py: the same proximity tiers
+// set the prototype savings rate and lead the ranking (distance is the primary signal).
+export const DISTANCE_TIERS = [
+  { rate: 0.15, label: "Shared station", work: "Crossing coordination, outage timing, right-of-way, access roads, permitting, laydown yards, deliveries, crews, and equipment" },
+  { rate: 0.1, label: "Under 1 mi", work: "Right-of-way, access roads, permitting, laydown yards, deliveries, crews, and equipment" },
+  { rate: 0.05, label: "Under 5 mi", work: "Laydown yards, deliveries, crews, and equipment" },
+  { rate: 0.03, label: "Under 25 mi", work: "Crews and equipment" },
+  { rate: 0, label: "25 mi or more", work: "No significant proximity-based coordination" },
+];
 
-  const timingFit = Math.max(0, 1 - daysApart / MAX_TIMING_WINDOW_DAYS);
-  const geographicFit = Math.max(
-    0,
-    1 - referenceDistanceMiles / SCREENING_RADIUS_MILES,
-  );
+export function distanceTier(referenceDistanceMiles) {
+  const miles = referenceDistanceMiles;
+  if (!Number.isFinite(miles) || miles < 0) return null;
+  if (miles === 0) return 0;
+  if (miles < 1) return 1;
+  if (miles < 5) return 2;
+  if (miles < SCREENING_RADIUS_MILES) return 3;
+  return 4;
+}
 
-  return Math.round((timingFit * 57 + geographicFit * 43) * 10) / 10;
+// In-service timing is recorded by year only, so gaps are whole years.
+export function yearsApart(daysApart) {
+  return Number.isFinite(daysApart) && daysApart >= 0 ? Math.round(daysApart / 365) : null;
 }
 
 export function rankOpportunities(opportunities) {
@@ -87,26 +92,26 @@ export function rankOpportunities(opportunities) {
   return opportunities
     .map((opportunity) => ({
       ...opportunity,
-      score: calculateOpportunityScore(
-        opportunity.daysApart,
-        opportunity.referenceDistanceMiles,
-      ),
+      distanceTier: distanceTier(opportunity.referenceDistanceMiles),
+      yearsApart: yearsApart(opportunity.daysApart),
+    }))
+    .map((opportunity) => ({
+      ...opportunity,
+      complete: opportunity.distanceTier !== null && opportunity.yearsApart !== null,
     }))
     .sort((first, second) => {
-      if (first.score === null && second.score === null) {
-        return compareIdentity(first, second);
+      if (!first.complete || !second.complete) {
+        return Number(second.complete) - Number(first.complete) || compareIdentity(first, second);
       }
-      if (first.score === null) return 1;
-      if (second.score === null) return -1;
       return (
-        second.score - first.score ||
-        first.daysApart - second.daysApart ||
+        first.distanceTier - second.distanceTier ||
+        first.yearsApart - second.yearsApart ||
         first.referenceDistanceMiles - second.referenceDistanceMiles ||
         compareIdentity(first, second)
       );
     })
-    .map((opportunity, index) => ({
+    .map(({ complete, ...opportunity }, index) => ({
       ...opportunity,
-      rank: opportunity.score === null ? null : index + 1,
+      rank: complete ? index + 1 : null,
     }));
 }
