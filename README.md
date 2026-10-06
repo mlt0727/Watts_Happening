@@ -18,7 +18,7 @@ Watts Happening analyzes nationwide planned transmission project data and identi
 
 Geographic proximity serves as the primary signal. When a project contains multiple substations, the shortest substation-to-substation distance is used to represent the distance between two projects.
 
-Projects within approximately **40 km (25 miles)** of one another may be considered potential coordination opportunities. Planned in-service timing and project costs provide additional context for evaluating and ranking these opportunities.
+Projects within approximately **40 km (25 miles)** of one another may be considered potential coordination opportunities. Opportunities are ranked by distance tier first, then by years between planned in-service dates. Project costs feed the prototype savings estimate.
 
 Through the interactive dashboard, users can explore planned projects geographically, investigate nearby projects, view ranked coordination opportunities, and examine potential cost impacts.
 
@@ -28,7 +28,7 @@ Through the interactive dashboard, users can explore planned projects geographic
 - **Cross-Utility Project Matching** — Identify geographically close projects owned by different utility companies.
 - **Geographic Proximity Analysis** — Compare projects using their closest substation-to-substation distance and identify opportunities within approximately 40 km.
 - **Timeline Analysis** — Use planned in-service years to identify projects whose development timelines may overlap.
-- **Coordination Opportunity Ranking** — Rank potential project-to-project coordination opportunities using factors including geographic distance, project cost, and planned in-service timing.
+- **Coordination Opportunity Ranking** — Rank potential project-to-project coordination opportunities by distance tier, then by planned in-service timing.
 - **Project Cost Estimation** — Estimate costs for projects without reported cost information using a Random Forest regression model trained on projects with known costs.
 - **Cost Impact Estimation** — Provide a rough estimate of potential savings associated with coordinating nearby projects.
 - **Coordination Insights** — Highlight potential areas of coordination such as shared crews, equipment, deliveries, laydown yards, permitting, access roads, and right-of-way activities.
@@ -79,7 +79,7 @@ These values are intended as rough prototype estimates for identifying and illus
 4. Projects owned by different utility companies are evaluated for geographic proximity.
 5. For projects containing multiple substations, the closest substation pair determines the project-to-project distance.
 6. Projects within approximately 40 km are identified as potential coordination opportunities.
-7. Distance, planned in-service timing, and project cost are considered when ranking opportunities.
+7. Opportunities are ranked by distance tier, then by years between planned in-service dates, then by exact distance.
 8. Users explore the results through the interactive dashboard.
 9. Selected opportunities include potential coordination activities and a rough cost-impact estimate.
 

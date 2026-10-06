@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { firstCompany, formatDistance, relatedOpportunities, companyOpportunities, getNationalTopOpportunities, mapRegionTitle } from "../src/lib/dashboardView.js";
+import { firstCompany, formatDistance, formatYearsApart, possibleAffiliates, orientPair, relatedOpportunities, companyOpportunities, getNationalTopOpportunities, mapRegionTitle } from "../src/lib/dashboardView.js";
 import { rankOpportunities } from "../src/lib/opportunityMetrics.js";
 
 test("shows the first company without cutting legal suffixes or company names", () => {
@@ -16,7 +16,7 @@ test("shows the first company without cutting legal suffixes or company names", 
 });
 
 test("only exact zero distance is labeled shared station", () => {
-  assert.equal(formatDistance(0), "Shared Station");
+  assert.equal(formatDistance(0), "Shared station");
   assert.equal(formatDistance(0.01), "<0.1 mi");
   assert.equal(formatDistance(9.63), "9.6 mi");
   assert.equal(formatDistance(null), "Unavailable");
@@ -84,18 +84,17 @@ test("company selection includes all its projects on either side and excludes un
   assert.deepEqual(companyOpportunities(all, { projectIds: ["no-matches"] }), []);
 });
 
-test("company, project, and station filters keep national cost percentiles, scores, and ranks", () => {
+test("company, project, and station filters keep national ranks", () => {
   const source = [
-    { ...pair("1", "other-a", "other-b", 0, 0, otherStation, otherStation),
-      gpcProject: { id: "other-b", estimatedCost: 100 } },
-    { ...pair("2", "selected", "b", 0, 0), gpcProject: { id: "b", estimatedCost: 200 } },
-    { ...pair("3", "selected", "c", 0, 0), gpcProject: { id: "c", estimatedCost: 1000 } },
+    pair("1", "other-a", "other-b", 0, 0, otherStation, otherStation),
+    pair("2", "selected", "b", 0, 0),
+    pair("3", "selected", "c", 365, 0),
   ];
   const before = structuredClone(source);
   const national = rankOpportunities(source);
   const expected = national.slice(1);
-  assert.deepEqual(expected.map(({ rank, costFit, score }) => [rank, costFit, score]),
-    [[2, 0.5, 85], [3, 0, 70]]);
+  assert.deepEqual(expected.map(({ id, rank, distanceTier, yearsApart }) => [id, rank, distanceTier, yearsApart]),
+    [["2", 2, 0, 0], ["3", 3, 0, 1]]);
   for (const input of [source, national]) {
     assert.deepEqual(companyOpportunities(input, { projectIds: ["selected"] }), expected);
     assert.deepEqual(relatedOpportunities(input, "selected"), expected);
@@ -107,12 +106,11 @@ test("company, project, and station filters keep national cost percentiles, scor
   assert.deepEqual(source, before);
 });
 
-test("national Top 20 takes only complete scored pairs, supports smaller sets, and does not mutate input", () => {
+test("national Top 20 takes only complete ranked pairs, supports smaller sets, and does not mutate input", () => {
   const source = Array.from({ length: 25 }, (_, index) => ({
     ...pair(String(index + 1).padStart(2, "0"), "a", "b", 0, 0),
     gpcProject: { id: "b", estimatedCost: 100 + index },
   })).reverse();
-  source.push({ ...pair("missing-cost", "a", "b", 0, 0), descProject: { id: "a", estimatedCost: null } });
   source.push(pair("missing-time", "a", "b", null, 0));
   const before = structuredClone(source);
   const top = getNationalTopOpportunities(source);
@@ -121,10 +119,36 @@ test("national Top 20 takes only complete scored pairs, supports smaller sets, a
   assert.deepEqual(top.map(({ id }) => id), Array.from({ length: 20 }, (_, index) => String(index + 1).padStart(2, "0")));
   assert.equal(getNationalTopOpportunities(source, 5).length, 5);
   assert.equal(getNationalTopOpportunities(source, 100).length, 25);
-  assert.equal(getNationalTopOpportunities(source.slice(-3)).length, 1);
+  assert.equal(getNationalTopOpportunities(source.slice(-3)).length, 2);
   assert.deepEqual(getNationalTopOpportunities([]), []);
   assert.deepEqual(getNationalTopOpportunities(source, 0), []);
   assert.deepEqual(getNationalTopOpportunities(source, -1), []);
   assert.deepEqual(getNationalTopOpportunities(source, NaN), []);
   assert.deepEqual(source, before);
+});
+
+test("year gaps read as plain language", () => {
+  assert.equal(formatYearsApart(0), "Same year");
+  assert.equal(formatYearsApart(1), "1 year apart");
+  assert.equal(formatYearsApart(3), "3 years apart");
+  assert.equal(formatYearsApart(null), "Timing unavailable");
+});
+
+const owners = (first, second) => ({ descProject: { utility: first }, gpcProject: { utility: second } });
+
+test("flags owners that share a parent name prefix, not unrelated companies", () => {
+  assert.equal(possibleAffiliates(owners("Duke Energy", "Duke Energy Indiana")), true);
+  assert.equal(possibleAffiliates(owners("Evergy Metro Inc.", "Evergy")), true);
+  assert.equal(possibleAffiliates(owners("AEP Texas", "AEP, Dominion Energy")), true);
+  assert.equal(possibleAffiliates(owners("Duke Energy", "Dominion Energy")), false);
+  assert.equal(possibleAffiliates(owners("Public Service Company of Colorado", "Public Service Company of New Mexico")), false);
+  assert.equal(possibleAffiliates(owners(null, "Xcel Energy")), false);
+});
+
+test("anchors the searched side first without reordering unrelated pairs", () => {
+  const opportunity = { descProject: { id: "a" }, gpcProject: { id: "b" }, descReference: "ra", gpcReference: "rb" };
+  assert.deepEqual(orientPair(opportunity, new Set(["b"])).map(({ project, reference }) => [project.id, reference]), [["b", "rb"], ["a", "ra"]]);
+  assert.deepEqual(orientPair(opportunity, new Set(["a"])).map(({ project }) => project.id), ["a", "b"]);
+  assert.deepEqual(orientPair(opportunity, new Set(["a", "b"])).map(({ project }) => project.id), ["a", "b"]);
+  assert.deepEqual(orientPair(opportunity, null).map(({ project }) => project.id), ["a", "b"]);
 });

@@ -1,9 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&display=swap");
 
 :root {
-  font-family: "Open Sans", Arial, sans-serif;
-  color: #18324b;
-  background: #f7fafc;
+  /* Surfaces and text */
+  --bg: #f2f4f6;
+  --surface: #ffffff;
+  --surface-sunk: #f6f7f9;
+  --ink: #15212c;
+  --ink-2: #3c4a57;
+  --ink-3: #566472;
+  --line: #dde2e7;
+  --line-strong: #aeb8c2;
+
+  /* Brand: warm "watts" orange, kept for the header band and the selected pair */
+  --brand: #f9a24b;
+  --accent: #b4470b;
+  --accent-soft: #fdebdc;
+  --highlight: #ffd43b;
+  --highlight-soft: #fff6cc;
+  --highlight-line: #d9b021;
+  --focus: #1a56db;
+
+  /* Map vocabulary, shared by Leaflet layers and the legend */
+  --marker-selected: var(--accent);
+  --marker-related: var(--highlight);
+  --marker-other: #8f9ba7;
+  --station: #2c7a83;
+  --station-selected: var(--accent);
+  --gap-line: var(--accent);
+
+  /* Cost provenance */
+  --reported-ink: #1e6b3a;
+  --reported-bg: #e3f3e8;
+  --model-ink: #7a4b00;
+  --model-bg: #fff1d6;
+
+  --radius: 8px;
+  --radius-control: 6px;
+  --shadow: 0 1px 2px rgb(21 33 44 / 6%), 0 4px 14px rgb(21 33 44 / 5%);
+
+  color-scheme: light;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-optical-sizing: auto;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -14,7 +53,6 @@
 
 html {
   min-width: 320px;
-  background: #f7fafc;
   scroll-behavior: smooth;
 }
 
@@ -22,12 +60,19 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background: #f7fafc;
+  background: var(--bg);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
 }
 
 button,
-input,
-select {
+input {
   font: inherit;
 }
 
@@ -35,22 +80,32 @@ button {
   cursor: pointer;
 }
 
+a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
 ::selection {
-  color: #ffffff;
-  background: #f58220;
+  color: var(--ink);
+  background: var(--highlight);
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+* {
+  scrollbar-color: var(--line-strong) transparent;
+  scrollbar-width: thin;
 }
 
-::-webkit-scrollbar-track {
-  background: #eef3f7;
-}
-
-::-webkit-scrollbar-thumb {
-  border: 2px solid #eef3f7;
-  border-radius: 99px;
-  background: #f58220;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
 }
